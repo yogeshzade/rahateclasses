@@ -2,7 +2,7 @@
     <li class="menu-title">Navigation</li>
 
     <li>
-        <a href="/">
+        <a href="{{route('home')}}">
             <i data-feather="home"></i>
         <!--     <span class="badge badge-success float-right">1</span> -->
             <span> Dashboard </span>
@@ -18,7 +18,7 @@
     <li>
         <a href="javascript: void(0);">
             <i data-feather="users"></i>
-            <span>Admission </span>
+            <span>Students </span>
             <span class="menu-arrow"></span>
         </a>
 
@@ -27,7 +27,7 @@
                 <a href="{{route('admission.index')}}">Add New Admission</a>
             </li>
             <li>
-                <a href="{{route('admission.manage')}}">Manage Admissions</a>
+                <a href="{{route('admission.manage')}}">Manage Students</a>
             </li>
            
         </ul>
@@ -41,108 +41,71 @@
     
         <ul class="nav-second-level" aria-expanded="false">
             <li>
-                <a href="/apps/project/list">List</a>
+                <a href="/apps/project/list">Check Student Fees</a>
             </li>
             <li>
-                <a href="/apps/project/detail">Detail</a>
+                <a href="/apps/project/detail">Pay Student Fees</a>
             </li>
+              <li>
+                <a href="/apps/project/list">Show Payements</a>
+            </li>
+              <!-- <li>
+                <a href="/apps/project/list">Print Receipt</a>
+            </li> -->
         </ul>
     </li>
     <li>
         <a href="javascript: void(0);">
             <i data-feather="bookmark"></i>
-            <span> Tasks </span>
+            <span> Courses </span>
             <span class="menu-arrow"></span>
         </a>
     
         <ul class="nav-second-level" aria-expanded="false">
             <li>
-                <a href="/apps/task/list">List</a>
+                <a href="{{route('course.manage')}}">All Courses</a>
             </li>
             <li>
-                <a href="/apps/task/board">Kanban Board</a>
+                <a href="{{route('course.index')}}">Add New Course</a>
             </li>
         </ul>
     </li>
-    <li class="menu-title">Teachers</li>
+    <li class="menu-title">Employees</li>
     <li>
         <a href="javascript: void(0);">
             <i data-feather="file-text"></i>
-            <span>Teachers </span>
+            <span>Employees </span>
             <span class="menu-arrow"></span>
         </a>
         <ul class="nav-second-level" aria-expanded="false">
             <li>
-                <a href="/pages/starter">Manage Teacher</a>
+                <a href="{{route('employee.add')}}">Add Employee</a>
             </li>
             <li>
-                <a href="/pages/profile">Calculate Salary</a>
+                <a href="{{route('employee.index')}}">Manage Employee</a>
             </li>
            
             <li>
-                <a href="/errors/500">Error 500</a>
+                <a href="{{route('employee.index')}}">Make Salary</a>
             </li>
         </ul>
     </li>
 
-    <li>
-        <a href="javascript: void(0);">
-            <i data-feather="layout"></i>
-            <span> Layouts </span>
-            <span class="menu-arrow"></span>
-        </a>
-        <ul class="nav-second-level" aria-expanded="false">
-            <li>
-                <a href="/layout-example/horizontal">Horizontal Nav</a>
-            </li>
-            <li>
-                <a href="/layout-example/rtl">RTL</a>
-            </li>
-            <li>
-                <a href="/layout-example//dark">Dark</a>
-            </li>
-            <li>
-                <a href="/layout-example/scrollable">Scrollable</a>
-            </li>
-            <li>
-                <a href="/layout-example/boxed">Boxed</a>
-            </li>
-            <li>
-                <a href="/layout-example/loader">With Pre-loader</a>
-            </li>
-            <li>
-                <a href="/layout-example/dark-sidebar">Dark Side Nav</a>
-            </li>
-            <li>
-                <a href="/layout-example/condensed-sidebar">Condensed Nav</a>
-            </li>
-        </ul>
-    </li>
 
-    <li class="menu-title">Components</li>
+    <li class="menu-title">Website</li>
 
     <li>
         <a href="javascript: void(0);">
             <i data-feather="package"></i>
-            <span> UI Elements </span>
+            <span>Website Configration</span>
             <span class="menu-arrow"></span>
         </a>
         <ul class="nav-second-level" aria-expanded="false">
             <li>
-                <a href="/ui/bootstrap">Bootstrap UI</a>
+                <a href="/ui/bootstrap">Manage Slider</a>
             </li>
             <li>
-                <a href="javascript: void(0);" aria-expanded="false">Icons
-                    <span class="menu-arrow"></span>
-                </a>
-                <ul class="nav-third-level" aria-expanded="false">
-                    <li>
-                        <a href="/ui/icons-feather">Feather Icons</a>
-                    </li>
-                    <li>
-                        <a href="/ui/icons-unicons">Unicons Icons</a>
-                    </li>
-                </ul>
+                  <a href="/ui/bootstrap">Manage Slider</a>
             </li>
             <li>
                 <a href="/ui/widgets">Widgets</a>

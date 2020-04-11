@@ -1,4 +1,4 @@
-@extends('layouts.vertical')
+@extends('layouts.vertical',['withLoader' => true])
 
 
 @section('css')
@@ -127,7 +127,7 @@
        <div class="card">
             <div class="card-body">
                 <a href="" class="btn btn-primary btn-sm float-right">
-                    <i class='uil uil-export ml-1'></i> Export
+                    <i class='uil uil-export ml-1'></i> Show All
                 </a>
                 <h5 class="card-title mt-0 mb-0 header-title">Recent Admissions</h5>
 

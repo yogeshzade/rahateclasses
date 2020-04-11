@@ -12,20 +12,18 @@
 */
 Auth::routes();
 
-Route::get('/',function(){
+ Route::get('/',function(){
+ 	return "Home";
+ });
 
-	return "Home Page";
-
-})->name('home');
-
-Route::prefix("admin")->middleware(['auth','is_admin'])->group(function(){
+Route::prefix("admin")->middleware(['auth'])->group(function(){
 
 Route::group([], function () {
-    Route::get('pages-logout', 'RoutingController@logout')->name('logout');
-    Route::get('/', 'RoutingController@index');
-    Route::get('{first}/{second}/{third}', 'RoutingController@thirdLevel');
-    Route::get('{first}/{second}', 'RoutingController@secondLevel');
-    Route::get('{any}', 'RoutingController@root');
+   Route::get('pages-logout', 'RoutingController@logout')->name('logout');
+    Route::get('/', 'RoutingController@index')->name('home');
+    // Route::get('{first}/{second}/{third}', 'RoutingController@thirdLevel');
+    // Route::get('{first}/{second}', 'RoutingController@secondLevel');
+    // Route::get('{any}', 'RoutingController@root');
 });
 
 
@@ -37,5 +35,30 @@ Route::group([], function () {
     Route::post('manage','AdmissionController@manage')->name('admission.manage');
 });
 
+ Route::group([
+          'prefix' => 'course',
+],function(){
+    Route::get('new', 'CourseController@index')->name('course.index');
+    Route::post('new','CourseController@store')->name('course.store');
+    Route::post('manage','CourseController@manage')->name('course.manage');
 });
+
+
+ Route::group([
+          'prefix' => 'employee'
+],function(){
+	Route::get('/','EmployeeController@index')->name('employee.index');
+    Route::get('new','EmployeeController@create')->name('employee.add');
+ 	Route::post('new','EmployeeController@store')->name('employee.store');
+ 	Route::get('view/{id}','EmployeeController@show')->name('employee.show');
+ 	Route::get('edit/{id}','EmployeeController@edit')->name('employee.edit');
+ 	Route::get('delete/{id}','EmployeeController@destroy')->name('employee.delete');
+
+});
+
+
+
+});
+
+
 
