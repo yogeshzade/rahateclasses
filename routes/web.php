@@ -10,11 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+Auth::routes(['register'=>false]);
 
- Route::get('/',function(){
- 	return "Home";
- });
+Route::get('/','HomeController@index')->name('home.index');
+Route::get('/courses','HomeController@getCourses')->name('home.course.index');
+Route::get('/contact','HomeController@contact')->name('home.contact');
+Route::get('student/login','StudentsController@loginindex')->name('home.student.login.index')->middleware('guest');
+Route::post('student/login','StudentsController@login')->name('home.student.login.post');
 
 Route::prefix("admin")->middleware(['auth'])->group(function(){
 
