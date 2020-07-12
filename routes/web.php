@@ -10,7 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+<<<<<<< Updated upstream
 Auth::routes();
+=======
+Auth::routes(['verify'=>false]);
+>>>>>>> Stashed changes
 
 Route::get('/','HomeController@index')->name('home.index');
 Route::get('/courses','HomeController@getCourses')->name('home.course.index');
