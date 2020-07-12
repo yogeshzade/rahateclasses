@@ -10,11 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-<<<<<<< Updated upstream
 Auth::routes();
-=======
-Auth::routes(['verify'=>false]);
->>>>>>> Stashed changes
 
 Route::get('/','HomeController@index')->name('home.index');
 Route::get('/courses','HomeController@getCourses')->name('home.course.index');
@@ -53,12 +49,12 @@ Route::group([], function () {
  Route::group([
           'prefix' => 'employee'
 ],function(){
-	Route::get('/','EmployeeController@index')->name('employee.index');
+  Route::get('/','EmployeeController@index')->name('employee.index');
     Route::get('new','EmployeeController@create')->name('employee.add');
- 	Route::post('new','EmployeeController@store')->name('employee.store');
- 	Route::get('view/{id}','EmployeeController@show')->name('employee.show');
- 	Route::get('edit/{id}','EmployeeController@edit')->name('employee.edit');
- 	Route::get('delete/{id}','EmployeeController@destroy')->name('employee.delete');
+  Route::post('new','EmployeeController@store')->name('employee.store');
+  Route::get('view/{id}','EmployeeController@show')->name('employee.show');
+  Route::get('edit/{id}','EmployeeController@edit')->name('employee.edit');
+  Route::get('delete/{id}','EmployeeController@destroy')->name('employee.delete');
 
 });
 
