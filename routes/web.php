@@ -15,8 +15,10 @@ Auth::routes();
 Route::get('/','HomeController@index')->name('home.index');
 Route::get('/courses','HomeController@getCourses')->name('home.course.index');
 Route::get('/contact','HomeController@contact')->name('home.contact');
+Route::get('/contact_send','HomeController@contactsend')->name('home.contact.send');
 Route::get('student/login','StudentsController@loginindex')->name('home.student.login.index')->middleware('guest');
 Route::post('student/login','StudentsController@login')->name('home.student.login.post');
+Route::get('apply-online','StudentsController@admission')->name('student.admission.index');
 
 Route::prefix("admin")->middleware(['auth'])->group(function(){
 

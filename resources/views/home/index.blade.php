@@ -59,7 +59,7 @@
                     <div class="detail">
                         <h3>Apply Online</h3>
                        
-                        <a href="#" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a href="{{route('student.admission.index')}}" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
                 </li>
                 <li class="col-sm-4 prospects clearfix equal-hight">
@@ -67,7 +67,7 @@
                     <div class="detail">
                         <h3><span>Download</span>Broucher</h3>
                     
-                        <a href="#" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a href="/raharepros.pdf" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
                 </li>
                 <li class="col-sm-4 certification clearfix equal-hight">
@@ -75,7 +75,7 @@
                     <div class="detail">
                         <h3>Fees Structure</h3>
                        
-                        <a href="#" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a href="{{route('home.course.index')}}" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
                 </li>
             </ul>

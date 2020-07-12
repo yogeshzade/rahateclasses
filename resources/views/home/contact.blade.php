@@ -28,8 +28,8 @@
                        <p>If you have any query then feel free to contact us</p>
                     </div>
                 </div>
-                <div class="col-sm-4 col-lg-3"> <a href="apply-online.html" class="apply-online clearfix">
-                        <div class="left clearfix"> <span class="icon"><img src="images\apply-online-sm-ico.png" class="img-responsive" alt=""></span> <span class="txt">Apply Online</span> </div>
+                <div class="col-sm-4 col-lg-3"> <a href="{{route('student.admission.index')}}" class="apply-online clearfix">
+                       
                         <div class="arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
                     </a></div>
             </div>
@@ -41,7 +41,8 @@
     =================================================== -->
     <section class="form-wrapper padding-lg">
         <div class="container">
-            <form name="contact-form" id="ContactForm">
+            <form name="contact-form" id="ContactForm" method="post" action="{{route('home.contact.send')}}">
+                @csrf
                 <div class="row input-row">
                     <div class="col-sm-6">
                         <input name="first_name" type="text" placeholder="First Name">
@@ -52,23 +53,21 @@
                 </div>
                 <div class="row input-row">
                     <div class="col-sm-6">
-                        <input name="company" type="text" placeholder="Company">
+                        <input name="email" type="text" placeholder=" Email">
                     </div>
                     <div class="col-sm-6">
                         <input name="phone_number" type="text" placeholder="Phone Number">
                     </div>
                 </div>
                 <div class="row input-row">
+                   
                     <div class="col-sm-6">
-                        <input name="business_email" type="text" placeholder="Business Email">
-                    </div>
-                    <div class="col-sm-6">
-                        <input name="job_title" type="text" placeholder="Job Tittle">
+                        <input name="message" type="text" placeholder="Message">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <button class="btn">Apply Now <span class="icon-more-icon"></span></button>
+                        <button class="btn">Send Now <span class="icon-more-icon"></span></button>
                         <div class="msg"></div>
                     </div>
                 </div>
