@@ -86,22 +86,16 @@
             <div class="contact-detail">
                 <div class="address">
                     <div class="inner">
-                        <h3>Edumart</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has...</p>
+                        <h3>Rahate Coaching Classes</h3>
+                        <p>L39, Old Subhedar Lay Out N/o,
+Ayodhya Nagar,Nagpur-24</p>
                     </div>
                     <div class="inner">
-                        <h3>000 0000 000</h3>
+                        <h3>+91-9545578282</h3>
                     </div>
-                    <div class="inner"> <a href="mailto:info@edumart.com">info@edumart.com</a> </div>
+                    <div class="inner"> <a href="mailto:krantirahate12@gmail.com">krantirahate12@gmail.com</a> </div>
                 </div>
-                <div class="contact-bottom">
-                    <ul class="follow-us clearfix">
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
     </section>
