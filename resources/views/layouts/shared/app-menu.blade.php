@@ -63,10 +63,10 @@
     
         <ul class="nav-second-level" aria-expanded="false">
             <li>
-                <a href="{{route('course.manage')}}">All Courses</a>
+                <a href="{{route('course.index')}}">All Courses</a>
             </li>
             <li>
-                <a href="{{route('course.index')}}">Add New Course</a>
+                <a href="{{route('course.create')}}">Add New Course</a>
             </li>
         </ul>
     </li>
@@ -104,63 +104,10 @@
             <li>
                 <a href="/ui/bootstrap">Manage Slider</a>
             </li>
-            <li>
-                  <a href="/ui/bootstrap">Manage Slider</a>
-            </li>
-            <li>
-                <a href="/ui/widgets">Widgets</a>
-            </li>
+           
         </ul>
     </li>
 
-    <li>
-        <a href="javascript: void(0);" aria-expanded="false">
-            <i data-feather="file-text"></i>
-            <span> Forms </span>
-            <span class="menu-arrow"></span>
-        </a>
-        <ul class="nav-second-level" aria-expanded="false">
-            <li>
-                <a href="/forms/basic">Basic Elements</a>
-            </li>
-            <li>
-                <a href="/forms/advanced">Advanced</a>
-            </li>
-            <li>
-                <a href="/forms/validation">Validation</a>
-            </li>
-            <li>
-                <a href="/forms/wizard">Wizard</a>
-            </li>
-            <li>
-                <a href="/forms/editor">Editor</a>
-            </li>
-            <li>
-                <a href="/forms/fileupload">File Uploads</a>
-            </li>
-        </ul>
-    </li>
+  
 
-    <li>
-        <a href="/charts" aria-expanded="false">
-            <i data-feather="pie-chart"></i>
-            <span> Charts </span>
-        </a>
-    </li>
-
-    <li>
-        <a href="javascript: void(0);" aria-expanded="false">
-            <i data-feather="grid"></i>
-            <span> Tables </span>
-            <span class="menu-arrow"></span>
-        </a>
-        <ul class="nav-second-level" aria-expanded="false">
-            <li>
-                <a href="/table/basic">Basic</a>
-            </li>
-            <li>
-                <a href="/table/datatables">Advanced</a>
-            </li>
-        </ul>
-    </li>
 </ul>

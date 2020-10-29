@@ -19,7 +19,7 @@ Route::get('/contact_send','HomeController@contactsend')->name('home.contact.sen
 Route::get('student/login','StudentsController@loginindex')->name('home.student.login.index')->middleware('guest');
 Route::post('student/login','StudentsController@login')->name('home.student.login.post');
 Route::get('apply-online','StudentsController@admission')->name('student.admission.index');
-
+Route::get('career','CareerController@index')->name('career.index');
 Route::prefix("admin")->middleware(['auth'])->group(function(){
 
 Route::group([], function () {
@@ -42,9 +42,9 @@ Route::group([], function () {
  Route::group([
           'prefix' => 'course',
 ],function(){
-    Route::get('new', 'CourseController@index')->name('course.index');
-    Route::post('new','CourseController@store')->name('course.store');
-    Route::post('manage','CourseController@manage')->name('course.manage');
+    Route::get('/', 'CourseController@index')->name('course.index');
+    Route::get('create','CourseController@create')->name('course.create');
+    Route::post('/create','CourseController@store')->name('course.store');
 });
 
 

@@ -23,6 +23,6 @@ class IsAdmin
         }
 
    
-                                return redirect(route('home'))->with('error',"You don't have admin access.");
+            return redirect(route('home'))->with('error',"You don't have admin access.");
     }
 }

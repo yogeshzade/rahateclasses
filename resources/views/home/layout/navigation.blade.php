@@ -5,8 +5,8 @@
                 </div>
                 <div class="navbar-collapse collapse" id="navbar">
                     <form class="navbar-form navbar-right">
-                        <input type="text" placeholder="Search Now" class="form-control">
-                        <button class="search-btn"><span class="icon-search-icon"></span></button>
+                        {{-- <input type="text" placeholder="Search Now" class="form-control">
+                        <button class="search-btn"><span class="icon-search-icon"></span></button> --}}
                     </form>
                     <ul class="nav navbar-nav">
                         <li class="dropdown"> <a data-toggle="dropdown" href="#">Home</a>
@@ -35,8 +35,8 @@
                                 
                             </ul>
                         </li>
-                        <li> <a href="">Contact Us</a></li>
-                        <li> <a href="">About Us</a></li>
+                        <li> <a href="/contact">Contact Us</a></li>
+                        <li> <a href="/career">Career</a></li>
                     </ul>
                 </div>
             </div>

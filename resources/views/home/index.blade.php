@@ -30,21 +30,7 @@
                     </div> -->
                 </div>
             </div>
-            <div class="slide2">
-                <div class="container">
-                   <!--  <div class="content">
-                        <h1 class="animated fadeInUp">MBA Marketing</h1>
-                        <p class="animated fadeInUp">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <a href="about.html" class="btn animated fadeInUp">Know More <span class="icon-more-icon"></span></a>
-                        <a href="gallery.html" class="btn white animated fadeInUp hidden-xs">Take a Tour <span class="icon-more-icon"></span></a>
-                    </div> -->
-                </div>
-            </div>
-            <div class="slide3">
-                <div class="container">
-                 
-                </div>
-            </div>
+           
         </div>
     </div>
 

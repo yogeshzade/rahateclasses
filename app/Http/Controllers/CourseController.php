@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Course;
+
 
 class CourseController extends Controller
 {
@@ -14,6 +16,9 @@ class CourseController extends Controller
     public function index()
     {
         //
+        $courses = Course::all();
+        
+        return view('course.index',compact('courses'));
     }
 
     /**
@@ -24,6 +29,7 @@ class CourseController extends Controller
     public function create()
     {
         //
+        return view('course.create');
     }
 
     /**
@@ -35,6 +41,19 @@ class CourseController extends Controller
     public function store(Request $request)
     {
         //
+      
+        $data = array(
+            'course_name' => $request->course_name,
+            'class'=> $request->class_name ,
+            'board'=> $request->board,
+            'total_fees'=> $request->total_fees,
+            'include_gst' => 1,
+            'fees_structure' => $request->fees_structure,
+        );
+        $store = Course::create($data);
+       if($store){
+           return redirect()->route('course.index')->with('success','Course Created Succesfully');
+       }
     }
 
     /**

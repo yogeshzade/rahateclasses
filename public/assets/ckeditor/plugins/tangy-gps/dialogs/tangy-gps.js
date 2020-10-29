@@ -1,0 +1,2 @@
+﻿CKEDITOR.dialog.add("tangy-gps",function(b){return{title:"Edit Tangy Form",minWidth:200,minHeight:100,contents:[{id:"info",elements:[{id:"required",type:"select",label:"Required",width:"100%",items:[["not-required","not-required"],["required","required"]],setup:function(a){this.setValue(a.data.required)},commit:function(a){a.setData("required",this.getValue())}},{id:"name",type:"text",label:"Variable Name",width:"100%",setup:function(a){this.setValue(a.data.name)},commit:function(a){a.setData("name",
+this.getValue())}}]}]}});

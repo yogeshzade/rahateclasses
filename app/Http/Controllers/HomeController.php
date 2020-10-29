@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Course;
 
 class HomeController extends Controller
 {
@@ -14,7 +15,8 @@ class HomeController extends Controller
 
 
     public function getCourses(){
-    	return view ('home.course.index');
+        $courses = Course::all();
+    	return view ('home.course.index',compact('courses'));
     }
 
     public function contact(){
