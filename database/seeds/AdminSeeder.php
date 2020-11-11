@@ -13,12 +13,13 @@ class AdminSeeder extends Seeder
     public function run()
     {
         //
-        $user = new User();
-        $user->name = "Rahate Admin";
-        $user->email = "rahate@admin.com";
-        $user->password = "$2y$10$7/sow9qH8ftGsvGN2of3i.aLR5OiH312XxL4f8sc/P0Y.p7Rzs5fC"; //12345678
-        $user->is_admin = 1;
-        $user->mobile = "9765679147";
-        $user->save();
+          User::create([
+        'name' => "Rahate Admin",
+        'email' => "rahate@admin.com",
+        "password" => "$2y$10$7/sow9qH8ftGsvGN2of3i.aLR5OiH312XxL4f8sc/P0Y.p7Rzs5fC", //12345678
+        "is_admin" => 1,
+        "mobile" => "9765679147",
+    ]);
+
     }
 }
