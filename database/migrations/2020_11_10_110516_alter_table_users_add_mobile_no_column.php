@@ -15,7 +15,7 @@ class AlterTableUsersAddMobileNoColumn extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-           // $table->char('mobile',10)->unique();
+            $table->char('mobile',10)->unique();
         });
     }
 
