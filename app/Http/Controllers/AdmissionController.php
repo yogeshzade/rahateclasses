@@ -81,4 +81,34 @@ class AdmissionController extends Controller
     {
         //
     }
+
+
+    public function indexCalender(){
+        $notifications = \App\ExamCalender::all();
+        return view('calender.index',compact('notifications'));
+    }
+
+    public function createCalender(){
+          return view('calender.create');
+    }
+
+    public function storeCalender(Request $request){
+
+        $request->validate([
+
+            'title' => 'required|string',
+            'details' => 'required',
+            'file' => 'file|max:10200',
+
+        ]);
+
+        if($request->file)
+        {
+            
+        }
+
+
+       
+
+    }
 }

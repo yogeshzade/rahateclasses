@@ -90,6 +90,16 @@ Route::get('/inquiry/delete/{id}','WebsiteConfigration@DeleteInquiry')->name('in
 });
 
 
+ Route::group([
+          'prefix' => 'calender',
+],function(){
+   Route::get('/', 'AdmissionController@indexCalender')->name('calender.index');
+    Route::get('new', 'AdmissionController@createCalender')->name('calender.create');
+    Route::post('new','AdmissionController@storeCalender')->name('calender.store');
+ 
+});
+
+
 
 });
 

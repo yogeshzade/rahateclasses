@@ -29,6 +29,9 @@
             <li>
                 <a href="{{route('admission.manage')}}">Manage Students</a>
             </li>
+            <li>
+                <a href="{{route('calender.index')}}">Exam Updates</a>
+            </li>
            
         </ul>
     </li>
