@@ -17,7 +17,6 @@ class CourseController extends Controller
     {
         //
         $courses = Course::all();
-        
         return view('course.index',compact('courses'));
     }
 
@@ -41,14 +40,14 @@ class CourseController extends Controller
     public function store(Request $request)
     {
         //
-      
+    //  dd($request);
         $data = array(
             'course_name' => $request->course_name,
             'class'=> $request->class_name ,
             'board'=> $request->board,
             'total_fees'=> $request->total_fees,
             'include_gst' => 1,
-            'fees_structure' => $request->fees_structure,
+            'fees_structure' => $request->fees_data,
         );
         $store = Course::create($data);
        if($store){
@@ -100,4 +99,15 @@ class CourseController extends Controller
     {
         //
     }
+
+    public function toggleCoursestatus($id){
+
+        $course = Course::find($id);
+        ($course->status) ? $course->status = 0 : $course->status = 1;
+        $course->save();
+        return back()->with('success','Status Changed');
+
+    }
+
+ 
 }

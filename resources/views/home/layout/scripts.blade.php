@@ -10,5 +10,8 @@
     <script src="{{ asset('homeassets\assets\owl-carousel\js\owl.carousel.min.js')}}"></script>
     <script src="{{ asset('homeassets\js\modernizr.custom.js')}}"></script>
     <script src="{{ asset('homeassets\js\custom.js')}}"></script>
+    <script src="{{ asset('homeassets\js\jquery.cookie.js')}}"></script>
+    <script src="{{ asset('homeassets\assets\datepicker\js\datepicker.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
 
     @yield('otherjs')

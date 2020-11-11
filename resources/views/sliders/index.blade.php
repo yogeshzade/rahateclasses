@@ -57,39 +57,23 @@ $data = [
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                 <th scope="col">Course Name</th>
-                                <th scope="col">Class</th>
-                                <th scope="col">Board</th>
-                                <th scope="col">Total Fees</th>
-                                 <th scope="col">Edit</th>
+                                 <th scope="col">Slider Image</th>
                                  <th scope="col">Status</th>
                                 
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($courses ?? '' as $course)
+                            @foreach ($sliders ?? '' as $slider)
                             <tr scope="{{$loop->iteration}}">
                                 <td>{{$loop->iteration}}</td>
-                            <td>{{$course->course_name}}</td>
-                            <td>{{$course->class}}</td>
-                            <td>{{$course->board}}</td>
-                            <td>{{$course->total_fees}}</td>
-
-                               
+                            <td><img src="{{url($slider->image_path)}}" class="img-rounded" style="width:30%;height:30%"></td>
+                           
                                  <td>
                                    
-                                   
-                                    <button type="button" class="btn btn-outline-primary">Edit</button>
-                              
-                             
-                                 </td>
-
-                                 <td>
-                                   
-                                   @if($course->status)
-                                  <a href="{{route('course.toggle',$course->id)}}">  <button type="button" class="btn btn-success">Active</button> </a>
+                                   @if($slider->status)
+                                  <a href="{{route('slider.toggle',$slider->id)}}">  <button type="button" class="btn btn-success">Active</button> </a>
                                     @else
-                                    <a href="{{route('course.toggle',$course->id)}}">   <button type="button" class="btn btn-danger">Inactive</button></a>
+                                    <a href="{{route('slider.toggle',$slider->id)}}">   <button type="button" class="btn btn-danger">Inactive</button></a>
                                     @endif
                              
                                  </td>

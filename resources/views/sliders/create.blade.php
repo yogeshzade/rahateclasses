@@ -43,55 +43,23 @@
 @endif
 
 
-                <h4 class="header-title mt-0 mb-1">Add New Course</h4>
-                <p class="sub-header">Add New Course Details.</p>
+                <h4 class="header-title mt-0 mb-1">Add New Slider</h4>
+          
 
 
-<form class="" novalidate method="post" action="{{route('course.store')}}" enctype='multipart/form-data'>
+<form class="" novalidate method="post" action="{{route('slider.store')}}" enctype='multipart/form-data'>
                     @csrf
                 <!--     @method('POST') -->
                     <div class="form-group mb-3">
-                        <label for="validationCustom01">Course Name</label>
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="Course name"
-                            value="" required name="course_name">
+                        <label for="validationCustom01">Upload Image</label>
+                        <input type="file" class="form-control" id="validationCustom01" placeholder="Course name"
+                            value="" required name="image_path">
                         <div class="valid-feedback">
                             Looks good!
                         </div>
                     </div>
                    
-                    <div class="form-group mb-3">
-                        <label for="validationCustomUsername">Enter Class</label>
-                        <div class="input-group">
-                            
-                            <input type="text" class="form-control" id="validationCustomUsername" placeholder="Example 7/JEE"
-                                aria-describedby="inputGroupPrepend" name="class_name" required>
-                          
-                        </div>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="validationCustom03">Enter Board or Other </label>
-                        <input type="text" class="form-control" id="validationCustom03"  required name="board">
-                       
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="validationCustom08">Total Course Fees</label>
-                        <input type="text" class="form-control" id="validationCustom03"  required name="total_fees" value="0">
-                      
-                    </div>
-
-                  
-                    <div class="form-group mb-3">
-                        <label for="validationCustom05">Include GST</label>
-                        <input type="checkbox"  required name="include_gst" checked>
-                      
-                    </div>
-                      <div class="form-group mb-3">
-                        <label >Fees Structure</label>
-
-                        <textarea id='long_desc' name='fees_data' id="feesstruct" ></textarea>               
                    
-
-                    </div>
                       
 
                   <!--   <div class="form-group mb-3">
@@ -103,7 +71,7 @@
                             </div>
                         </div>
                     </div> -->
-                    <button class="btn btn-primary" type="submit" id="submit">Create Course</button>
+                    <button class="btn btn-primary" type="submit" id="submit">Upload Image</button>
                 </form>
 
             </div> <!-- end card-body-->

@@ -102,7 +102,18 @@
         </a>
         <ul class="nav-second-level" aria-expanded="false">
             <li>
-                <a href="/ui/bootstrap">Manage Slider</a>
+                <a href="{{route('slider.index')}}">Sliders <span class="badge badge-success">@php echo \App\Slider::where('status',1)->count();@endphp</span> </a>
+            </li>
+
+            <li>
+                <a href="{{route('popup.create')}}">Popups <span class="badge badge-success">@php echo \App\Popup::where('status',1)->count();@endphp</span></a>
+            </li>
+            <li>
+            <a href="{{route('inquiry.index')}}">Inquiry Box <span class="badge badge-danger">@php echo \App\Inquiry::where('status',1)->count();@endphp</span></a>
+            </li>
+
+            <li>
+            <a href="{{route('career.index')}}">Career</a>
             </li>
            
         </ul>

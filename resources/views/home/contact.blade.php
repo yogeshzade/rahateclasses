@@ -41,33 +41,33 @@
     =================================================== -->
     <section class="form-wrapper padding-lg">
         <div class="container">
-            <form name="contact-form" id="ContactForm" method="post" action="{{route('home.contact.send')}}">
+            <form name="contact-form" id="ContactForm" method="post" action="{{route('inquiry.store')}}">
                 @csrf
                 <div class="row input-row">
                     <div class="col-sm-6">
-                        <input name="first_name" type="text" placeholder="First Name">
+                    <input name="name" placeholder="Name" type="text" required>
                     </div>
                     <div class="col-sm-6">
-                        <input name="last_name" type="text" placeholder="Last Name">
+                    <input name="email" placeholder="Email" type="email" required>
                     </div>
                 </div>
                 <div class="row input-row">
                     <div class="col-sm-6">
-                        <input name="email" type="text" placeholder=" Email">
+                    <input name="phone" placeholder="Phone" type="text" required maxlength="10">
                     </div>
                     <div class="col-sm-6">
-                        <input name="phone_number" type="text" placeholder="Phone Number">
+                    <input name="place" placeholder="Place" type="text" required >
                     </div>
                 </div>
                 <div class="row input-row">
                    
                     <div class="col-sm-6">
-                        <input name="message" type="text" placeholder="Message">
+                    <input name="message" placeholder="Message" type="text" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <button class="btn">Send Now <span class="icon-more-icon"></span></button>
+                        <button class="btn" type="submit">Send Now <span class="icon-more-icon"></span></button>
                         <div class="msg"></div>
                     </div>
                 </div>
@@ -110,6 +110,36 @@ Ayodhya Nagar,Nagpur-24</p>
     <a href="#" class="scroll-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 
       @include('home.layout.scripts')
+
+      <script>
+      $( document ).ready(function() {
+    console.log( "ready!" );
+    @if ($message = Session::get('success'))
+      //  alert("Message Sent");
+        Command: toastr["success"]("Message Sent Succesfully.", "Success")
+
+toastr.options = {
+  "closeButton": true,
+  "debug": true,
+  "newestOnTop": true,
+  "progressBar": true,
+  "positionClass": "toast-bottom-right",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "show",
+  "hideMethod": "hide"
+}
+
+@endif
+
+});
+      </script>
 
 
       @endsection

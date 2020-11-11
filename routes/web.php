@@ -10,17 +10,28 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/','HomeController@index')->name('home.index');
 Route::get('/courses','HomeController@getCourses')->name('home.course.index');
 Route::get('/contact','HomeController@contact')->name('home.contact');
+Route::post('/sendinquiry','HomeController@storeInquiry')->name('inquiry.store');
 Route::get('/contact_send','HomeController@contactsend')->name('home.contact.send');
 Route::get('student/login','StudentsController@loginindex')->name('home.student.login.index')->middleware('guest');
 Route::post('student/login','StudentsController@login')->name('home.student.login.post');
 Route::get('apply-online','StudentsController@admission')->name('student.admission.index');
 Route::get('career','CareerController@index')->name('career.index');
-Route::prefix("admin")->middleware(['auth'])->group(function(){
+
+
+Route::prefix("student")->group(function(){
+
+  Route::get('/register', 'StudentsController@registerindex')->name('student.register')->middleware('guest');
+  Route::post('student/register','StudentsController@storeStudent')->name('student.store')->middleware('guest');
+
+});
+
+
+Route::prefix("admin")->middleware(['auth','checkAdmin'])->group(function(){
 
 Route::group([], function () {
    Route::get('pages-logout', 'RoutingController@logout')->name('logout');
@@ -45,6 +56,7 @@ Route::group([], function () {
     Route::get('/', 'CourseController@index')->name('course.index');
     Route::get('create','CourseController@create')->name('course.create');
     Route::post('/create','CourseController@store')->name('course.store');
+    Route::get('/toggle/{id}','CourseController@toggleCoursestatus')->name('course.toggle');
 });
 
 
@@ -58,6 +70,23 @@ Route::group([], function () {
   Route::get('edit/{id}','EmployeeController@edit')->name('employee.edit');
   Route::get('delete/{id}','EmployeeController@destroy')->name('employee.delete');
 
+});
+
+
+Route::group([
+  'prefix' => 'settings'
+],function(){
+Route::get('/slider','WebsiteConfigration@sliderindex')->name('slider.index');
+Route::get('/slider/new','WebsiteConfigration@slidercreate')->name('slider.add');
+Route::post('/slider/new','WebsiteConfigration@sliderStore')->name('slider.store');
+Route::get('/slider/toggle/{id}','WebsiteConfigration@toggleslider')->name('slider.toggle');
+Route::get('/popup/create','WebsiteConfigration@popupCreate')->name('popup.create');
+Route::post('/popup/create','WebsiteConfigration@popupStore')->name('popup.store');
+Route::get('/popup/toggle/{id}','WebsiteConfigration@togglePopup')->name('popup.toggle');
+Route::get('/career','WebsiteConfigration@CareerIndex')->name('career.index');
+Route::get('/inquiry','WebsiteConfigration@inquiryIndex')->name('inquiry.index');
+Route::get('/inquiry/{id}','WebsiteConfigration@inquiryRead')->name('inquiry.view');
+Route::get('/inquiry/delete/{id}','WebsiteConfigration@DeleteInquiry')->name('inquiry.delete');
 });
 
 

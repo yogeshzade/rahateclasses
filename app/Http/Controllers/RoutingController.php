@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Slider;
+use App\User;
+use App\Inquiry;
+use App\Popup;
+use App\Course;
 
 
 class RoutingController extends Controller
@@ -16,7 +21,11 @@ class RoutingController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $sliders = Slider::where('status',1)->count();
+        $students = User::where('type',1)->where('is_admin',0)->count();
+        $courses = Course::all()->count();
+        $inquiry = Inquiry::where('status',1)->count();
+        return view('dashboard',compact('sliders','students','courses','inquiry'));
     }
 
     /**

@@ -19,7 +19,8 @@
     =================================================== -->
     <div class="banner-outer">
         <div class="banner-slider">
-            <div class="slide1">
+            @foreach($sliders as $slider)
+            <div class="slide1" style="background: url({{$slider->image_path}}) no-repeat center top / cover !important;">
                 <div class="container">
                    <!--  <div class="content animated fadeInRight">
                         <div class="fl-right">
@@ -30,9 +31,17 @@
                     </div> -->
                 </div>
             </div>
+
+            @endforeach
+            
+
+          
            
         </div>
     </div>
+
+   
+    <!-- background: url(../images/rahateclassescourse.jpg) no-repeat center top / cover; -->
 
     <!-- ==============================================
     ** About **
@@ -300,7 +309,7 @@
 
             <li>
                 <div class="overlay">
-                    <h3>Tanmay Giri</h3>
+                    <h3>PRAFULLA GOTEMARE</h3>
                     <p>JEE Topper</p>
                     <a class="galleryItem" href="{{asset('homeassets\images\9c2cd031-32ce-498d-ae11-8d7376788256.jpg')}}"><span class="icon-enlarge-icon"></span></a>
                     
@@ -310,7 +319,7 @@
 
             <li>
                 <div class="overlay">
-                    <h3>Tanmay Giri</h3>
+                    <h3>Himakshi Kapte</h3>
                     <p>JEE Topper</p>
                     <a class="galleryItem" href="{{asset('homeassets\images\ff2bd4ad-08e4-48bc-a24b-825e0740d88a.jpg')}}"><span class="icon-enlarge-icon"></span></a>
                     
@@ -320,7 +329,7 @@
 
                 <li>
                 <div class="overlay">
-                    <h3>Tanmay Giri</h3>
+                    <h3>Apporva Sonkusre</h3>
                     <p>JEE Topper</p>
                     <a class="galleryItem" href="{{asset('homeassets\images\ff2bd4ad-08e4-48bc-a24b-825e0740d88a.jpg')}}"><span class="icon-enlarge-icon"></span></a>
                     
@@ -335,23 +344,28 @@
 
    <div class="col-md-4 col-sm-12 col-lg-4" id="enquirynow">
      <h2 style="color:#010101;">OUR TOPPERS</h2>
+     <form action="{{route('inquiry.store')}}" method="POST" id="inquiryform">
+     @csrf
     <div class="enquire-now">
+    
+   
                         <div class="inner">
                           
                             <div class="row1">
-                                <input name="Name" placeholder="Name" type="text">
+                                <input name="name" placeholder="Name" type="text" required>
                             </div>
                             <div class="row2 clearfix">
-                                <input name="Email" placeholder="Email" type="text">
-                                <input name="Phone" placeholder="Phone" type="text">
+                                <input name="email" placeholder="Email" type="email" required>
+                                <input name="phone" placeholder="Phone" type="text" required maxlength="10">
                             </div>
                             <div class="row2 clearfix">
-                                <input name="Place" placeholder="Place" type="text">
-                                <input name="Course" placeholder="Course" type="text">
+                                <input name="place" placeholder="Place" type="text" required >
+                                <input name="message" placeholder="Message" type="text" required>
                             </div>
                         </div>
-                        <button class="enquire-btn">Enquire now <span class="icon-more-icon"></span></button>
+                        <button class="enquire-btn" type="submit" id="sendinquiry">Send now <span class="icon-more-icon"></span></button>
                     </div>
+                    </form>
    </div>
 
 
@@ -440,6 +454,38 @@
         </div>
     </section>
 
+    @if($popup->status)
+    <!-- mPopup box -->
+<div id="mpopupBox" class="mpopup">
+    <!-- mPopup content -->
+    <div class="mpopup-content">
+        <div class="mpopup-head">
+        <div class="modal-header">
+       <span class="close">&times;</span>
+        <h4 class="modal-title" style="margin:auto;color:#fff;">Notification</h4>
+      </div>
+        </div>
+        <div class="mpopup-main">
+        <div class="modal-body">
+      
+
+          
+                        <div id="popupimg"> 
+                        <img src= "{{$popup->img_path}}" class="img-responsive" alt=""> 
+                        </div>
+                       <!--  <a href="https://www.youtube.com/watch?v=i11RXCJVEnw" class="start-video video"><img src="images\play-btn.png" alt=""></a> -->
+      
+      </div>
+        </div>
+        <div class="mpopup-foot">
+      
+           
+        </div>
+    </div>
+</div>
+
+@endif
+
     <!-- ==============================================
     ** News & Events **
     =================================================== -->
@@ -490,6 +536,76 @@
     <a href="#" class="scroll-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 
       @include('home.layout.scripts')
+
+      <script>
+
+function subscriptionPopup(){
+    // get the mPopup
+    var mpopup = $('#mpopupBox');
+    
+    // open the mPopup
+    mpopup.show();
+    
+    // close the mPopup once close element is clicked
+    $(".close").on('click',function(){
+        mpopup.hide();
+    });
+    
+    // close the mPopup when user clicks outside of the box
+    $(window).on('click', function(e) {
+        if(e.target == mpopup[0]){
+            mpopup.hide();
+        }
+    });
+}
+
+
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+    @if ($message = Session::get('success'))
+      //  alert("Message Sent");
+        Command: toastr["success"]("Message Sent Succesfully.", "Success")
+
+toastr.options = {
+  "closeButton": true,
+  "debug": true,
+  "newestOnTop": true,
+  "progressBar": true,
+  "positionClass": "toast-bottom-right",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "show",
+  "hideMethod": "hide"
+}
+
+@endif
+
+var popDisplayed = $.cookie('popDisplayed');
+    if(popDisplayed == '1'){
+        return false;
+    }else{
+        setTimeout( function() {
+            subscriptionPopup();
+        },4000);
+        $.cookie('popDisplayed', '1', { expires: 1 });
+    }
+
+});
+
+
+
+
+    
+
+
+      </script>
 
 
       @endsection

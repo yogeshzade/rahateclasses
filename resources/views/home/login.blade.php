@@ -20,14 +20,29 @@
                     <h1>Login To Your Account</h1>
                 </div>
                 <div class="cnt-block">
+                    @if ($message = Session::get('success'))
+<div class="alert alert-success alert-block">
+	<button type="button" class="close" data-dismiss="alert">×</button>	
+        <strong>{{ $message }}</strong>
+</div>
+@endif
+
+
+@if ($message = Session::get('error'))
+<div class="alert alert-danger alert-block">
+	<button type="button" class="close" data-dismiss="alert">×</button>	
+        <strong>{{ $message }}</strong>
+</div>
+@endif
+
                     <form action="{{route('home.student.login.post')}}" method="post" class="form-outer">
                       @csrf
-                        <input name="useremailormobile" type="text" placeholder="Email or Mobile">
+                        <input name="mobile" type="text" placeholder="mobile">
                         <input name="password" type="password" placeholder="password">
                         <div class="button-outer">
                             <button class="btn">Login now <span class="icon-more-icon"></span></button>
                             <div class="or hidden-xs">or</div>
-                            <button class="btn register" formaction="register.html">Register now <span class="icon-more-icon"></span></button>
+                        <a href="{{route('student.register')}}">   <button class="btn register" type="button">Register now <span class="icon-more-icon"></span></button> </a>
                         </div>
                         <div class="remember">
                             <div class="check">
