@@ -96,8 +96,37 @@ Route::get('/inquiry/delete/{id}','WebsiteConfigration@DeleteInquiry')->name('in
    Route::get('/', 'AdmissionController@indexCalender')->name('calender.index');
     Route::get('new', 'AdmissionController@createCalender')->name('calender.create');
     Route::post('new','AdmissionController@storeCalender')->name('calender.store');
+      Route::get('delete/{id}', 'AdmissionController@deleteCalander')->name('calender.delete');
+       Route::get('toggle/{id}', 'AdmissionController@toggleCourse')->name('calender.toggle');
+    
  
 });
+
+
+  Route::group([
+          'prefix' => 'file',
+],function(){
+   Route::get('/', 'AdmissionController@indexFile')->name('file.index');
+    Route::get('new', 'AdmissionController@createFile')->name('file.create');
+    Route::post('new','AdmissionController@storeFile')->name('file.store');
+      Route::get('delete/{id}', 'AdmissionController@deleteFile')->name('file.delete');
+       Route::get('toggle/{id}', 'AdmissionController@toggleFile')->name('file.toggle');
+    
+ 
+});
+
+   Route::group([
+          'prefix' => 'installment',
+],function(){
+  Route::get('/', 'CourseController@indexInstallment')->name('installment.index');
+  Route::get('/create', 'CourseController@createInstallment')->name('installment.create');
+  Route::post('/create', 'CourseController@storeInstallment')->name('installment.store');
+  Route::get('/total_installments', 'CourseController@getInstallmentNo')->name('installment.number');
+   Route::get('/show_installments/{id}', 'CourseController@getInstallments')->name('installment.view');
+    
+ 
+});
+
 
 
 

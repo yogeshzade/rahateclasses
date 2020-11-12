@@ -101,14 +101,39 @@ class AdmissionController extends Controller
             'file' => 'file|max:10200',
 
         ]);
+         $filepath = null;
 
         if($request->file)
         {
-            
+             $fileName = time().'.'.$request->file->extension();  
+             $request->file->move(public_path('uploads'), $fileName);
+             $filepath = "uploads/".$fileName;
         }
 
+        $calender = new \App\ExamCalender();
+        $calender->title = $request->title;
+        $calender->details = $request->details;
+        $calender->file_path =  $filepath;
+        $calender->date = $request->date;
+        $calender->status = 1;
+        $calender->save();
 
-       
+        return back()->with('success','Notification Added');
+
+
+    }
+
+    public function deleteCalander($id){
+        $calender =  \App\ExamCalender::findorFail($id);
+        $calender->delete();
+        return back()->with('error','Notification deleted');
+    }
+
+    public function toggleCourse ($id){
+
+        $calender =  \App\ExamCalender::findorFail($id);
+        ($calender->status) ? $calender->status = 0 : $calender->status = 1;
+        return back()->with('success','Status Changed');
 
     }
 }

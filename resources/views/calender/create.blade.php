@@ -44,6 +44,8 @@
 
 
                 <h4 class="header-title mt-0 mb-1">Add New Notification</h4>
+
+                  <button class="btn btn-warning pull-right" type="button" id="submit" style="float:right;">Go Back</button>
               
 
 

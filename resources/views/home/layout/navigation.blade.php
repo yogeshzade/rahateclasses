@@ -9,7 +9,7 @@
                         <button class="search-btn"><span class="icon-search-icon"></span></button> --}}
                     </form>
                     <ul class="nav navbar-nav">
-                        <li class="dropdown"> <a data-toggle="dropdown" href="#">Home</a>
+                        <li class="dropdown"> <a data-toggle="dropdown" href="{{route('home.index')}}">Home</a>
                             
                         </li>
                     
@@ -35,6 +35,7 @@
                                 
                             </ul>
                         </li>
+                        
                         <li> <a href="/contact">Contact Us</a></li>
                         <li> <a href="/career">Career</a></li>
                     </ul>

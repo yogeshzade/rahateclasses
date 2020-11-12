@@ -15,12 +15,35 @@
             <span> </span>
         </a>
     </li> -->
+      <li>
+        <a href="javascript: void(0);">
+            <i data-feather="bookmark"></i>
+            <span> Courses </span>
+            <span class="menu-arrow"></span>
+        </a>
+    
+        <ul class="nav-second-level" aria-expanded="false">
+            <li>
+                <a href="{{route('course.index')}}">All Courses</a>
+            </li>
+            <li>
+                <a href="{{route('course.create')}}">Add New Course</a>
+            </li>
+             <li>
+                <a href="{{route('installment.index')}}">Manage Installment</a>
+            </li>
+        </ul>
+    </li>
+
+
     <li>
         <a href="javascript: void(0);">
             <i data-feather="users"></i>
             <span>Students </span>
             <span class="menu-arrow"></span>
         </a>
+
+        
 
         <ul class="nav-second-level" aria-expanded="false">
             <li>
@@ -31,6 +54,9 @@
             </li>
             <li>
                 <a href="{{route('calender.index')}}">Exam Updates</a>
+            </li>
+             <li>
+                <a href="{{route('file.index')}}">Upload Files</a>
             </li>
            
         </ul>
@@ -57,42 +83,8 @@
             </li> -->
         </ul>
     </li>
-    <li>
-        <a href="javascript: void(0);">
-            <i data-feather="bookmark"></i>
-            <span> Courses </span>
-            <span class="menu-arrow"></span>
-        </a>
+  
     
-        <ul class="nav-second-level" aria-expanded="false">
-            <li>
-                <a href="{{route('course.index')}}">All Courses</a>
-            </li>
-            <li>
-                <a href="{{route('course.create')}}">Add New Course</a>
-            </li>
-        </ul>
-    </li>
-    <li class="menu-title">Employees</li>
-    <li>
-        <a href="javascript: void(0);">
-            <i data-feather="file-text"></i>
-            <span>Employees </span>
-            <span class="menu-arrow"></span>
-        </a>
-        <ul class="nav-second-level" aria-expanded="false">
-            <li>
-                <a href="{{route('employee.add')}}">Add Employee</a>
-            </li>
-            <li>
-                <a href="{{route('employee.index')}}">Manage Employee</a>
-            </li>
-           
-            <li>
-                <a href="{{route('employee.index')}}">Make Salary</a>
-            </li>
-        </ul>
-    </li>
 
 
     <li class="menu-title">Website</li>
@@ -119,6 +111,27 @@
             <a href="{{route('career.index')}}">Career</a>
             </li>
            
+        </ul>
+    </li>
+
+    <li class="menu-title">Employees</li>
+    <li>
+        <a href="javascript: void(0);">
+            <i data-feather="file-text"></i>
+            <span>Employees </span>
+            <span class="menu-arrow"></span>
+        </a>
+        <ul class="nav-second-level" aria-expanded="false">
+            <li>
+                <a href="{{route('employee.add')}}">Add Employee</a>
+            </li>
+            <li>
+                <a href="{{route('employee.index')}}">Manage Employee</a>
+            </li>
+           
+            <li>
+                <a href="{{route('employee.index')}}">Make Salary</a>
+            </li>
         </ul>
     </li>
 

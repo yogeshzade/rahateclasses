@@ -95,8 +95,6 @@ class WebsiteConfigration extends Controller
         $inquriyview = \App\Inquiry::findOrFail($id);
         $inquriyview->status = 0;
         $inquriyview->save();
-        
-
        return  view('inquiries.view',compact('inquriyview'));
 
     }

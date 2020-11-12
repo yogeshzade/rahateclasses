@@ -24,6 +24,7 @@
                 <!-- Start Content-->
                 <div class="container-fluid">
                     @yield('breadcrumb')
+                    
                     @yield('content')
                 </div>
             </div>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCareersTable extends Migration
+class CreateBankDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateCareersTable extends Migration
      */
     public function up()
     {
-        Schema::create('careers', function (Blueprint $table) {
+        Schema::create('bank_details', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('job_title');
-             $table->string('job_description');
-              $table->string('salary')->nullable();
-              $table->char('status',1)->default(1);
-
+            $table->string('account_holder_name');
+            $table->string('bank_name');
+            $table->string('account_number');
+            $table->string('ifsc_code');
+            $table->string('branch_name');
+            $table->string('account_type');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateCareersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('careers');
+        Schema::dropIfExists('bank_details');
     }
 }

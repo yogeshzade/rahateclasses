@@ -80,7 +80,9 @@
     =================================================== -->
    
    <section class="google-map">
-        <div id="map"><iframe src="https://snazzymaps.com/embed/238948" style="border:none;"></iframe></div>
+        
+          <div class="mapouter"><div class="gmap_canvas"><iframe height="500" width="800px" id="gmap_canvas" src="https://maps.google.com/maps?q=Rahate%20Classes&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:500px;width:800px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+       
         <div class="container">
             <div class="contact-detail">
                 <div class="address">

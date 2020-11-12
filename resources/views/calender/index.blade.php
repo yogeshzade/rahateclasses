@@ -61,17 +61,22 @@
                             @foreach ($notifications ?? '' as $notification)
                             <tr scope="{{$loop->iteration}}">
                                 <td>{{$loop->iteration}}</td>
-                            <td>{{$course->title}}</td>
-                            <td>{{$course->details}}</td>
-                            <td><button type="button" class="btn btn-outline-primary"><i class="fa fa-files"></i></button></td>
-                              <td>
-                                  @if($course->status)
+                            <td>{{$notification->title}}</td>
+                            <td>{!! $notification->details !!}</td>
+                        
+        
+                               <td>{{$notification->date}}</td>
+                                <td><a href="{{$notification->file_path}}"><button type="button" class="btn btn-outline-primary">Download</button></a></td>
+                               <td>
+                                <a href="{{route('calender.toggle',$notification->id)}}">
+                                  @if($notification->status)
                                    <button type="button" class="btn btn-outline-success">Active</button>
                                   @else
                                   <button type="button" class="btn btn-outline-danger">Deactivate</button>
                                   @endif
+                                </a>
                               </td>
-                               <td>{{$course->date}}</td>
+                                <td><a href="{{route('calender.delete',$notification->id)}}"> <button type="button" class="btn btn-danger">Delete</button></a> </td>
 
                              
                             </tr>
