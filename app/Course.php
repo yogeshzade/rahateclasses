@@ -12,6 +12,6 @@ class Course extends Model
 
      public function installments()
     {
-        return $this->belongsTo('App\installment', 'course_id','id');
+        return $this->belongsTo('App\Installment', 'course_id','id');
     }
 }

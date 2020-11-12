@@ -112,7 +112,6 @@ class CourseController extends Controller
 
     public function indexInstallment(){
         $installments = Course::with('installments')->orderBy('created_at','desc')->get();
-
        // dd($installments);
         return view('course.installment_index',compact('installments'));
     }
