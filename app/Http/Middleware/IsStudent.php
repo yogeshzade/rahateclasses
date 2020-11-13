@@ -16,12 +16,12 @@ class IsStudent
      */
     public function handle($request, Closure $next)
     {
-         if(Auth::user()->is_admin == 0){
-
+        if (Auth::check() && Auth::user()->is_admin == 0 && Auth::user()->type == 0) {
             return $next($request);
-
+        }
+        else{
+            return redirect()->route('home.index')->with('error','You Are Not Student');
         }
 
-         return redirect(route('home'))->with('error',"You don't have access.");
     }
 }

@@ -35,6 +35,13 @@
 </div>
 @endif
 
+@if ($message = Session::get('warning'))
+<div class="alert alert-warning alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button> 
+        <strong>{{ $message }}</strong>
+</div>
+@endif
+
                     <form action="{{route('home.student.login.post')}}" method="post" class="form-outer">
                       @csrf
                         <input name="email" type="text" placeholder="Email Address">

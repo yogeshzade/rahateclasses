@@ -22,25 +22,29 @@ class StudentsController extends Controller
     public function login(Request $request){
 
         $this->validate($request, [
-            'email' => 'required|max:10|min:10', 
+            'email' => 'required|email', 
             'password' => 'required',
         ]);
-    
 
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password, 'type' => 1])) {
-            $user = Auth::getLastAttempted();
-            if($user->account_status)
-            {
-                return "Logged In";
-            }
-            else{
-                return redirect()->back()->with('error','Your Account is Disabled By Admin');
-            }
+        $userauth = Auth::attempt(['email' => $request->email, 'password' => $request->password, 'type' => 1]);
+
+      if($userauth)
+      {
+        if(Auth::user()->account_status)
+        {
+                return redirect()->route('student.dashboard.index');
         }
         else{
-            return redirect()->back()->with('error','Invalid Credentials');
+                Auth::logout();
+                return back()->with('warning','Your Account Is Not Activate');
         }
 
+      }  
+
+      else{
+         return back()->with('error','Invalid Login Details');
+      }
+       
     }
 
    
@@ -102,6 +106,18 @@ class StudentsController extends Controller
         $user->save();        
 
         return redirect()->route('home.student.login.index')->with('success','Your Email Verified Please Login And Apply');
+
+    }
+
+
+
+    public function studentDashboardIndex(){
+        return "Welcome";
+    }
+
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('home.student.login.index')->with('success','Logout Successfully.');
 
     }
 

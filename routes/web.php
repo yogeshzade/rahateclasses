@@ -27,9 +27,24 @@ Route::prefix("student")->group(function(){
   Route::post('/register','StudentsController@storeStudent')->name('student.create.account')->middleware('guest');
   Route::get('/login','StudentsController@loginindex')->name('home.student.login.index')->middleware('guest');
 Route::post('/login','StudentsController@login')->name('home.student.login.post');
+ Route::get('/logout','StudentsController@logout')->name('home.student.logout');
 
 
 });
+
+// Student Dashboard
+
+
+Route::prefix("student/dashboard")->middleware(['auth','checkStudent'])->group(function(){
+
+Route::get('/','StudentsController@studentDashboardIndex')->name('student.dashboard.index');
+
+});
+
+
+// End Student Dashboard
+
+
 
 Route::get('reload-captcha', 'CaptchaServiceController@reloadCaptcha')->name('captcha.reload');
 Route::get('/verify','StudentsController@verifyemail')->name('email.verify');
