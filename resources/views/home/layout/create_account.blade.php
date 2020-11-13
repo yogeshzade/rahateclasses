@@ -36,26 +36,33 @@
                     @csrf
                     <div class="row">
                         <div class="col-sm-4">
-                            <input name="firstname" type="text" placeholder="First Name" required="">
+                            <input name="firstname" type="text" placeholder="First Name" required="" value="{{old('firstname')}}">">
                               @if ($errors->has('firstname'))
                     <span class="text-danger">{{ $errors->first('firstname') }}</span>
                 @endif
                         </div>
                         <div class="col-sm-4">
-                            <input name="lastname" type="text" placeholder="Last Name" required="">
+                            <input name="lastname" type="text" placeholder="Last Name" required="" value="{{old('lastname')}}">
                                @if ($errors->has('lastname'))
                     <span class="text-danger">{{ $errors->first('lastname') }}</span>
                 @endif
                         </div>
                         <div class="col-sm-4">
-                            <input name="email" type="email" placeholder="email@gmail.com" required="">
+                            <input name="email" type="email" placeholder="email@gmail.com" required=""
+                            value="{{old('email')}}" 
+                            autocomplete="off" 
+                            >
                                @if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                 @endif
                         </div>
 
                         <div class="col-sm-6">
-                            <input name="mobile" type="number" placeholder="9988776655" required="">
+                            <input name="mobile" type="number" placeholder="" 
+                            required=""
+                            value="{{old('mobile')}}" 
+                            autocomplete="off" 
+                            >
                                @if ($errors->has('mobile'))
                     <span class="text-danger">{{ $errors->first('mobile') }}</span>
                 @endif
