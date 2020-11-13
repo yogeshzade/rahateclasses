@@ -64,7 +64,7 @@ class StudentsController extends Controller
       $newotp = rand(111111,999999);
 
         $student = new User();
-        $student->name = $request->firstname . $request->firstname;
+        $student->name = $request->firstname ." ". $request->firstname;
         $student->email = $request->email;
         $student->password = Hash::make($request->password);
         $student->mobile = $request->mobile;
@@ -83,7 +83,9 @@ class StudentsController extends Controller
 
          \Mail::to($request->email)->send(new \App\Mail\MyTestMail($details));
 
-         return back()->with('success','Account Created Successfully.Please Verify Email To Process Next');
+          return redirect()->route('home.student.login.index')->with('success','Account Created Successfully.Please Verify Email To Process Next');
+
+         
 
           
     }
