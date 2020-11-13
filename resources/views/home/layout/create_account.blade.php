@@ -36,7 +36,7 @@
                     @csrf
                     <div class="row">
                         <div class="col-sm-4">
-                            <input name="firstname" type="text" placeholder="First Name" required="" value="{{old('firstname')}}">">
+                            <input name="firstname" type="text" placeholder="First Name" required="" value="{{old('firstname')}}">
                               @if ($errors->has('firstname'))
                     <span class="text-danger">{{ $errors->first('firstname') }}</span>
                 @endif
@@ -58,7 +58,7 @@
                         </div>
 
                         <div class="col-sm-6">
-                            <input name="mobile" type="number" placeholder="" 
+                            <input name="mobile" type="number" placeholder="Mobile Number" 
                             required=""
                             value="{{old('mobile')}}" 
                             autocomplete="off" 
