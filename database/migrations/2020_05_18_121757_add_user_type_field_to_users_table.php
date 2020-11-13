@@ -15,8 +15,8 @@ class AddUserTypeFieldToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
            $table->char('otp', 6)->nullable();
-          $table->enum('type',['0','1','2'])->default('0');
-          $table->enum('account_status',['0','1','2'])->default('0');
+          $table->char('type',1)->default('1');  // 0 Admin 1 Student
+          $table->char('account_status',1)->default('0');  // 0 Inactive 1 Active 2 Blocked
 
         });
     }

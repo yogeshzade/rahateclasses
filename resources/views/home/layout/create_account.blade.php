@@ -18,7 +18,7 @@
 <section class="login-wrapper register" style="background-color:#f1f6f9">
     <div class="inner">
         <div class="regiter-inner">
-            <div class="login-logo"> <a href=""><img src="{{url('homeassets\images\rahatelogo.png')}}" class="img-responsive" alt="" style="width:120px;height:70px;"></a> </div>
+            <div class="login-logo"> <a href="{{route('home.index')}}"><img src="{{url('homeassets\images\rahatelogo.png')}}" class="img-responsive" alt="" style="width:120px;height:70px;"></a> </div>
             <div class="head-block">
 
                 <h1>Create Your Account First!</h1>

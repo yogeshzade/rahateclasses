@@ -17,8 +17,6 @@ Route::get('/courses','HomeController@getCourses')->name('home.course.index');
 Route::get('/contact','HomeController@contact')->name('home.contact');
 Route::post('/sendinquiry','HomeController@storeInquiry')->name('inquiry.store');
 Route::get('/contact_send','HomeController@contactsend')->name('home.contact.send');
-Route::get('student/login','StudentsController@loginindex')->name('home.student.login.index')->middleware('guest');
-Route::post('student/login','StudentsController@login')->name('home.student.login.post');
 Route::get('apply-online','StudentsController@admission')->name('student.admission.index');
 Route::get('career','CareerController@index')->name('career.index');
 
@@ -27,10 +25,14 @@ Route::prefix("student")->group(function(){
 
   Route::get('/register', 'StudentsController@registerindex')->name('student.register')->middleware('guest');
   Route::post('/register','StudentsController@storeStudent')->name('student.create.account')->middleware('guest');
+  Route::get('/login','StudentsController@loginindex')->name('home.student.login.index')->middleware('guest');
+Route::post('/login','StudentsController@login')->name('home.student.login.post');
+
 
 });
 
 Route::get('reload-captcha', 'CaptchaServiceController@reloadCaptcha')->name('captcha.reload');
+Route::get('/verify','StudentsController@verifyemail')->name('email.verify');
 
 
 Route::prefix("admin")->middleware(['auth','checkAdmin'])->group(function(){
