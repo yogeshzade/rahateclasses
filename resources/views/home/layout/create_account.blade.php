@@ -20,7 +20,14 @@
         <div class="regiter-inner">
             <div class="login-logo"> <a href=""><img src="{{url('homeassets\images\rahatelogo.png')}}" class="img-responsive" alt="" style="width:120px;height:70px;"></a> </div>
             <div class="head-block">
+
                 <h1>Create Your Account First!</h1>
+                   @if ($message = Session::get('success'))
+<div class="alert alert-success alert-block mt-2">
+    <button type="button" class="close" data-dismiss="alert">×</button> 
+        <strong>{{ $message }}</strong>
+</div>
+@endif
 
 
             </div>
@@ -49,8 +56,8 @@
 
                         <div class="col-sm-6">
                             <input name="mobile" type="number" placeholder="9988776655" required="">
-                               @if ($errors->has('number'))
-                    <span class="text-danger">{{ $errors->first('number') }}</span>
+                               @if ($errors->has('mobile'))
+                    <span class="text-danger">{{ $errors->first('mobile') }}</span>
                 @endif
                         </div>
                         <div class="col-sm-6">

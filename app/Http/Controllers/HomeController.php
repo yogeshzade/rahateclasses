@@ -12,6 +12,7 @@ class HomeController extends Controller
     //
 
     public function index(){
+
         $sliders = \App\Slider::where('status',1)->get();
         $popup = \App\Popup::first();
     	return view('home.index',compact('sliders','popup'));

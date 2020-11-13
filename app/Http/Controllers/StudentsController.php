@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\User;
+use Illuminate\Support\Facades\Hash;
+
 
 
 class StudentsController extends Controller
@@ -46,8 +49,7 @@ class StudentsController extends Controller
 
      public function storeStudent(Request $request){
 
-      //  dd($request);
-        $request->validate([
+      $validate =   $request->validate([
             'firstname' => 'required|string',
             'lastname' => 'required|string',
             'email' => 'required|email|unique:users',
@@ -55,6 +57,33 @@ class StudentsController extends Controller
             'mobile' => 'required|min:10|max:10|unique:users',
             'captcha' => 'required|captcha',
         ]);
+     // dd($validate);
+
+      $newotp = rand(111111,999999);
+
+        $student = new User();
+        $student->name = $request->firstname . $request->firstname;
+        $student->email = $request->email;
+        $student->password = Hash::make($request->password);
+        $student->mobile = $request->mobile;
+        $student->is_admin = 0;
+        $student->type = 1;
+        $student->account_status = 2;
+        $student->otp = $newotp;
+        $student->save();
+
+        $details = [
+            'name' => $request->firstname,
+            'otp' =>  $newotp,
+        ];
+
+         \Mail::to($request->email)->send(new \App\Mail\MyTestMail($details));
+
+         return back()->with('success','Account Created Successfully.Please Verify Email To Process Next');
+
+
+
+
           
     }
 
