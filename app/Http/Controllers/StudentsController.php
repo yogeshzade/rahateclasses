@@ -43,4 +43,25 @@ class StudentsController extends Controller
     public function registerindex(){
         return view('home.layout.create_account');
     }
+
+     public function storeStudent(Request $request){
+
+      //  dd($request);
+        $request->validate([
+            'firstname' => 'required|string',
+            'lastname' => 'required|string',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|string|min:8|max:14',
+            'mobile' => 'required|min:10|max:10|unique:users',
+            'captcha' => 'required|captcha',
+        ]);
+          
+    }
+
+
+
+
+
+
+
 }

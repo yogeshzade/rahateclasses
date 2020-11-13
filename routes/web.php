@@ -26,9 +26,11 @@ Route::get('career','CareerController@index')->name('career.index');
 Route::prefix("student")->group(function(){
 
   Route::get('/register', 'StudentsController@registerindex')->name('student.register')->middleware('guest');
-  Route::post('student/register','StudentsController@storeStudent')->name('student.store')->middleware('guest');
+  Route::post('/register','StudentsController@storeStudent')->name('student.create.account')->middleware('guest');
 
 });
+
+Route::get('reload-captcha', 'CaptchaServiceController@reloadCaptcha')->name('captcha.reload');
 
 
 Route::prefix("admin")->middleware(['auth','checkAdmin'])->group(function(){
@@ -126,6 +128,8 @@ Route::get('/inquiry/delete/{id}','WebsiteConfigration@DeleteInquiry')->name('in
     
  
 });
+
+   
 
 
 
