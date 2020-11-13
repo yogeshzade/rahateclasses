@@ -22,11 +22,12 @@ class StudentsController extends Controller
     public function login(Request $request){
 
         $this->validate($request, [
-            'mobile' => 'required|max:10|min:10', 'password' => 'required',
+            'email' => 'required|max:10|min:10', 
+            'password' => 'required',
         ]);
     
 
-        if (Auth::attempt(['email' => $request->mobile, 'password' => $request->password, 'type' => 1])) {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password, 'type' => 1])) {
             $user = Auth::getLastAttempted();
             if($user->account_status)
             {

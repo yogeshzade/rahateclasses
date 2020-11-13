@@ -37,7 +37,7 @@
 
                     <form action="{{route('home.student.login.post')}}" method="post" class="form-outer">
                       @csrf
-                        <input name="mobile" type="text" placeholder="mobile">
+                        <input name="email" type="text" placeholder="Email Address">
                         <input name="password" type="password" placeholder="password">
                         <div class="button-outer">
                             <button class="btn">Login now <span class="icon-more-icon"></span></button>
