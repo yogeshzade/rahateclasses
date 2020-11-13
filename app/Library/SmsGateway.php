@@ -9,9 +9,9 @@ class SmsGateway
 	public static function sendSMS($msg,$to)
 	{
 		// Account details
-		$apiKey = urlencode("");
+		$apiKey = urlencode("qn1V4Kg2/CU-VADqQYh8r0TBpHJu5lOWwdxvR5ay7");
 		// Message details
-		$sender = urlencode("");
+		$sender = urlencode("RHTCLS");
 		$message = rawurlencode($msg);
 		$numbers = array($to);
 		 

@@ -14,7 +14,6 @@ class HomeController extends Controller
     public function index(){
         $sliders = \App\Slider::where('status',1)->get();
         $popup = \App\Popup::first();
-       // dd($popup);
     	return view('home.index',compact('sliders','popup'));
     }
 
@@ -25,11 +24,8 @@ class HomeController extends Controller
     }
 
     public function getViewCourse($id){
-        
         $course = Course::findOrFail($id);
         return view('home.course.course_explore',compact($course));
-
-
     }
 
     public function contact(){

@@ -51,13 +51,18 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-12">
                             <input name="address" type="text" placeholder="adress">
                         </div>
-                        <div class="col-sm-6">
-                            <input name="Apartment" type="text" placeholder="Apartment">
-                        </div>
+                       
                     </div>
+                     <div class="row">
+                        <div class="col-sm-12">
+                            <input name="address" type="text" placeholder="adress">
+                        </div>
+                       
+                    </div>
+                    
                     <div class="row">
                         <div class="col-sm-6">
                             <input name="Zip Code" type="text" placeholder="Zip Code">

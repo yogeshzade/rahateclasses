@@ -58,7 +58,9 @@
                             <h4>Class: {{$course->class}}</h4>
                             <span> Courses : {{$course->board}}</span>
                             </div>
-                            <a href="#" style="color:#fff;">MORE</a>
+                            <a href="{{route('student.register')}}?course={{$course->id}}" style="color:#fff; 
+                            padding: 4px;
+                            ">Enroll</a>
                         </div>
                     </div>
                 </li>

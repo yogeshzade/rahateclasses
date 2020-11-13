@@ -41,6 +41,6 @@ class StudentsController extends Controller
 
 
     public function registerindex(){
-        return view('home.register');
+        return view('home.layout.create_account');
     }
 }
