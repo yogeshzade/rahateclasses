@@ -1,4 +1,10 @@
 @extends('home.layout.app')
+@section('othercss')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.css" integrity="sha256-jKV9n9bkk/CTP8zbtEtnKaKf+ehRovOYeKoyfthwbC8=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.js" integrity="sha256-CgvH7sz3tHhkiVKh05kSUgG97YtzYNnWt6OXcmYzqHY=" crossorigin="anonymous"></script>
+
+@endsection
+
 @section('body')
   
 
@@ -7,8 +13,12 @@
     =================================================== -->
     <header>
        
-      
-    </header>
+        @include('home.layout.headermenu')
+        @include('home.layout.headermiddle') 
+         <!-- Start Navigation -->
+        @include('home.layout.navigation')
+         <!-- End Navigation -->
+     </header>
 
     
    
@@ -21,7 +31,7 @@
             <div class="login-logo"> <a href="{{route('home.index')}}"><img src="{{url('homeassets\images\rahatelogo.png')}}" class="img-responsive" alt="" style="width:120px;height:70px;"></a> </div>
             <div class="head-block">
 
-                <h1>Create Your Account First!</h1>
+                <h1>Fill Admission Form To Apply!</h1>
             </br>
                    @if ($message = Session::get('success'))
 <div class="alert alert-success alert-block mt-2">
@@ -36,54 +46,102 @@
                 <form action="{{route('student.create.account')}}" method="post" class="form-outer">
                     @csrf
                     <div class="row">
-                        <div class="col-sm-8">
-                            <input name="fullname" type="text" placeholder="Enter Full Name" required="" value="{{Auth::user()->fullname}}">
+
+                        <div class="form-group col-md-6">
+                            <input name="fullname" type="text" placeholder="Name Of Applicant" required="" value="{{Auth::user()->name}}">
                               @if ($errors->has('fullname'))
                     <span class="text-danger">{{ $errors->first('fullname') }}</span>
                 @endif
                         </div>
-                       
-                        <div class="col-sm-4">
-                            <input name="email" type="email" placeholder="email@gmail.com" required=""
-                            value="{{old('email')}}" 
-                            autocomplete="off" 
-                            >
-                               @if ($errors->has('email'))
-                    <span class="text-danger">{{ $errors->first('email') }}</span>
+
+
+                        <div class="form-group col-md-6">
+                            <input name="fathername" type="text" placeholder="Enter Father Name" required="" value="{{old('fathername')}}">
+                              @if ($errors->has('fathername'))
+                    <span class="text-danger">{{ $errors->first('fathername') }}</span>
                 @endif
                         </div>
 
-                        <div class="col-sm-6">
-                            <input name="mobile" type="number" placeholder="Mobile Number" 
-                            required=""
-                            value="{{old('mobile')}}" 
-                            autocomplete="off" 
-                            >
-                               @if ($errors->has('mobile'))
-                    <span class="text-danger">{{ $errors->first('mobile') }}</span>
-                @endif
-                        </div>
-                        <div class="col-sm-6">
-                            <input name="password" type="password" placeholder="Password" min="8" maxlength="14" required="">
-                               @if ($errors->has('password'))
-                    <span class="text-danger">{{ $errors->first('password') }}</span>
+                        <div class="form-group col-md-6">
+                            <input name="mothername" type="text" placeholder="Enter Mother Name" required="" value="{{old('mothername')}}">
+                              @if ($errors->has('mothername'))
+                    <span class="text-danger">{{ $errors->first('mothername') }}</span>
                 @endif
                         </div>
 
-                          <div class="col-sm-5 captcha">
-                             <span>{!! captcha_img() !!}</span>
-                              <button type="button" class="btn btn-danger" class="reload" id="reload">
-                        &#x21bb;
-                    </button>
-                        </div>
-                        <div class="col-sm-4">
-                                         <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha">
-                                            @if ($errors->has('captcha'))
-                    <span class="text-danger">{{ $errors->first('captcha') }}</span>
+                        <div class="form-group col-md-5">
+                            <input name="state" type="text" placeholder="State Of Domicile" required="" value="{{old('state')}}">
+                              @if ($errors->has('state'))
+                    <span class="text-danger">{{ $errors->first('state') }}</span>
                 @endif
-
                         </div>
-                       
+
+                        <div class="form-group col-md-3">
+                            <input name="dob" type="date" placeholder="Select DOB" required="" value="{{old('dob')}}">
+                              @if ($errors->has('dob'))
+                    <span class="text-danger">{{ $errors->first('dob') }}</span>
+                @endif
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label class="radio-inline" style="
+    margin-top: 0 auto;
+    margin: 0 auto;
+    display: inline;
+    display: inline;
+    vertical-align: bottom;
+">
+                                <input type="radio" name="gender" value="male" style="width: 14px;padding: 0px;">Male
+                              </label>
+                              <label class="radio-inline" style="
+                              margin-top: 0 auto;
+                              margin: 0 auto;
+                              display: inline;
+                              display: inline;
+                              vertical-align: bottom;
+                          ">
+                                <input type="radio" name="gender" value="female" style="width: 14px;padding: 0px;">Female
+                              </label>
+                              @if ($errors->has('gender'))
+                              <span class="text-danger">{{ $errors->first('gender') }}</span>
+                          @endif
+                        </div>
+
+                        <div class="form-group col-md-3">
+                           
+                            <select class="form-control" id="sel1" name="category">
+                                <option selected>Select Category</option>
+                              <option value="GEN">GEN</option>
+                              <option value="SC">SC</option>
+                              <option value="ST">ST</option>
+                              <option value="OBC">OBC</option>
+                           
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                           
+                            <select class="form-control" id="sel1" name="religion">
+                                <option selected>Select Religion</option>
+                              <option value="GEN">GEN</option>
+                              <option value="SC">SC</option>
+                              <option value="ST">ST</option>
+                              <option value="OBC">OBC</option>
+                           
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-12 col-sm-12">
+                            <input name="address" type="address" placeholder="Enter Residence Address" rquired="" value="{{old('address')}}">
+                            @if ($errors->has('address'))
+                  <span class="text-danger">{{ $errors->first('address') }}</span>
+              @endif
+                        </div>
+
+
+
+
+                        
                     </div>
                   
             
@@ -92,6 +150,7 @@
                     <div class="button-outer">
                         <button class="btn">Register Now <span class="icon-more-icon"></span></button>
                     </div>
+
                 </form>
             </div>
         </div>

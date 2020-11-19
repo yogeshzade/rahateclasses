@@ -110,6 +110,7 @@ class StudentsController extends Controller
                 ->where('otp',$token)
                 ->firstOrFail();
         $user->account_status = 1;
+        $user->otp = rand(111111,999999);
         $user->save();        
 
         return redirect()->route('home.student.login.index')->with('success','Your Email Verified Please Login And Apply');
