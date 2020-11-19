@@ -132,7 +132,8 @@ class StudentsController extends Controller
 
 
     public function studentAdmission(){
-        return view('home.admission');
+        $userinfo = User::findOrFail(Auth::user()->id);
+        return view('home.admission',compact('userinfo'));
     }
 
     public function logout(){
