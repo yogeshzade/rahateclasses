@@ -33,7 +33,7 @@ class StudentsController extends Controller
       {
         if(Auth::user()->account_status)
         {
-                return back()->route('student.dashboard');
+                return redirect()->route('student.dashboard');
           
         }
         else{
