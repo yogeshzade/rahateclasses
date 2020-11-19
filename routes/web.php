@@ -78,6 +78,7 @@ Route::group([
     Route::get('create','CourseController@create')->name('course.create');
     Route::post('/create','CourseController@store')->name('course.store');
     Route::get('/toggle/{id}','CourseController@toggleCoursestatus')->name('course.toggle');
+    Route::get('fetch/class','CourseController@fetchClass')->name('fetch.class');
 });
 
 

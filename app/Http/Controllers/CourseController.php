@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Course;
 use App\Installment;
+use App\CourseClass;
 
 
 class CourseController extends Controller
@@ -29,7 +30,8 @@ class CourseController extends Controller
     public function create()
     {
         //
-        return view('course.create');
+        $classes = \App\CourseClass::all();
+        return view('course.create',compact('classes'));
     }
 
     /**
@@ -150,6 +152,13 @@ class CourseController extends Controller
      public function getInstallments(int $id){
       $installments = Installment::where('course_id',$id)->get();
         return view('course.installment_view',compact('installments'));
+     }
+
+     public function fetchClass(Request $request){
+        
+        $data = CourseClass::where('id',$request->id)->firstOrFail();
+        return $data;
+
      }
 
 

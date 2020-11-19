@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Course;
 use App\Inquiry;
+use App\Alumini;
 
 
 class HomeController extends Controller
@@ -15,7 +16,8 @@ class HomeController extends Controller
 
         $sliders = \App\Slider::where('status',1)->get();
         $popup = \App\Popup::first();
-    	return view('home.index',compact('sliders','popup'));
+        $testimonials = Alumini::all();
+    	return view('home.index',compact('sliders','popup','testimonials'));
     }
 
 

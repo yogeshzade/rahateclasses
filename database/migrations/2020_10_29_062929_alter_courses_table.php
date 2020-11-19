@@ -17,7 +17,7 @@ class AlterCoursesTable extends Migration
             //
             $table->char('course_name',100);
             $table->char('class',10);
-            $table->char('board',10)->nullable();
+            $table->string('board')->nullable();
             $table->char('total_fees',10);
             $table->char('include_gst',1)->default(1);
 

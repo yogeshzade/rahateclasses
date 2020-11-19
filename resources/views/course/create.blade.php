@@ -60,17 +60,23 @@
                     </div>
                    
                     <div class="form-group mb-3">
-                        <label for="validationCustomUsername">Enter Class</label>
-                        <div class="input-group">
+                        <label for="validationCustomUsername">Select Class</label>
+                       
+                        <select class="form-control" id="classform" name="class_name">
+                            <option value="" selected> -- Select --</option>
+                            @foreach ($classes as $class)
+                        <option value="{{$class->id}}">{{$class->classname}} - {{$class->type}}</option>
+                            @endforeach
+                           
+                          </select>
                             
-                            <input type="text" class="form-control" id="validationCustomUsername" placeholder="Example 7/JEE"
-                                aria-describedby="inputGroupPrepend" name="class_name" required>
-                          
-                        </div>
+                      
+
+                      
                     </div>
                     <div class="form-group mb-3">
                         <label for="validationCustom03">Enter Board or Other </label>
-                        <input type="text" class="form-control" id="validationCustom03"  required name="board">
+                        <input type="text" class="form-control" id="board"  required name="board" readonly="">
                        
                     </div>
                     <div class="form-group mb-3">
@@ -146,6 +152,36 @@ height: "200px"
 $('#submit').click(function(){
 
     $('#submit').submit();
+
+});
+
+$('#classform').on('change',function(){
+
+    var selectedval = $('#classform').val();
+
+    $.ajax({
+
+url: "{{route('fetch.class')}}",
+    data: {
+       "id" : selectedval
+    },
+    dataType: "json",
+    method: "GET",
+    success: function(response){
+       
+            var ipvalue = response.type;
+            console.log(ipvalue);
+             $('#board').val(ipvalue);
+                             
+
+
+    }
+
+});
+
+  //  console.log(selectedval);
+
+  
 
 });
 
