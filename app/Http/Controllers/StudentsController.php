@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Crypt;
+use App\StudentProfile;
 
 
 
@@ -32,7 +33,8 @@ class StudentsController extends Controller
       {
         if(Auth::user()->account_status)
         {
-                return redirect()->route('student.dashboard.index');
+                return back()->route('student.dashboard');
+          
         }
         else{
                 Auth::logout();
@@ -54,11 +56,16 @@ class StudentsController extends Controller
         return view('home.layout.create_account');
     }
 
+
+    public function admissionIndex(){
+
+        return view('home.admission');
+    }
+
      public function storeStudent(Request $request){
 
       $validate =   $request->validate([
-            'firstname' => 'required|string',
-            'lastname' => 'required|string',
+            'fullname' => 'required|string',
             'email' => 'required|email|unique:users',
             'password' => 'required|string|min:8|max:14',
             'mobile' => 'required|min:10|max:10|unique:users',
@@ -69,7 +76,7 @@ class StudentsController extends Controller
       $newotp = rand(111111,999999);
 
         $student = new User();
-        $student->name = $request->firstname ." ". $request->firstname;
+        $student->name = $request->fullname;
         $student->email = $request->email;
         $student->password = Hash::make($request->password);
         $student->mobile = $request->mobile;
@@ -112,7 +119,20 @@ class StudentsController extends Controller
 
 
     public function studentDashboardIndex(){
-        return "Welcome";
+
+       $student= Auth::user();
+       $student = StudentProfile::where('user_id',$student->id)->first();
+       if(!$student)
+       {
+        return redirect()->route('student.admission')->with('success','Please Fill Admission Form And Apply.');
+       }
+
+
+    }
+
+
+    public function studentAdmission(){
+        return view('home.admission');
     }
 
     public function logout(){

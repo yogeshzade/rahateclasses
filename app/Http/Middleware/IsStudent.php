@@ -16,7 +16,7 @@ class IsStudent
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->is_admin == 0 && Auth::user()->type == 0) {
+        if (Auth::check()  && Auth::user()->is_admin == 0) {
             return $next($request);
         }
         else{

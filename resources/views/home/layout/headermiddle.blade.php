@@ -16,7 +16,7 @@
                             @endif
 
                             @if(!Auth::user()->is_admin)
-                            <a href="/dashboard" class="login">{{Auth::user()->name}} <span class=""><i class="fa fa-user"></i></span></a>
+                            <a href="{{route('student.dashboard')}}" class="login">{{Auth::user()->name}} <span class=""><i class="fa fa-user"></i></span></a>
 
                             @endif
 

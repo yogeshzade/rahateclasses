@@ -26,18 +26,18 @@ Route::prefix("student")->group(function(){
   Route::get('/register', 'StudentsController@registerindex')->name('student.register')->middleware('guest');
   Route::post('/register','StudentsController@storeStudent')->name('student.create.account')->middleware('guest');
   Route::get('/login','StudentsController@loginindex')->name('home.student.login.index')->middleware('guest');
-Route::post('/login','StudentsController@login')->name('home.student.login.post');
+  Route::post('/login','StudentsController@login')->name('home.student.login.post');
  Route::get('/logout','StudentsController@logout')->name('home.student.logout');
-
+ Route::get('/admission','StudentsController@studentAdmission')->name('student.admission')->middleware('auth');
 
 });
 
 // Student Dashboard
 
 
-Route::prefix("student/dashboard")->middleware(['auth','checkStudent'])->group(function(){
+Route::prefix("student")->middleware(['auth','checkStudent'])->group(function(){
 
-Route::get('/','StudentsController@studentDashboardIndex')->name('student.dashboard.index');
+Route::get('/dashboard','StudentsController@studentDashboardIndex')->name('student.dashboard');
 
 });
 
@@ -55,11 +55,13 @@ Route::prefix("admin")->middleware(['auth','checkAdmin'])->group(function(){
 Route::group([], function () {
    Route::get('pages-logout', 'RoutingController@logout')->name('logout');
     Route::get('/', 'RoutingController@index')->name('home');
-    // Route::get('{first}/{second}/{third}', 'RoutingController@thirdLevel');
-    // Route::get('{first}/{second}', 'RoutingController@secondLevel');
-    // Route::get('{any}', 'RoutingController@root');
 });
 
+Route::group([
+  'prefix' => 'settings'
+],function(){
+  Route::get('/profile','AdminController@index')->name('profile.index');
+});
 
  Route::group([
           'prefix' => 'admission',

@@ -22,6 +22,7 @@
             <div class="head-block">
 
                 <h1>Create Your Account First!</h1>
+            </br>
                    @if ($message = Session::get('success'))
 <div class="alert alert-success alert-block mt-2">
     <button type="button" class="close" data-dismiss="alert">×</button> 
@@ -36,12 +37,17 @@
                     @csrf
                     <div class="row">
                         <div class="col-sm-8">
-                            <input name="fullname" type="text" placeholder="Enter Full Name" required="" value="{{old('fullname')}}">
-                              @if ($errors->has('fullname'))
-                    <span class="text-danger">{{ $errors->first('fullname') }}</span>
+                            <input name="fullname" type="text" placeholder="" required="" value="{{old('firstname')}}">
+                              @if ($errors->has('firstname'))
+                    <span class="text-danger">{{ $errors->first('firstname') }}</span>
                 @endif
                         </div>
-                        
+                        <div class="col-sm-4">
+                            <input name="lastname" type="text" placeholder="Last Name" required="" value="{{old('lastname')}}">
+                               @if ($errors->has('lastname'))
+                    <span class="text-danger">{{ $errors->first('lastname') }}</span>
+                @endif
+                        </div>
                         <div class="col-sm-4">
                             <input name="email" type="email" placeholder="email@gmail.com" required=""
                             value="{{old('email')}}" 
@@ -104,6 +110,9 @@
 
 
      @include('home.layout.scripts')
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js"></script>
 
      <script type="text/javascript">
     $('#reload').click(function () {
