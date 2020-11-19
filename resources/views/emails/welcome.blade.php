@@ -5,7 +5,22 @@
 </head>
 <body>
    <h1>Welcome {{$details['name']}}</h1>
+
+   <div>
+    <h3>Thank You For Creating Account </h3>
+   </br>
+   <h5>This is verification Email Please verify your account to continue admission process.</h5>
+</br>
+
+<b><a href="{{route('email.verify')}}?email={{$details['email']}}&verification={{$details['otp']}}">Verify My Email</a></b>
+
+<h5>
+  <b>  Regards </b>
+</br> Rahate IIT Home
+
+</h5>
+   </div>
    
-    <p>Thank you Signup On Rahate IIT Home. This is verification email to continue registration. <a href="{{route('email.verify')}}?email={{$details['email']}}&verification={{$details['otp']}}">Click Here To Complete Registration</a></p>
+   
 </body>
 </html>
