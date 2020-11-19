@@ -37,17 +37,12 @@
                     @csrf
                     <div class="row">
                         <div class="col-sm-8">
-                            <input name="fullname" type="text" placeholder="" required="" value="{{old('firstname')}}">
-                              @if ($errors->has('firstname'))
-                    <span class="text-danger">{{ $errors->first('firstname') }}</span>
+                            <input name="fullname" type="text" placeholder="Enter Full Name" required="" value="{{Auth::user()->fullname}}">
+                              @if ($errors->has('fullname'))
+                    <span class="text-danger">{{ $errors->first('fullname') }}</span>
                 @endif
                         </div>
-                        <div class="col-sm-4">
-                            <input name="lastname" type="text" placeholder="Last Name" required="" value="{{old('lastname')}}">
-                               @if ($errors->has('lastname'))
-                    <span class="text-danger">{{ $errors->first('lastname') }}</span>
-                @endif
-                        </div>
+                       
                         <div class="col-sm-4">
                             <input name="email" type="email" placeholder="email@gmail.com" required=""
                             value="{{old('email')}}" 
