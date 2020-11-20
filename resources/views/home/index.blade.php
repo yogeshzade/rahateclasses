@@ -625,14 +625,12 @@ toastr.options = {
 @endif
 
 var popDisplayed = $.cookie('popDisplayed');
-    if(popDisplayed == '1'){
-        return false;
-    }else{
+   
         setTimeout( function() {
             subscriptionPopup();
         },4000);
-        $.cookie('popDisplayed', '1', { expires: 1 });
-    }
+      //  $.cookie('popDisplayed', '1', { expires: 1 });
+   
 
 });
 
