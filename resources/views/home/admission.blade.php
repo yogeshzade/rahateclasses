@@ -77,35 +77,15 @@
                         </div>
 
                         <div class="form-group col-md-3">
-                            <input name="dob" type="date" placeholder="Select DOB" required="" value="{{old('dob')}}">
+                           
+                            <input name="dob" type="date" placeholder="Select DOB" required="" value="{{old('dob')}}" placeholder="">
                               @if ($errors->has('dob'))
                     <span class="text-danger">{{ $errors->first('dob') }}</span>
                 @endif
+                           
                         </div>
 
-                        <div class="form-group col-md-3">
-                            <label class="radio-inline" style="
-    margin-top: 0 auto;
-    margin: 0 auto;
-    display: inline;
-    display: inline;
-    vertical-align: bottom;
-">
-                                <input type="radio" name="gender" value="male" style="width: 14px;padding: 0px;">Male
-                              </label>
-                              <label class="radio-inline" style="
-                              margin-top: 0 auto;
-                              margin: 0 auto;
-                              display: inline;
-                              display: inline;
-                              vertical-align: bottom;
-                          ">
-                                <input type="radio" name="gender" value="female" style="width: 14px;padding: 0px;">Female
-                              </label>
-                              @if ($errors->has('gender'))
-                              <span class="text-danger">{{ $errors->first('gender') }}</span>
-                          @endif
-                        </div>
+                        
 
                         <div class="form-group col-md-3">
                            
@@ -131,6 +111,25 @@
                             </select>
                         </div>
 
+                        <div class="form-group col-md-3">
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" value="male" style="width: 16px;">Male
+                              </label>
+                              <label class="radio-inline" style="">
+                                <input type="radio" name="gender" value="female" style="width: 16px;">Female
+                              </label>
+                              @if ($errors->has('gender'))
+                              <span class="text-danger">{{ $errors->first('gender') }}</span>
+                          @endif
+                        </div>
+
+                        
+
+                     
+                        
+                        
+
+                   
                         <div class="form-group col-md-12 col-sm-12">
                             <input name="address" type="address" placeholder="Enter Residence Address" rquired="" value="{{old('address')}}">
                             @if ($errors->has('address'))
@@ -138,18 +137,53 @@
               @endif
                         </div>
 
+                        <div class="form-group col-md-4 col-sm-4">
+                            <input name="address" type="address" placeholder="Enter Residence Address" rquired="" value="{{old('address')}}">
+                            @if ($errors->has('address'))
+                  <span class="text-danger">{{ $errors->first('address') }}</span>
+              @endif
+                        </div>
 
+                        <div class="form-group col-md-4 col-sm-4">
+                            <input name="address" type="address" placeholder="Enter Residence Address" rquired="" value="{{old('address')}}">
+                            @if ($errors->has('address'))
+                  <span class="text-danger">{{ $errors->first('address') }}</span>
+              @endif
+                        </div>
 
-
+                        <div class="form-group col-md-4 col-sm-4">
+                            <input name="address" type="address" placeholder="Enter Residence Address" rquired="" value="{{old('address')}}">
+                            @if ($errors->has('address'))
+                  <span class="text-danger">{{ $errors->first('address') }}</span>
+              @endif
+                        </div>
                         
+
+
+
                     </div>
+
+             
                   
             
                 
-                
+                    {{-- Row Start --}}
+                    <div class="row">
+                <div class="col-md-6">
                     <div class="button-outer">
-                        <button class="btn">Register Now <span class="icon-more-icon"></span></button>
+                        <button class="btn">Apply Now <span class="icon-more-icon"></span></button>
                     </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="button-outer">
+                        <button class="btn-sm btn-danger" type="reset">Clear Form <span class="fa fa-exlamation"></span></button>
+                    </div>
+                </div>
+
+
+                    </div>
+                    {{-- Row End --}}
 
                 </form>
             </div>
