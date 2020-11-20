@@ -143,6 +143,10 @@ class StudentsController extends Controller
 
     }
 
+    public function admission(){
+        return redirect()->route('student.register');
+    }
+
 
 
 
