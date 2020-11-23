@@ -49,7 +49,38 @@
     </div>
             
         </div>
+
+<div class="col-md-4 col-sm-12">
+
+
+<!--  -->
+
+<div class="panel panel-success">
+                        <div class="panel-heading">
+                            <span class="panel-title" style="font-family: inherit; font-weight: 500; line-height: 1.1;">Notifications & Update @ RahateIITHome</span>
+                        </div>
+
+                         <div class="scroll-wrapper list-group scrollbar-macosx" style="position: relative;">
+
+                               <ul class="list-group  scrollbar-macosx scroll-content scroll-scrolly_visible" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 260px;">
+                            <li class="list-group-item">
+                                <img src="webimages/bullet_arrow_r.png" alt="" title="" style="border: 0px;"><a href="applyonline/apply-online.aspx" style="color: brown;" class="link"><b>Now Apply For Admission</b><br>
+                                    You Can Apply Online From Our Website
+                                    <img src="webimages/new.gif" alt="" title="" style="border: 0px;"></a>
+                            </li>
+
+                        </ul>
+
+                         </div>
+                      
+                    </div>
+
+<!--  -->
+</div>
+
     </div>
+
+
     </div>
   
    
