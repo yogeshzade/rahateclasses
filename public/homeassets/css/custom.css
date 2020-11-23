@@ -457,7 +457,7 @@ textarea:focus::placeholder{
 	background: #b80000;
 }
 .nav > li > a {
-	padding: 19px 26px;
+	padding: 15px 28px;
 }
 .navbar-nav > li {
 	border-right: 1px #fff solid;
@@ -7401,4 +7401,13 @@ overflow-y: auto;
 	height:22%;
 	 display:block;
     margin:auto;
+}
+
+.bx-viewport{
+	height: 400px !important;
+}
+
+.cust-menu{
+	height: 19px !important;
+    border-bottom: #010101 solid 3px;
 }

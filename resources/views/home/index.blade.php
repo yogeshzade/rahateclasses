@@ -6,21 +6,29 @@
     ** Header **
     =================================================== -->
     <header>
-       
-       @include('home.layout.headermenu')
-       @include('home.layout.headermiddle') 
+        @include('home.layout.navigation')
+      
+       @include('home.layout.headermiddle')
+
         <!-- Start Navigation -->
-       @include('home.layout.navigation')
+      
         <!-- End Navigation -->
     </header>
 
     <!-- ==============================================
     ** Banner Carousel **
     =================================================== -->
-    <div class="banner-outer">
+    <div class="container">
+          <div class="row">
+        <div class="col-md-8 com-sm-12" style="height: 200%;">
+
+             <div class="banner-outer">
         <div class="banner-slider">
             @foreach($sliders as $slider)
-            <div class="slide1" style="background: url({{$slider->image_path}}) no-repeat center top / cover !important;">
+            <div class="slide1" style="background: url({{$slider->image_path}});
+             background-repeat: no-repeat;
+            background-size: contain, cover;
+            ">
                 <div class="container">
                    <!--  <div class="content animated fadeInRight">
                         <div class="fl-right">
@@ -39,6 +47,12 @@
            
         </div>
     </div>
+            
+        </div>
+    </div>
+    </div>
+  
+   
 
    
     <!-- background: url(../images/rahateclassescourse.jpg) no-repeat center top / cover; -->
