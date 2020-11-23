@@ -29,6 +29,7 @@ Route::prefix("student")->group(function(){
   Route::post('/login','StudentsController@login')->name('home.student.login.post');
  Route::get('/logout','StudentsController@logout')->name('home.student.logout');
  Route::get('/admission','StudentsController@studentAdmission')->name('student.admission')->middleware('auth');
+  Route::post('/admission','StudentsController@StorestudentAdmission')->name('student.admission.submit')->middleware('auth');
 
 });
 
@@ -109,6 +110,7 @@ Route::get('/career','WebsiteConfigration@CareerIndex')->name('career.index');
 Route::get('/inquiry','WebsiteConfigration@inquiryIndex')->name('inquiry.index');
 Route::get('/inquiry/{id}','WebsiteConfigration@inquiryRead')->name('inquiry.view');
 Route::get('/inquiry/delete/{id}','WebsiteConfigration@DeleteInquiry')->name('inquiry.delete');
+Route::get('/updates','WebsiteConfigration@sliderindex')->name('updates.index');
 });
 
 

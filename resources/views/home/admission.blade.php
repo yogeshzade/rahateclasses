@@ -43,7 +43,7 @@
 
             </div>
             <div class="cnt-block">
-                <form action="{{route('student.create.account')}}" method="post" class="form-outer">
+                <form action="{{route('student.admission.submit')}}" method="post" class="form-outer">
                     @csrf
                     <div class="row">
 

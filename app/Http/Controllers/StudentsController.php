@@ -148,6 +148,13 @@ class StudentsController extends Controller
     }
 
 
+    public function StorestudentAdmission(Request $request){
+
+        dd($request);
+
+    }
+
+
 
 
 

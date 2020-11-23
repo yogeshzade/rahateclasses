@@ -110,6 +110,10 @@
             <li>
             <a href="{{route('career.index')}}">Career</a>
             </li>
+
+            <li>
+                <a href="{{route('updates.index')}}">Website Notifications</a>
+            </li>
            
         </ul>
     </li>
