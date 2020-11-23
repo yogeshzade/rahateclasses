@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Course;
 use App\Inquiry;
 use App\Alumini;
+use App\NewsAndUpdate;
 
 
 class HomeController extends Controller
@@ -17,7 +18,8 @@ class HomeController extends Controller
         $sliders = \App\Slider::where('status',1)->get();
         $popup = \App\Popup::first();
         $testimonials = Alumini::all();
-    	return view('home.index',compact('sliders','popup','testimonials'));
+        $notifications = NewsAndUpdate::orderBy('id', 'DESC')->limit(4)->get();
+    	return view('home.index',compact('sliders','popup','testimonials','notifications'));
     }
 
 

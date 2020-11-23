@@ -6,6 +6,7 @@
     ** Header **
     =================================================== -->
     <header>
+        @include('home.layout.headermenu')
         @include('home.layout.navigation')
       
        @include('home.layout.headermiddle')
@@ -63,11 +64,18 @@
                          <div class="scroll-wrapper list-group scrollbar-macosx" style="position: relative;">
 
                                <ul class="list-group  scrollbar-macosx scroll-content scroll-scrolly_visible" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 260px;">
-                            <li class="list-group-item">
-                                <img src="webimages/bullet_arrow_r.png" alt="" title="" style="border: 0px;"><a href="applyonline/apply-online.aspx" style="color: brown;" class="link"><b>Now Apply For Admission</b><br>
-                                    You Can Apply Online From Our Website
-                                    <img src="webimages/new.gif" alt="" title="" style="border: 0px;"></a>
+
+                                @foreach($notifications as $notification)
+
+                                 <li class="list-group-item">
+                                <img src="{{url('images/bullet_arrow_r.png')}}" alt="" title="" style="border: 0px;"><a href="{{$notification->notification_link}}" style="color: brown;" class="link">
+                                    <b>{{$notification->notification_title}}</b><br>
+                                    {{$notification->notification_body}}
+                                   </a>
                             </li>
+
+                                @endforeach
+                           
 
                         </ul>
 
@@ -107,7 +115,7 @@
                     <div class="detail">
                         <h3><span>Download</span>Broucher</h3>
                     
-                        <a href="/raharepros.pdf" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a href="/" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
                 </li>
                 <li class="col-sm-4 certification clearfix equal-hight">
@@ -500,7 +508,7 @@
     </section>
 
   <?php
-    if($testimonials->count())
+    if($testimonials->count() > 0)
     {
 
       ?>

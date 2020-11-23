@@ -1,5 +1,5 @@
  <!-- Start Header top Bar -->
-        <div class="header-top">
+        <div class="header-top mb-3">
             <div class="container clearfix">
                 <ul class="follow-us hidden-xs">
                     <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
