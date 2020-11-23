@@ -31,6 +31,12 @@ Route::prefix("student")->group(function(){
  Route::get('/admission','StudentsController@studentAdmission')->name('student.admission')->middleware('auth');
   Route::post('/admission','StudentsController@StorestudentAdmission')->name('student.admission.submit')->middleware('auth');
 
+
+
+
+  Route::get('photo', 'AjaxController@getImage')->name('get.image');
+Route::post('photo', 'AjaxController@storeImage')->name('store.image')->middleware('auth');
+
 });
 
 // Student Dashboard

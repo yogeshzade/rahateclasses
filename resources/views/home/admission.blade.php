@@ -76,7 +76,7 @@
                 @endif
                         </div>
 
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-md-4">
                            
                             <input name="dob" type="date" placeholder="Select DOB" required="" value="{{old('dob')}}" placeholder="">
                               @if ($errors->has('dob'))
@@ -87,7 +87,7 @@
 
                         
 
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-md-4">
                            
                             <select class="form-control" id="sel1" name="category">
                                 <option selected>Select Category</option>
@@ -99,19 +99,9 @@
                             </select>
                         </div>
 
-                        <div class="form-group col-md-3">
-                           
-                            <select class="form-control" id="sel1" name="religion">
-                                <option selected>Select Religion</option>
-                              <option value="GEN">GEN</option>
-                              <option value="SC">SC</option>
-                              <option value="ST">ST</option>
-                              <option value="OBC">OBC</option>
-                           
-                            </select>
-                        </div>
+                     
 
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-md-4">
                             <select class="form-control" id="sel1" name="gender">
                                 <option selected>Select Gender</option>
                               <option value="male">Male</option>
@@ -176,17 +166,36 @@
                         </div>
 
                         <div class="form-group col-md-4 col-sm-4">
-                            <input name="parentmobile" type="text" placeholder="Enter Parent Mob No" rquired="" value="{{old('parentmobile')}}" readonly maxlength="10">
+                            <input name="parentmobile" type="text" placeholder="Enter Parent Mob No" rquired="" value="{{old('parentmobile')}}"  maxlength="10">
                             @if ($errors->has('parentmobile'))
                   <span class="text-danger">{{ $errors->first('parentmobile') }}</span>
               @endif
                         </div>
 
                         <div class="form-group col-md-4 col-sm-4">
-                            <input name="aadharno" type="text" placeholder="Enter Aadhar No" rquired="" value="{{old('aadharno')}}" readonly maxlength="15">
+                            <input name="aadharno" type="text" placeholder="Enter Aadhar No" rquired="" value="{{old('aadharno')}}"  maxlength="15">
                             @if ($errors->has('aadharno'))
                   <span class="text-danger">{{ $errors->first('aadharno') }}</span>
               @endif
+                        </div>
+
+
+                             <div class="form-group col-md-6 col-sm-12">
+                              <div class="col-md-4">
+                                Upload Photo :
+                              </div>
+                                <div class="col-md-8">
+                                    <input type="file" name="image" placeholder="Choose image" id="image">
+                                </div>
+                         
+                        <span class="text-danger">{{ $errors->first('image') }}</span>
+                        </div>
+
+
+                             <div class="form-group col-md-6 col-sm-12">
+                          
+                             <img id="image_preview_container" src="{{ asset('storage/image/image-preview.png') }}"
+                        alt="preview image" style="width: 240px; max-height: 150px;">
                         </div>
 
 
@@ -209,12 +218,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <div class="button-outer">
-                        <button class="btn-sm btn-danger" type="reset">Clear Form <span class="fa fa-exlamation"></span></button>
-                    </div>
-                </div>
-
+              
 
                     </div>
                     {{-- Row End --}}
@@ -237,6 +241,54 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js"></script>
 
      <script type="text/javascript">
+
+
+      $(document).ready(function (e) {
+   
+   $.ajaxSetup({
+       headers: {
+           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+   });
+  
+   $('#image').change(function(){
+           
+    let reader = new FileReader();
+
+    reader.onload = (e) => { 
+
+      $('#image_preview_container').attr('src', e.target.result); 
+    }
+
+    reader.readAsDataURL(this.files[0]); 
+  
+   });
+  
+   $('#upload_image_form').submit(function(e) {
+
+     e.preventDefault();
+  
+     var formData = new FormData(this);
+  
+     $.ajax({
+        type:'POST',
+        url: "{{ url('store.image')}}",
+        data: formData,
+        cache:false,
+        contentType: false,
+        processData: false,
+        success: (data) => {
+           this.reset();
+           alert('Image has been uploaded successfully');
+        },
+        error: function(data){
+           console.log(data);
+         }
+       });
+   });
+});
+
+
     $('#reload').click(function () {
         $.ajax({
             type: 'GET',

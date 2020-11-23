@@ -36,10 +36,7 @@
                         <li> <a href="/contact">Contact Us</a></li>
                         <li> <a href="/career">Career</a></li>
 
-                          <li> <a href="/career" class="pull-right">
-                              
-                            <i class="fa fa-whatsapp right-block clearfix"></i>
-                          </a></li>
+                         
                     </ul>
                 </div>
             </div>
