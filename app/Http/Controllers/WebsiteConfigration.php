@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Slider;
 use App\Popup;
+use App\NewsAndUpdate;
 
 class WebsiteConfigration extends Controller
 {
@@ -109,5 +110,39 @@ class WebsiteConfigration extends Controller
 
       public function CareerIndex(){
         return "Career index working";
+    }
+
+    public function Updatesindex(){
+        $updates = NewsAndUpdate::all();
+        return view('updates.index',compact('updates'));
+    }
+
+     public function CreateUpdates(){
+         return view('updates.create');
+
+    }
+
+    public function UpdatesStore(Request $request){
+
+
+        $file = NULL;
+
+        if($request->file)
+        {
+             $filename = time().'.'.$request->file->extension();  
+       
+        $request->file->move(public_path('files'), $filename);
+        $file = 'files/'.$filename;
+        }
+
+        $data = new NewsAndUpdate();
+        $data->notification_title = $request->notification_title;
+        $data->notification_body = $request->notification_body;
+          $data->notification_link = $request->notification_link;
+          $data->file_path = $file;
+          $data->save();
+          return redirect()->route('updates.index')->with('success',"Notification Added!");
+
+
     }
 }

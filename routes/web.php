@@ -118,7 +118,10 @@ Route::get('/career','WebsiteConfigration@CareerIndex')->name('career.index');
 Route::get('/inquiry','WebsiteConfigration@inquiryIndex')->name('inquiry.index');
 Route::get('/inquiry/{id}','WebsiteConfigration@inquiryRead')->name('inquiry.view');
 Route::get('/inquiry/delete/{id}','WebsiteConfigration@DeleteInquiry')->name('inquiry.delete');
-Route::get('/updates','WebsiteConfigration@sliderindex')->name('updates.index');
+Route::get('/updates','WebsiteConfigration@Updatesindex')->name('updates.index');
+Route::get('/updates/new','WebsiteConfigration@CreateUpdates')->name('updates.create');
+Route::post('/updates/new','WebsiteConfigration@UpdatesStore')->name('updates.store');
+Route::get('/updates/delete/{id}','WebsiteConfigration@UpdatesDelete')->name('updates.delete');
 });
 
 
