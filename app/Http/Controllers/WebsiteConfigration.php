@@ -145,4 +145,9 @@ class WebsiteConfigration extends Controller
 
 
     }
+
+    public function UpdatesDelete($id){
+    $notification = NewsAndUpdate::findOrFail($id)
+
+    }
 }

@@ -161,9 +161,21 @@ class StudentsController extends Controller
         'course_id' => 'required',
         'class_id' => 'required',
          'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:4048',
+        
       ]);
 
       $student_id = Auth::user()->id;
+
+       $file = NULL;
+
+        if($request->image)
+        {
+        $filename = time().'.'.$request->image->extension();  
+       
+        $request->image->move(public_path('students'), $filename);
+        $file = 'students/'.$filename;
+        }
+
 
       $data = array(
         'user_id' => $student_id,
@@ -181,6 +193,7 @@ class StudentsController extends Controller
                  'student_aadhar'=> $request->aadharno,
                  'parent_no' => $request->parentmobile,
                   'student_no' => $request->studentmobile,
+                    'student_photo' => $file,
       );
 
       $checkIfExist = Studentprofile::where('user_id',$student_id)->first();
@@ -213,8 +226,9 @@ class StudentsController extends Controller
         $studentcourse = studentprofile::where('user_id',Auth::user()->id)->firstOrFail();
         $coursedetails = Course::findOrFail($studentcourse->course_id);
         $installments = Installment::where('course_id',$studentcourse->course_id)->get();
+        $classdetails = CourseClass::where('id',$studentcourse->class_id)->firstOrFail();
       
-      return view('home.feesdetails',compact('studentcourse','coursedetails','installments'));
+      return view('home.feesdetails',compact('studentcourse','coursedetails','installments','classdetails'));
 
     }
 

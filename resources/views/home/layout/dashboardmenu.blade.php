@@ -4,7 +4,33 @@
     <div class="inner dashboard-menu">
 
 
+   <div class="card hovercard">
+                <div class="cardheader">
 
+                </div>
+                <div class="avatar">
+                    @php
+                    $profile = \App\studentprofile::where('user_id',Auth::user()->id)->get();
+                    @endphp
+                    @if($profile->count())
+                        <img alt="" src="{{url('')}}">
+
+                    @else
+                     <img alt="" src="{{url('user.png')}}">
+                    @endif
+                   
+                </div>
+                <div class="info">
+                    <div class="title">
+                        {{Auth::user()->name}}
+                    </div>
+                    <div class="desc">Registraion ID: <b>RHT-{{Auth::user()->id}}</b></div>
+               
+                </div>
+                <div class="bottom">
+                
+                </div>
+            </div>
     <div class="mini-submenu">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>

@@ -59,6 +59,50 @@
             </div>
             <div class="cnt-block">
 
+              <div class="row">
+                <div class="col-md-4">
+
+                  <div class="pull-left">
+                    <b>Course Name :- </b> <b class="text-success">
+                      {{$coursedetails->course_name}}
+                    </b>
+                  </div>
+
+
+                
+                </div>
+
+                 <div class="col-md-4">
+
+                  <div class="pull-left">
+                    <b>Class Name :- </b> <b class="text-success">
+                      {{$classdetails->classname}} - {{$classdetails->type}}
+                    </b>
+                  </div>
+
+                  
+                
+                </div>
+
+
+                <div class="col-md-4">
+
+                  <div class="pull-left">
+                    <b>Total Course Fees :- </b> <b class="text-success">
+                     Rs. {{IND_money_format($coursedetails->total_fees)}}
+                    </b>
+                  </div>
+
+                  
+                
+                </div>
+
+
+
+
+              </div>
+              <br/>
+
               <table class="table table-striped">
   <thead>
     <tr>
@@ -91,7 +135,7 @@
 
               
 <div id="accordion" class="second-accordion">
-                                                                                          <div class="card">
+                                   <div class="card">
                               <div class="card-header" id="headingSix">
                       <div class="panel-title">
                           <label for="r16">
@@ -106,12 +150,11 @@
                       <div class="card-body">
                                   <div class="payment-proceed-btn">
                                     <form action="http://rjarts.in/dopayment" method="POST">
-                                      <input type="hidden" name="_token" value="fkzSCahlLlKWjoA1DTzUucESdzr2cbzT2MgvchTY">                                      
-                                    <input type="hidden" name="amount" value="eyJpdiI6IlVDa29Rb0xram8xQ0t5d3hMRjJuaGc9PSIsInZhbHVlIjoiNlhheGlVeHBDOG5pN3dsYnptUWlQdz09IiwibWFjIjoiMWE3NDkwYmYxODdlM2JmOTU5Y2I2OGZhNjk3Y2JiZWM4MDU1OTdkMzI2YTY0NjAxODZhNTYwYTJlNGFiMjE5YiJ9">
+                                    @csrf                                      
+                                    <input type="hidden" name="amount" value="">
                                     
 
-                                    
-                                    <script src="https://checkout.razorpay.com/v1/checkout.js" data-key="rzp_live_CcBMTD7wnchcjh" data-amount="49900" data-currency="INR" data-order_id="" data-buttontext="Pay Now" data-name="RjArts" data-description="" data-image="http://rjarts.in/images/logo/logo.png" data-prefill.name="Shantanu Kulkarni " data-prefill.email="shantukulkarni11@gmail.com" data-theme.color="#F44A4A"></script><input type="submit" value="Pay Now" class="razorpay-payment-button">
+                              <input type="submit" value="Pay Now" class="btn btn-success">
                                     </form>
                                   </div>
                       </div>
