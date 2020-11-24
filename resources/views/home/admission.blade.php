@@ -16,7 +16,7 @@
         @include('home.layout.headermenu')
         @include('home.layout.headermiddle') 
          <!-- Start Navigation -->
-        @include('home.layout.navigation')
+      
          <!-- End Navigation -->
      </header>
 
@@ -58,7 +58,7 @@
 
             </div>
             <div class="cnt-block">
-                <form action="{{route('student.admission.submit')}}" method="post" class="form-outer">
+                <form action="{{route('student.admission.submit')}}" method="post" class="form-outer" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
 
@@ -119,12 +119,58 @@
                         <div class="form-group col-md-4">
                             <select class="form-control" id="sel1" name="gender">
                                 <option selected>Select Gender</option>
-                              <option value="male">Male</option>
-                              <option value="female">Female</option>
+                              <option value="M">Male</option>
+                              <option value="L">Female</option>
+                                <option value="O">Other</option>
                           
                            
                             </select>
                         </div>
+
+
+                         <div class="form-group col-md-12 col-sm-12">
+                              <div class="col-md-3 col-sm-12">
+                               Select Class :
+                              </div>
+                                <div class="col-md-9 col-sm-12">
+                                     <select class="form-control" id="class_id" name="class_id">
+                                <option selected>Select Class</option>
+                            
+                            @foreach($classes as $class)
+                                  <option value="{{$class->id}}">{{$class->classname}} - {{$class->type}}</option>
+                            @endforeach
+
+                          
+                           
+                            </select>
+                                
+                                </div>
+                         
+                        <span class="text-danger">{{ $errors->first('class') }}</span>
+                        </div>
+
+
+                         <div class="form-group col-md-12 col-sm-12">
+                              <div class="col-md-3 col-sm-12">
+                               Select Course :
+                              </div>
+                                <div class="col-md-9 col-sm-12">
+                                     <select class="form-control" id="course_id" name="course_id">
+                                <option selected>Select Class First</option>
+                           
+                            </select>
+                                
+                                </div>
+                         
+                        <span class="text-danger">{{ $errors->first('class') }}</span>
+                        </div>
+
+
+
+                            
+
+
+
 
                         
 
@@ -281,7 +327,10 @@
      <script type="text/javascript">
 
 
+
       $(document).ready(function (e) {
+
+       $("#course_id").prop("disabled",true); 
    
    $.ajaxSetup({
        headers: {
@@ -335,6 +384,39 @@
                 $(".captcha span").html(data.captcha);
             }
         });
+    });
+
+    $("#class_id").on('change',function(){
+
+      var clssid = $("#class_id").val();
+      if(clssid != "")
+
+      {
+
+          $.ajax({
+            type: 'POST',
+            url: "{{route('fetch.course')}}",
+            dataType: "json",
+            data:{
+              class_id:clssid
+            },
+            success: function (data) {
+              if(data == ""){
+                return false;
+              }
+                 $("#course_id").prop("disabled",false); 
+                 $('#course_id').empty();
+                 console.log(data);
+                      $("#course_id").append("<option value='"+data.id+"'>"+data.course_name+"</option>");
+                     var coursedata = data;
+            }
+        });
+        
+      }
+
+       $("#course_id").prop("disabled",true); 
+       
+
     });
 
 </script>

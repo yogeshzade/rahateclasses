@@ -30,7 +30,7 @@ Route::prefix("student")->group(function(){
  Route::get('/logout','StudentsController@logout')->name('home.student.logout');
  Route::get('/admission','StudentsController@studentAdmission')->name('student.admission')->middleware('auth');
   Route::post('/admission','StudentsController@StorestudentAdmission')->name('student.admission.submit')->middleware('auth');
-
+ Route::post('fetch/course','CourseController@fetchCourse')->name('fetch.course');
 
 
 
@@ -86,6 +86,7 @@ Route::group([
     Route::post('/create','CourseController@store')->name('course.store');
     Route::get('/toggle/{id}','CourseController@toggleCoursestatus')->name('course.toggle');
     Route::get('fetch/class','CourseController@fetchClass')->name('fetch.class');
+   
 });
 
 

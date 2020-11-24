@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Crypt;
 use App\StudentProfile;
+use App\CourseClass;
 
 
 
@@ -134,7 +135,8 @@ class StudentsController extends Controller
 
     public function studentAdmission(){
         $userinfo = User::findOrFail(Auth::user()->id);
-        return view('home.admission',compact('userinfo'));
+        $classes = CourseClass::all();
+        return view('home.admission',compact('userinfo','classes'));
     }
 
     public function logout(){
@@ -150,7 +152,57 @@ class StudentsController extends Controller
 
     public function StorestudentAdmission(Request $request){
 
-        dd($request);
+      $request->validate([
+        'course_id' => 'required',
+        'class_id' => 'required',
+         'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:4048',
+      ]);
+
+      $student_id = Auth::user()->id;
+
+      $data = array(
+        'user_id' => $student_id,
+        'applicant_name' => $request->fullname,
+        'father_name' => $request->fathername,
+         'mother_name' => $request->mothername,
+          'state_of_domicile' => $request->state,
+           'dob' => $request->dob,
+            'gender' => $request->gender,
+             'category' => $request->category,
+              'religion' => "N/A",
+               'class_id' => $request->class_id,
+                'course_id' => $request->course_id,
+                 'student_address' => $request->address.",".$request->city.",".$request->pincode.",".$request->state,
+                 'student_aadhar'=> $request->aadharno,
+                 'parent_no' => $request->parentmobile,
+                  'student_no' => $request->studentmobile,
+      );
+
+      $checkIfExist = Studentprofile::where('user_id',$student_id)->first();
+
+      if(!$checkIfExist)
+      {
+        $stored = studentprofile::insert($data);
+        if($stored)
+        {
+            $user = User::find($student_id);
+         return back()->with('success','Form Submitted!');
+        }
+        else{
+             return back()->with('error','Please Check Errors!');
+        }
+      }
+      
+      else{
+        return back()->with('success','You Already Submited Form! Please Wait For Approval');
+      }
+
+
+
+    
+
+     
+
 
     }
 
