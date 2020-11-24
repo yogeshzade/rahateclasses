@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Crypt;
 use App\StudentProfile;
 use App\CourseClass;
-
+use App\Course;
+use App\Installment;
 
 
 
@@ -128,6 +129,10 @@ class StudentsController extends Controller
        {
         return redirect()->route('student.admission')->with('success','Please Fill Admission Form And Apply.');
        }
+       else{
+        return redirect()->route('student.fees')->with('success','Form Submitted! Please Pay Fees');
+       }
+
 
 
     }
@@ -186,23 +191,30 @@ class StudentsController extends Controller
         if($stored)
         {
             $user = User::find($student_id);
-         return back()->with('success','Form Submitted!');
+         return redirect()->route('student.fees')->with('success','Form Submitted!');
         }
         else{
              return back()->with('error','Please Check Errors!');
         }
       }
-      
+
       else{
         return back()->with('success','You Already Submited Form! Please Wait For Approval');
       }
 
 
 
-    
+    }
 
-     
 
+    public function payStudentFees(Request $request,$id=null){
+
+
+        $studentcourse = studentprofile::where('user_id',Auth::user()->id)->firstOrFail();
+        $coursedetails = Course::findOrFail($studentcourse->course_id);
+        $installments = Installment::where('course_id',$studentcourse->course_id)->get();
+      
+      return view('home.feesdetails',compact('studentcourse','coursedetails','installments'));
 
     }
 

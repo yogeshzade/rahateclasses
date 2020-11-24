@@ -36,6 +36,7 @@ Route::prefix("student")->group(function(){
 
   Route::get('photo', 'AjaxController@getImage')->name('get.image');
 Route::post('photo', 'AjaxController@storeImage')->name('store.image')->middleware('auth');
+Route::get('pay/fees/{id?}', 'StudentsController@payStudentFees')->name('student.fees')->middleware('auth');
 
 });
 
