@@ -1,0 +1,65 @@
+
+  <div class="col-md-3 col-sm-12 sidebar">
+
+    <div class="inner dashboard-menu">
+
+
+
+    <div class="mini-submenu">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </div>
+    <div class="list-group">
+        <span href="#" class="list-group-item active">
+           Welcome , <b>{{Auth::user()->name}}</b>
+            
+        </span>
+                @php
+        $applied = \App\StudentProfile::where('user_id',Auth::user()->id)->count();
+        @endphp
+
+        <a href="{{route('student.admission.submit')}}" class="list-group-item">
+            <i class="fa fa-refresh"></i> Apply Admission
+            
+                  @if($applied)
+                   <span class="badge badge-danger">
+                    Applied
+                     </span>
+                     @else
+                      <span class="badge badge-danger">
+                    Pending
+                     </span>
+
+                  @endif
+            
+        </a>
+
+       
+        <a href="#" class="list-group-item">
+            <i class="fa fa-search"></i> Check Fees
+        </a>
+        <a href="#" class="list-group-item">
+            <i class="fa fa-inr"></i> Pay Fees
+        </a>
+          <a href="#" class="list-group-item">
+            <i class="fa fa-file-pdf-o"></i> Download Notes
+        </a>
+         <a href="#" class="list-group-item">
+            <i class="fa fa-bell"></i> Notifications & Updates
+        </a>
+       
+       
+       
+       
+        <a href="{{route('home.student.logout')}}" class="list-group-item">
+            <i class="fa fa-sign-out"></i> Log Out
+        </a>
+    </div>        
+
+
+
+    </div>
+    
+
+  </div>

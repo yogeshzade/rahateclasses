@@ -20,12 +20,27 @@
          <!-- End Navigation -->
      </header>
 
+
     
+    <!-- Container Start  -->
    
+<div class="container">
+
+<!-- Row Start -->
+
+<div class="row">
+  <!-- Side Bar -->
+@include('home.layout.dashboardmenu');
+
+  <!-- Side Bar End -->
+
+  <!-- Containt Here -->
 
 
+<!-- Col Start -->
+  <div class="col-md-9 col-sm-12">
 
-<section class="login-wrapper register" style="background-color:#f1f6f9">
+    <section class="login-wrapper register" style="background-color:#f1f6f9">
     <div class="inner">
         <div class="regiter-inner">
           
@@ -231,6 +246,26 @@
 
                
 
+  </div>
+
+  <!-- Col ENd -->
+
+
+  <!-- Content End Here -->
+</div>
+
+<!-- Row ENd -->
+
+
+
+
+ </div> 
+
+ <!-- Container End -->
+
+
+
+
     <!-- Optional JavaScript -->
 
 
@@ -239,6 +274,9 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js"></script>
+
+@include('home.layout.dashboardscripts');
+
 
      <script type="text/javascript">
 

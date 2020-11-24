@@ -7411,3 +7411,8 @@ overflow-y: auto;
 	height: 19px !important;
     border-bottom: #010101 solid 3px;
 }
+
+.dashboard-menu{
+	margin-top: 40px;
+	position: sticky;
+}
