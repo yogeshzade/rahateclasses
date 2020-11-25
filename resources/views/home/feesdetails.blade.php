@@ -173,8 +173,71 @@
       </h4>
     </div>
     <div id="collapse1" class="panel-collapse collapse">
-      <div class="panel-body">Panel Body</div>
-      
+      <div class="panel-body">
+         <div class="row">
+
+        <div class="col-md-4">
+          Bank Name :
+        </div>
+        <div class="col-md-8">
+          <b class="text-danger">BANK OF BARODA</b>
+        </div>
+
+         <div class="col-md-4">
+          IFSC Code :
+        </div>
+        <div class="col-md-8">
+          <b class="text-danger">BARB0GONDIA</b>
+        </div>
+
+         <div class="col-md-4">
+          A/C Holder Name :
+        </div>
+        <div class="col-md-8">
+          <b class="text-danger">Shantanu Kulkarni</b>
+        </div>
+
+
+         <div class="col-md-4">
+          Branch Name : 
+        </div>
+        <div class="col-md-8">
+          <b class="text-danger">Branch</b>
+        </div>
+
+
+        <div class="col-md-4">
+       Account Type : 
+        </div>
+        <div class="col-md-8">
+          <b class="text-danger">Current</b>
+        </div>
+
+        <!-- End Bank Details -->
+
+
+
+
+
+
+
+      </div>
+
+      </div>
+  <div class="panel-footer">
+       <form action="" method="POST" enctype="multipart/form-data">
+          @csrf
+           <div class="col-md-4">
+     Upload Payment Receipt: 
+        </div>
+
+          <div class="col-md-4">
+      <input type="file" class="form-control" id="receipt" name="file" required="">
+        </div>
+        </form>
+  </div>
+     
+     
     </div>
   </div>
 </div>
