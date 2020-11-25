@@ -147,7 +147,7 @@
 
 <div class="row">
    <div class="col-md-3">
-    Enter Amount :-  
+    Enter Amount To Pay:-  
    </div>
    <div class="col-md-9">
   <input type="number" class="form-control" placeholder="Enter Amount To Pay" aria-label="Enter Amount" aria-describedby="button-addon1" id="amount">
@@ -230,9 +230,14 @@
            <div class="col-md-4">
      Upload Payment Receipt: 
         </div>
+         <input type="hidden" class="form-control" id="payamount" name="amount" required="" value="0">
 
           <div class="col-md-4">
       <input type="file" class="form-control" id="receipt" name="file" required="">
+        </div>
+
+        <div class="col-md-4">
+    <button type="submit" name="submit" class="btn btn-success">Upload</button>
         </div>
         </form>
   </div>
@@ -252,8 +257,13 @@
       </h4>
     </div>
     <div id="collapse2" class="panel-collapse collapse">
-      <div class="panel-body">Panel Body</div>
-      <div class="panel-footer">Panel Footer</div>
+      <div class="panel-body">
+        <form action="" method="">
+          @csrf
+            <button type="submit" name="submit" class="btn btn-success">Pay Online</button>
+        </form>
+      </div>
+      
     </div>
   </div>
 </div>

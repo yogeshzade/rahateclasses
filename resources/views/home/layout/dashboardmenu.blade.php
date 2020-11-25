@@ -10,10 +10,11 @@
                 </div>
                 <div class="avatar">
                     @php
-                    $profile = \App\studentprofile::where('user_id',Auth::user()->id)->get();
+                    $profile = \App\studentprofile::where('user_id',Auth::user()->id)->first();
+                  
                     @endphp
-                    @if($profile->count())
-                        <img alt="" src="{{url('')}}">
+                    @if($profile)
+                        <img alt="" src="{{url($profile->student_photo)}}">
 
                     @else
                      <img alt="" src="{{url('user.png')}}">
