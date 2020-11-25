@@ -62,18 +62,20 @@
         </a>
 
        
-        <a href="#" class="list-group-item">
-            <i class="fa fa-search"></i> Check Fees
-        </a>
-        <a href="#" class="list-group-item">
+      
+        <a href="{{route('student.fees')}}" class="list-group-item">
             <i class="fa fa-inr"></i> Pay Fees
         </a>
           <a href="#" class="list-group-item">
-            <i class="fa fa-file-pdf-o"></i> Download Notes
+            <i class="fa fa-search"></i> Check Fees / Payment History
         </a>
          <a href="#" class="list-group-item">
             <i class="fa fa-bell"></i> Notifications & Updates
         </a>
+          <a href="#" class="list-group-item">
+            <i class="fa fa-file-pdf-o"></i> Download Notes
+        </a>
+        
        
        
        

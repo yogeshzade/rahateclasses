@@ -38,6 +38,13 @@ Route::prefix("student")->group(function(){
 Route::post('photo', 'AjaxController@storeImage')->name('store.image')->middleware('auth');
 Route::get('pay/fees/{id?}', 'StudentsController@payStudentFees')->name('student.fees')->middleware('auth');
 
+Route::get('notifications','StudentsController@getNotifications')->name('students.notifications')->middleware('auth');
+Route::get('check/fees/{id?}','StudentsController@checkStudentFees')
+      ->name('students.checkfees')
+      ->middleware('auth');
+ Route::get('tnc','StudentsController@tnc')->name('tnc');    
+ Route::post('fetch/installment/{id?}', 'StudentsController@fetchInstallmentAmount')->name('fetch.installment.amount')->middleware('auth'); 
+
 });
 
 // Student Dashboard

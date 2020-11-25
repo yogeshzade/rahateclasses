@@ -46,9 +46,16 @@
           
             <div class="head-block">
 
-                <h1>Complete Payment To Appoval Amdission!</h1>
+                <h1>Complete Payment Continue!</h1>
             </br>
                    @if ($message = Session::get('success'))
+<div class="alert alert-success alert-block mt-2">
+    <button type="button" class="close" data-dismiss="alert">×</button> 
+        <strong>{{ $message }}</strong>
+</div>
+@endif
+
+ @if ($message = Session::get('error'))
 <div class="alert alert-success alert-block mt-2">
     <button type="button" class="close" data-dismiss="alert">×</button> 
         <strong>{{ $message }}</strong>
@@ -110,6 +117,7 @@
       <th scope="col">Installment Name</th>
       <th scope="col">Installment Amout</th>
       <th scope="col">Installment Description</th>
+       <th scope="col">Payment Action</th>
     </tr>
   </thead>
   <tbody>
@@ -126,49 +134,76 @@
 </b>
 @endif
         </td>
+        <td>
+          <a href="#amount" onclick="return payfees('{{$installment->id}}');">Pay Fees</a>
+        </td>
     </tr>
     @endforeach
    
   </tbody>
 </table>
+  <br/>
 
 
-              
-<div id="accordion" class="second-accordion">
-                                   <div class="card">
-                              <div class="card-header" id="headingSix">
-                      <div class="panel-title">
-                          <label for="r16">
-                            <input type="radio" id="r16" name="occupation" value="Working" required="">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix"></a>
-                          <b>Online Payment With Debit Card/Gpay/Phonepay </b>
-                          </label>
-                          
-                      </div>
-                  </div>
-                  <div id="collapseSix" class="panel-collapse collapse in">
-                      <div class="card-body">
-                                  <div class="payment-proceed-btn">
-                                    <form action="http://rjarts.in/dopayment" method="POST">
-                                    @csrf                                      
-                                    <input type="hidden" name="amount" value="">
-                                    
+<div class="row">
+   <div class="col-md-3">
+    Enter Amount :-  
+   </div>
+   <div class="col-md-9">
+  <input type="number" class="form-control" placeholder="Enter Amount To Pay" aria-label="Enter Amount" aria-describedby="button-addon1" id="amount">
+  </div>
+</div>
+<br/>
+<br/>
+<div class="row">
+   <div class="col-md-12">
+  <h6>Select Payment Mode:</h6>
+   </div>
+  
+</div>
+<br/>
 
-                              <input type="submit" value="Pay Now" class="btn btn-success">
-                                    </form>
-                                  </div>
-                      </div>
-                  </div>
-              </div>
-                                          
-                            
-                        </div>
+<div class="row">
 
-
-
-            </div>
-        </div>
+  <div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">Bank Transfer</a>
+      </h4>
     </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div class="panel-body">Panel Body</div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Online -->
+
+  <div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse2">Online Payment With Card/Upi</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">Panel Body</div>
+      <div class="panel-footer">Panel Footer</div>
+    </div>
+  </div>
+</div>
+
+<!-- Online End -->
+
+  </div>
+
+ 
+
+
+
+
 </section>
 
                
@@ -206,6 +241,39 @@
 
 
      <script type="text/javascript">
+
+      $.ajaxSetup({
+       headers: {
+           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+   });
+  
+
+      function payfees(id)
+      {
+      console.log(id);
+
+        $.ajax({
+
+            type: 'POST',
+            url: "{{route('fetch.installment.amount')}}",
+            dataType: "json",
+            data:{
+              id:id
+            },
+              success: function (data) {
+                console.log(data);
+                if(data.length == 0){
+                  return false;
+                }
+
+                 var amount = $("#amount").val(data.amount);
+
+              }
+
+
+        });
+      }
 
 
 

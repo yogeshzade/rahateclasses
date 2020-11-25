@@ -232,6 +232,18 @@ class StudentsController extends Controller
 
     }
 
+    public function checkStudentFees($id=null){
+
+    }
+
+
+    public function fetchInstallmentAmount(Request $request){
+
+      $data = Installment::where('id',$request->id)->firstOrFail();
+      return response()->json($data,200);
+
+    }
+
 
 
 

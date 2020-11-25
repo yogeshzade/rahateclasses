@@ -56,7 +56,7 @@
                                 <input type="checkbox" id="test1">
                                 <label for="test1">Remember me</label>
                             </div>
-                            <a href="#" class="forgot"><span>?</span>Forgot password</a>
+                            <a href="{{url('password/reset')}}" class="forgot"><span>?</span>Forgot password</a>
                         </div>
                     </form>
                 </div>

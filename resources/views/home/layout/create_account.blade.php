@@ -82,6 +82,11 @@
                 @endif
 
                         </div>
+
+                          <div class="col-sm-12">
+                           <input type="checkbox" id="test1" checked="" disabled="">
+                                <label for="test1">I accept <a href="{{route('tnc')}}">Terms & Contitions</a></label>
+                        </div>
                        
                     </div>
                   
@@ -90,6 +95,7 @@
                 
                     <div class="button-outer">
                         <button class="btn">Register Now <span class="icon-more-icon"></span></button>
+                           <a href="{{route('home.student.login.index')}}">   <button class="btn register" type="button">Login now <span class="icon-more-icon"></span></button> </a>
                     </div>
                 </form>
             </div>
