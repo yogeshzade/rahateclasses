@@ -10,7 +10,7 @@
                 </div>
                 <div class="avatar">
                     @php
-                    $profile = \App\studentprofile::where('user_id',Auth::user()->id)->first();
+                    $profile = \App\Studentprofile::where('user_id',Auth::user()->id)->first();
                   
                     @endphp
                     @if($profile)
