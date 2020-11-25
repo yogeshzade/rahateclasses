@@ -9,16 +9,12 @@
 
                 </div>
                 <div class="avatar">
-                    @php
-                    $profile = \App\Studentprofile::where('user_id',Auth::user()->id)->first();
-                  
-                    @endphp
-                    @if($profile)
-                        <img alt="" src="{{url($profile->student_photo)}}">
+                   
+                       
 
-                    @else
+                  
                      <img alt="" src="{{url('user.png')}}">
-                    @endif
+                  
                    
                 </div>
                 <div class="info">
