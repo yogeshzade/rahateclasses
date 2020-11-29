@@ -247,6 +247,10 @@ class StudentsController extends Controller
 
     }
 
+    public function tnc(){
+      return view ('home.tnc');
+    }
+
 
 
 
