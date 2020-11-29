@@ -50,6 +50,13 @@ Route::get('check/fees/{id?}','StudentsController@checkStudentFees')
 
 Route::post('payment/offline/{id}','StudentsController@initOfflinePayment')->name('payment.offline')->middleware('auth'); 
 
+Route::post('payment/online/{id}','StudentsController@initOnlinePayment')->name('payment.online')->middleware('auth'); 
+
+Route::get('payment/online/process','StudentsController@proccedTransaction')->name('payment.process')->middleware('auth');
+
+Route::post('payment/online/callback','StudentsController@proccedTransaction')->name('payment.callback')->middleware(['auth','prevent-back-history']);
+
+
  // End Transacion Routes
 
 });

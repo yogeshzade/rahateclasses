@@ -138,6 +138,21 @@ return [
 
     'admission_session' => ("2020-21"),
 
+    'PAYU_MERCHANT_SANDBOX' => "68eRIy7L",
+
+    'PAYU_SALT_SANDBOX' =>  "YBIdt1n4VK",
+
+    'PAYU_MERCHANT_LIVE' => "68eRIy7L",
+
+    'PAYU_SALT_LIVE' =>  "YBIdt1n4VK",
+
+    'PAYU_LIVE' => "https://secure.payu.in/_payment",
+
+    'PAYU_SANDBOX' => "https://test.payu.in/_payment",
+
+    'ADMISSION_FEES' => "RAHATE_ADMISSION_FEES",
+
+
     'providers' => [
 
         /*

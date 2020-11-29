@@ -56,7 +56,7 @@
 @endif
 
  @if ($message = Session::get('error'))
-<div class="alert alert-success alert-block mt-2">
+<div class="alert alert-danger alert-block mt-2">
     <button type="button" class="close" data-dismiss="alert">×</button> 
         <strong>{{ $message }}</strong>
 </div>
@@ -286,7 +286,7 @@
 Enter Amount:-
             </div>
             <div class="col-md-6 col-sm-12 form-group">
- <input type="number" class="form-control" placeholder="Enter Amount To Pay" aria-label="Enter Amount" aria-describedby="button-addon1" id="amount" required="" name="payment_amount">
+ <input type="text" class="form-control" placeholder="Enter Amount To Pay" aria-label="Enter Amount" aria-describedby="button-addon1" id="amount" required="" name="payment_amount">
             </div>
 
              <div class="col-md-6">
@@ -325,14 +325,14 @@ Enter Amount:-
     </div>
     <div id="collapse2" class="panel-collapse collapse">
       <div class="panel-body">
-        <form action="" method="">
+        <form action="{{route('payment.online',Auth::user()->id)}}" method="POST">
           @csrf
            <div class="row">
              <div class="col-md-6 col-sm-12">
 <b>Enter Amount: </b>
             </div>
             <div class="col-md-6 col-sm-12">
- <input type="number" class="form-control" placeholder="Enter Amount To Pay" aria-label="Enter Amount" aria-describedby="button-addon1" id="amountonline" required="" name="payment_amount">
+ <input type="text" class="form-control" placeholder="Enter Amount To Pay" aria-label="Enter Amount" aria-describedby="button-addon1" id="amountonline" required="" name="payment_amount">
             </div>
 
 </div>

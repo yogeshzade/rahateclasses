@@ -49,7 +49,7 @@
 
                 <h1>Fill Admission Form To Apply!</h1>
                 <br/>
-                <h5>Session  2020-21</h5>
+                <h5>Session  config('app.admission_session');</h5>
                 <br/>
                 @if($profilestatus && $profilestatus->status == 0)
 

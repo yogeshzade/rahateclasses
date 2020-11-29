@@ -315,6 +315,85 @@ class StudentsController extends Controller
 
     }
 
+    public function initOnlinePayment(Request $request,$id){
+
+      $request->validate([
+
+        'payment_amount' => 'required|numeric|min:1'
+
+      ]);
+
+      $authuser = Auth::user()->id;
+
+      if($authuser == $id){
+
+        // Inititalise Transation For PayU With Status Pending
+
+       $request->session()->forget('txnid');
+
+        $initTransaction = new PaymentTransaction();
+        $initTransactionID = new TransactionId();
+        $txnID = $initTransactionID->TransactionId($authuser);
+        $initTransaction->user_id = $authuser;
+        $initTransaction->payment_amount = $request->payment_amount;
+        $initTransaction->transaction_id = $txnID;
+        $initTransaction->payment_method = 1;
+        $initTransaction->product_info = config('app.ADMISSION_FEES')."-RHT".$authuser;
+        $isSaved = $initTransaction->save();
+        if($isSaved)
+        {
+          $request->session()->put('txnid', $txnID);
+           return redirect()->route('payment.process',['txnid'=>$txnID]);
+        }
+        else{
+          return back()->with('error','Invalid Transaction');
+        }
+
+
+
+        // Inititalise Transation Ended
+      }
+
+
+    }
+
+
+     public function proccedTransaction(Request $request){
+          $sessionTXN = $request->session()->get('txnid');
+          $userID = Auth::user();
+          $hash = '';
+          $posted = array();
+
+         if($sessionTXN){
+          $request->session()->forget('txnid');
+          $fetchTransaction  = PaymentTransaction::where('transaction_id',$sessionTXN)
+                              ->where('user_id',$userID->id)
+          ->firstOrFail();
+
+          // Hash Sequence
+          // $samplehash = config('app.PAYU_MERCHANT_LIVE').'|'.$sessionTXN.'|'.$fetchTransaction->payment_amount.'|'.$fetchTransaction->product_info.'|'.$userID->name.'|'.$userID->email.'|||||'."".'||||||'.config('app.PAYU_SALT_LIVE');
+          
+
+          $paymenthash=hash('sha512', config('app.PAYU_MERCHANT_LIVE').'|'.$sessionTXN.'|'.$fetchTransaction->payment_amount.'|'.$fetchTransaction->product_info.'|'.$userID->name.'|'.$userID->email.'|||||'."".'||||||'.config('app.PAYU_SALT_LIVE'));
+
+          return view('home.process',compact('paymenthash','fetchTransaction'));
+
+         }
+         else{
+          return back()->with('error','Invalid Transaction.Please Inititalise Transaction Again');
+         }
+          
+        return $requestID;
+    }
+
+
+    public function callbackTransaction(Request $request){
+      return $request;
+
+    }
+
+   
+
 
 
 
