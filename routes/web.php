@@ -29,6 +29,7 @@ Route::prefix("student")->group(function(){
   Route::post('/login','StudentsController@login')->name('home.student.login.post');
  Route::get('/logout','StudentsController@logout')->name('home.student.logout');
  Route::get('/admission','StudentsController@studentAdmission')->name('student.admission')->middleware('auth');
+  Route::get('/admission/preview/{id}','StudentsController@formpreview')->name('student.admission.preview')->middleware('auth');
   Route::post('/admission','StudentsController@StorestudentAdmission')->name('student.admission.submit')->middleware('auth');
  Route::post('fetch/course','CourseController@fetchCourse')->name('fetch.course');
 

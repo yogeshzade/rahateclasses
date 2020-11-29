@@ -51,13 +51,7 @@
                 <br/>
                 <h5>Session  2020-21</h5>
                 <br/>
-                @if($profilestatus && $profilestatus->status == 0)
-
-                <div class="alert alert-warning alert-block mt-2">
-    <button type="button" class="close" data-dismiss="alert">×</button> 
-        <strong>You Already Submited Application. Your Application is pending</strong>
-</div>
-@endif
+              
 
            
                    @if ($message = Session::get('success'))
@@ -74,9 +68,9 @@
 </div>
 @endif
 
-            </div>
 
-                       <ul class="nav nav-justified nav-tabs">
+            </div>
+               <ul class="nav nav-justified nav-tabs">
                     <li class="disabled"
                     >
                         <a href="#Coursetab" data-toggle="tab" aria-expanded="true"
@@ -97,7 +91,7 @@
                           style="
                        color: #fff;
     border: none;
-    background: #c0992c;
+    background: #72c02c;
      margin-right: 1px;
     "
                         >
@@ -110,7 +104,7 @@
                             style="
                        color: #fff;
     border: none;
-    background: #72c02c;
+    background: #c0992c;
      margin-right: 1px;
     "
                         ><i class="fa fa-files" aria-hidden="true"></i> 3. Preview Form </a>
@@ -129,8 +123,32 @@
                         ><i class="fa fa-bank"></i>  4.Pay Fees Online/Offline   </a>
                     </li>
                 </ul>
-                
             <div class="cnt-block">
+
+
+              <!-- Profile Info -->
+              <div class="row">
+                <div class="col-md-5">
+                    <div class="thumbnail" >
+                                    <img src="{{url($profileinfo->student_photo)}}" style="max-height: 180px; max-width: 180px;"/>
+                                </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="col-md-12">
+                     <b>Application ID : <b class="text-danger">RHT/ADM/20/21- {{$profileinfo->id}}</b></b>
+                  </div>
+                  <div class="col-md-12">
+                    <b>Application Date : {{$profileinfo->admission_date}}</b>
+                  </div>
+                 <div class="col-md-12">
+                    <b>Total Fees: </b> <b class="text-danger">Rs. {{$courseinfo->total_fees}}</b>
+                  </div>
+                
+                </div>
+                <!--  -->
+              </div>
+               <!-- Profile Info Ended-->
+               <br/>
                 <form action="{{route('student.admission.submit')}}" method="post" class="form-outer" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
@@ -144,21 +162,18 @@
 
 
                         <div class="form-group col-md-6">
-                            <input name="fathername" type="text" placeholder="Enter Father Name *" required="" value="{{old('fathername')}}">
-                              @if ($errors->has('fathername'))
-                    <span class="text-danger">{{ $errors->first('fathername') }}</span>
-                @endif
-                        </div>
+                            <input name="fathername" type="text" placeholder="Enter Father Name *" required="" value="{{$profileinfo->father_name}}">
+                       </div>
 
                         <div class="form-group col-md-6">
-                            <input name="mothername" type="text" placeholder="Enter Mother Name *" required="" value="{{old('mothername')}}">
+                            <input name="mothername" type="text" placeholder="Enter Mother Name *" required="" value="{{$profileinfo->mother_name}}">
                               @if ($errors->has('mothername'))
                     <span class="text-danger">{{ $errors->first('mothername') }}</span>
                 @endif
                         </div>
 
                         <div class="form-group col-md-6">
-                            <input name="state" type="text" placeholder="State Of Domicile *" required="" value="{{old('state')}}">
+                            <input name="state" type="text" placeholder="State Of Domicile *" required="" value="{{$profileinfo->state_of_domicile}}">
                               @if ($errors->has('state'))
                     <span class="text-danger">{{ $errors->first('state') }}</span>
                 @endif
@@ -166,7 +181,7 @@
 
                         <div class="form-group col-md-4">
                            
-                            <input name="dob" type="date" placeholder="Select DOB *" required="" value="{{old('dob')}}" placeholder="">
+                            <input name="dob" type="text" placeholder="Select DOB *" required="" value="{{$profileinfo->dob}}" placeholder="">
                               @if ($errors->has('dob'))
                     <span class="text-danger">{{ $errors->first('dob') }}</span>
                 @endif
@@ -178,12 +193,8 @@
                         <div class="form-group col-md-4">
                            
                             <select class="form-control" id="sel1" name="category">
-                                <option selected>Select Category *</option>
-                              <option value="GEN">GEN</option>
-                              <option value="SC">SC</option>
-                              <option value="ST">ST</option>
-                              <option value="OBC">OBC</option>
-                           
+                                <option >{{$profileinfo->category}}</option>
+                                                       
                             </select>
                         </div>
 
@@ -191,9 +202,8 @@
 
                         <div class="form-group col-md-4">
                             <select class="form-control" id="sel1" name="gender">
-                                <option selected>Select Gender *</option>
-                              <option value="M">Male</option>
-                              <option value="L">Female</option>
+                                <option selected>{{$profileinfo->gender}}</option>
+                             
                                 
                           
                            
@@ -207,20 +217,16 @@
                               </div>
                                 <div class="col-md-9 col-sm-12">
                                      <select class="form-control" id="class_id" name="class_id">
-                                <option selected>Select Class *</option>
                             
-                            @foreach($classes as $class)
-                                  <option value="{{$class->id}}">{{$class->classname}} - {{$class->type}}</option>
-                            @endforeach
-
-                          
+                            
+                        
+                                  <option value="{{$classinfo->id}}">{{$classinfo->classname}} - {{$classinfo->type}}</option>
                            
                             </select>
                                 
                                 </div>
                          
-                        <span class="text-danger">{{ $errors->first('class') }}</span>
-                        </div>
+                                      </div>
 
 
                          <div class="form-group col-md-12 col-sm-12">
@@ -229,7 +235,7 @@
                               </div>
                                 <div class="col-md-9 col-sm-12">
                                      <select class="form-control" id="course_id" name="course_id">
-                                <option selected>Select Class First *</option>
+                                <option>{{$courseinfo->course_name}}</option>
                            
                             </select>
                                 
@@ -250,33 +256,25 @@
                      
                    
                         <div class="form-group col-md-12 col-sm-12">
-                            <input name="address" type="address" placeholder="Enter Residence Address *" rquired="" value="{{old('address')}}">
-                            @if ($errors->has('address'))
-                  <span class="text-danger">{{ $errors->first('address') }}</span>
-              @endif
+                            <input name="address" type="address" placeholder="Enter Residence Address *" rquired="" value="{{$profileinfo->student_address}}">
+                           
                         </div>
 
                         <div class="form-group col-md-6 col-sm-12">
-                            <input name="city" type="text" placeholder="Enter City *" rquired="" value="{{old('city')}}">
-                            @if ($errors->has('city'))
-                  <span class="text-danger">{{ $errors->first('city') }}</span>
-              @endif
+                            <input name="city" type="text" placeholder="Enter City *" rquired="" value="{{$profileinfo->student_address}}">
+                         
                         </div>
 
                      
 
                         <div class="form-group col-md-6 col-sm-12">
-                            <input name="state" type="text" placeholder="Enter State *" rquired="" value="{{old('state')}}">
-                            @if ($errors->has('state'))
-                  <span class="text-danger">{{ $errors->first('state') }}</span>
-              @endif
+                            <input name="state" type="text" placeholder="Enter State *" rquired="" value="{{$profileinfo->student_address}}">
+                         
                         </div>
 
                         <div class="form-group col-md-6 col-sm-12">
                             <input name="pincode" type="text" placeholder="Enter PinCode *" rquired="" value="{{old('pincode')}}" maxlength="6">
-                            @if ($errors->has('pincode'))
-                  <span class="text-danger">{{ $errors->first('pincode') }}</span>
-              @endif
+                           
                         </div>
 
                         
@@ -288,45 +286,14 @@
                         </div>
 
                         <div class="form-group col-md-6 col-sm-12">
-                            <input name="parentmobile" type="text" placeholder="Enter Parent Mob No *" rquired="" value="{{old('parentmobile')}}"  maxlength="10">
-                            @if ($errors->has('parentmobile'))
-                  <span class="text-danger">{{ $errors->first('parentmobile') }}</span>
-              @endif
+                            <input name="parentmobile" type="text" placeholder="Enter Parent Mob No *" rquired="" value="{{$profileinfo->parent_no}}"  maxlength="10">
+                           
                         </div>
 
                         <div class="form-group col-md-6 col-sm-12">
-                            <input name="aadharno" type="text" placeholder="Enter Aadhar No *" rquired="" value="{{old('aadharno')}}"  maxlength="15">
-                            @if ($errors->has('aadharno'))
-                  <span class="text-danger">{{ $errors->first('aadharno') }}</span>
-              @endif
-                        </div>
-
-
-                             <div class="form-group col-md-6 col-sm-12">
-                              <div class="col-md-4">
-                                Upload Photo :
-                              </div>
-                                <div class="col-md-8">
-                                    <input type="file" name="image" placeholder="Choose image" id="image">
-                                </div>
+                            <input name="aadharno" type="text" placeholder="Enter Aadhar No *" rquired="" value="{{$profileinfo->student_aadhar}}"  maxlength="15">
                          
-                        <span class="text-danger">{{ $errors->first('image') }}</span>
                         </div>
-
-
-                             <div class="form-group col-md-6 col-sm-12">
-                             
-                          
-                             <img id="image_preview_container" src="{{url('user.png')}}"
-                        alt="preview image" style="width: 240px; max-height: 150px;">
-                        </div>
-
-
-                        
-                        
-
-
-
                     </div>
 
              
@@ -335,11 +302,7 @@
                 
                     {{-- Row Start --}}
                     <div class="row">
-                <div class="col-md-6">
-                    <div class="button-outer">
-                        <button class="btn">Apply Now <span class="icon-more-icon"></span></button>
-                    </div>
-                </div>
+               
 
               
 
@@ -347,6 +310,11 @@
                     {{-- Row End --}}
 
                 </form>
+                 <div class="col-md-6">
+                    <div class="button-outer">
+                      <a href="{{route('student.fees')}}"> <button class="btn">Continue To Payment<span class="icon-more-icon"></span></button></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

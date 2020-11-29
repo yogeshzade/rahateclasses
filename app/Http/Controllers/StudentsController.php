@@ -143,7 +143,13 @@ class StudentsController extends Controller
         $userinfo = User::findOrFail(Auth::user()->id);
         $classes = CourseClass::all();
         $profilestatus = StudentProfile::where('user_id',Auth::user()->id)->first();
-        return view('home.admission',compact('userinfo','classes','profilestatus'));
+        if($profilestatus){
+            return redirect()->route('student.admission.preview',Auth::user()->id)->with('success','You Already Applied.');
+        }
+        else{
+           return view('home.admission',compact('userinfo','classes','profilestatus'));
+        }
+       
     }
 
     public function logout(){
@@ -197,6 +203,8 @@ class StudentsController extends Controller
                  'parent_no' => $request->parentmobile,
                   'student_no' => $request->studentmobile,
                     'student_photo' => $file,
+                    'admission_date' => date('d/m/Y'),
+                    'pincode' => $request->pincode
       );
 
       $checkIfExist = Studentprofile::where('user_id',$student_id)->first();
@@ -207,7 +215,7 @@ class StudentsController extends Controller
         if($stored)
         {
             $user = User::find($student_id);
-         return redirect()->route('student.fees')->with('success','Form Submitted!');
+         return redirect()->route('student.admission.preview',$student_id)->with('success','Form Submitted! Please Continue To Payment');
         }
         else{
              return back()->with('error','Please Check Errors!');
@@ -249,6 +257,19 @@ class StudentsController extends Controller
 
     public function tnc(){
       return view ('home.tnc');
+    }
+
+    public function formpreview($id)
+    {
+      $profileinfo = studentprofile::where('user_id',$id)->firstOrFail();
+        $userinfo = User::where('id',$id)->first();
+        $courseinfo = Course::where('id',$profileinfo->course_id)->first(['id','course_name','board','total_fees']);
+        $classinfo = CourseClass::where('id',$profileinfo->class_id)->first();
+        $profilestatus = 1;
+
+        return view('home.formpreview',compact('profileinfo','userinfo','courseinfo','classinfo','profilestatus'));
+
+
     }
 
 
