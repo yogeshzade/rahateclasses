@@ -6,7 +6,7 @@
     ** Header **
     =================================================== -->
     <header>
-       
+           @include('home.layout.headermiddle')
       
     </header>
 
@@ -14,7 +14,7 @@
         <div class="inner" style="background-color:#f4f4f4;" >
             <div class="login">
                 <div class="login-logo">
-                    <a href="{{route('home.index')}}"><img src="{{asset('homeassets\images\rahatelogo.png')}}" class="img-responsive" alt=""></a>
+                    <a href="{{route('home.index')}}"><img src="{{asset('homeassets\images\rahatelogo.png')}}" class="img-responsive" alt="" style="width: 180px;"></a>
                 </div>
                 <div class="head-block">
                     <h1>Login To Your Account</h1>

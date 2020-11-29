@@ -6,6 +6,7 @@
     ** Header **
     =================================================== -->
     <header>
+        @include('home.layout.headermiddle')
        
       
     </header>
@@ -18,10 +19,12 @@
 <section class="login-wrapper register" style="background-color:#f1f6f9">
     <div class="inner">
         <div class="regiter-inner">
-            <div class="login-logo"> <a href="{{route('home.index')}}"><img src="{{url('homeassets\images\rahatelogo.png')}}" class="img-responsive" alt="" style="width:120px;height:70px;"></a> </div>
+          
             <div class="head-block">
 
                 <h1>Create Your Account First!</h1>
+                <br/>
+                <h4>Session 20-21</h4>
                    @if ($message = Session::get('success'))
 <div class="alert alert-success alert-block mt-2">
     <button type="button" class="close" data-dismiss="alert">×</button> 
@@ -31,19 +34,28 @@
 
 
             </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <br/>
+                      @include('home.progress')
+
+                </div>
+            </div>
+       
             <div class="cnt-block">
+
                 <form action="{{route('student.create.account')}}" method="post" class="form-outer">
                     @csrf
                     <div class="row">
                         <div class="col-sm-8">
-                            <input name="fullname" type="text" placeholder="Enter Full Name" required="" value="{{old('fullname')}}">
+                            <input name="fullname" type="text" placeholder="Enter Full Name*" required="" value="{{old('fullname')}}">
                               @if ($errors->has('fullname'))
                     <span class="text-danger">{{ $errors->first('fullname') }}</span>
                 @endif
                         </div>
                         
                         <div class="col-sm-4">
-                            <input name="email" type="email" placeholder="email@gmail.com" required=""
+                            <input name="email" type="email" placeholder="Enter Your Email *" required=""
                             value="{{old('email')}}" 
                             autocomplete="off" 
                             >
@@ -53,7 +65,7 @@
                         </div>
 
                         <div class="col-sm-6">
-                            <input name="mobile" type="number" placeholder="Mobile Number" 
+                            <input name="mobile" type="number" placeholder="Enter Mobile Number *" 
                             required=""
                             value="{{old('mobile')}}" 
                             autocomplete="off" 
@@ -63,7 +75,7 @@
                 @endif
                         </div>
                         <div class="col-sm-6">
-                            <input name="password" type="password" placeholder="Password" min="8" maxlength="14" required="">
+                            <input name="password" type="password" placeholder="Password *" min="8" maxlength="14" required="">
                                @if ($errors->has('password'))
                     <span class="text-danger">{{ $errors->first('password') }}</span>
                 @endif
@@ -76,7 +88,7 @@
                     </button>
                         </div>
                         <div class="col-sm-4">
-                                         <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha">
+                                         <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha *" name="captcha">
                                             @if ($errors->has('captcha'))
                     <span class="text-danger">{{ $errors->first('captcha') }}</span>
                 @endif

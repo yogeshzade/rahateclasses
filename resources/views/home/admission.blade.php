@@ -15,6 +15,7 @@
        
         @include('home.layout.headermenu')
         @include('home.layout.headermiddle') 
+         @include('home.layout.headermiddle')
          <!-- Start Navigation -->
       
          <!-- End Navigation -->
