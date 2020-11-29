@@ -134,6 +134,10 @@ return [
     |
     */
 
+    // Extra Config
+
+    'admission_session' => ("2020-21"),
+
     'providers' => [
 
         /*

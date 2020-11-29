@@ -48,6 +48,7 @@
                     @csrf
                     <div class="row">
                         <div class="col-sm-8">
+                           
                             <input name="fullname" type="text" placeholder="Enter Full Name*" required="" value="{{old('fullname')}}">
                               @if ($errors->has('fullname'))
                     <span class="text-danger">{{ $errors->first('fullname') }}</span>

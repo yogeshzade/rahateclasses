@@ -11,9 +11,22 @@
                 <div class="avatar">
                    
                        
+                        @php
+                              $profilestatus = 0;
+ $profilestatus = App\StudentProfile::where('user_id',Auth::user()->id)->first();
+                              @endphp
+                              @if($profilestatus)
+                          
+                             <img id="image_preview_container" src="{{ url($profilestatus->student_photo) }}"
+                        alt="preview image">
+                       
+                        @else
+                         <img alt="" src="{{url('user.png')}}">
+
+                              @endif
 
                   
-                     <img alt="" src="{{url('user.png')}}">
+                    
                   
                    
                 </div>

@@ -4332,8 +4332,8 @@ ul.faq-listing li h2 {
 	padding: 0 20px;
 	background: none;
 	border: none;
-	border-left: 1px #dae4e8 solid;
-	border-bottom: 1px #dae4e8 solid;
+	border: 1px #dae4e8 solid;
+	/*border-bottom: 1px #dae4e8 solid;*/
 	font-size: 12px;
 	font-weight: 700;
 	color: #7f8385;

@@ -139,9 +139,11 @@ class StudentsController extends Controller
 
 
     public function studentAdmission(){
+      $profilestatus= 0;
         $userinfo = User::findOrFail(Auth::user()->id);
         $classes = CourseClass::all();
-        return view('home.admission',compact('userinfo','classes'));
+        $profilestatus = StudentProfile::where('user_id',Auth::user()->id)->first();
+        return view('home.admission',compact('userinfo','classes','profilestatus'));
     }
 
     public function logout(){
@@ -158,13 +160,14 @@ class StudentsController extends Controller
     public function StorestudentAdmission(Request $request){
 
       $request->validate([
-        'course_id' => 'required',
+        'course_id' => 'required|numeric|min:0|not_in:0',
         'class_id' => 'required',
          'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:4048',
         
       ]);
 
       $student_id = Auth::user()->id;
+
 
        $file = NULL;
 
