@@ -11,7 +11,8 @@ use App\StudentProfile;
 use App\CourseClass;
 use App\Course;
 use App\Installment;
-
+use App\Library\TransactionId;
+use App\PaymentTransaction;
 
 
 class StudentsController extends Controller
@@ -269,6 +270,48 @@ class StudentsController extends Controller
 
         return view('home.formpreview',compact('profileinfo','userinfo','courseinfo','classinfo','profilestatus'));
 
+
+    }
+
+    public function initOfflinePayment(Request $request,$id){
+
+      $authuser = Auth::user()->id;
+
+      if($authuser == $id){
+        $request->validate([
+          'payment_amount' => 'required|numeric|not_in:0|min:1',
+          'file' => 'required|image|max:1024',
+        ]);
+
+        $initTransaction = new PaymentTransaction();
+        $initTransactionID = new TransactionId();
+        $txnID = $initTransactionID->TransactionId($authuser); 
+        $filename = time().'.'.$request->file->extension();  
+        $request->file->move(public_path('transactions'), $filename);
+        $file = 'transactions/'.$filename;
+
+        $initTransaction->user_id = $authuser;
+        $initTransaction->payment_amount = $request->payment_amount;
+        $initTransaction->receipt_path = $file;
+        $initTransaction->transaction_id = $txnID;
+        $initTransaction->payment_method = 0;
+        $isSaved = $initTransaction->save();
+
+        if($isSaved)
+        {
+          return back()->with('success','Payment Receipt Submited Successfully.');
+        }
+        return back()->with('error','Unable To Process Payment');
+
+        // Submit Transaction Receipts
+
+
+
+
+      }
+      else{
+        return back()->with('error','Invalid Transaction!Please Try Again With Account');
+      }
 
     }
 

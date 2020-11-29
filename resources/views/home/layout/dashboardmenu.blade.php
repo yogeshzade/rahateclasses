@@ -48,7 +48,7 @@
     </div>
     <div class="list-group">
         <span href="#" class="list-group-item active">
-           Welcome , <b>{{Auth::user()->name}}</b>
+           Dashboard
             
         </span>
                 @php

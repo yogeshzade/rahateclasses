@@ -67,6 +67,10 @@ this is the file you need to edit to change the look of the Template.
 /* ================================================== */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
+html{
+	  scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
@@ -7660,4 +7664,9 @@ overflow-y: auto;
     margin-bottom: 17px;
 }
 
+.bank{
+	  text-transform: uppercase;
+	    letter-spacing: 3px;
+
+}
 

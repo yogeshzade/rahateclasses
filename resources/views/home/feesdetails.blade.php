@@ -64,6 +64,60 @@
 
 
             </div>
+
+             <ul class="nav nav-justified nav-tabs">
+                    <li class="disabled"
+                    >
+                        <a href="#Coursetab" data-toggle="tab" aria-expanded="true"
+                        style="
+                       color: #fff;
+    border: none;
+    background: #72c02c;
+    margin-right: 1px;
+    "
+                        > 
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            1. Signup Details
+                           </a>
+                    </li>
+
+                    <li class="active">
+                        <a data-toggle="tab"
+                          style="
+                       color: #fff;
+    border: none;
+    background: #72c02c;
+     margin-right: 1px;
+    "
+                        >
+                             <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                         2. Apply Admission</a>
+                    </li>
+
+                    <li class="disabled">
+                        <a data-toggle="tab"
+                            style="
+                       color: #fff;
+    border: none;
+    background: #72c02c;
+     margin-right: 1px;
+    "
+                        ><i class="fa fa-files" aria-hidden="true"></i> 3. Preview Form </a>
+                    </li>
+
+
+                    <li class="active">
+                        <a data-toggle="tab"
+                                                    style="
+                       color: #fff;
+    border: none;
+    background: #c0992c;
+     margin-right: 1px;
+    "
+
+                        ><i class="fa fa-bank"></i>  4.Pay Fees Online/Offline   </a>
+                    </li>
+                </ul>
             <div class="cnt-block">
 
               <div class="row">
@@ -145,16 +199,7 @@
   <br/>
 
 
-<div class="row">
-   <div class="col-md-3">
-    Enter Amount To Pay:-  
-   </div>
-   <div class="col-md-9">
-  <input type="number" class="form-control" placeholder="Enter Amount To Pay" aria-label="Enter Amount" aria-describedby="button-addon1" id="amount">
-  </div>
-</div>
-<br/>
-<br/>
+
 <div class="row">
    <div class="col-md-12">
   <h6>Select Payment Mode:</h6>
@@ -176,41 +221,50 @@
       <div class="panel-body">
          <div class="row">
 
-        <div class="col-md-4">
-          Bank Name :
+            <div class="col-md-4">
+         <b> A/C Holder Name : </b>
         </div>
         <div class="col-md-8">
-          <b class="text-danger">BANK OF BARODA</b>
+          <b class="text-danger bank">OMPRAKASH SHRIRAM RAHATE</b>
         </div>
-
-         <div class="col-md-4">
-          IFSC Code :
-        </div>
-        <div class="col-md-8">
-          <b class="text-danger">BARB0GONDIA</b>
-        </div>
-
-         <div class="col-md-4">
-          A/C Holder Name :
-        </div>
-        <div class="col-md-8">
-          <b class="text-danger">Shantanu Kulkarni</b>
-        </div>
-
-
-         <div class="col-md-4">
-          Branch Name : 
-        </div>
-        <div class="col-md-8">
-          <b class="text-danger">Branch</b>
-        </div>
-
 
         <div class="col-md-4">
-       Account Type : 
+          <b>Bank Name :</b>
         </div>
         <div class="col-md-8">
-          <b class="text-danger">Current</b>
+          <b class="text-danger bank">Union Bank </b>
+        </div>
+
+         <div class="col-md-4">
+          <b>Account Number :</b>
+        </div>
+        <div class="col-md-8">
+          <b class="text-danger bank">543002010007004 </b>
+        </div>
+
+         <div class="col-md-4">
+         <b> IFSC Code : </b>
+        </div>
+        <div class="col-md-8">
+          <b class="text-danger bank">UBIN0554308</b>
+        </div>
+
+       
+
+
+         <div class="col-md-4">
+         <b> Branch Name : </b>
+        </div>
+        <div class="col-md-8">
+          <b class="text-danger bank">Manewada Road</b>
+        </div>
+
+
+        <div class="col-md-4">
+       <b>Account Type : </b>
+        </div>
+        <div class="col-md-8">
+          <b class="text-danger bank">Current</b>
         </div>
 
         <!-- End Bank Details -->
@@ -225,20 +279,33 @@
 
       </div>
   <div class="panel-footer">
-       <form action="" method="POST" enctype="multipart/form-data">
+       <form action="{{route('payment.offline',Auth::user()->id)}}" method="POST" enctype="multipart/form-data">
           @csrf
-           <div class="col-md-4">
+          <div class="row">
+             <div class="col-md-6 col-sm-12">
+Enter Amount:-
+            </div>
+            <div class="col-md-6 col-sm-12 form-group">
+ <input type="number" class="form-control" placeholder="Enter Amount To Pay" aria-label="Enter Amount" aria-describedby="button-addon1" id="amount" required="" name="payment_amount">
+            </div>
+
+             <div class="col-md-6">
      Upload Payment Receipt: 
+     <small>(Upload Payment Sceeenshot)</small>
         </div>
          <input type="hidden" class="form-control" id="payamount" name="amount" required="" value="0">
 
-          <div class="col-md-4">
+          <div class="col-md-6">
       <input type="file" class="form-control" id="receipt" name="file" required="">
         </div>
 
         <div class="col-md-4">
     <button type="submit" name="submit" class="btn btn-success">Upload</button>
         </div>
+
+          </div>
+
+          
         </form>
   </div>
      
@@ -260,6 +327,15 @@
       <div class="panel-body">
         <form action="" method="">
           @csrf
+           <div class="row">
+             <div class="col-md-6 col-sm-12">
+<b>Enter Amount: </b>
+            </div>
+            <div class="col-md-6 col-sm-12">
+ <input type="number" class="form-control" placeholder="Enter Amount To Pay" aria-label="Enter Amount" aria-describedby="button-addon1" id="amountonline" required="" name="payment_amount">
+            </div>
+
+</div>
             <button type="submit" name="submit" class="btn btn-success">Pay Online</button>
         </form>
       </div>
@@ -341,6 +417,7 @@
                 }
 
                  var amount = $("#amount").val(data.amount);
+                 var amountonline = $("#amountonline").val(data.amount);
 
               }
 

@@ -125,15 +125,15 @@
                 </ul>
             <div class="cnt-block">
 
-
+<div id="printable">
               <!-- Profile Info -->
               <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-5 col-sm-5">
                     <div class="thumbnail" >
                                     <img src="{{url($profileinfo->student_photo)}}" style="max-height: 180px; max-width: 180px;"/>
                                 </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-7 col-sm-7">
                   <div class="col-md-12">
                      <b>Application ID : <b class="text-danger">RHT/ADM/20/21- {{$profileinfo->id}}</b></b>
                   </div>
@@ -154,6 +154,9 @@
                     <div class="row">
 
                         <div class="form-group col-md-6">
+                           <div class="col-md-12">
+                            <b>Student Name:</b>
+                           </div>
                             <input name="fullname" type="text" placeholder="Name Of Applicant *" required="" value="{{Auth::user()->name}}">
                               @if ($errors->has('fullname'))
                     <span class="text-danger">{{ $errors->first('fullname') }}</span>
@@ -162,10 +165,16 @@
 
 
                         <div class="form-group col-md-6">
+                          <div class="col-md-12">
+                            <b>Father Name:</b>
+                           </div>
                             <input name="fathername" type="text" placeholder="Enter Father Name *" required="" value="{{$profileinfo->father_name}}">
                        </div>
 
                         <div class="form-group col-md-6">
+                          <div class="col-md-12">
+                            <b>Mother Name:</b>
+                           </div>
                             <input name="mothername" type="text" placeholder="Enter Mother Name *" required="" value="{{$profileinfo->mother_name}}">
                               @if ($errors->has('mothername'))
                     <span class="text-danger">{{ $errors->first('mothername') }}</span>
@@ -173,6 +182,9 @@
                         </div>
 
                         <div class="form-group col-md-6">
+                          <div class="col-md-12">
+                            <b>State Of Domicile:</b>
+                           </div>
                             <input name="state" type="text" placeholder="State Of Domicile *" required="" value="{{$profileinfo->state_of_domicile}}">
                               @if ($errors->has('state'))
                     <span class="text-danger">{{ $errors->first('state') }}</span>
@@ -180,7 +192,9 @@
                         </div>
 
                         <div class="form-group col-md-4">
-                           
+                           <div class="col-md-12">
+                            <b>Date Of Birth:</b>
+                           </div>
                             <input name="dob" type="text" placeholder="Select DOB *" required="" value="{{$profileinfo->dob}}" placeholder="">
                               @if ($errors->has('dob'))
                     <span class="text-danger">{{ $errors->first('dob') }}</span>
@@ -191,7 +205,9 @@
                         
 
                         <div class="form-group col-md-4">
-                           
+                           <div class="col-md-12">
+                            <b>Categort : </b>
+                           </div>
                             <select class="form-control" id="sel1" name="category">
                                 <option >{{$profileinfo->category}}</option>
                                                        
@@ -201,6 +217,9 @@
                      
 
                         <div class="form-group col-md-4">
+                          <div class="col-md-12">
+                            <b>Gender : </b>
+                           </div>
                             <select class="form-control" id="sel1" name="gender">
                                 <option selected>{{$profileinfo->gender}}</option>
                              
@@ -213,7 +232,7 @@
 
                          <div class="form-group col-md-12 col-sm-12">
                               <div class="col-md-3 col-sm-12">
-                               Select Class :
+                             Class :
                               </div>
                                 <div class="col-md-9 col-sm-12">
                                      <select class="form-control" id="class_id" name="class_id">
@@ -231,7 +250,7 @@
 
                          <div class="form-group col-md-12 col-sm-12">
                               <div class="col-md-3 col-sm-12">
-                               Select Course :
+                             Course : 
                               </div>
                                 <div class="col-md-9 col-sm-12">
                                      <select class="form-control" id="course_id" name="course_id">
@@ -256,11 +275,17 @@
                      
                    
                         <div class="form-group col-md-12 col-sm-12">
+                          <div class="col-md-12">
+                            <b>Student Address :</b>
+                           </div>
                             <input name="address" type="address" placeholder="Enter Residence Address *" rquired="" value="{{$profileinfo->student_address}}">
                            
                         </div>
 
                         <div class="form-group col-md-6 col-sm-12">
+                          <div class="col-md-12">
+                            <b>City : </b>
+                           </div>
                             <input name="city" type="text" placeholder="Enter City *" rquired="" value="{{$profileinfo->student_address}}">
                          
                         </div>
@@ -268,17 +293,26 @@
                      
 
                         <div class="form-group col-md-6 col-sm-12">
+                          <div class="col-md-12">
+                            <b>State : </b>
+                           </div>
                             <input name="state" type="text" placeholder="Enter State *" rquired="" value="{{$profileinfo->student_address}}">
                          
                         </div>
 
                         <div class="form-group col-md-6 col-sm-12">
-                            <input name="pincode" type="text" placeholder="Enter PinCode *" rquired="" value="{{old('pincode')}}" maxlength="6">
+                           <div class="col-md-12">
+                            <b>Pin Code : </b>
+                           </div>
+                            <input name="pincode" type="text" placeholder="Enter PinCode *" rquired="" value="{{$profileinfo->pincode}}" maxlength="6">
                            
                         </div>
 
                         
                         <div class="form-group col-md-6 col-sm-12">
+                           <div class="col-md-12">
+                            <b>Student Number : </b>
+                           </div>
                             <input name="studentmobile" type="text" placeholder="Enter Student Mob No *" rquired="" value="{{Auth::user()->mobile}}" readonly>
                             @if ($errors->has('studentmobile'))
                   <span class="text-danger">{{ $errors->first('studentmobile') }}</span>
@@ -286,11 +320,17 @@
                         </div>
 
                         <div class="form-group col-md-6 col-sm-12">
+                            <div class="col-md-12">
+                            <b>Parent Number : </b>
+                           </div>
                             <input name="parentmobile" type="text" placeholder="Enter Parent Mob No *" rquired="" value="{{$profileinfo->parent_no}}"  maxlength="10">
                            
                         </div>
 
                         <div class="form-group col-md-6 col-sm-12">
+                            <div class="col-md-12">
+                            <b>Student Aadhar Number : </b>
+                           </div>
                             <input name="aadharno" type="text" placeholder="Enter Aadhar No *" rquired="" value="{{$profileinfo->student_aadhar}}"  maxlength="15">
                          
                         </div>
@@ -310,12 +350,23 @@
                     {{-- Row End --}}
 
                 </form>
+                <!-- End pritable -->
+              </div>
+
+              <div class="row">
+
                  <div class="col-md-6">
                     <div class="button-outer">
                       <a href="{{route('student.fees')}}"> <button class="btn">Continue To Payment<span class="icon-more-icon"></span></button></a>
                     </div>
                 </div>
+
+                <!-- Print Button -->
+                   
+
+                <!-- Print Button End -->
             </div>
+          </div>
         </div>
     </div>
 </section>
@@ -350,6 +401,10 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js"></script>
+
+<script src="{{url('homeassets/js/jQuery.print.min.js')}}">
+  
+</script>
 
 @include('home.layout.dashboardscripts');
 
@@ -455,6 +510,10 @@
        $("#course_id").prop("disabled",true); 
        
 
+    });
+
+    $("#printform").click(function(){
+      $("#printable").print();
     });
 
 </script>

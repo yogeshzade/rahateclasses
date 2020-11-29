@@ -46,6 +46,12 @@ Route::get('check/fees/{id?}','StudentsController@checkStudentFees')
  Route::get('tnc','StudentsController@tnc')->name('tnc');    
  Route::post('fetch/installment/{id?}', 'StudentsController@fetchInstallmentAmount')->name('fetch.installment.amount')->middleware('auth'); 
 
+ // Transaction Routes
+
+Route::post('payment/offline/{id}','StudentsController@initOfflinePayment')->name('payment.offline')->middleware('auth'); 
+
+ // End Transacion Routes
+
 });
 
 // Student Dashboard
