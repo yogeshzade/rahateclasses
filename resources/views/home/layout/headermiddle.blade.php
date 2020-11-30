@@ -1,4 +1,4 @@
-\<!-- Start Header Middle -->
+<!-- Start Header Middle -->
         <div class="container header-middle">
             <div class="row"> <span class="col-xs-6 col-sm-3"><a href="{{route('home.index')}}"><img src="{{asset('homeassets\images\rahatelogo.png')}}" class="img-responsive" alt=""></a></span>
                 <div class="col-xs-6 col-sm-3"></div>
@@ -9,7 +9,7 @@
                             <li> <span>Contact Us</span>+91-9545578282</li>
                         </ul>
                         @guest
-                        <a href="{{route('home.student.login.post')}}" class="login">Student Login <span class=""></span><i class="fa fa-lock"></i></a>
+                        <a href="{{route('home.student.login.post')}}" class="login">Login / Register <span class=""></span><i class="fa fa-lock"></i></a>
                         @else
                             @if(Auth::user()->is_admin)
                             <a href="/admin" class="login">{{Auth::user()->name}} <span class=""><i class="fa fa-user"></i></span></a>
