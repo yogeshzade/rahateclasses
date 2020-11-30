@@ -9,7 +9,7 @@
                 <div class="right-block clearfix">
                     <ul class="top-nav hidden-xs">
                         <li><a href="#enquirynow">Enquiry</a></li>
-                        <li><a href="#">Apply Online</a></li>
+                        <li><a href="{{route('student.admission.index')}}">Apply Online</a></li>
                     </ul>
                    
                 </div>
