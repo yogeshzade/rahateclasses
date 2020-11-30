@@ -361,6 +361,12 @@
                     </div>
                 </div>
 
+                 <div class="col-md-3">
+                    
+                      <a href="{{route('form.reset')}}"> <button class="btn btn-danger" style="color:#fff !important;">Reset</a>
+                    </div>
+                </div>
+
                 <!-- Print Button -->
                    
 

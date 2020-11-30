@@ -130,7 +130,18 @@
                           @endif
 
                         </td>
-                           <td>1</td>
+                           <td>
+                             <div class="row">
+
+                               <div class="col-md-3">
+                                 <button class="btn btn-success"></button>
+                               </div>
+                                 <div class="col-md-3">
+                                 <button class="btn btn-warning"></button>
+                               </div>
+
+                             </div>
+                           </td>
     </tr>
     @endforeach
    

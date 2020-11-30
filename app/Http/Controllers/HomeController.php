@@ -58,5 +58,9 @@ class HomeController extends Controller
         
     }
 
+    public function howToApply(){
+        return view('home.howtoapply');
+    }
+
     
 }

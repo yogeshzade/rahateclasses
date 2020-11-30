@@ -32,6 +32,7 @@
         <script src="js/html5shiv.min.js"></script>
         <script src="js/respond.min.js"></script>
         <![endif]-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('homeassets\css\floating-wpp.css')}}"/>    
 
         @yield('othercss')
       

@@ -49,7 +49,7 @@
 
                 <h1>Fill Admission Form To Apply!</h1>
                 <br/>
-                <h5>Session  config('app.admission_session');</h5>
+                <h5>Session  {{config('app.admission_session')}};</h5>
                 <br/>
                 @if($profilestatus && $profilestatus->status == 0)
 
@@ -136,6 +136,9 @@
                     <div class="row">
 
                         <div class="form-group col-md-6">
+                           <div class="col-md-12">
+                            <b>Student Name: *</b>
+                           </div>
                             <input name="fullname" type="text" placeholder="Name Of Applicant *" required="" value="{{Auth::user()->name}}">
                               @if ($errors->has('fullname'))
                     <span class="text-danger">{{ $errors->first('fullname') }}</span>
@@ -144,6 +147,9 @@
 
 
                         <div class="form-group col-md-6">
+                           <div class="col-md-12">
+                            <b>Father Name: *</b>
+                           </div>
                             <input name="fathername" type="text" placeholder="Enter Father Name *" required="" value="{{old('fathername')}}">
                               @if ($errors->has('fathername'))
                     <span class="text-danger">{{ $errors->first('fathername') }}</span>
@@ -151,6 +157,9 @@
                         </div>
 
                         <div class="form-group col-md-6">
+                           <div class="col-md-12">
+                            <b>Mother Name: *</b>
+                           </div>
                             <input name="mothername" type="text" placeholder="Enter Mother Name *" required="" value="{{old('mothername')}}">
                               @if ($errors->has('mothername'))
                     <span class="text-danger">{{ $errors->first('mothername') }}</span>
@@ -158,6 +167,9 @@
                         </div>
 
                         <div class="form-group col-md-6">
+                           <div class="col-md-12">
+                            <b>State Of Domicile : *</b>
+                           </div>
                             <input name="state" type="text" placeholder="State Of Domicile *" required="" value="{{old('state')}}">
                               @if ($errors->has('state'))
                     <span class="text-danger">{{ $errors->first('state') }}</span>
@@ -165,7 +177,9 @@
                         </div>
 
                         <div class="form-group col-md-4">
-                           
+                            <div class="col-md-12">
+                            <b>Date Of Birth: *</b>
+                           </div>
                             <input name="dob" type="date" placeholder="Select DOB *" required="" value="{{old('dob')}}" placeholder="">
                               @if ($errors->has('dob'))
                     <span class="text-danger">{{ $errors->first('dob') }}</span>
@@ -176,6 +190,9 @@
                         
 
                         <div class="form-group col-md-4">
+                           <div class="col-md-12">
+                            <b>Select Category : *</b>
+                           </div>
                            
                             <select class="form-control" id="sel1" name="category">
                                 <option selected>Select Category *</option>
@@ -190,6 +207,9 @@
                      
 
                         <div class="form-group col-md-4">
+                           <div class="col-md-12">
+                            <b>Select Gender : *</b>
+                           </div>
                             <select class="form-control" id="sel1" name="gender">
                                 <option selected>Select Gender *</option>
                               <option value="M">Male</option>
@@ -202,9 +222,9 @@
 
 
                          <div class="form-group col-md-12 col-sm-12">
-                              <div class="col-md-3 col-sm-12">
-                               Select Class :
-                              </div>
+                               <div class="col-md-3">
+                            <b>Select Class : *</b>
+                           </div>
                                 <div class="col-md-9 col-sm-12">
                                      <select class="form-control" id="class_id" name="class_id">
                                 <option selected>Select Class *</option>
@@ -225,7 +245,7 @@
 
                          <div class="form-group col-md-12 col-sm-12">
                               <div class="col-md-3 col-sm-12">
-                               Select Course :
+                              <b> Select Course : *</b>
                               </div>
                                 <div class="col-md-9 col-sm-12">
                                      <select class="form-control" id="course_id" name="course_id">
@@ -250,6 +270,9 @@
                      
                    
                         <div class="form-group col-md-12 col-sm-12">
+                           <div class="col-md-12">
+                            <b>Enter Address : *</b>
+                           </div>
                             <input name="address" type="address" placeholder="Enter Residence Address *" rquired="" value="{{old('address')}}">
                             @if ($errors->has('address'))
                   <span class="text-danger">{{ $errors->first('address') }}</span>
@@ -257,7 +280,10 @@
                         </div>
 
                         <div class="form-group col-md-6 col-sm-12">
-                            <input name="city" type="text" placeholder="Enter City *" rquired="" value="{{old('city')}}">
+                           <div class="col-md-12">
+                            <b>Enter City : *</b>
+                           </div>
+                            <input name="city" type="text" placeholder="Enter City *" rquired="" value="NAGPUR" readonly="">
                             @if ($errors->has('city'))
                   <span class="text-danger">{{ $errors->first('city') }}</span>
               @endif
@@ -266,13 +292,19 @@
                      
 
                         <div class="form-group col-md-6 col-sm-12">
-                            <input name="state" type="text" placeholder="Enter State *" rquired="" value="{{old('state')}}">
+                           <div class="col-md-12">
+                            <b>Enter State : *</b>
+                           </div>
+                            <input name="state" type="text" placeholder="Enter State *" rquired="" value="Maharashtra" readonly="">
                             @if ($errors->has('state'))
                   <span class="text-danger">{{ $errors->first('state') }}</span>
               @endif
                         </div>
 
                         <div class="form-group col-md-6 col-sm-12">
+                           <div class="col-md-12">
+                            <b>Enter Pincode : *</b>
+                           </div>
                             <input name="pincode" type="text" placeholder="Enter PinCode *" rquired="" value="{{old('pincode')}}" maxlength="6">
                             @if ($errors->has('pincode'))
                   <span class="text-danger">{{ $errors->first('pincode') }}</span>
@@ -281,6 +313,9 @@
 
                         
                         <div class="form-group col-md-6 col-sm-12">
+                           <div class="col-md-12">
+                            <b>Student Mob Number : *</b>
+                           </div>
                             <input name="studentmobile" type="text" placeholder="Enter Student Mob No *" rquired="" value="{{Auth::user()->mobile}}" readonly>
                             @if ($errors->has('studentmobile'))
                   <span class="text-danger">{{ $errors->first('studentmobile') }}</span>
@@ -288,6 +323,9 @@
                         </div>
 
                         <div class="form-group col-md-6 col-sm-12">
+                          <div class="col-md-12">
+                            <b>Parent Mob Number : *</b>
+                           </div>
                             <input name="parentmobile" type="text" placeholder="Enter Parent Mob No *" rquired="" value="{{old('parentmobile')}}"  maxlength="10">
                             @if ($errors->has('parentmobile'))
                   <span class="text-danger">{{ $errors->first('parentmobile') }}</span>
@@ -295,6 +333,9 @@
                         </div>
 
                         <div class="form-group col-md-6 col-sm-12">
+                          <div class="col-md-12">
+                            <b>Aadhar Number : *</b>
+                           </div>
                             <input name="aadharno" type="text" placeholder="Enter Aadhar No *" rquired="" value="{{old('aadharno')}}"  maxlength="15">
                             @if ($errors->has('aadharno'))
                   <span class="text-danger">{{ $errors->first('aadharno') }}</span>
@@ -304,10 +345,10 @@
 
                              <div class="form-group col-md-6 col-sm-12">
                               <div class="col-md-4">
-                                Upload Photo :
+                                Upload Photo : *
                               </div>
                                 <div class="col-md-8">
-                                    <input type="file" name="image" placeholder="Choose image" id="image">
+                                    <input type="file" name="image" placeholder="Choose image" id="image" required="">
                                 </div>
                          
                         <span class="text-danger">{{ $errors->first('image') }}</span>

@@ -399,6 +399,12 @@ class StudentsController extends Controller
 
     }
 
+    public function resetAdmission(){
+      $student = StudentProfile::where('user_id',Auth::user()->id)->first();
+      $student->delete();
+      return redirect()->route('student.admission')->with('success','Form Reset Successfully.');
+    }
+
 
 
 

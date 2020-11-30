@@ -19,6 +19,7 @@ Route::post('/sendinquiry','HomeController@storeInquiry')->name('inquiry.store')
 Route::get('/contact_send','HomeController@contactsend')->name('home.contact.send');
 Route::get('apply-online','StudentsController@admission')->name('student.admission.index');
 Route::get('career','CareerController@index')->name('career.index');
+Route::get('/how-to-apply','HomeController@howToApply')->name('howtoapply.index');
 
 
 Route::prefix("student")->group(function(){
@@ -45,6 +46,8 @@ Route::get('check/fees/{id?}','StudentsController@checkStudentFees')
       ->middleware('auth');
  Route::get('tnc','StudentsController@tnc')->name('tnc');    
  Route::post('fetch/installment/{id?}', 'StudentsController@fetchInstallmentAmount')->name('fetch.installment.amount')->middleware('auth'); 
+ Route::get('form/reset','StudentsController@resetAdmission')->name('form.reset')->middleware('auth');
+
 
  // Transaction Routes
 
@@ -143,6 +146,7 @@ Route::get('/updates','WebsiteConfigration@Updatesindex')->name('updates.index')
 Route::get('/updates/new','WebsiteConfigration@CreateUpdates')->name('updates.create');
 Route::post('/updates/new','WebsiteConfigration@UpdatesStore')->name('updates.store');
 Route::get('/updates/delete/{id}','WebsiteConfigration@UpdatesDelete')->name('updates.delete');
+
 });
 
 

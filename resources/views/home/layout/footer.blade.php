@@ -50,5 +50,7 @@
             </div>
         </div>
         <!-- End Footer Top -->
+
+        @include('home.whatsapp');
         
     </footer>

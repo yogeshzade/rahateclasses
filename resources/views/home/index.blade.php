@@ -438,43 +438,7 @@
     <!-- ==============================================
     ** How Study **
     =================================================== -->
-    <section class="how-study padding-lg">
-        <div class="container">
-            <h2> <span>IIT & NEET Crackers Testimonials</span> Rahate’s IIT & Medical Home</h2>
-            <ul class="row">
-                <li class="col-sm-4">
-                    <div class="overly">
-                        <div class="cnt-block">
-                            <h3>Ayush Warudkar</h3>
-                            <p>MBBS (GMC Yavatmal)</p>
-                        </div>
-                        <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
-                    </div>
-                    <figure><img src="http://rahateclasses.in/wp-content/uploads/2019/03/Ayush-Warudkar.jpg" class="img-responsive" alt=""></figure>
-                </li>
-                <li class="col-sm-4">
-                    <div class="overly">
-                        <div class="cnt-block">
-                            <h3>Palash Pantawne</h3>
-                            <p>IIT Madras (Aerospace)</p>
-                        </div>
-                        <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
-                    </div>
-                    <figure><img src="http://rahateclasses.in/wp-content/uploads/2019/03/Palash-Pantawne.jpg" class="img-responsive" alt=""></figure>
-                </li>
-                <li class="col-sm-4">
-                    <div class="overly">
-                        <div class="cnt-block">
-                            <h3>Chinmay Hattewar</h3>
-                            <p>VNIT Nagpur (CSE)</p>
-                        </div>
-                        <a href="#" class="more"><i class="fa fa-caret-right" aria-hidden="true"></i></a>
-                    </div>
-                    <figure><img src="http://rahateclasses.in/wp-content/uploads/2019/03/Chinmay-Hattewar.jpg" class="img-responsive" alt=""></figure>
-                </li>
-            </ul>
-        </div>
-    </section>
+  
 
     <!-- ==============================================
     ** Why Choose **
