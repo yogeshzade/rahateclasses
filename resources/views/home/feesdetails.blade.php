@@ -279,7 +279,7 @@
 
       </div>
   <div class="panel-footer">
-       <form action="{{route('payment.offline',Auth::user()->id)}}" method="POST" enctype="multipart/form-data">
+       <form action="{{route('payment.offline',Auth::user()->id)}}" method="POST" enctype="multipart/form-data" id="paymentform">
           @csrf
           <div class="row">
              <div class="col-md-6 col-sm-12">
@@ -325,7 +325,7 @@ Enter Amount:-
     </div>
     <div id="collapse2" class="panel-collapse collapse">
       <div class="panel-body">
-        <form action="{{route('payment.online',Auth::user()->id)}}" method="POST">
+        <form action="{{route('payment.online',Auth::user()->id)}}" method="POST" id="paymentform">
           @csrf
            <div class="row">
              <div class="col-md-6 col-sm-12">
@@ -390,6 +390,12 @@ Enter Amount:-
 
 
      <script type="text/javascript">
+
+ $('form').submit(function(){
+  $(this).find(':submit').attr('disabled','disabled');
+});
+
+
 
       $.ajaxSetup({
        headers: {

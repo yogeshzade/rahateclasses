@@ -59,7 +59,7 @@
             <i class="fa fa-refresh"></i> Apply Admission
             
                   @if($applied)
-                   <span class="badge badge-danger">
+                   <span class="badge badge-warning">
                     Applied
                      </span>
                      @else
@@ -76,7 +76,7 @@
         <a href="{{route('student.fees')}}" class="list-group-item">
             <i class="fa fa-inr"></i> Pay Fees
         </a>
-          <a href="#" class="list-group-item">
+          <a href="{{route('students.checkfees')}}" class="list-group-item">
             <i class="fa fa-search"></i> Check Fees / Payment History
         </a>
          <a href="#" class="list-group-item">

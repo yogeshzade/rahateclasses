@@ -246,6 +246,13 @@ class StudentsController extends Controller
 
     public function checkStudentFees($id=null){
 
+        $userid = Auth::user()->id;
+        $studentcourse = studentprofile::where('user_id',$userid)->firstOrFail();
+        $coursedetails = Course::findOrFail($studentcourse->course_id)->first();
+        $classdetails = CourseClass::where('id',$studentcourse->class_id)->firstOrFail();
+        $transactions = PaymentTransaction::where('user_id',$userid)->orderBy('id','DESC')->get();
+         return view('home.feeshistory',compact('studentcourse','coursedetails','transactions','classdetails'));
+
     }
 
 
@@ -391,11 +398,6 @@ class StudentsController extends Controller
       return $request;
 
     }
-
-   
-
-
-
 
 
 
