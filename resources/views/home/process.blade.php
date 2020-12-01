@@ -15,7 +15,7 @@ and open the template in the editor.
 	<h3>Redirecting... Please Don't Reload or Press Don't Press Back...</h3>
 	<img src="{{url('833.gif')}}" />
 
-   <form action="{{config('app.PAYU_SANDBOX')}}" method="post" id="payu_form" name="payu_form" >
+   <form action="{{config('app.PAYU_LIVE')}}" method="post" id="payu_form" name="payu_form" >
                       
 
 	<input type="hidden" name="key"value="{{config('app.PAYU_MERCHANT_LIVE')}}" />
