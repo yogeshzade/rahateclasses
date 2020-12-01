@@ -28,6 +28,7 @@ and open the template in the editor.
                             <input type="hidden" name="surl" value="{{route('payment.callback')}}" />
                             <input type="hidden" name="furl" value="{{route('payment.callback')}}" />
                             <input type="hidden" name="hash" value="{{$paymenthash}}" />
+                            <input type="hidden" name="service_provider" value="payu_paisa">
                            
 
 <button type="submit">Click Here If Not Redirect</button>
@@ -39,7 +40,7 @@ and open the template in the editor.
 
 <script type="text/javascript">
 <!--
-   var wait=setTimeout("document.payu_form.submit();",3000);
+   var wait=setTimeout("document.payu_form.submit();",1000);
 //-->
 </script>
 

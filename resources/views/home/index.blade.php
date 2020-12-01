@@ -481,22 +481,37 @@
     ** Testimonials **
     =================================================== -->
     <section class="testimonial padding-lg">
+
         <div class="container">
-            <div class="wrapper">
-                <h2>Alumini Testimonials</h2>
-                <ul class="testimonial-slide">
-                  
-                   
-                    <li>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley...<a href="#">Read more</a></p>
-                        <span>Thomas, <span>London</span></span>
-                    </li>
-                </ul>
-                <div id="bx-pager">
-                    <a data-slide-index="0" href="#"><img src="images/testimonial-thumb1.jpg" class="img-circle" alt="" /></a>
-                </div>
-            </div>
-        </div>
+
+        <div class="carousel slide" data-ride="carousel" id="myCarousel" style="z-index: 99999;"><!-- Carousel indicators -->
+
+<!-- Wrapper for carousel items -->
+
+<div class="carousel-inner">
+
+    @foreach($testimonials as $testimonial)
+    @if($testimonial->id == 1)
+<div class="item carousel-item active">
+    @else
+    <div class="item carousel-item">
+    @endif
+
+<div class="img-box"><img alt="" src="https://dcx0p3on5z8dw.cloudfront.net/Aakash/s3fs-public/pdf_management_files/sm_sa/Chirag_falor.png"></div>
+
+<p class=""><img src="https://d16swpibua0gnc.cloudfront.net/Aakash-Anthe/s3fs-public/inline-images/testimonialsicon-top.png"><br>
+<br>
+Hello Friends, My name is Chirag Falor. I joined Aakash for Two year Foundation course of IX, X 2016-18 and then I continued for another 2 years by joining 2 year Integrated Course for JEE (Main &amp; Adv) . The institute supported me a lot and I want to give credit to management who provided all the required facilities and to faculties of Aakash who were experts of their subjects.</p>
+
+<p class="overview"><b>Chirag Falor</b> JEE (Advanced) 2020 Topper<br>
+<b>4 Year Classroom Student | Class IX-XII</b></p>
+</div>
+@endforeach
+
+<!-- Carousel controls -->
+</div>
+</div>
+
     </section>
 
 

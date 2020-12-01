@@ -1,1 +1,1 @@
-<div id="myButton"></div>
+<div id="myButton" style="z-index: 99999"></div>

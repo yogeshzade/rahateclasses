@@ -1605,9 +1605,9 @@ ul.our-strength li .title {
 -----------------------*/
 .testimonial {
 	display: block;
-    background: url(../images/testimonial-bg.jpg) no-repeat center top / cover;
 	text-align: center;
 	position: relative;
+	background-color: #fff;
 }
 .testimonial:after {
 	width: 100%;
@@ -1617,7 +1617,7 @@ ul.our-strength li .title {
 	top: 0px;
 	z-index: 1;
 	content: "";
-	background: #2e5f85;
+	background: #fff;
 	opacity: 0.8;
 }
 .testimonial .container {
@@ -1626,7 +1626,7 @@ ul.our-strength li .title {
 }
 .testimonial h2 {
 	font-family: 'texgyreadventorbold';
-	color: #fff;
+	color: #010101;
 }
 .testimonial .wrapper {
 	display: block;
@@ -7702,3 +7702,31 @@ overflow-y: auto;
     background-color: #c9302c;
     border-color: #ac2925;
 }
+
+
+ .profile {
+     margin-top: 16px;
+     margin-left: 11px
+ }
+
+ .profile-pic {
+     width: 58px
+ }
+
+ .cust-name {
+     font-size: 18px
+ }
+
+ .cust-profession {
+     font-size: 10px
+ }
+
+ .items {
+     width: 90%;
+     margin: 0px auto;
+     margin-top: 100px
+ }
+
+ .slick-slide {
+     margin: 10px
+ }

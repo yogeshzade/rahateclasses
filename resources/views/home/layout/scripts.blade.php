@@ -16,6 +16,8 @@
     <script src="{{ asset('homeassets\js\floating-wpp.js')}}"></script>
 
     <script type="text/javascript">
+
+        
     $(function () {
         $('#myButton').floatingWhatsApp({
             phone: '+919545578282',

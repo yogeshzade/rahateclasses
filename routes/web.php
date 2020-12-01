@@ -57,7 +57,7 @@ Route::post('payment/online/{id}','StudentsController@initOnlinePayment')->name(
 
 Route::get('payment/online/process','StudentsController@proccedTransaction')->name('payment.process')->middleware('auth');
 
-Route::post('payment/online/callback','StudentsController@proccedTransaction')->name('payment.callback')->middleware(['auth','prevent-back-history']);
+
 
 
  // End Transacion Routes

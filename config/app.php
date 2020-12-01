@@ -148,7 +148,7 @@ return [
 
     'PAYU_LIVE' => "https://secure.payu.in/_payment",
 
-    'PAYU_SANDBOX' => "https://test.payu.in/_payment",
+    'PAYU_SANDBOX' => "https://sandboxsecure.payu.in/_payment",
 
     'ADMISSION_FEES' => "RAHATE_ADMISSION_FEES",
 
