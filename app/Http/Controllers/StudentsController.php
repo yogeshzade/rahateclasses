@@ -300,6 +300,8 @@ class StudentsController extends Controller
           'file' => 'required|image|max:1024',
         ]);
 
+
+
         $initTransaction = new PaymentTransaction();
         $initTransactionID = new TransactionId();
         $txnID = $initTransactionID->TransactionId($authuser); 
@@ -308,7 +310,7 @@ class StudentsController extends Controller
         $file = 'transactions/'.$filename;
 
         $initTransaction->user_id = $authuser;
-        $initTransaction->payment_amount = number_format($request->payment_amount,2);
+        $initTransaction->payment_amount = number_format($request->payment_amount, 2, '.', '');
         $initTransaction->receipt_path = $file;
         $initTransaction->transaction_id = $txnID;
         $initTransaction->payment_method = 0;
@@ -344,7 +346,7 @@ class StudentsController extends Controller
       ]);
 
       $authuser = Auth::user()->id;
-
+    
       if($authuser == $id){
 
         // Inititalise Transation For PayU With Status Pending
@@ -355,7 +357,7 @@ class StudentsController extends Controller
         $initTransactionID = new TransactionId();
         $txnID = $initTransactionID->TransactionId($authuser);
         $initTransaction->user_id = $authuser;
-        $initTransaction->payment_amount = number_format($request->payment_amount,2);
+        $initTransaction->payment_amount = number_format($request->payment_amount, 2, '.', '');
         $initTransaction->transaction_id = $txnID;
         $initTransaction->payment_method = 1;
         $initTransaction->product_info = config('app.ADMISSION_FEES')."-RHT".$authuser;
@@ -417,7 +419,7 @@ class StudentsController extends Controller
       $amount = $_POST['amount'];
       $txnid = $_POST['txnid'];
       $receiVedHash = $_POST['hash'];
-      $cardnum = $_POST['cardnum'];
+      $cardnum = ($_POST['cardnum']) ? $_POST['cardnum'] : "" ;
       $mode = $_POST['mode'];
       $payuMoneyId = $_POST['payuMoneyId'];
 

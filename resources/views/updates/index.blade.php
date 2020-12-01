@@ -59,7 +59,7 @@
                                  <th scope="col">Notification Title</th>
                                  <th scope="col">Notification Body</th>
                                    <th scope="col">Notification Link/File</th>
-                                    <th scope="col">Action</th>
+                                   
                                 
                             </tr>
                         </thead>
@@ -94,9 +94,7 @@
                                  
                                  </td>
 
-                                 <td>
-                                    
-                                 </td>
+                                
                                 
                             </tr>
                             @endforeach

@@ -215,6 +215,142 @@
         </div>
     </section>
 
+       <!-- ==============================================
+    ** Campus Tour **
+    =================================================== -->
+    <section class="campus-tour padding-lg">
+        <div class="container-fluid">
+            <div class="row">
+              
+            <h2>OUR TOPPERS</h2>
+        </div>
+          <div class="col-md-8 col-sm-12 col-lg-8">
+        <ul class="gallery clearfix">
+            <li>
+                <div class="overlay">
+                    <h3>Tanmay Giri</h3>
+                    <p>JEE Topper</p>
+                    <a class="galleryItem" href="{{asset('homeassets\images\rahate_topper_1.jpg')}}"><span class="icon-enlarge-icon"></span></a>
+                    
+                </div>
+                <figure><img src="{{asset('homeassets\images\0d965cee-0e18-488f-8cba-b1cfb8589c1e(1).jpg')}}" class="img-responsive" alt="" style="height: 320px; width: 100%"></figure>
+            </li>
+
+     <!--        <li>
+                <div class="overlay">
+                    <h3>Tanmay Giri</h3>
+                    <p>JEE Topper</p>
+                    <a class="galleryItem" href="images\1dff820e-55b4-4e7f-acd0-1bea08f75fa8.jpg"><span class="icon-enlarge-icon"></span></a>
+                    
+                </div>
+                <figure><img src="images\1dff820e-55b4-4e7f-acd0-1bea08f75fa8.jpg" class="img-responsive" alt="" style="height: 320px; width: 100%"></figure>
+            </li> -->
+
+            <li>
+                <div class="overlay">
+                    <h3>PRAFULLA GOTEMARE</h3>
+                    <p>JEE Topper</p>
+                    <a class="galleryItem" href="{{asset('homeassets\images\9c2cd031-32ce-498d-ae11-8d7376788256.jpg')}}"><span class="icon-enlarge-icon"></span></a>
+                    
+                </div>
+                <figure><img src="{{asset('homeassets\images\9c2cd031-32ce-498d-ae11-8d7376788256.jpg')}}" class="img-responsive" alt="" style="height: 320px; width: 100%"></figure>
+            </li>
+
+            <li>
+                <div class="overlay">
+                    <h3>Himakshi Kapte</h3>
+                    <p>JEE Topper</p>
+                    <a class="galleryItem" href="{{asset('homeassets\images\ff2bd4ad-08e4-48bc-a24b-825e0740d88a.jpg')}}"><span class="icon-enlarge-icon"></span></a>
+                    
+                </div>
+                <figure><img src="{{asset('homeassets\images\ff2bd4ad-08e4-48bc-a24b-825e0740d88a.jpg')}}" class="img-responsive" alt="" style="height: 320px; width: 100%"></figure>
+            </li>
+
+                <li>
+                <div class="overlay">
+                    <h3>Apporva Sonkusre</h3>
+                    <p>JEE Topper</p>
+                    <a class="galleryItem" href="{{asset('homeassets\images\ff2bd4ad-08e4-48bc-a24b-825e0740d88a.jpg')}}"><span class="icon-enlarge-icon"></span></a>
+                    
+                </div>
+                <figure><img src="{{asset('homeassets\images\381dd297-dd62-4a68-b5bb-8192becda14e.jpg')}}" class="img-responsive" alt="" style="height: 320px; width: 100%"></figure>
+            </li>
+
+            
+          
+        </ul>
+        </div>
+
+   <div class="col-md-4 col-sm-12 col-lg-4" id="enquirynow">
+     <h2 style="color:#010101;">OUR TOPPERS</h2>
+     <form action="{{route('inquiry.store')}}" method="POST" id="inquiryform">
+     @csrf
+    <div class="enquire-now">
+    
+   
+                        <div class="inner">
+                          
+                            <div class="row1">
+                                <input name="name" placeholder="Name" type="text" required>
+                            </div>
+                            <div class="row2 clearfix">
+                                <input name="email" placeholder="Email" type="email" required>
+                                <input name="phone" placeholder="Phone" type="text" required maxlength="10">
+                            </div>
+                            <div class="row2 clearfix">
+                                <input name="place" placeholder="Place" type="text" required >
+                                <input name="message" placeholder="Message" type="text" required>
+                            </div>
+                        </div>
+                        <button class="enquire-btn" type="submit" id="sendinquiry">Send now <span class="icon-more-icon"></span></button>
+                    </div>
+                    </form>
+   </div>
+
+
+    </div>
+    </section>
+
+    <!-- End Our Topper -->
+
+      <section class="logos">
+        <div class="container">
+           
+        </div>
+    </section>
+
+
+     <section class="why-choose padding-lg">
+        <div class="container">
+            <h2><span>The Numbers Say it All</span>Why Choose Us</h2>
+            <ul class="our-strength">
+                <li>
+                    <div class="icon"><span class="icon-certification-icon"> </span></div>
+                    <span class="counter">10</span><span>+</span>
+                    <div class="title">Cources Classes</div>
+                </li>
+                <li>
+                    <div class="icon"><span class="icon-student-icon"></span></div>
+                    <span class="counter">1000</span><span>+</span>
+                    <div class="title">Students Registered</div>
+                </li>
+                <li>
+                    <div class="icon"><span class="icon-book-icon"></span></div>
+                    <div class="couter-outer"></span><span class="counter">1</span></div>
+                    <div class="title">No. 1 Coaching In Nagpur</div>
+                </li>
+                <li>
+                    <div class="icon"><span class="icon-parents-icon"></span></div>
+                    <div class="couter-outer"><span class="counter">100</span><span>%</span></div>
+                    <div class="title">Exellent Faculties</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
 
 
     <!-- ==============================================
@@ -329,111 +465,7 @@
         </div>
     </section>
 
-     <!-- ==============================================
-    ** Campus Tour **
-    =================================================== -->
-    <section class="campus-tour padding-lg">
-        <div class="container-fluid">
-            <div class="row">
-              
-            <h2>OUR TOPPERS</h2>
-        </div>
-          <div class="col-md-8 col-sm-12 col-lg-8">
-        <ul class="gallery clearfix">
-            <li>
-                <div class="overlay">
-                    <h3>Tanmay Giri</h3>
-                    <p>JEE Topper</p>
-                    <a class="galleryItem" href="{{asset('homeassets\images\rahate_topper_1.jpg')}}"><span class="icon-enlarge-icon"></span></a>
-                    
-                </div>
-                <figure><img src="{{asset('homeassets\images\0d965cee-0e18-488f-8cba-b1cfb8589c1e(1).jpg')}}" class="img-responsive" alt="" style="height: 320px; width: 100%"></figure>
-            </li>
-
-     <!--        <li>
-                <div class="overlay">
-                    <h3>Tanmay Giri</h3>
-                    <p>JEE Topper</p>
-                    <a class="galleryItem" href="images\1dff820e-55b4-4e7f-acd0-1bea08f75fa8.jpg"><span class="icon-enlarge-icon"></span></a>
-                    
-                </div>
-                <figure><img src="images\1dff820e-55b4-4e7f-acd0-1bea08f75fa8.jpg" class="img-responsive" alt="" style="height: 320px; width: 100%"></figure>
-            </li> -->
-
-            <li>
-                <div class="overlay">
-                    <h3>PRAFULLA GOTEMARE</h3>
-                    <p>JEE Topper</p>
-                    <a class="galleryItem" href="{{asset('homeassets\images\9c2cd031-32ce-498d-ae11-8d7376788256.jpg')}}"><span class="icon-enlarge-icon"></span></a>
-                    
-                </div>
-                <figure><img src="{{asset('homeassets\images\9c2cd031-32ce-498d-ae11-8d7376788256.jpg')}}" class="img-responsive" alt="" style="height: 320px; width: 100%"></figure>
-            </li>
-
-            <li>
-                <div class="overlay">
-                    <h3>Himakshi Kapte</h3>
-                    <p>JEE Topper</p>
-                    <a class="galleryItem" href="{{asset('homeassets\images\ff2bd4ad-08e4-48bc-a24b-825e0740d88a.jpg')}}"><span class="icon-enlarge-icon"></span></a>
-                    
-                </div>
-                <figure><img src="{{asset('homeassets\images\ff2bd4ad-08e4-48bc-a24b-825e0740d88a.jpg')}}" class="img-responsive" alt="" style="height: 320px; width: 100%"></figure>
-            </li>
-
-                <li>
-                <div class="overlay">
-                    <h3>Apporva Sonkusre</h3>
-                    <p>JEE Topper</p>
-                    <a class="galleryItem" href="{{asset('homeassets\images\ff2bd4ad-08e4-48bc-a24b-825e0740d88a.jpg')}}"><span class="icon-enlarge-icon"></span></a>
-                    
-                </div>
-                <figure><img src="{{asset('homeassets\images\381dd297-dd62-4a68-b5bb-8192becda14e.jpg')}}" class="img-responsive" alt="" style="height: 320px; width: 100%"></figure>
-            </li>
-
-            
-          
-        </ul>
-        </div>
-
-   <div class="col-md-4 col-sm-12 col-lg-4" id="enquirynow">
-     <h2 style="color:#010101;">OUR TOPPERS</h2>
-     <form action="{{route('inquiry.store')}}" method="POST" id="inquiryform">
-     @csrf
-    <div class="enquire-now">
-    
-   
-                        <div class="inner">
-                          
-                            <div class="row1">
-                                <input name="name" placeholder="Name" type="text" required>
-                            </div>
-                            <div class="row2 clearfix">
-                                <input name="email" placeholder="Email" type="email" required>
-                                <input name="phone" placeholder="Phone" type="text" required maxlength="10">
-                            </div>
-                            <div class="row2 clearfix">
-                                <input name="place" placeholder="Place" type="text" required >
-                                <input name="message" placeholder="Message" type="text" required>
-                            </div>
-                        </div>
-                        <button class="enquire-btn" type="submit" id="sendinquiry">Send now <span class="icon-more-icon"></span></button>
-                    </div>
-                    </form>
-   </div>
-
-
-    </div>
-    </section>
-
-    <!-- End Our Topper -->
-
-      <section class="logos">
-        <div class="container">
-           
-        </div>
-    </section>
-
-
+  
    
     <!-- ==============================================
     ** How Study **
@@ -443,34 +475,7 @@
     <!-- ==============================================
     ** Why Choose **
     =================================================== -->
-    <section class="why-choose padding-lg">
-        <div class="container">
-            <h2><span>The Numbers Say it All</span>Why Choose Us</h2>
-            <ul class="our-strength">
-                <li>
-                    <div class="icon"><span class="icon-certification-icon"> </span></div>
-                    <span class="counter">10</span><span>+</span>
-                    <div class="title">Cources Classes</div>
-                </li>
-                <li>
-                    <div class="icon"><span class="icon-student-icon"></span></div>
-                    <span class="counter">1000</span><span>+</span>
-                    <div class="title">Students Registered</div>
-                </li>
-                <li>
-                    <div class="icon"><span class="icon-book-icon"></span></div>
-                    <div class="couter-outer"></span><span class="counter">1</span></div>
-                    <div class="title">No. 1 Coaching In Nagpur</div>
-                </li>
-                <li>
-                    <div class="icon"><span class="icon-parents-icon"></span></div>
-                    <div class="couter-outer"><span class="counter">100</span><span>%</span></div>
-                    <div class="title">Exellent Faculties</div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
+   
   <?php
     if($testimonials->count() > 0)
     {
@@ -495,7 +500,7 @@
 
 <!-- Wrapper for carousel items -->
 
-<div class="carousel-inner">
+<div class="carousel-inner" style="border: 1px solid #f0832126;">
 
     @foreach($testimonials as $testimonial)
     @if($testimonial->id == 1)

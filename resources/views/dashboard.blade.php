@@ -71,24 +71,7 @@
         </div>
     </div>
 
-    <div class="col-md-6 col-xl-3">
-        <div class="card">
-            <div class="card-body p-0">
-                <div class="media p-3">
-                    <div class="media-body">
-                        <span class="text-muted text-uppercase font-size-12 font-weight-bold">Today's
-                           Total Active Students</span>
-                        <h2 class="mb-0">{{$students}}</h2>
-                    </div>
-                    <div class="align-self-center">
-                        <div id="today-new-visitors-chart" class="apex-charts"></div>
-                        <span class="text-danger font-weight-bold font-size-13"><i class='uil uil-arrow-up'></i>
-                          </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
 </div>
 
 <!--  -->
@@ -150,24 +133,7 @@
         </div>
     </div>
 
-    <div class="col-md-6 col-xl-3">
-        <div class="card">
-            <div class="card-body p-0">
-                <div class="media p-3">
-                    <div class="media-body">
-                        <span class="text-muted text-uppercase font-size-12 font-weight-bold">Today's
-                            Received Payment</span>
-                        <h2 class="mb-0">&#x20B9 {{0}}</h2>
-                    </div>
-                    <div class="align-self-center">
-                        <div id="today-new-visitors-chart" class="apex-charts"></div>
-                        <span class="text-danger font-weight-bold font-size-13"><i class='uil uil-arrow-up'></i>
-                          </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  
 </div>
 
 <!-- stats + charts -->
