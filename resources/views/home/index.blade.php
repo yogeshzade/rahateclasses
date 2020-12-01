@@ -482,7 +482,14 @@
     =================================================== -->
     <section class="testimonial padding-lg">
 
+        
+              <center> <h2>Alumini Testimonials</h2> </center> 
+            
+            <div class="strip"><img src="https://d16swpibua0gnc.cloudfront.net/Aakash-Anthe/s3fs-public/inline-images/strip.png"></div>
+
         <div class="container">
+
+
 
         <div class="carousel slide" data-ride="carousel" id="myCarousel" style="z-index: 99999;"><!-- Carousel indicators -->
 
@@ -497,13 +504,21 @@
     <div class="item carousel-item">
     @endif
 
-<div class="img-box"><img alt="" src="https://dcx0p3on5z8dw.cloudfront.net/Aakash/s3fs-public/pdf_management_files/sm_sa/Chirag_falor.png"></div>
+<div class="img-box">
+<div class="avatar">
+                   
+                       
+                             
+
+    <img alt="" src="{{url($testimonial->image_path)}}" style="width:140px;height: 140px;" id="image_preview_container"></div>
+</div>
 
 <p class=""><img src="https://d16swpibua0gnc.cloudfront.net/Aakash-Anthe/s3fs-public/inline-images/testimonialsicon-top.png"><br>
 <br>
-Hello Friends, My name is Chirag Falor. I joined Aakash for Two year Foundation course of IX, X 2016-18 and then I continued for another 2 years by joining 2 year Integrated Course for JEE (Main &amp; Adv) . The institute supported me a lot and I want to give credit to management who provided all the required facilities and to faculties of Aakash who were experts of their subjects.</p>
+{{$testimonial->description}}
+</p>
 
-<p class="overview"><b>Chirag Falor</b> JEE (Advanced) 2020 Topper<br>
+<p class="overview"><b>{{$testimonial->name}}</b> JEE (Advanced) 2020 Topper<br>
 <b>4 Year Classroom Student | Class IX-XII</b></p>
 </div>
 @endforeach

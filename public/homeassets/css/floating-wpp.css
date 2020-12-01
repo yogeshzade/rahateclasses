@@ -1,6 +1,6 @@
 .floating-wpp {
     position: fixed;
-    bottom: 75px;
+    bottom: 65px;
     left: 15px;
     font-size: 14px;
     transition: bottom 0.2s;
@@ -28,7 +28,7 @@
 }
 
 .floating-wpp:hover {
-    bottom: 17px;
+    bottom: 57px;
 }
 
 .floating-wpp:hover .floating-wpp-button {
