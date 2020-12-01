@@ -250,7 +250,9 @@ class StudentsController extends Controller
         $studentcourse = studentprofile::where('user_id',$userid)->firstOrFail();
         $coursedetails = Course::findOrFail($studentcourse->course_id)->first();
         $classdetails = CourseClass::where('id',$studentcourse->class_id)->firstOrFail();
-        $transactions = PaymentTransaction::where('user_id',$userid)->orderBy('id','DESC')->get();
+        $transactions = PaymentTransaction::where('user_id',$userid)
+        ->where('payment_status',1)
+        ->orderBy('payment_status','DESc')->get();
          return view('home.feeshistory',compact('studentcourse','coursedetails','transactions','classdetails'));
 
     }
@@ -324,6 +326,7 @@ class StudentsController extends Controller
 
     public function initOnlinePayment(Request $request,$id){
 
+
       $request->validate([
 
         'payment_amount' => 'required|numeric|min:1'
@@ -379,9 +382,10 @@ class StudentsController extends Controller
 
           // Hash Sequence
           // $samplehash = config('app.PAYU_MERCHANT_LIVE').'|'.$sessionTXN.'|'.$fetchTransaction->payment_amount.'|'.$fetchTransaction->product_info.'|'.$userID->name.'|'.$userID->email.'|||||'."".'||||||'.config('app.PAYU_SALT_LIVE');
-          
 
-          $paymenthash=hash('sha512', config('app.PAYU_MERCHANT_LIVE').'|'.$sessionTXN.'|'.$fetchTransaction->payment_amount.'|'.$fetchTransaction->product_info.'|'.$userID->name.'|'.$userID->email.'|||||'."".'||||||'.config('app.PAYU_SALT_LIVE'));
+          $hashSequence = config('app.PAYU_MERCHANT_LIVE').'|'.$sessionTXN.'|'.$fetchTransaction->payment_amount.'|'.$fetchTransaction->product_info.'|'.$userID->name.'|'.$userID->email.'|||||'."".'||||||'.config('app.PAYU_SALT_LIVE');
+
+          $paymenthash=hash('sha512', $hashSequence);
 
           return view('home.process',compact('paymenthash','fetchTransaction'));
 
@@ -403,6 +407,24 @@ class StudentsController extends Controller
       $student = StudentProfile::where('user_id',Auth::user()->id)->first();
       $student->delete();
       return redirect()->route('student.admission')->with('success','Form Reset Successfully.');
+    }
+
+    public function invoicePriview(Request $request){
+
+        $request->validate([
+          'txn_id' => 'required|numeric'
+        ]);
+
+
+
+        $invoice = PaymentTransaction::where('transaction_id',$request->txn_id)
+        ->where('user_id',Auth::user()->id)
+        ->where('payment_status',1)
+        ->firstOrFail();
+        $student = User::where('id',Auth::user()->id)->firstOrFail();
+         return view('home.invoice',compact('invoice','student'));
+     
+    
     }
 
 

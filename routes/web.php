@@ -58,7 +58,7 @@ Route::post('payment/online/{id}','StudentsController@initOnlinePayment')->name(
 Route::get('payment/online/process','StudentsController@proccedTransaction')->name('payment.process')->middleware('auth');
 
 
-
+Route::post('invoice/download','StudentsController@invoicePriview')->name('invoice.download')->middleware('auth');
 
  // End Transacion Routes
 

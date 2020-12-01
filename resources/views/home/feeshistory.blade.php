@@ -132,13 +132,25 @@
                         </td>
                            <td>
                              <div class="row">
-
+                              @if($transaction->payment_status)
                                <div class="col-md-3">
-                                 <button class="btn btn-success"></button>
+                                
+                                   <form method="post" action="{{route('invoice.download')}}">
+                                     @csrf
+                                     <input type="hidden" name="txn_id" value="{{$transaction->transaction_id}}">
+                                      <button class="btn btn-success" type="submit">
+                                       <i class="fa fa-file-o" aria-hidden="true"></i> Download
+                                        </button>
+                                   </form>
+                                 
                                </div>
-                                 <div class="col-md-3">
-                                 <button class="btn btn-warning"></button>
-                               </div>
+                               @else
+                                <button class="btn btn-danger" >
+                                      <i class="fa fa-refresh" aria-hidden="true"></i>
+  Retry
+                                        </button>
+                               @endif
+                                 
 
                              </div>
                            </td>
