@@ -15,6 +15,16 @@ class AlterPaymentTransactionTableAddPayu extends Migration
     {
         Schema::table('payment_transactions', function (Blueprint $table) {
             //
+            $table->string('payuMoneyId')->nullable();
+             $table->string('bank_ref_num')->nullable();
+             $table->string('status')->nullable();
+             $table->string('mihpayid')->nullable();
+              $table->string('unmappedstatus')->nullable();
+               $table->string('name_on_card')->nullable();
+                 $table->string('cardnum')->nullable();
+                  $table->string('mode')->nullable();
+                
+
         });
     }
 

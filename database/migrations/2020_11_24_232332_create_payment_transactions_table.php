@@ -20,7 +20,7 @@ class CreatePaymentTransactionsTable extends Migration
             $table->char('payment_method',1)->default(0); 
             //  0 = Offline 1 = Online
             $table->char('payment_status',1)->default(0); 
-            // 0 = Pending ,1 = Success ,2 = Failed ,3 = Refunded, 4 = Invalid Payment
+            // 0 = Pending ,1 = Success ,2 = Failed ,3 = Refunded, 4 = Invalid Payment , 5 = Pending For Approval
             $table->string('receipt_path')->nullable();
             $table->string('transaction_id')->nullable();
             $table->timestamps();

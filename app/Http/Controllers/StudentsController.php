@@ -304,6 +304,8 @@ class StudentsController extends Controller
         $initTransaction->receipt_path = $file;
         $initTransaction->transaction_id = $txnID;
         $initTransaction->payment_method = 0;
+         $initTransaction->payment_status = 5;
+          $initTransaction->product_info = config('app.ADMISSION_FEES')."-RHT".$authuser;
         $isSaved = $initTransaction->save();
 
         if($isSaved)
@@ -420,6 +422,7 @@ class StudentsController extends Controller
         $invoice = PaymentTransaction::where('transaction_id',$request->txn_id)
         ->where('user_id',Auth::user()->id)
         ->where('payment_status',1)
+       // / ->Orwhere('payment_status',5)
         ->firstOrFail();
         $student = User::where('id',Auth::user()->id)->firstOrFail();
          return view('home.invoice',compact('invoice','student'));

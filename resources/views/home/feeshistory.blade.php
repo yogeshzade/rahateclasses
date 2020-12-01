@@ -124,7 +124,9 @@
                            @elseif($transaction->payment_status == 3)    
                            <span class="badge badge-primary">Refunded</span> 
                            @elseif($transaction->payment_status == 4)  
-                         <span class="badge badge-default">Invalid Payment</span>         
+                         <span class="badge badge-default">Invalid Payment</span>  
+                          @elseif($transaction->payment_status == 5)  
+                         <span class="badge badge-default">Pending For Approval</span>         
                           @else
                           <span class="badge badge-info">Unknown</span>
                           @endif
