@@ -13,6 +13,7 @@ use App\Course;
 use App\Installment;
 use App\Library\TransactionId;
 use App\PaymentTransaction;
+use App\StudentFee;
 
 
 class StudentsController extends Controller
@@ -186,6 +187,7 @@ class StudentsController extends Controller
         $file = 'students/'.$filename;
         }
 
+        $courseinfo = Course::where('id',$request->course_id)->first();
 
       $data = array(
         'user_id' => $student_id,
@@ -212,7 +214,12 @@ class StudentsController extends Controller
 
       if(!$checkIfExist)
       {
-        $stored = studentprofile::insert($data);
+       
+        $initFees = StudentFee::create([
+          'user_id' => $student_id,
+          'total_amount' => $courseinfo->total_fees,
+        ]);
+         $stored = studentprofile::insert($data);
         if($stored)
         {
             $user = User::find($student_id);
@@ -253,6 +260,7 @@ class StudentsController extends Controller
         $transactions = PaymentTransaction::where('user_id',$userid)
         ->where('payment_status',1)
         ->orderBy('payment_status','DESc')->get();
+        // $paidfees = 
          return view('home.feeshistory',compact('studentcourse','coursedetails','transactions','classdetails'));
 
     }
@@ -300,7 +308,7 @@ class StudentsController extends Controller
         $file = 'transactions/'.$filename;
 
         $initTransaction->user_id = $authuser;
-        $initTransaction->payment_amount = $request->payment_amount;
+        $initTransaction->payment_amount = number_format($request->payment_amount,2);
         $initTransaction->receipt_path = $file;
         $initTransaction->transaction_id = $txnID;
         $initTransaction->payment_method = 0;
@@ -347,7 +355,7 @@ class StudentsController extends Controller
         $initTransactionID = new TransactionId();
         $txnID = $initTransactionID->TransactionId($authuser);
         $initTransaction->user_id = $authuser;
-        $initTransaction->payment_amount = $request->payment_amount;
+        $initTransaction->payment_amount = number_format($request->payment_amount,2);
         $initTransaction->transaction_id = $txnID;
         $initTransaction->payment_method = 1;
         $initTransaction->product_info = config('app.ADMISSION_FEES')."-RHT".$authuser;
@@ -401,7 +409,65 @@ class StudentsController extends Controller
 
 
     public function callbackTransaction(Request $request){
-      return $request;
+
+      $status = $_POST['status'];
+      $email = $_POST['email'];
+      $productinfo = $_POST['productinfo'];
+      $firstname = $_POST['firstname'];
+      $amount = $_POST['amount'];
+      $txnid = $_POST['txnid'];
+      $receiVedHash = $_POST['hash'];
+      $cardnum = $_POST['cardnum'];
+      $mode = $_POST['mode'];
+      $payuMoneyId = $_POST['payuMoneyId'];
+
+      $hashSequence  = config('app.PAYU_SALT_LIVE').'|'.$status.'||||||'.'|||||'.$email.'|'.$firstname.'|'.$productinfo.'|'.$amount.'|'.$txnid.'|'.config('app.PAYU_MERCHANT_LIVE');
+      $generatedHash = hash("sha512", $hashSequence);
+
+      if($receiVedHash == $generatedHash)
+      {
+        if($status == "success")
+        {
+
+        $invoice = PaymentTransaction::where('transaction_id',$txnid)
+                  ->where('user_id',Auth::user()->id)
+                  ->first();
+        $invoice->payment_status = 1;
+        $invoice->cardnum = $cardnum;
+        $invoice->mode = $mode;
+        $invoice->payment_approved_by = 1;
+        $invoice->payuMoneyId = $payuMoneyId;
+        $invoice->save();
+
+
+        $paidFees = StudentFee::where('user_id',Auth::user()->id)->first();
+
+        if($paidFees)
+        {
+            $paidFees->paid_amount =  $paidFees->paid_amount + $amount;
+            $paidFees->save();
+        } 
+
+
+        return redirect()->route('students.checkfees')->with('success','Fees Paid Successfully! . Thank You .Download Receipt From Below !');
+                
+        }
+        else{
+             return redirect()->route('student.fees')->with('error','Payment Not Successful. Try Again');
+        }
+     
+      }
+      else{
+         return redirect()->route('student.fees')->with('error','Invalid Payment... Try Again!');
+      }
+
+      return redirect()->route('student.fees')->with('error','Something Went Wring.. Try Again!');
+
+    
+
+     
+      // print_r($request);
+
 
     }
 

@@ -70,20 +70,40 @@
                 <div class="col-md-6">
 
                   <div class="col-md-12">
-                    <b>Total Applicable Fees : </b>
+                  <h4>Total Applicable Fees : </h4>
+                  <hr/>
                   </div>
 
                   <div class="col-md-12">
-                    <b>Total Paid Fees : </b>
+                  <h4>  <b>Total Paid Fees : </b> </h4>
+                   <hr/>
                   </div>
 
                   <div class="col-md-12">
-                    <b>Next Payment Date : </b>
+                  <h4>  <b>Balance Fees : </b></h4>
+                   <hr/>
                   </div>
                   
                 </div>
                 <div class="col-md-6">
-                  
+                  <div class="col-md-12">
+                  <h5 class="text-danger">Rs. @php $fees= \App\StudentFee::where('user_id',Auth::user()->id)->first();  
+                    echo $fees->total_amount; @endphp</h5>
+                  <hr/>
+                  </div>
+
+                  <div class="col-md-12">
+                  <h5 class="text text-success">Rs. 
+                   @php echo $fees->paid_amount; @endphp</h5>
+                  <hr/>
+                  </div>
+
+                    <div class="col-md-12">
+                  <h5 class="text text-info">Rs. 
+                   @php echo $fees->total_amount - $fees->paid_amount; @endphp</h5>
+                  <hr/>
+                  </div>
+
                 </div>
 
               </div>

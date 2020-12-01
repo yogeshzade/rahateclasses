@@ -17,6 +17,7 @@ class CreateStudentFeesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->float('paid_amount', 8, 2)->default(0);
+            $table->float('total_amount', 8, 2);
             $table->timestamps();
         });
     }

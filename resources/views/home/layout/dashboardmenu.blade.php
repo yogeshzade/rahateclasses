@@ -79,12 +79,17 @@
           <a href="{{route('students.checkfees')}}" class="list-group-item">
             <i class="fa fa-search"></i> Check Fees / Payment History
         </a>
+         <a href="http://rahateclasses.mstitute.com/test/build" class="list-group-item" target="_blank">
+            <b><i class="fa fa-pencil-square-o" aria-hidden="true"></i></b>
+ mStitute Student Login
+        </a>
          <a href="#" class="list-group-item">
             <i class="fa fa-bell"></i> Notifications/Calender and Notes
         </a>
           <a href="#" class="list-group-item">
             <i class="fa fa-file-pdf-o"></i> Download Notes
         </a>
+         
         <a href="{{route('home.student.logout')}}" class="list-group-item">
             <i class="fa fa-sign-out"></i> Log Out
         </a>
