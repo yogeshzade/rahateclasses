@@ -94,4 +94,8 @@ class AdminController extends Controller
         return view('students.index',compact('studentslists'));
         
     }
+
+    public function indexFile(){
+        
+    }
 }

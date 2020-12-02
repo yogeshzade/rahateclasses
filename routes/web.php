@@ -18,7 +18,7 @@ Route::get('/contact','HomeController@contact')->name('home.contact');
 Route::post('/sendinquiry','HomeController@storeInquiry')->name('inquiry.store');
 Route::get('/contact_send','HomeController@contactsend')->name('home.contact.send');
 Route::get('apply-online','StudentsController@admission')->name('student.admission.index');
-Route::get('career','CareerController@index')->name('career.index');
+Route::get('career','CareerController@adminindex')->name('career.index');
 Route::post('career','CareerController@apply')->name('career.apply');
 Route::get('/how-to-apply','HomeController@howToApply')->name('howtoapply.index');
 
@@ -165,11 +165,11 @@ Route::get('/updates/delete/{id}','WebsiteConfigration@UpdatesDelete')->name('up
   Route::group([
           'prefix' => 'file',
 ],function(){
-   Route::get('/', 'AdmissionController@indexFile')->name('file.index');
-    Route::get('new', 'AdmissionController@createFile')->name('file.create');
-    Route::post('new','AdmissionController@storeFile')->name('file.store');
-      Route::get('delete/{id}', 'AdmissionController@deleteFile')->name('file.delete');
-       Route::get('toggle/{id}', 'AdmissionController@toggleFile')->name('file.toggle');
+   Route::get('/', 'AdminController@indexFile')->name('file.index');
+    Route::get('new', 'AdminController@createFile')->name('file.create');
+    Route::post('new','AdminController@storeFile')->name('file.store');
+      Route::get('delete/{id}', 'AdminController@deleteFile')->name('file.delete');
+       Route::get('toggle/{id}', 'AdminController@toggleFile')->name('file.toggle');
     
  
 });
@@ -193,6 +193,8 @@ Route::get('/updates/delete/{id}','WebsiteConfigration@UpdatesDelete')->name('up
 
     Route::get('/applied','CareerController@appliedLits')->name('applied.index');
     Route::get('/applied/{id}','CareerController@adminToggle')->name('applied.toggle');
+     Route::get('new','CareerController@adminstoreIndex')->name('career.add.new');
+      Route::post('new','CareerController@adminstoreIndex')->name('career.new.store');
  
  
 });

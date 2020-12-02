@@ -11,7 +11,7 @@
         <nav aria-label="breadcrumb" class="float-right mt-1">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="">Jobs</a></li>
+                <li class="breadcrumb-item"><a href="/settings/career">Jobs</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
             </ol>
         </nav>
@@ -36,6 +36,11 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="header-title mt-0 mb-1">
+
+
+                <a href="{{route('career.add.new')}}"> <button type="button" class="btn btn-success btn-md pull-right">Create New </button> </a>
+            </h4>
+             
                 
                <!--  <p class="sub-header">
                     Add <code>.table-hover</code> to enable a hover state on table rows within a
@@ -51,7 +56,6 @@
                                 <th scope="col">#</th>
                                  <th scope="col">Vacancy Name</th>
                                  <th scope="col">Vacancy Description</th>
-                                 <th scope="col">Salary</th>
                                  <th scope="col">Status</th>
                                
                                 
@@ -68,8 +72,8 @@
                             <tr scope="{{$loop->iteration}}">
                                 <td>{{$loop->iteration}}</td>
                                <td>{{$list->job_title}}</td>
-                                 <td>{{$list->job_description}}</td>
-                                   <td>{{$list->salary}}</td>
+                                 <td>{!! $list->job_description !!}</td>
+                                   
                                      <td>
                                         @if($list->status)
                                         <a href="{{route('applied.toggle',$list->id)}}">

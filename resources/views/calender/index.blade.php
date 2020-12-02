@@ -15,7 +15,7 @@
                 <li class="breadcrumb-item active" aria-current="page">Index</li>
             </ol>
         </nav>
-        <h4 class="mb-1 mt-0">Courses List</h4>
+        <h4 class="mb-1 mt-0">Calender Lists</h4>
     </div>
 </div>
 @endsection

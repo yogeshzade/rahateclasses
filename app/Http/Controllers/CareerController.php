@@ -65,7 +65,15 @@ class CareerController extends Controller
 
     }
 
-     public function adminstore(){
+     public function adminstoreIndex(){
+
+     		return view('career.add');
+    	
+    }
+
+      public function adminstore(){
+
+     	return view('career.add');
     	
     }
 

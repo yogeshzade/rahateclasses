@@ -41,6 +41,7 @@
                     Add <code>.table-hover</code> to enable a hover state on table rows within a
                     <code>&lt;tbody&gt;</code>.
                 </p> -->
+              </h4>
 
                 <div class="table-responsive" >
                     <table id="example" class="display table table-hover mb-0" style="width:100%">
