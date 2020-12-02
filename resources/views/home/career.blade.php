@@ -86,7 +86,7 @@
         <h6>Job Description :</h6>
       </br>
         <b>
-          {{$career->job_description}}
+          {!! $career->job_description !!}
         </b>
       </div>
       </div>

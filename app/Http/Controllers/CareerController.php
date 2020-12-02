@@ -81,7 +81,7 @@ class CareerController extends Controller
      	$job->job_title = $request->job_title;
      	$job->job_description = $request->job_description;
      	$job->save();
-     	return back()->route('career.index.admin')->with('success',"Added Succesfully");
+     	return redirect()->route('career.index.admin')->with('success',"Added Succesfully");
     	
     }
 
