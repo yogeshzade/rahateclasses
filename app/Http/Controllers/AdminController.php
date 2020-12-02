@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\StudentProfile;
+use App\Course;
 
 class AdminController extends Controller
 {
@@ -81,5 +84,14 @@ class AdminController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+     public function Studentindex(){
+
+        $studentslists = studentprofile::with(['userProfile','studentCourse','studentClass'])->orderBy('created_at','desc')->get();
+        // return $studentslists;
+        return view('students.index',compact('studentslists'));
+        
     }
 }

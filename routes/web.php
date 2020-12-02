@@ -98,9 +98,7 @@ Route::group([
  Route::group([
           'prefix' => 'admission',
 ],function(){
-    Route::get('new', 'AdmissionController@index')->name('admission.index');
-    Route::post('new','AdmissionController@store')->name('admission.store');
-    Route::post('manage','AdmissionController@manage')->name('admission.manage');
+    Route::get('/','AdminController@Studentindex')->name('admission.index');
 });
 
  Route::group([
@@ -186,6 +184,9 @@ Route::get('/updates/delete/{id}','WebsiteConfigration@UpdatesDelete')->name('up
     
  
 });
+
+
+
 
    
 

@@ -102,7 +102,7 @@
                     <div class="media-body">
                         <span class="text-muted text-uppercase font-size-12 font-weight-bold">Today's
                             Admission</span>
-                        <h2 class="mb-0">{{0}}</h2>
+                        <h2 class="mb-0">{{$todaysregistered}}</h2>
                     </div>
                     <div class="align-self-center">
                         <div id="today-product-sold-chart" class="apex-charts"></div>
@@ -121,7 +121,7 @@
                     <div class="media-body">
                         <span class="text-muted text-uppercase font-size-12 font-weight-bold">Total
                             Registered Students</span>
-                        <h2 class="mb-0">{{0}}</h2>
+                        <h2 class="mb-0">{{$totalstudents}}</h2>
                     </div>
                     <div class="align-self-center">
                         <div id="today-new-customer-chart" class="apex-charts"></div>
@@ -186,15 +186,19 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach($recentadmissions as $recentadmission)
 
                             <tr>
-                                <td>#1</td>
-                                <td>Shantanu</td>
-                                <td>IIT MEDICAL</td>
-                                <td>10,000</td>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>@php $username = App\User::where('id',$recentadmission->user_id)->first();  echo $username->name; @endphp</td>
+                                <td>
+                                    @php $username = App\Course::where('id',$recentadmission->course_id)->first();  echo $username->course_name; @endphp
+                                </td>
+                                <td>Rs. {{$username->total_fees}}</td>
                                 <td><span class="badge badge-soft-danger py-1">pending</span>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div> <!-- end table-responsive-->

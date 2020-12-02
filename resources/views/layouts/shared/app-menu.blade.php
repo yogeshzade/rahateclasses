@@ -46,17 +46,15 @@
         
 
         <ul class="nav-second-level" aria-expanded="false">
+            
             <li>
-                <a href="{{route('admission.index')}}">Add New Admission</a>
-            </li>
-            <li>
-                <a href="{{route('admission.manage')}}">Manage Students</a>
+                <a href="{{route('admission.index')}}">Manage Students</a>
             </li>
             <li>
                 <a href="{{route('calender.index')}}">Exam Updates</a>
             </li>
              <li>
-                <a href="{{route('file.index')}}">Upload Files</a>
+                <a href="{{route('file.index')}}">Upload Notes</a>
             </li>
            
         </ul>
