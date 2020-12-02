@@ -68,13 +68,16 @@
     
         <ul class="nav-second-level" aria-expanded="false">
             <li>
-                <a href="/apps/project/list">Check Student Fees</a>
+                <a href="/">Pending Offline Payments</a>
             </li>
             <li>
-                <a href="/apps/project/detail">Pay Student Fees</a>
+                <a href="/">Check Student Fees</a>
+            </li>
+            <li>
+                <a href="/">Pay Student Fees</a>
             </li>
               <li>
-                <a href="/apps/project/list">Show Payements</a>
+                <a href="/">Show Payements</a>
             </li>
               <!-- <li>
                 <a href="/apps/project/list">Print Receipt</a>
@@ -106,7 +109,11 @@
             </li>
 
             <li>
-            <a href="{{route('career.index')}}">Career</a>
+            <a href="{{route('career.index')}}">Jobs</a>
+            </li>
+
+              <li>
+            <a href="{{route('applied.index')}}">Vacancy Applied List</a>
             </li>
 
             <li>

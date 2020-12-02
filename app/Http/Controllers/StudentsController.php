@@ -419,7 +419,7 @@ class StudentsController extends Controller
       $amount = $_POST['amount'];
       $txnid = $_POST['txnid'];
       $receiVedHash = $_POST['hash'];
-      $cardnum = ($_POST['cardnum']) ? $_POST['cardnum'] : "" ;
+      $cardnum = (empty($_POST['cardnum'])) ? "" : $_POST['cardnum']  ;
       $mode = $_POST['mode'];
       $payuMoneyId = $_POST['payuMoneyId'];
 

@@ -19,6 +19,7 @@ Route::post('/sendinquiry','HomeController@storeInquiry')->name('inquiry.store')
 Route::get('/contact_send','HomeController@contactsend')->name('home.contact.send');
 Route::get('apply-online','StudentsController@admission')->name('student.admission.index');
 Route::get('career','CareerController@index')->name('career.index');
+Route::post('career','CareerController@apply')->name('career.apply');
 Route::get('/how-to-apply','HomeController@howToApply')->name('howtoapply.index');
 
 
@@ -136,7 +137,7 @@ Route::get('/slider/toggle/{id}','WebsiteConfigration@toggleslider')->name('slid
 Route::get('/popup/create','WebsiteConfigration@popupCreate')->name('popup.create');
 Route::post('/popup/create','WebsiteConfigration@popupStore')->name('popup.store');
 Route::get('/popup/toggle/{id}','WebsiteConfigration@togglePopup')->name('popup.toggle');
-Route::get('/career','WebsiteConfigration@CareerIndex')->name('career.index');
+Route::get('/career','CareerController@adminindex')->name('career.index');
 Route::get('/inquiry','WebsiteConfigration@inquiryIndex')->name('inquiry.index');
 Route::get('/inquiry/{id}','WebsiteConfigration@inquiryRead')->name('inquiry.view');
 Route::get('/inquiry/delete/{id}','WebsiteConfigration@DeleteInquiry')->name('inquiry.delete');
@@ -184,6 +185,19 @@ Route::get('/updates/delete/{id}','WebsiteConfigration@UpdatesDelete')->name('up
     
  
 });
+
+
+      Route::group([
+          'prefix' => 'list',
+],function(){
+
+    Route::get('/applied','CareerController@appliedLits')->name('applied.index');
+    Route::get('/applied/{id}','CareerController@adminToggle')->name('applied.toggle');
+ 
+ 
+});
+
+
 
 
 
