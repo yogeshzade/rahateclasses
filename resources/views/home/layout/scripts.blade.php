@@ -30,7 +30,6 @@
             backgroundColor: 'crimson',
             buttonImage: '<img src="whatsapp.svg" />',
             position:'right',
-            autoOpenTimeout:3000,
         });
     });
 </script>

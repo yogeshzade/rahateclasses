@@ -19,22 +19,7 @@
   <!-- ==============================================
     ** Inner Banner **
     =================================================== -->
-    <div class="inner-banner contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-lg-9">
-                    <div class="content">
-                        <h1>Career Page</h1>
-                       <p>Are You Looking For Job?</p>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-lg-3"> <a href="{{route('student.admission.index')}}" class="apply-online clearfix">
-                       
-                        <div class="arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
-                    </a></div>
-            </div>
-        </div>
-    </div>
+
 
 
 
