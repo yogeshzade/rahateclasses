@@ -49,7 +49,9 @@
                     <div class="row">
 
                         <div class="col-sm-4">
-                            
+                            <div class="col-md-12">
+                            <b>First Name : *</b>
+                           </div>
                            
                             <input name="firstname" type="text" placeholder="Enter First Name*" required="" value="{{old('firstname')}}">
                               @if ($errors->has('firstname'))
@@ -58,6 +60,9 @@
                         </div>
 
                         <div class="col-sm-4">
+                            <div class="col-md-12">
+                            <b>Middle Name : *</b>
+                           </div>
                            
                             <input name="middlename" type="text" placeholder="Enter Middle Name*" required="" value="{{old('middlename')}}">
                               @if ($errors->has('middlename'))
@@ -66,6 +71,9 @@
                         </div>
 
                         <div class="col-sm-4">
+                            <div class="col-md-12">
+                            <b>Last Name : *</b>
+                           </div>
                            
                             <input name="lastname" type="text" placeholder="Enter Last Name*" required="" value="{{old('lastname')}}">
                               @if ($errors->has('lastname'))
@@ -74,6 +82,9 @@
                         </div>
                         
                         <div class="col-sm-12">
+                            <div class="col-md-12">
+                            <b>Email : *</b>
+                           </div>
                             <input name="email" type="email" placeholder="Enter Your Email *" required=""
                             value="{{old('email')}}" 
                             autocomplete="off" 
@@ -84,6 +95,9 @@
                         </div>
 
                         <div class="col-sm-6">
+                            <div class="col-md-12">
+                            <b>Mobile : </b>
+                           </div>
                             <input name="mobile" type="number" placeholder="Enter Mobile Number *" 
                             required=""
                             value="{{old('mobile')}}" 
@@ -94,6 +108,9 @@
                 @endif
                         </div>
                         <div class="col-sm-6">
+                            <div class="col-md-12">
+                            <b>Password : *</b>
+                           </div>
                             <input name="password" type="password" placeholder="Password *" min="8" maxlength="14" required="">
                                @if ($errors->has('password'))
                     <span class="text-danger">{{ $errors->first('password') }}</span>

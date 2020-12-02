@@ -69,7 +69,9 @@ class StudentsController extends Controller
      public function storeStudent(Request $request){
 
       $validate =   $request->validate([
-            'fullname' => 'required|string',
+            'firstname' => 'required|string',
+            'middlename' => 'required|string',
+            'lastname' => 'required|string',
             'email' => 'required|email|unique:users',
             'password' => 'required|string|min:8|max:14',
             'mobile' => 'required|min:10|max:10|unique:users',
@@ -80,7 +82,7 @@ class StudentsController extends Controller
       $newotp = rand(111111,999999);
 
         $student = new User();
-        $student->name = $request->fullname;
+        $student->name = $request->firstname." ".$request->middlename." ". $request->lastname;
         $student->email = $request->email;
         $student->password = Hash::make($request->password);
         $student->mobile = $request->mobile;
