@@ -11,7 +11,7 @@ class CareerController extends Controller
     //
 
     public function index(){
-    	$careers = Career::all();
+    	$careers = Career::where('status',1)->orderBy('id','DESC')->get();
     	return view('home.career',compact('careers'));
     }
 
