@@ -138,7 +138,7 @@
                         <div class="col-sm-6">
                                          <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha *" name="captcha">
                                             @if ($errors->has('captcha'))
-                    <span class="text-danger">{{ $errors->first('captcha') }}</span>
+                    <span class="text-danger">Invalid Captcha ! Re-enter</span>
                 @endif
 
                         </div>

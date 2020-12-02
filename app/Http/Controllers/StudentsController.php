@@ -42,7 +42,7 @@ class StudentsController extends Controller
         }
         else{
                 Auth::logout();
-                return back()->with('warning','Your Account Is Not Activate');
+                return back()->with('warning','Please Verify Your Email First To Login');
         }
 
       }  
