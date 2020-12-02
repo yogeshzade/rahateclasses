@@ -18,7 +18,7 @@ Route::get('/contact','HomeController@contact')->name('home.contact');
 Route::post('/sendinquiry','HomeController@storeInquiry')->name('inquiry.store');
 Route::get('/contact_send','HomeController@contactsend')->name('home.contact.send');
 Route::get('apply-online','StudentsController@admission')->name('student.admission.index');
-Route::get('career','CareerController@adminindex')->name('career.index');
+Route::get('career','CareerController@index')->name('career.index');
 Route::post('career','CareerController@apply')->name('career.apply');
 Route::get('/how-to-apply','HomeController@howToApply')->name('howtoapply.index');
 
