@@ -135,7 +135,7 @@
                     @csrf
                     <div class="row">
 
-                        <div class="form-group col-md-6">
+                        <div class="col-md-6">
                            <div class="col-md-12">
                             <b>Student Name: *</b>
                            </div>
@@ -146,7 +146,7 @@
                         </div>
 
 
-                        <div class="form-group col-md-6">
+                        <div class="col-md-6">
                            <div class="col-md-12">
                             <b>Father Name: *</b>
                            </div>
@@ -156,7 +156,7 @@
                 @endif
                         </div>
 
-                        <div class="form-group col-md-6">
+                        <div class="col-md-6">
                            <div class="col-md-12">
                             <b>Mother Name: *</b>
                            </div>
@@ -166,17 +166,7 @@
                 @endif
                         </div>
 
-                        <div class="form-group col-md-6">
-                           <div class="col-md-12">
-                            <b>State Of Domicile : *</b>
-                           </div>
-                            <input name="state" type="text" placeholder="State Of Domicile *" required="" value="{{old('state')}}">
-                              @if ($errors->has('state'))
-                    <span class="text-danger">{{ $errors->first('state') }}</span>
-                @endif
-                        </div>
-
-                        <div class="form-group col-md-4">
+                        <div class="col-md-6">
                             <div class="col-md-12">
                             <b>Date Of Birth: *</b>
                            </div>
@@ -187,87 +177,7 @@
                            
                         </div>
 
-                        
 
-                        <div class="form-group col-md-4">
-                           <div class="col-md-12">
-                            <b>Select Category : *</b>
-                           </div>
-                           
-                            <select class="form-control" id="sel1" name="category">
-                                <option selected>Select Category *</option>
-                              <option value="GEN">GEN</option>
-                              <option value="SC">SC</option>
-                              <option value="ST">ST</option>
-                              <option value="OBC">OBC</option>
-                           
-                            </select>
-                        </div>
-
-                     
-
-                        <div class="form-group col-md-4">
-                           <div class="col-md-12">
-                            <b>Select Gender : *</b>
-                           </div>
-                            <select class="form-control" id="sel1" name="gender">
-                                <option selected>Select Gender *</option>
-                              <option value="M">Male</option>
-                              <option value="L">Female</option>
-                                
-                          
-                           
-                            </select>
-                        </div>
-
-
-                         <div class="form-group col-md-12 col-sm-12">
-                               <div class="col-md-3">
-                            <b>Select Class : *</b>
-                           </div>
-                                <div class="col-md-9 col-sm-12">
-                                     <select class="form-control" id="class_id" name="class_id">
-                                <option selected>Select Class *</option>
-                            
-                            @foreach($classes as $class)
-                                  <option value="{{$class->id}}">{{$class->classname}} - {{$class->type}}</option>
-                            @endforeach
-
-                          
-                           
-                            </select>
-                                
-                                </div>
-                         
-                        <span class="text-danger">{{ $errors->first('class') }}</span>
-                        </div>
-
-
-                         <div class="form-group col-md-12 col-sm-12">
-                              <div class="col-md-3 col-sm-12">
-                              <b> Select Course : *</b>
-                              </div>
-                                <div class="col-md-9 col-sm-12">
-                                     <select class="form-control" id="course_id" name="course_id">
-                                <option selected>Select Class First *</option>
-                           
-                            </select>
-                                
-                                </div>
-                         
-                        <span class="text-danger">{{ $errors->first('class') }}</span>
-                        </div>
-
-
-
-                            
-
-
-
-
-                        
-
-                     
                    
                         <div class="form-group col-md-12 col-sm-12">
                            <div class="col-md-12">
@@ -279,7 +189,90 @@
               @endif
                         </div>
 
-                        <div class="form-group col-md-6 col-sm-12">
+                     
+
+                        
+
+                        <div class="form-group col-md-6">
+                           <div class="col-md-12">
+                            <b>Select Category : *</b>
+                           </div>
+                           
+                            <select class="form-control" id="sel1" name="category" style="height: 46px;">
+                                <option selected>Select Category *</option>
+                              <option value="GEN">GEN</option>
+                              <option value="SC">SC</option>
+                              <option value="ST">ST</option>
+                              <option value="OBC">OBC</option>
+                           
+                            </select>
+                        </div>
+
+                            <div class="form-group col-md-6">
+                           <div class="col-md-12">
+                            <b>Select Gender : *</b>
+                           </div>
+                            <select class="form-control" id="sel1" name="gender" style="height: 46px;">
+                                <option selected>Select Gender *</option>
+                              <option value="M">Male</option>
+                              <option value="L">Female</option>
+                                
+                          
+                           
+                            </select>
+                        </div>
+
+                     
+
+                    
+
+
+                         <div class="form-group col-md-6 col-sm-6">
+                             <div class="col-md-12">
+                            <b>Select Class : *</b>
+                           </div>
+                               
+                                     <select class="form-control" id="class_id" 
+                                     name="class_id"
+                                     style="height: 46px;"
+                                     >
+                                <option selected>Select Class *</option>
+                            
+                            @foreach($classes as $class)
+                                  <option value="{{$class->id}}">{{$class->classname}} - {{$class->type}}</option>
+                            @endforeach
+
+                          
+                           
+                            </select>
+                                
+                            
+                         
+                        <span class="text-danger">{{ $errors->first('class') }}</span>
+                        </div>
+
+
+                         <div class="form-group col-md-6 col-sm-6"  >
+                              <div class="col-md-12 col-sm-12">
+                              <b> Select Course : *</b>
+                              </div>
+                                
+                                     <select class="form-control" id="course_id" name="course_id" style="height: 46px;">
+                                <option selected>Select Class First *</option>
+                           
+                            </select>
+                                
+                             
+                         
+                        <span class="text-danger">{{ $errors->first('class') }}</span>
+                        </div>
+
+                         <div class="col-md-12" id="feesshow">
+      <b class="text-success" >*** Total Course Fees is Rs. ***</b>
+                         </div>
+                     
+
+                        <div class="col-md-6 col-sm-12">
                            <div class="col-md-12">
                             <b>Enter City : *</b>
                            </div>
@@ -291,7 +284,7 @@
 
                      
 
-                        <div class="form-group col-md-6 col-sm-12">
+                        <div class="col-md-6 col-sm-12">
                            <div class="col-md-12">
                             <b>Enter State : *</b>
                            </div>
@@ -301,7 +294,7 @@
               @endif
                         </div>
 
-                        <div class="form-group col-md-6 col-sm-12">
+                        <div class=" col-md-6 col-sm-12">
                            <div class="col-md-12">
                             <b>Enter Pincode : *</b>
                            </div>
@@ -312,7 +305,7 @@
                         </div>
 
                         
-                        <div class="form-group col-md-6 col-sm-12">
+                        <div class="col-md-6 col-sm-12">
                            <div class="col-md-12">
                             <b>Student Mob Number : *</b>
                            </div>
@@ -344,12 +337,12 @@
 
 
                              <div class="form-group col-md-6 col-sm-12">
-                              <div class="col-md-4">
+                              <div class="col-md-12">
                                 Upload Photo : *
                               </div>
-                                <div class="col-md-8">
+                              
                                     <input type="file" name="image" placeholder="Choose image" id="image" required="">
-                                </div>
+                               
                          
                         <span class="text-danger">{{ $errors->first('image') }}</span>
                         </div>
@@ -432,6 +425,8 @@
 
 
       $(document).ready(function (e) {
+
+        $("#feesshow").hide();
 
        @if($profilestatus)
   $(document).ready(function(){

@@ -55,6 +55,10 @@
         $applied = \App\StudentProfile::where('user_id',Auth::user()->id)->count();
         @endphp
 
+         <a href="{{route('home.index')}}" class="list-group-item">
+            <i class="fa fa-home"></i> Home
+        </a>
+
         <a href="{{route('student.admission.submit')}}" class="list-group-item">
             <i class="fa fa-refresh"></i> Apply Admission
             

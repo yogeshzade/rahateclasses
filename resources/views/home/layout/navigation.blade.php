@@ -26,7 +26,7 @@
                         </li>
                          
                         
-                        <li> <a href="/contact">Contact Us</a></li>
+                       
                         
 
                          <li class="dropdown"> <a data-toggle="dropdown" href="">Help <i class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -38,6 +38,7 @@
 
                         <li> <a href="/career">Career</a></li>
                            <li> <a href="/career">Faculties</a></li>
+                            <li> <a href="/contact">Contact Us</a></li>
 
                          
                     </ul>

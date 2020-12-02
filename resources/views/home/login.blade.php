@@ -7,6 +7,7 @@
     =================================================== -->
     <header>
            @include('home.layout.headermiddle')
+             @include('home.layout.navigation')
       
     </header>
 

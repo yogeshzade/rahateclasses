@@ -51,45 +51,37 @@
                    }
                    @endphp
                 </div>
-            </div>
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-              @foreach($careers as $career)
 
-              <div class="panel-group">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" href="#collapse{{$career->id}}">
-          {{$career->job_title}}
-        </a>
-      </h4>
-    </div>
-    <div id="collapse{{$career->id}}" class="panel-collapse collapse">
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-md-12">
-        <h6>Job Description :</h6>
-      </br>
-        <b>
-          {!! $career->job_description !!}
-        </b>
-      </div>
-      </div>
+                <div class="container">
+  <h2>JOB LISTS</h2>
+  <br/>
+            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Sr No</th>
+        <th>Vacancy Title</th>
+        <th>Vacancy Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach($careers as $career)
+      <tr style="font-weight: 600;">
+        <td>{{$loop->iteration}}</td>
+        <td>{{$career->job_title}}</td>
+        <td>{!! $career->job_description !!}</td>
+        <td>
+          <a href="" data-toggle="modal" data-target="#myModal">Apply Now</a>
+        </td>
+      </tr>
+      @endforeach
      
-
-      </div>
-      <div class="panel-footer">
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Apply Now</button>
-      </div>
-    </div>
-  </div>
+    </tbody>
+  </table>
 </div>
-              
-                @endforeach
-           
-              
             </div>
-
+          
         </div>
     </section>
 
@@ -201,6 +193,25 @@
          <div class="col-md-8">
 
           <input name="file" type="file" placeholder="Select File *" required="" class="form-control">
+           
+           
+         </div>
+      
+
+        </div>
+
+        <!-- End Name -->
+
+          <!-- Name -->
+
+        <div class="form-group col-md-12">
+           <div class="col-md-4">
+          Upload Photo* :<small>(Photo Must Be Passport Size)</small>
+         </div>
+
+         <div class="col-md-8">
+
+          <input name="photo" type="file" placeholder="Select File *" required="" class="form-control">
            
            
          </div>
