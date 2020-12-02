@@ -6,7 +6,9 @@
     ** Header **
     =================================================== -->
     <header>
+         @include('home.layout.headermenu')
         @include('home.layout.headermiddle')
+
        
       
     </header>
@@ -81,7 +83,7 @@
                 @endif
                         </div>
                         
-                        <div class="col-sm-12">
+                        <div class="col-sm-6">
                             <div class="col-md-12">
                             <b>Email : *</b>
                            </div>
@@ -117,13 +119,23 @@
                 @endif
                         </div>
 
-                          <div class="col-sm-5 captcha">
+                         <div class="col-sm-6">
+                            <div class="col-md-12">
+                            <b>Confirm Password : *</b>
+                           </div>
+                            <input name="confirmpass" type="password" placeholder="Password *" min="8" maxlength="14" required="">
+                               @if ($errors->has('password'))
+                    <span class="text-danger">{{ $errors->first('password') }}</span>
+                @endif
+                        </div>
+
+                          <div class="col-sm-6 captcha">
                              <span>{!! captcha_img() !!}</span>
                               <button type="button" class="btn btn-danger" class="reload" id="reload">
                         &#x21bb;
                     </button>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-6">
                                          <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha *" name="captcha">
                                             @if ($errors->has('captcha'))
                     <span class="text-danger">{{ $errors->first('captcha') }}</span>
