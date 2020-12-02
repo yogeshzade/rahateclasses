@@ -137,7 +137,7 @@ Route::get('/slider/toggle/{id}','WebsiteConfigration@toggleslider')->name('slid
 Route::get('/popup/create','WebsiteConfigration@popupCreate')->name('popup.create');
 Route::post('/popup/create','WebsiteConfigration@popupStore')->name('popup.store');
 Route::get('/popup/toggle/{id}','WebsiteConfigration@togglePopup')->name('popup.toggle');
-Route::get('/career','CareerController@adminindex')->name('career.index');
+Route::get('/career','CareerController@adminindex')->name('career.index.admin');
 Route::get('/inquiry','WebsiteConfigration@inquiryIndex')->name('inquiry.index');
 Route::get('/inquiry/{id}','WebsiteConfigration@inquiryRead')->name('inquiry.view');
 Route::get('/inquiry/delete/{id}','WebsiteConfigration@DeleteInquiry')->name('inquiry.delete');
@@ -194,7 +194,7 @@ Route::get('/updates/delete/{id}','WebsiteConfigration@UpdatesDelete')->name('up
     Route::get('/applied','CareerController@appliedLits')->name('applied.index');
     Route::get('/applied/{id}','CareerController@adminToggle')->name('applied.toggle');
      Route::get('new','CareerController@adminstoreIndex')->name('career.add.new');
-      Route::post('new','CareerController@adminstoreIndex')->name('career.new.store');
+      Route::post('new','CareerController@adminstore')->name('career.new.store');
  
  
 });

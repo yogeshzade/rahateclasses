@@ -71,9 +71,17 @@ class CareerController extends Controller
     	
     }
 
-      public function adminstore(){
+      public function adminstore(Request $request){
 
-     	return view('career.add');
+     	$request->validate([
+     		'job_description' => 'required|string',
+     		'job_title' => 'required'
+     	]);
+     	$job = new Career();
+     	$job->job_title = $request->job_title;
+     	$job->job_description = $request->job_description;
+     	$job->save();
+     	return back()->route('career.index.admin')->with('success',"Added Succesfully");
     	
     }
 

@@ -109,7 +109,7 @@
             </li>
 
             <li>
-            <a href="{{route('career.index')}}">Jobs</a>
+            <a href="{{route('career.index.admin')}}">Jobs</a>
             </li>
 
               <li>

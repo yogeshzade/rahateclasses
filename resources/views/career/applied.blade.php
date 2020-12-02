@@ -35,7 +35,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="header-title mt-0 mb-1">
+                <h4 class="header-title mt-0 mb-1"></h4>
                 
                <!--  <p class="sub-header">
                     Add <code>.table-hover</code> to enable a hover state on table rows within a
