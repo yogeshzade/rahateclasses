@@ -14,19 +14,24 @@
   </head>
   <body>
 
-  	<div class="container mt-3 cust-clr">
+  	<div class="container mt-3 cust-clr" id="printable">
   	<div class="wlsm-container wlsm" id="wlsm-print-invoice-payment">
 	<div class="wlsm-print-invoice-payment-container">
 
 		
 <!-- School header -->
+
 <div class="container-fluid">
-	<div class="row wlsm-school-header justify-content-center">
-		<div class="col-3 text-right">
+	<div class="row">
+
+		<div class="col-3 text-left col-sm-3">
 						<img src="{{url('homeassets/images/rahatelogo.png')}}" class="wlsm-print-school-logo" style="width:180px;">
 					</div>
-		<div class="col-9">
-			<div class="wlsm-print-school-label">
+					<div class="col-md-2 col-sm-2"></div>
+
+					<div class="col-7 text-left col-sm-7">
+
+						<div class="wlsm-print-school-label">
 				RAHATES IIT & MEDICAL HOME		</div>
 			<div class="wlsm-print-school-contact">
 								<span class="wlsm-print-school-phone">
@@ -45,10 +50,16 @@
 						Address:					</span>
 					<span>L39, Old Subhedar Lay Out N/o, Ayodhya Nagar,Nagpur-24</span>
 				</span>
-							</div>
-		</div>
+						
+
+
+					</div>
+
+
 	</div>
+	
 </div>
+</br>
 
 		<div class="row">
 			<div class="col-md-12">
@@ -104,7 +115,7 @@
 							<th>Amount (In Word)</th>
 							<td>
 								<b>
-								{{ucfirst(getIndianCurrency($invoice->payment_amount))}}
+								{{ucfirst(getIndianCurrency($invoice->payment_amount))}} Only
 							</b>
 							</td>
 						</tr>
@@ -203,6 +214,18 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+      <script src="{{url('homeassets/js/printThis.js')}}" ></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js"></script>
+
+
+      <script type="text/javascript">
+
+
+
+      	$('#printable').printThis();
+      	
+      </script>
   </body>
 </html>
 
