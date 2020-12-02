@@ -84,7 +84,7 @@
  mStitute Student Login
         </a>
          <a href="#" class="list-group-item">
-            <i class="fa fa-bell"></i> Notifications/Calender and Notes
+            <i class="fa fa-bell"></i> Notifications/Updates
         </a>
           <a href="#" class="list-group-item">
             <i class="fa fa-file-pdf-o"></i> Download Notes

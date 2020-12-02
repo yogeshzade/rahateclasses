@@ -100,7 +100,12 @@
 
                     <div class="col-md-12">
                   <h5 class="text text-info">Rs. 
-                   @php echo $fees->total_amount - $fees->paid_amount; @endphp</h5>
+                   @php  $balanced = $fees->total_amount - $fees->paid_amount; 
+                   if($balanced < 0 || $balanced == 0)
+                   {
+                      echo "All Fees Paid";
+                   }
+                 @endphp</h5>
                   <hr/>
                   </div>
 
