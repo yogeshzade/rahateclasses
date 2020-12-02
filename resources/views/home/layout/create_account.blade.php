@@ -47,15 +47,33 @@
                 <form action="{{route('student.create.account')}}" method="post" class="form-outer">
                     @csrf
                     <div class="row">
-                        <div class="col-sm-8">
+
+                        <div class="col-sm-4">
+                            
                            
-                            <input name="fullname" type="text" placeholder="Enter Full Name*" required="" value="{{old('fullname')}}">
-                              @if ($errors->has('fullname'))
-                    <span class="text-danger">{{ $errors->first('fullname') }}</span>
+                            <input name="firstname" type="text" placeholder="Enter First Name*" required="" value="{{old('firstname')}}">
+                              @if ($errors->has('firstname'))
+                    <span class="text-danger">{{ $errors->first('firstname') }}</span>
+                @endif
+                        </div>
+
+                        <div class="col-sm-4">
+                           
+                            <input name="middlename" type="text" placeholder="Enter Middle Name*" required="" value="{{old('middlename')}}">
+                              @if ($errors->has('middlename'))
+                    <span class="text-danger">{{ $errors->first('middlename') }}</span>
+                @endif
+                        </div>
+
+                        <div class="col-sm-4">
+                           
+                            <input name="lastname" type="text" placeholder="Enter Last Name*" required="" value="{{old('lastname')}}">
+                              @if ($errors->has('lastname'))
+                    <span class="text-danger">{{ $errors->first('lastname') }}</span>
                 @endif
                         </div>
                         
-                        <div class="col-sm-4">
+                        <div class="col-sm-12">
                             <input name="email" type="email" placeholder="Enter Your Email *" required=""
                             value="{{old('email')}}" 
                             autocomplete="off" 
