@@ -186,19 +186,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($recentadmissions as $recentadmission)
-
-                            <tr>
-                                <td>{{ $loop->iteration }}</td>
-                                <td>@php $username = App\User::where('id',$recentadmission->user_id)->first();  echo $username->name; @endphp</td>
-                                <td>
-                                    @php $username = App\Course::where('id',$recentadmission->course_id)->first();  echo $username->course_name; @endphp
-                                </td>
-                                <td>Rs. {{$username->total_fees}}</td>
-                                <td><span class="badge badge-soft-danger py-1">pending</span>
-                                </td>
-                            </tr>
-                            @endforeach
+                           
                         </tbody>
                     </table>
                 </div> <!-- end table-responsive-->
