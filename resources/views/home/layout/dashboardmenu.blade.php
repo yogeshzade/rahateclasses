@@ -52,7 +52,7 @@
             
         </span>
                 @php
-        $applied = \App\StudentProfile::where('user_id',Auth::user()->id)->count();
+        $applied = \App\StudentProfile::where('user_id',Auth::user()->id)->first();
         @endphp
 
          <a href="{{route('home.index')}}" class="list-group-item">
@@ -62,9 +62,13 @@
         <a href="{{route('student.admission.submit')}}" class="list-group-item">
             <i class="fa fa-refresh"></i> Apply Admission
             
-                  @if($applied)
+                  @if($applied && $applied->status == 0)
                    <span class="badge badge-warning">
                     Applied
+                     </span>
+                    @elseif($applied->status) 
+                     <span class="badge badge-success">
+                    Approved
                      </span>
                      @else
                       <span class="badge badge-danger">

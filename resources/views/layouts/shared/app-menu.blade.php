@@ -76,9 +76,7 @@
             <li>
                 <a href="/">Pay Student Fees</a>
             </li>
-              <li>
-                <a href="/">Show Payements</a>
-            </li>
+            
               <!-- <li>
                 <a href="/apps/project/list">Print Receipt</a>
             </li> -->

@@ -442,8 +442,6 @@ class StudentsController extends Controller
         $invoice->payment_approved_by = 1;
         $invoice->payuMoneyId = $payuMoneyId;
         $invoice->save();
-
-
         $paidFees = StudentFee::where('user_id',Auth::user()->id)->first();
 
         if($paidFees)
@@ -456,8 +454,8 @@ class StudentsController extends Controller
         return redirect()->route('students.checkfees')->with('success','Fees Paid Successfully! . Thank You .Download Receipt From Below !');
                 
         }
-        else{
-             return redirect()->route('student.fees')->with('error','Payment Not Successful. Try Again');
+        else{   
+          return redirect()->route('student.fees')->with('error','Payment Not Successful. Try Again');
         }
      
       }
@@ -465,13 +463,7 @@ class StudentsController extends Controller
          return redirect()->route('student.fees')->with('error','Invalid Payment... Try Again!');
       }
 
-      return redirect()->route('student.fees')->with('error','Something Went Wring.. Try Again!');
-
-    
-
-     
-      // print_r($request);
-
+      return redirect()->route('student.fees')->with('error','Something Went Wrong.. Try Again!');
 
     }
 
@@ -483,18 +475,25 @@ class StudentsController extends Controller
 
     public function invoicePriview(Request $request){
 
+        $id = "";
+
         $request->validate([
           'txn_id' => 'required|numeric'
         ]);
 
-
+        if($request->id)
+        {
+           $id = $request->id;
+        }
+        else{
+          $id = Auth::user()->id;
+        }
 
         $invoice = PaymentTransaction::where('transaction_id',$request->txn_id)
-        ->where('user_id',Auth::user()->id)
+        ->where('user_id',$id)
         ->where('payment_status',1)
-       // / ->Orwhere('payment_status',5)
         ->firstOrFail();
-        $student = User::where('id',Auth::user()->id)->firstOrFail();
+        $student = User::where('id',$id)->firstOrFail();
          return view('home.invoice',compact('invoice','student'));
      
     

@@ -20,16 +20,15 @@ and open the template in the editor.
 
 	<input type="hidden" name="key"value="{{config('app.PAYU_MERCHANT_LIVE')}}" />
     <input type="hidden" name="txnid" value="{{$fetchTransaction->transaction_id}}" />
-                            <input type="hidden" name="amount" value="{{$fetchTransaction->payment_amount}}" />
-                            <input type="hidden" name="productinfo" value="{{$fetchTransaction->product_info}}" />
-                            <input type="hidden" name="firstname" value="{{Auth::user()->name}}" />
-                            <input type="hidden" name="email" value="{{Auth::user()->email}}" />
-                            <input type="hidden" name="phone" value="{{Auth::user()->mobile}}" />
-                            <input type="hidden" name="surl" value="{{route('payment.callback')}}" />
-                            <input type="hidden" name="furl" value="{{route('payment.callback')}}" />
-                            <input type="hidden" name="hash" value="{{$paymenthash}}" />
-                            <input type="hidden" name="service_provider" value="payu_paisa">
-                           
+ <input type="hidden" name="amount" value="{{$fetchTransaction->payment_amount}}" />
+<input type="hidden" name="productinfo" value="{{$fetchTransaction->product_info}}" />
+<input type="hidden" name="firstname" value="{{Auth::user()->name}}" />
+<input type="hidden" name="email" value="{{Auth::user()->email}}" />
+<input type="hidden" name="phone" value="{{Auth::user()->mobile}}" />
+<input type="hidden" name="surl" value="{{route('payment.callback')}}" />
+<input type="hidden" name="furl" value="{{route('payment.callback')}}" />
+<input type="hidden" name="hash" value="{{$paymenthash}}" />
+<input type="hidden" name="service_provider" value="payu_paisa">
 
 <button type="submit">Click Here If Not Redirect</button>
 

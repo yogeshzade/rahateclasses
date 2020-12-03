@@ -91,11 +91,29 @@ class AdminController extends Controller
 
         $studentslists = studentprofile::with(['userProfile','studentCourse','studentClass'])->orderBy('created_at','desc')->get();
         // return $studentslists;
+
         return view('students.index',compact('studentslists'));
         
     }
 
-    public function indexFile(){
+    public function ApproveAdmission($id){
+
+        $student = studentprofile::where('id',$id)->firstOrFail();
+        $student->status = 1;
+        $student->save();
+        return back()->with('success','Application Approved');
         
+    }
+
+    public function ViewAdmission($id){
+         $profileinfo = studentprofile::where('id',$id)
+                        ->with(['userProfile','studentCourse','studentClass'])->orderBy('created_at','desc')->firstOrFail();
+
+                        return view('home.adminformpreview',compact('profileinfo'));
+
+    }
+
+    public function pendingPayments(){
+        $payments ;
     }
 }

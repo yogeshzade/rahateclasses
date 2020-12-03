@@ -100,6 +100,9 @@ Route::group([
           'prefix' => 'admission',
 ],function(){
     Route::get('/','AdminController@Studentindex')->name('admission.index');
+     Route::get('approve/{id}','AdminController@ApproveAdmission')->name('admission.approve');
+      Route::get('view/{id}','AdminController@ViewAdmission')->name('admission.view');
+   
 });
 
  Route::group([
@@ -199,6 +202,17 @@ Route::get('/updates/delete/{id}','WebsiteConfigration@UpdatesDelete')->name('up
  
 });
 
+
+
+     Route::group([
+          'prefix' => 'payments',
+],function(){
+
+    Route::get('/pending','AdmissionController@pendingPayments')->name('pending.payments');
+
+ 
+ 
+});
 
 
 
