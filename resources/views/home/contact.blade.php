@@ -19,28 +19,22 @@
   <!-- ==============================================
     ** Inner Banner **
     =================================================== -->
-    <div class="inner-banner contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-lg-9">
-                    <div class="content">
-                        <h1>Contact Us</h1>
-                       <p>If you have any query then feel free to contact us</p>
-                    </div>
+
+      <div class="col-sm-8 col-lg-9">
+                   
+                       <h3>Contact Us</h3>
                 </div>
-                <div class="col-sm-4 col-lg-3"> <a href="{{route('student.admission.index')}}" class="apply-online clearfix">
-                       
-                        <div class="arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
-                    </a></div>
-            </div>
-        </div>
-    </div>
+   
 
     <!-- ==============================================
     ** Contact Us **
     =================================================== -->
     <section class="form-wrapper padding-lg">
-        <div class="container">
+      <div class="row">
+
+        <div class="col-md-6">
+          
+            <div class="container">
             <form name="contact-form" id="ContactForm" method="post" action="{{route('inquiry.store')}}">
                 @csrf
                 <div class="row input-row">
@@ -73,7 +67,15 @@
                 </div>
             </form>
         </div>
-    </section>
+
+
+        </div>
+        <div class="col-md-6">
+              <div class="mapouter"><div class="gmap_canvas"><iframe height="500" width="800px" id="gmap_canvas" src="https://maps.google.com/maps?q=Rahate%20Classes&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:500px;width:800px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+        </div>
+
+      </div>
+          </section>
 
     <!-- ==============================================
     ** Google Map **
@@ -81,7 +83,7 @@
    
    <section class="google-map">
         
-          <div class="mapouter"><div class="gmap_canvas"><iframe height="500" width="800px" id="gmap_canvas" src="https://maps.google.com/maps?q=Rahate%20Classes&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:500px;width:800px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+      
        
         <div class="container">
             <div class="contact-detail">
