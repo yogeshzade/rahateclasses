@@ -56,7 +56,7 @@
   <h2>JOB LISTS</h2>
   <br/>
             
-  <table class="table table-striped">
+  <table class="table table-hover">
     <thead>
       <tr>
         <th>Sr No</th>
@@ -67,8 +67,8 @@
     </thead>
     <tbody>
       @foreach($careers as $career)
-      <tr style="font-weight: 600;">
-        <td>{{$loop->iteration}}</td>
+      <tr style="font-weight: 600;" class="">
+        <td><b>{{$loop->iteration}}</b></td>
         <td>{{$career->job_title}}</td>
         <td>{!! $career->job_description !!}</td>
         <td>

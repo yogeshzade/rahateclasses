@@ -19,71 +19,27 @@
   <!-- ==============================================
     ** Inner Banner **
     =================================================== -->
-
-      <div class="col-sm-8 col-lg-9">
-                   
-                       <h3>Contact Us</h3>
-                </div>
-   
+  
+        <div class="container">
+            <br/>
+                        <h1>Contact Us</h1>
+                       <p>If you have any query then feel free to contact us</p>
+                    
+        </div>
+        <br/>
+ 
 
     <!-- ==============================================
     ** Contact Us **
     =================================================== -->
-    <section class="form-wrapper padding-lg">
-      <div class="row">
-
-        <div class="col-md-6">
-          
-            <div class="container">
-            <form name="contact-form" id="ContactForm" method="post" action="{{route('inquiry.store')}}">
-                @csrf
-                <div class="row input-row">
-                    <div class="col-sm-6">
-                    <input name="name" placeholder="Name" type="text" required>
-                    </div>
-                    <div class="col-sm-6">
-                    <input name="email" placeholder="Email" type="email" required>
-                    </div>
-                </div>
-                <div class="row input-row">
-                    <div class="col-sm-6">
-                    <input name="phone" placeholder="Phone" type="text" required maxlength="10">
-                    </div>
-                    <div class="col-sm-6">
-                    <input name="place" placeholder="Place" type="text" required >
-                    </div>
-                </div>
-                <div class="row input-row">
-                   
-                    <div class="col-sm-6">
-                    <input name="message" placeholder="Message" type="text" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <button class="btn" type="submit">Send Now <span class="icon-more-icon"></span></button>
-                        <div class="msg"></div>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-
-        </div>
-        <div class="col-md-6">
-              <div class="mapouter"><div class="gmap_canvas"><iframe height="500" width="800px" id="gmap_canvas" src="https://maps.google.com/maps?q=Rahate%20Classes&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:500px;width:800px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
-        </div>
-
-      </div>
-          </section>
-
+  
     <!-- ==============================================
     ** Google Map **
     =================================================== -->
    
    <section class="google-map">
         
-      
+          <div class="mapouter" style="margin-left: 20px;"><div class="gmap_canvas"><iframe height="500" width="800px" id="gmap_canvas" src="https://maps.google.com/maps?q=Rahate%20Classes&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:500px;width:800px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
        
         <div class="container">
             <div class="contact-detail">
@@ -102,6 +58,45 @@ Ayodhya Nagar,Nagpur-24</p>
             </div>
         </div>
     </section>
+
+
+      <section class="form-wrapper padding-lg">
+        <div class="container">
+            <form name="contact-form" id="ContactForm" method="post" action="{{route('inquiry.store')}}">
+                @csrf
+                <div class="row input-row">
+                    <div class="col-sm-4">
+                    <input name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-4">
+                    <input name="email" placeholder="Email" type="email" required>
+                    </div>
+                     <div class="col-sm-4">
+                    <input name="phone" placeholder="Phone" type="text" required maxlength="10">
+                    </div>
+                </div>
+              </br>
+                <div class="row input-row">
+                   
+                    <div class="col-sm-6">
+                    <input name="place" placeholder="Place" type="text" required >
+                    </div>
+
+                    <div class="col-sm-6">
+                    <input name="message" placeholder="Message" type="text" required>
+                    </div>
+                </div>
+             
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button class="btn" type="submit">Send Now <span class="icon-more-icon"></span></button>
+                        <div class="msg"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
 
    
 
