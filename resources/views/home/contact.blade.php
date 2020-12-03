@@ -12,6 +12,12 @@
         <!-- Start Navigation -->
        @include('home.layout.navigation')
         <!-- End Navigation -->
+        <style type="text/css">
+          .first-box{padding:30px;background:#9C0; color: #fff;margin: 5px;}
+.second-box{padding:30px; background:#39F; color: #fff;margin: 5px;}
+.third-box{padding:30px;background:#F66; color: #fff;margin: 5px;}
+.fourth-box{padding:30px;background:#6CC; color: #fff;margin: 5px;}
+        </style>
     </header>
 
   
@@ -19,86 +25,102 @@
   <!-- ==============================================
     ** Inner Banner **
     =================================================== -->
-  
+   
+   </br>
         <div class="container">
-            <br/>
+            <div class="row">
+                <div class="col-sm-8 col-lg-9">
+                    <div class="content">
                         <h1>Contact Us</h1>
                        <p>If you have any query then feel free to contact us</p>
-                    
+                    </div>
+                </div>
+                <div class="col-sm-4 col-lg-3"> <a href="{{route('student.admission.index')}}" class="apply-online clearfix">
+                       
+                        <div class="arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                    </a></div>
+            </div>
         </div>
-        <br/>
- 
+      </br>
+
 
     <!-- ==============================================
     ** Contact Us **
     =================================================== -->
+
+    <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+        <iframe src="https://maps.google.com/maps?q=Rahate%20Classes&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="315" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+      </div>
+
+      <div class="col-md-4">
+         
+        <form action="{{route('inquiry.store')}}" method="post">
+          @csrf
+           <input type="hidden" class="form-control" name="place" value="Nagpur" placeholder="Place">
+          <div class="form-group">
+            <input type="text" class="form-control" name="name" value="" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" value="" placeholder="E-mail">
+          </div>
+          <div class="form-group">
+            <input type="tel" class="form-control" name="phone" value="" placeholder="Phone">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="3" placeholder="Message"></textarea>
+          </div>
+          <button class="btn btn-default" type="submit" name="button">
+              <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Submit
+          </button>
+        </form>
+      </div>
+      <br/>
+
+      <div class="col-md-12">
+        <div class="container">
+
+  <div class="row text-center">
+    <div class="col-sm-3 col-xs-6 first-box" style="  width: 270px;
+    height: 200px;">
+        <h1><span class="fa fa-phone"></span></h1>
+        <h3>Phone</h3>
+        <p style="font-weight: 600;">+91-9545578282</p><br>
+    </div>
+    <div class="col-sm-3 col-xs-6 second-box" style="  width: 270px;
+    height: 200px;">
+        <h1><span class="fa fa-location-arrow"></span></h1>
+        <h3>Location</h3>
+        <p style="font-weight: 600;">L39, Old Subhedar L/O
+Ayodhya Nagar,Nagpur-24</p><br>
+    </div>
+    <div class="col-sm-3 col-xs-6 third-box" style="  width: 270px;
+    height: 200px;">
+        <h1><span class="fa fa-envelope"></span></h1>
+        <h3>E-mail</h3>
+        <p style="font-weight: 600;">krantirahate12@gmail.com</p><br>
+    </div>
+    <div class="col-sm-3 col-xs-6 fourth-box" style="  width: 270px;
+    height: 200px;">
+      <h1><span class="fa fa-chrome"></span></h1>
+        <h3>Web</h3>
+        <p style="font-weight: 600;">http://www.rahateiithome.in</p><br>
+    </div>
+  </div>
+</div>
+      </div>
+
+      </div>
+    </div>
   
     <!-- ==============================================
     ** Google Map **
     =================================================== -->
    
-   <section class="google-map">
-        
-          <div class="mapouter" style="margin-left: 20px;"><div class="gmap_canvas"><iframe height="500" width="800px" id="gmap_canvas" src="https://maps.google.com/maps?q=Rahate%20Classes&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:500px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
-       
-        <div class="container">
-            <div class="contact-detail">
-                <div class="address">
-                    <div class="inner">
-                        <h3>Rahate Coaching Classes</h3>
-                        <p>L39, Old Subhedar Lay Out N/o,
-Ayodhya Nagar,Nagpur-24</p>
-                    </div>
-                    <div class="inner">
-                        <h3>+91-9545578282</h3>
-                    </div>
-                    <div class="inner"> <a href="mailto:krantirahate12@gmail.com">krantirahate12@gmail.com</a> </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-
-      <section class="form-wrapper padding-lg">
-        <div class="container">
-            <form name="contact-form" id="ContactForm" method="post" action="{{route('inquiry.store')}}">
-                @csrf
-                <div class="row input-row">
-                    <div class="col-sm-4">
-                    <input name="name" placeholder="Name" type="text" required>
-                    </div>
-                    <div class="col-sm-4">
-                    <input name="email" placeholder="Email" type="email" required>
-                    </div>
-                     <div class="col-sm-4">
-                    <input name="phone" placeholder="Phone" type="text" required maxlength="10">
-                    </div>
-                </div>
-              </br>
-                <div class="row input-row">
-                   
-                    <div class="col-sm-6">
-                    <input name="place" placeholder="Place" type="text" required >
-                    </div>
-
-                    <div class="col-sm-6">
-                    <input name="message" placeholder="Message" type="text" required>
-                    </div>
-                </div>
-             
-                <div class="row">
-                    <div class="col-sm-12">
-                        <button class="btn" type="submit">Send Now <span class="icon-more-icon"></span></button>
-                        <div class="msg"></div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
-
-
    
+   <br/>
 
    
     <!-- ==============================================
