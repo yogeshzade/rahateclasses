@@ -61,22 +61,23 @@
 
         <a href="{{route('student.admission.submit')}}" class="list-group-item">
             <i class="fa fa-refresh"></i> Apply Admission
-            
-                  @if($applied && $applied->status == 0)
-                   <span class="badge badge-warning">
+
+            @if($applied)
+        <span class="badge badge-warning">
                     Applied
                      </span>
-                    @elseif($applied->status) 
-                     <span class="badge badge-success">
-                    Approved
-                     </span>
-                     @else
+
+             @else
                       <span class="badge badge-danger">
                     Pending
                      </span>
+            @endif
 
-                  @endif
-            
+           
+                   
+                 
+
+              
         </a>
 
        
