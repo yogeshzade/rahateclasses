@@ -86,7 +86,7 @@
                                               @endif
                                           </td>
                                             <td>
-                                                @if($studentlist->userProfile->status)
+                                                @if($studentlist->status)
                                                  <div class="badge badge-success">Active</div>
                                                 @else
                                                     <div class="badge badge-danger">Inactive</div>
