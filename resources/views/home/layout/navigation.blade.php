@@ -37,7 +37,7 @@
                         </li>
 
                         <li> <a href="/career">Career</a></li>
-                           <li> <a href="/career">Faculties</a></li>
+                           <li> <a href="{{route('home.index')}}#faculties">Faculties</a></li>
                             <li> <a href="/contact">Contact Us</a></li>
 
                          

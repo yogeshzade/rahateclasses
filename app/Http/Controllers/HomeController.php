@@ -7,6 +7,7 @@ use App\Course;
 use App\Inquiry;
 use App\Alumini;
 use App\NewsAndUpdate;
+use App\Faculty;
 
 
 class HomeController extends Controller
@@ -19,7 +20,8 @@ class HomeController extends Controller
         $popup = \App\Popup::first();
         $testimonials = Alumini::all();
         $notifications = NewsAndUpdate::orderBy('id', 'DESC')->limit(4)->get();
-    	return view('home.index',compact('sliders','popup','testimonials','notifications'));
+        $faculties = Faculty::where('status',1)->orderBy('id','ASC')->get();
+    	return view('home.index',compact('sliders','popup','testimonials','notifications','faculties'));
     }
 
 

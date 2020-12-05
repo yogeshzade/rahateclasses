@@ -13,6 +13,11 @@
     <title>Payment Invoice</title>
   </head>
   <body>
+  	<div class="row">
+  		<div class="col-md-4">
+  			
+  		</div>
+  	</div>
 
   	<div class="container mt-3 cust-clr" id="printable">
   	<div class="wlsm-container wlsm" id="wlsm-print-invoice-payment">

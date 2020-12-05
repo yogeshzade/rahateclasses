@@ -2,9 +2,7 @@
         <div class="header-top mb-3">
             <div class="container clearfix">
                 <ul class="follow-us hidden-xs">
-                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                 
                 </ul>
                 <div class="right-block clearfix">
                     <ul class="top-nav hidden-xs">

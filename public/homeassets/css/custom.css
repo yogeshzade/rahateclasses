@@ -2781,8 +2781,8 @@ ul.browse-teachers-list > li .inner-block {
 	padding: 0 20px;
 }
 ul.browse-teachers-list figure {
-	width: 124px;
-	height: 124px;
+	width: 152px;
+	height: 152px;
 	margin: 0 auto 28px;
 	position: relative;
 }
@@ -2805,15 +2805,17 @@ ul.browse-teachers-list figure:before {
 }
 ul.browse-teachers-list h3 {
 	font-family: 'texgyreadventorbold';
-	font-size: 14px;
+	font-size: 18px;
 	text-transform: uppercase;
 	color: #414a4f;
+	letter-spacing: 1px;
+	margin-bottom: 12px;
 }
 ul.browse-teachers-list .designation {
 	display: block;
-	padding-bottom: 10px;
-	font-size: 12px;
-	font-weight: 500;
+	padding-bottom: 8px;
+	font-size: 16px;
+	font-weight: 600;
 }
 ul.browse-teachers-list p {
 	display: block;

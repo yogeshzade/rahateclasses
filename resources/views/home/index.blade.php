@@ -115,7 +115,7 @@
                     <div class="detail">
                         <h3><span>Download</span>Broucher</h3>
                     
-                        <a href="/" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a href="{{url('raharepros.pdf')}}" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
                 </li>
                 <li class="col-sm-4 certification clearfix equal-hight">
@@ -320,6 +320,9 @@
     </section>
 
 
+
+
+
      <section class="why-choose padding-lg">
         <div class="container">
             <h2><span>The Numbers Say it All</span>Why Choose Us</h2>
@@ -349,6 +352,30 @@
     </section>
 
 
+        <!-- Teachers -->
+
+    <section class="browse-teacher padding-lg" id="faculties">
+        <div class="container">
+            <h2>OUR EXPERTE FACULTIES</h2>
+            <ul class="row browse-teachers-list clearfix">
+                @foreach($faculties as $facultie)
+                <li class="col-xs-6 col-sm-4">
+                    <figure> <img src="{{url($facultie->photo_url)}}" width="124" height="124" alt=""  style="    font-size: 14px;
+"> </figure>
+                    <h3>{{$facultie->fullname}}</h3>
+                    <span class="designation" style="font-weight: 600">{{$facultie->designation}}</span>
+                    <p class="equal-hight" style="height: 114px; font-weight: 500;">{!! $facultie->details !!}</p>
+                   
+                </li>
+               @endforeach
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- End teachers -->
+
+
 
 
 
@@ -370,7 +397,7 @@
                                <h4>Apply Online</h4>
                                 <span>To Take Admission</span>
                             </div>
-                            <a href="#"><span class="icon-more-icon"></span></a>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
                         </div>
                     </div>
                 </li>
@@ -384,7 +411,7 @@
                                <h4>Apply Online</h4>
                                 <span>To Take Admission</span>
                             </div>
-                            <a href="#"><span class="icon-more-icon"></span></a>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
                         </div>
                     </div>
                 </li>
@@ -399,7 +426,7 @@
                                <h4>Apply Online</h4>
                                 <span>To Take Admission</span>
                             </div>
-                            <a href="#"><span class="icon-more-icon"></span></a>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
                         </div>
                     </div>
                 </li>
@@ -414,7 +441,7 @@
                                <h4>Apply Online</h4>
                                 <span>To Take Admission</span>
                             </div>
-                            <a href="#"><span class="icon-more-icon"></span></a>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
                         </div>
                     </div>
                 </li>
@@ -428,7 +455,7 @@
                                 <h4>Apply Online</h4>
                                 <span>To Take Admission</span>
                             </div>
-                            <a href="#"><span class="icon-more-icon"></span></a>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
                         </div>
                     </div>
                 </li>
@@ -442,7 +469,7 @@
                                  <h4>Apply Online</h4>
                                 <span>To Take Admission</span>
                             </div>
-                            <a href="#"><span class="icon-more-icon"></span></a>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
                         </div>
                     </div>
                 </li>
@@ -457,7 +484,7 @@
                                 <span>To Take Admission</span>
                                 
                             </div>
-                            <a href="#"><span class="icon-more-icon"></span></a>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
                         </div>
                     </div>
                 </li>
