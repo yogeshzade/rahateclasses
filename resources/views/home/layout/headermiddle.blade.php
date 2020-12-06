@@ -19,6 +19,9 @@
                             <a href="{{route('student.dashboard')}}" class="login">{{Auth::user()->name}} <span class=""><i class="fa fa-user"></i></span></a>
 
                             @endif
+                            @if(Auth::check())
+                            <a href="{{route('home.student.logout')}}" class="login">Logout<span class=""><i class="fa fa-sign-out"></i></span></a>
+                            @endif
 
 
                         @endguest

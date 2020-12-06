@@ -84,22 +84,23 @@
                 @endif
                         </div>
                         
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <div class="col-md-12">
                             <b>Email : *</b>
                            </div>
                             <input name="email" type="email" placeholder="Enter Your Email *" required=""
                             value="{{old('email')}}" 
-                            autocomplete="off" 
+                            autocomplete="false" 
+
                             >
                                @if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                 @endif
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <div class="col-md-12">
-                            <b>Mobile : </b>
+                            <b>Mobile : *</b>
                            </div>
                             <input name="mobile" type="number" placeholder="Enter Mobile Number *" 
                             required=""
@@ -110,6 +111,21 @@
                     <span class="text-danger">{{ $errors->first('mobile') }}</span>
                 @endif
                         </div>
+
+                         <div class="col-sm-4">
+                            <div class="col-md-12">
+                            <b>Date Of Birth : * </b>
+                           </div>
+                            <input name="dob" type="date" placeholder="Enter Date Of Birth *" 
+                            required=""
+                            value="{{old('dob')}}" 
+                            autocomplete="off" 
+                            >
+                               @if ($errors->has('dob'))
+                    <span class="text-danger">{{ $errors->first('dob') }}</span>
+                @endif
+                        </div>
+
                         <div class="col-sm-6">
                             <div class="col-md-12">
                             <b>Password : *</b>

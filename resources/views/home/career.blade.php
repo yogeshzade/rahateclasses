@@ -12,6 +12,7 @@
         <!-- Start Navigation -->
        @include('home.layout.navigation')
         <!-- End Navigation -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     </header>
 
   
@@ -24,7 +25,7 @@
 
 
 
-    <section class="faq-wrapper faq2 padding-lg">
+  
         <div class="container">
 
           @if ($message = Session::get('success'))
@@ -56,7 +57,7 @@
   <h2>JOB LISTS</h2>
   <br/>
             
-  <table class="table table-hover">
+<table id="example" class="display" style="width:100%">
     <thead>
       <tr>
         <th>Sr No</th>
@@ -72,7 +73,7 @@
         <td>{{$career->job_title}}</td>
         <td>{!! $career->job_description !!}</td>
         <td>
-          <a href="" data-toggle="modal" data-target="#myModal">Apply Now</a>
+          <a href="" data-toggle="modal" data-target="#myModal" class="btn">Apply Now</a>
         </td>
       </tr>
       @endforeach
@@ -83,7 +84,7 @@
             </div>
           
         </div>
-    </section>
+ <div style="margin-bottom: 40px;"></div>
 
 
     <!-- Modal -->
@@ -246,10 +247,13 @@
     <a href="#" class="scroll-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 
       @include('home.layout.scripts')
+      <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 
       <script>
       $( document ).ready(function() {
     console.log( "ready!" );
+        $('#example').DataTable();
+
     @if ($message = Session::get('success'))
       //  alert("Message Sent");
         Command: toastr["success"]("Message Sent Succesfully.", "Success")

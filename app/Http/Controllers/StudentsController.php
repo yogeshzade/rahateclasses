@@ -76,6 +76,7 @@ class StudentsController extends Controller
             'password' => 'required|string|min:8|max:14',
             'mobile' => 'required|min:10|max:10|unique:users',
             'captcha' => 'required|captcha',
+            'dob' => 'required|max:10'
         ]);
      // dd($validate);
 
@@ -90,6 +91,7 @@ class StudentsController extends Controller
         $student->type = 1;
         $student->account_status = 0;
         $student->otp = $newotp;
+        $student->dob = $request->dob;
         $student->save();
 
         $details = [
@@ -101,7 +103,7 @@ class StudentsController extends Controller
 
          \Mail::to($request->email)->send(new \App\Mail\MyTestMail($details));
 
-          return redirect()->route('home.student.login.index')->with('success','Account Created Successfully.Please Verify Email To Process Next');
+          return redirect()->route('home.student.login.index')->with('success','Account Created Successfully.Please Verify Email To Continue');
 
          
 

@@ -170,7 +170,7 @@
                             <div class="col-md-12">
                             <b>Date Of Birth: *</b>
                            </div>
-                            <input name="dob" type="date" placeholder="Select DOB *" required="" value="{{old('dob')}}" placeholder="">
+                            <input name="dob" type="date" placeholder="Select DOB *" required="" value="{{Auth::user()->dob}}" placeholder="">
                               @if ($errors->has('dob'))
                     <span class="text-danger">{{ $errors->first('dob') }}</span>
                 @endif

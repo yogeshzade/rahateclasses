@@ -14,6 +14,7 @@
         <!-- Start Navigation -->
       
         <!-- End Navigation -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     </header>
 
     <!-- ==============================================
@@ -57,11 +58,11 @@
 <!--  -->
 
 <div class="panel panel-success">
-                        <div class="panel-heading">
-                            <span class="panel-title" style="font-family: inherit; font-weight: 500; line-height: 1.1;">Notifications & Update @ RahateIITHome</span>
+                        <div class="panel-heading notification-home">
+                            <span class="panel-title" style="font-family: inherit; font-weight: 500; line-height: 1.1;">Notifications & Update</span>
                         </div>
 
-                         <div class="scroll-wrapper list-group scrollbar-macosx" style="position: relative;">
+                         <div class="scroll-wrapper list-group scrollbar-outer" style="position: relative; overflow: auto;">
 
                                <ul class="list-group  scrollbar-macosx scroll-content scroll-scrolly_visible" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 260px;">
 
@@ -69,8 +70,9 @@
 
                                  <li class="list-group-item">
                                 <img src="{{url('images/bullet_arrow_r.png')}}" alt="" title="" style="border: 0px;"><a href="{{$notification->notification_link}}" style="color: brown;" class="link">
-                                    <b>{{$notification->notification_title}}</b><br>
+                                    <b>{{$notification->notification_title}} <img src="{{url('new_icon_blink.gif')}}" style="width:22px; height: 9px;"></b><br>
                                     {{$notification->notification_body}}
+
                                    </a>
                             </li>
 
@@ -655,6 +657,7 @@
     <a href="#" class="scroll-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 
       @include('home.layout.scripts')
+      
 
       <script>
 
@@ -681,6 +684,8 @@ function subscriptionPopup(){
 
 
 $( document ).ready(function() {
+      // $('.scrollbar-inner').scrollbar();
+
     console.log( "ready!" );
     @if ($message = Session::get('success'))
       //  alert("Message Sent");
