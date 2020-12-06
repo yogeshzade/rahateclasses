@@ -858,7 +858,10 @@ textarea:focus::placeholder{
 }
 .about p {
 	display: block;
-	padding-bottom: 34px;
+    padding-bottom: 34px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 500;
 }
 .about .know-more-wrapper {
 	display: block;
