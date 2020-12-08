@@ -451,12 +451,22 @@ class StudentsController extends Controller
         $paidFees = StudentFee::where('user_id',Auth::user()->id)->first();
 
         if($paidFees)
-        {
-            $paidFees->paid_amount =  $paidFees->paid_amount + $amount;
+        { 
+            $pendingAmt = $paidFees->paid_amount + $amount;
+            $paidFees->paid_amount =  $pendingAmt;
             $paidFees->save();
+            $data = array(
+            'payment_amount' => $invoice->payment_amount,
+            'mode' =>  $mode,
+            'transaction_id' => $txnid,
+            'pending' => ($pendingAmt < 0) ? (0) : ($pendingAmt),
+            );
+
+
         } 
 
-
+       //  $sendotp = new SmsGateway();
+       // $status =  $sendotp->sendSMS(2,Auth::user()->mobile,'',$data);
         return redirect()->route('students.checkfees')->with('success','Fees Paid Successfully! . Thank You .Download Receipt From Below !');
                 
         }
