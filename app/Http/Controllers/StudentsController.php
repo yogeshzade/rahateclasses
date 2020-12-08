@@ -14,6 +14,9 @@ use App\Installment;
 use App\Library\TransactionId;
 use App\PaymentTransaction;
 use App\StudentFee;
+use App\Library\SmsGateway;
+
+
 
 
 class StudentsController extends Controller
@@ -81,6 +84,7 @@ class StudentsController extends Controller
      // dd($validate);
 
       $newotp = rand(111111,999999);
+      
 
         $student = new User();
         $student->name = $request->firstname." ".$request->middlename." ". $request->lastname;
@@ -99,7 +103,7 @@ class StudentsController extends Controller
             'otp' => Crypt::encryptString($newotp),
             'email' => $request->email,
         ];
-
+       
 
          \Mail::to($request->email)->send(new \App\Mail\MyTestMail($details));
 
@@ -499,7 +503,40 @@ class StudentsController extends Controller
          return view('home.invoice',compact('invoice','student'));
      
     
+
     }
+
+    public function sendotp(){
+      $sendotp = new SmsGateway();
+       $status =  $sendotp->sendSMS(1,Auth::user()->mobile,Auth::user()->otp);
+      return view('home.verifyotp');
+    }
+
+    public function verifyMobile(Request $request){
+
+      // $request->validate([
+      //   'mobile' => 'required|numeric|max:10|min:10',
+      //   'otp' => 'request|numeric|min:4|max:6',
+      // ]);
+
+      $isVerified = User::where('id',Auth::user()->id)
+                          ->where('otp',$request->otp)
+                          ->first();
+     if($isVerified){
+      $isVerified->mobile_verified = 1;
+      $isVerified->save();
+      return redirect()->route('student.dashboard')->with('success','OTP Verified');
+
+     } 
+     else{
+      return redirect()->back()->with('error','Incorrect OTP. Please Re-enter OTP');
+     }                    
+
+
+    }
+
+
+
 
 
 

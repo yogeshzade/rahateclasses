@@ -67,8 +67,11 @@ Route::post('invoice/download','StudentsController@invoicePriview')->name('invoi
 
 // Student Dashboard
 
+Route::get('verify/otp','StudentsController@sendotp')->name('student.sendotp')->middleware(['auth']);
+Route::post('verify/otp','StudentsController@verifyMobile')->name('student.verifymobile')->middleware(['auth','throttle:3,5']);
 
-Route::prefix("student")->middleware(['auth','checkStudent'])->group(function(){
+
+Route::prefix("student")->middleware(['auth','checkStudent','verifyMobile'])->group(function(){
 
 Route::get('/dashboard','StudentsController@studentDashboardIndex')->name('student.dashboard');
 

@@ -78,7 +78,8 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'checkAdmin' => \App\Http\Middleware\CheckIfAdminOrNot::class,
         'checkStudent' => \App\Http\Middleware\IsStudent::class,
-        'prevent-back-history' => \App\Http\Middleware\PreventBackHistory::class
+        'prevent-back-history' => \App\Http\Middleware\PreventBackHistory::class,
+        'verifyMobile' => \App\Http\Middleware\IsMobileVerified::class,
 
     ];
 

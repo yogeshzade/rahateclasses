@@ -1,32 +1,45 @@
 <?php
 
 namespace App\Library;
+use GuzzleHttp\Client;
 
 
 class SmsGateway 
 {
 
-	public static function sendSMS($msg,$to)
-	{
-		// Account details
-		$apiKey = urlencode("qn1V4Kg2/CU-VADqQYh8r0TBpHJu5lOWwdxvR5ay7");
-		// Message details
-		$sender = urlencode("RHTCLS");
-		$message = rawurlencode($msg);
-		$numbers = array($to);
-		 
-		$data = array('apikey' => $apiKey, 'numbers' => , "sender" => $sender, "message" => $message);
+	public static function sendSMS($msgtype,$to,$otp=null){
+      // Account details
+	
+  	$apiKey = urlencode('qn1V4Kg2/CU-VADqQYh8r0TBpHJu5lOWwdxvR5ay72');
+  
+  // Message details
+  	$to = "91".$to;
+  $numbers = array($to);
+  $sender = urlencode('RHTIIT');
 
-		// Send the POST request with cURL
-		$ch = curl_init('https://api.textlocal.in/send/');
-		curl_setopt($ch, CURLOPT_POST, true);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		$response = curl_exec($ch);
-		curl_close($ch);
-		// Process your response here
-		return $response;
-	}
+  switch ($msgtype) {
+  case "1":
+  	$message = rawurlencode('Hello Your OTP is '.$otp.'. <> Rahates IIT & Medical Home');
+    break;
+
+  default:
+    return false;
+}
+
+
+ 
+  $numbers = implode(',', $numbers);
+
+  $data = 'apikey=' . $apiKey . '&numbers=' . $numbers . "&sender=" . $sender . "&message=" . $message;
+
+  $client = new Client(['base_uri' => 'http://api.textlocal.in']);
+
+  $response = $client->request('GET', '/send/?', ['query' => $data]);
+
+return $response->getBody();
+
+
+    }
 
 }
 
