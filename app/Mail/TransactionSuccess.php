@@ -7,22 +7,21 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class MyTestMail extends Mailable
+class TransactionSuccess extends Mailable
 {
     use Queueable, SerializesModels;
 
-     public $details;
+     public $data = [];
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($details)
+    public function __construct($invoice)
     {
         //
-
-         $this->details = $details;
+        $this->data = $invoice;
     }
 
     /**
@@ -32,7 +31,7 @@ class MyTestMail extends Mailable
      */
     public function build()
     {
-         return $this->subject('Welcome To Rahates' IIT & Medical Home')
-                    ->view('emails.welcome');
+         return $this->subject('Payment Succesful')
+                    ->view('emails.payment_success');
     }
 }
