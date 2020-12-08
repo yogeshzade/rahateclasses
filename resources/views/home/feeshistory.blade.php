@@ -125,7 +125,8 @@
       <th scope="col">Payment Amount</th>
        <th scope="col">Payment Mode</th>
       <th scope="col">Transaction ID</th>
-      <th scope="col">Payment Status</th>
+        <th scope="col">Transaction Status</th>
+      <th scope="col">Payment Date</th>
        <th scope="col">Action</th>
     </tr>
   </thead>
@@ -159,6 +160,9 @@
                           <span class="badge badge-info">Unknown</span>
                           @endif
 
+                        </td>
+                        <td>
+                       <b>   {{$transaction->updated_at}} </b>
                         </td>
                            <td>
                              <div class="row">

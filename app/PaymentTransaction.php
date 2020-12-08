@@ -27,6 +27,12 @@ class PaymentTransaction extends Model
 
 	}
 
+	 public function getUpdatedAtAttribute($date) {
+    
+    return Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('d/m/Y');
+
+	}
+
 
 
 
