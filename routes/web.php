@@ -208,7 +208,7 @@ Route::get('/updates/delete/{id}','WebsiteConfigration@UpdatesDelete')->name('up
           'prefix' => 'payments',
 ],function(){
 
-    Route::get('/pending','AdmissionController@pendingPayments')->name('pending.payments');
+    Route::get('/pending','AdminController@pendingPayments')->name('pending.payments');
 
  
  

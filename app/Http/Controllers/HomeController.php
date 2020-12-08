@@ -26,7 +26,7 @@ class HomeController extends Controller
 
 
     public function getCourses(){
-        $courses = Course::all();
+        $courses = Course::where('status',1)->orderByRaw("featured =  1")->get();
     	return view ('home.course.index',compact('courses'));
     }
 

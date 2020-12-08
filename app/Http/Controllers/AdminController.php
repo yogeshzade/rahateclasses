@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\StudentProfile;
 use App\Course;
+use App\PaymentTransaction;
 
 class AdminController extends Controller
 {
@@ -114,6 +115,12 @@ class AdminController extends Controller
     }
 
     public function pendingPayments(){
-        $payments ;
+       $transactions = PaymentTransaction::where('payment_method',0)->where('payment_status',0)
+                        ->with(['user','studentProfile'])
+                        ->get();
+       //return $transactions;
+
+       return view('payments.index',compact('transactions'));
+
     }
 }

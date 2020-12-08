@@ -97,20 +97,29 @@
                                                 <div class="row">
                                                 
 
-                                                  <div class="col-md-6">
+                                                  <div class="col-md-5">
                                                     <a onclick="window.open('{{route('admission.view',$studentlist)}}', '_blank', 'location=yes,height=570,width=1024,scrollbars=yes,status=yes');">
                                             
-                                                     <span class=""> <i class="fa fa-eye"></i> </span>
+                                                     <span class="btn btn-info"> <i class="fa fa-eye"></i> </span>
                                                    </a>
                                                   </div>
                                                    
-                                                    @if(!$studentlist->status)
+                                                   
                                                   <div class="col-md-4">
                                                     <a href="{{route('admission.approve',$studentlist)}}">
-                                                     <span class=""> <i class="fa fa-check text-danger"></i> </span>
+                                                     <span class="btn btn-success"> <i class="fas fa-rupee-sign"></i> </span>
+                                                   </a>
+                                                  </div>
+                                                
+
+                                                     @if(!$studentlist->status)
+                                                  <div class="col-md-3">
+                                                    <a href="{{route('admission.approve',$studentlist)}}">
+                                                     <span class="btn btn-success"> <i class="fa fa-check"></i> </span>
                                                    </a>
                                                   </div>
                                                   @endif
+                                             
                                                 </div>
                                                 
                                               </td>
