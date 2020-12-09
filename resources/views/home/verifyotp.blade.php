@@ -62,7 +62,7 @@
                         <div class="button-outer">
                             <button class="btn" style="width: 220px; background-color: #17a2b8!important;"><span class="fa fa-check"></span> Verify OTP </button>
                             
-                        <a href="{{route('student.resendotp')}}" onclick="resendotp()" >   <button class="btn register" type="button" id="resend" disabled style=" background-color: #dc3545!important;"><i class="fa fa-repeat"></i> Resent OTP in <span id="counter"></span></button> </a>
+                        <a href="" id="resendlink">   <button class="btn register" type="button" id="resend" disabled style=" background-color: #dc3545!important;"><i class="fa fa-repeat"></i> Resent OTP in <span id="counter"></span></button> </a>
                         </div>
                        
                     </form>
@@ -80,15 +80,14 @@
 
      <script type="text/javascript">
 
-      function  resendotp(){
-       alert("OTP Send Succesfully");
-        };
+
+ 
      
 // Get refreence to span and button
 var spn = document.getElementById("counter");
 var btn = document.getElementById("resend");
 
-var count = 60;     // Set count
+var count = 120;     // Set count
 var timer = null;  // For referencing the timer
 
 (function countDown(){
@@ -102,8 +101,39 @@ var timer = null;  // For referencing the timer
   } else {
     // Enable the button
     btn.removeAttribute("disabled");
+  //   $("#resendlink").fadeIn("fast").attr("href", "{{route('student.resendotp')}}"); 
   }
 }());
+
+$('#resend').click(function(e){
+   e.preventDefault(); 
+
+   $.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
+    $.ajax({
+
+            type: "POST",
+            url: "{{route('student.resendotp')}}",
+            success: function(response,textStatus, xhr)
+            {
+                if(xhr.status == 200){
+                    alert("OTP Send Succesfully");
+
+                }
+                else{
+                    alert("Try After Sometime");
+                    
+                }
+
+            }
+
+    });
+
+});
 
 
 

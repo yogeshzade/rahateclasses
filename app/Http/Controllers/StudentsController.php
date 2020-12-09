@@ -548,7 +548,7 @@ class StudentsController extends Controller
 
        $sendotp = new SmsGateway();
             $sendotp->sendSMS(1,Auth::user()->mobile,Auth::user()->otp,'');
-            return back()->with('success','OTP Send Successfully');
+            return response()->json('success',200);
 
     }
 

@@ -69,7 +69,7 @@ Route::post('invoice/download','StudentsController@invoicePriview')->name('invoi
 
 Route::get('verify/otp','StudentsController@sendotp')->name('student.sendotp')->middleware(['auth']);
 Route::post('verify/otp','StudentsController@verifyMobile')->name('student.verifymobile')->middleware(['auth','throttle:3,5']);
-Route::post('/resend/otp','StudentsController@resendotp')->name('student.resendotp')->middleware(['auth','throttle:1,1']);
+Route::post('/resend/otp','StudentsController@resendotp')->name('student.resendotp')->middleware(['auth','throttle:1,2']);
 
 
 Route::prefix("student")->middleware(['auth','checkStudent','verifyMobile'])->group(function(){
