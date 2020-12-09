@@ -11,11 +11,12 @@
       
     </header>
 
+
      <section class="login-wrapper" >
         <div class="inner" style="background-color:#f4f4f4;" >
             <div class="login">
                
-                <div class="head-block">
+                <div class="head-block" style="height: 142px;">
                     <h1>Verify Your Mobile</h1>
 <br/>
                     <div class="alert alert-success alert-block">
@@ -24,7 +25,7 @@
 </div>
 
                 </div>
-                <div class="cnt-block">
+                <div class="cnt-block" style="margin-top: 18px;">
                     @if ($message = Session::get('success'))
 <div class="alert alert-success alert-block">
 	<button type="button" class="close" data-dismiss="alert">×</button>	
@@ -59,9 +60,9 @@
                       </div>
                      
                         <div class="button-outer">
-                            <button class="btn">Verify OTP <span class="icon-more-icon"></span></button>
-                            <div class="or hidden-xs">or</div>
-                        <a href="{{route('student.register')}}">   <button class="btn register" type="button">Resent OTP<span class="icon-more-icon"></span></button> </a>
+                            <button class="btn" style="width: 220px; background-color: #17a2b8!important;"><span class="fa fa-check"></span> Verify OTP </button>
+                            
+                        <a href="{{route('student.resendotp')}}" onclick="resendotp()" >   <button class="btn register" type="button" id="resend" disabled style=" background-color: #dc3545!important;"><i class="fa fa-repeat"></i> Resent OTP in <span id="counter"></span></button> </a>
                         </div>
                        
                     </form>
@@ -76,6 +77,39 @@
 
 
      @include('home.layout.scripts')
+
+     <script type="text/javascript">
+
+      function  resendotp(){
+       alert("OTP Send Succesfully");
+        };
+     
+// Get refreence to span and button
+var spn = document.getElementById("counter");
+var btn = document.getElementById("resend");
+
+var count = 60;     // Set count
+var timer = null;  // For referencing the timer
+
+(function countDown(){
+  // Display counter and start counting down
+  spn.textContent = count;
+  
+  // Run the function again every second if the count is not zero
+  if(count !== 0){
+    timer = setTimeout(countDown, 1000);
+    count--; // decrease the timer
+  } else {
+    // Enable the button
+    btn.removeAttribute("disabled");
+  }
+}());
+
+
+
+
+
+     </script>
 
 
       @endsection

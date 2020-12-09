@@ -517,9 +517,7 @@ class StudentsController extends Controller
     }
 
     public function sendotp(){
-      $sendotp = new SmsGateway();
-       $status =  $sendotp->sendSMS(1,Auth::user()->mobile,Auth::user()->otp,'');
-      return view('home.verifyotp');
+      return view('home.verifyotp',compact('status'));
     }
 
     public function verifyMobile(Request $request){
@@ -542,6 +540,15 @@ class StudentsController extends Controller
       return redirect()->back()->with('error','Incorrect OTP. Please Re-enter OTP');
      }                    
 
+
+    }
+
+
+    public function resendotp(){
+
+       $sendotp = new SmsGateway();
+            $sendotp->sendSMS(1,Auth::user()->mobile,Auth::user()->otp,'');
+            return back()->with('success','OTP Send Successfully');
 
     }
 

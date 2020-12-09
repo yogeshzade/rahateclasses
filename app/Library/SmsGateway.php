@@ -42,6 +42,8 @@ class SmsGateway
 
 return $response->getBody();
 
+// https://api.textlocal.in/balance/?apikey=qn1V4Kg2/CU-VADqQYh8r0TBpHJu5lOWwdxvR5ay72
+
 
     }
 
