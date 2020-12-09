@@ -59,7 +59,7 @@
                         
                        
                         <div class="button-outer">
-                            <button class="btn" style="width: 220px; background-color: #17a2b8!important;">Login now <span class="fa fa-sign-in"></span></button>
+                            <button class="btn" background-color: #17a2b8!important;">Login now <span class="fa fa-sign-in"></span></button>
                           
                         <a href="{{route('student.register')}}">   <button class="btn register" type="button">Register now <span class="fa fa-plus"></span></button> </a>
                         </div>
