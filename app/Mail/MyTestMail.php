@@ -32,7 +32,7 @@ class MyTestMail extends Mailable
      */
     public function build()
     {
-         return $this->subject('Welcome To Rahate IIT Home')
+         return $this->subject('Welcome To Rahates IIT & Medical Home')
                     ->view('emails.welcome');
     }
 }

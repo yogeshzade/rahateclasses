@@ -12,6 +12,7 @@
         <!-- Start Navigation -->
        @include('home.layout.navigation')
         <!-- End Navigation -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     </header>
 
   
@@ -19,27 +20,29 @@
   <!-- ==============================================
     ** Inner Banner **
     =================================================== -->
-    <div class="inner-banner contact">
+
+
+
+
+
+  
         <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-lg-9">
-                    <div class="content">
-                        <h1>Career Page</h1>
-                       <p>Are You Looking For Job?</p>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-lg-3"> <a href="{{route('student.admission.index')}}" class="apply-online clearfix">
-                       
-                        <div class="arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
-                    </a></div>
-            </div>
-        </div>
-    </div>
 
+          @if ($message = Session::get('success'))
+<div class="alert alert-success alert-block mt-2">
+    <button type="button" class="close" data-dismiss="alert">×</button> 
+        <strong>{{ $message }}</strong>
+</div>
+@endif
 
-
-    <section class="faq-wrapper faq2 padding-lg">
-        <div class="container">
+ @if ($message = Session::get('error'))
+<div class="alert alert-danger alert-block mt-2">
+    <button type="button" class="close" data-dismiss="alert">×</button> 
+        <strong>{{ $message }}</strong>
+</div>
+@endif
+<br/>
+                   
             <div class="row">
                 <div class="col-sm-12">
                    @php
@@ -49,36 +52,190 @@
                    }
                    @endphp
                 </div>
-            </div>
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-              @foreach($careers as $career)
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="heading{{$career->id}}">
-                        <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$career->id}}" aria-expanded="true" aria-controls="collapse{{$career->id}}"> {{$career->job_title}} </a> </h4>
-                    </div>
-                    <div id="collapse{$career->id}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{$career->id}}">
-                        <div class="panel-body">
-                            <p style=" color: #010101; font-size: 16px;">
-                               {{$career->job_description}} 
-                            </p>
-                        </div>
 
-                    </div>
-                    <div class="panel-footer">
-                      <div class="container">
-                        <div class="col-md-4">
-                          <a href="/contact"><button class="btn btn-warning btn-sm">Contact</button></a>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                @endforeach
-           
-              
+                <div class="container">
+  <h2>JOB LISTS</h2>
+  <br/>
+            
+<table id="example" class="display" style="width:100%">
+    <thead>
+      <tr>
+        <th>Sr No</th>
+        <th>Vacancy Title</th>
+        <th>Vacancy Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach($careers as $career)
+      <tr style="font-weight: 600;" class="">
+        <td><b>{{$loop->iteration}}</b></td>
+        <td>{{$career->job_title}}</td>
+        <td>{!! $career->job_description !!}</td>
+        <td>
+          <a href="" data-toggle="modal" data-target="#myModal" class="btn">Apply Now</a>
+        </td>
+      </tr>
+      @endforeach
+     
+    </tbody>
+  </table>
+</div>
             </div>
+          
+        </div>
+ <div style="margin-bottom: 40px;"></div>
+
+
+    <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+ 
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Apply For Job</h4>
+      </div>
+      <div class="modal-body">
+        
+        
+       <div class="row">
+         <form method="post" action="{{route('career.apply')}}" enctype="multipart/form-data">
+          @csrf
+
+        <!-- Name -->
+
+        <div class="form-group col-md-12">
+           <div class="col-md-4">
+           Full Name * :
+         </div>
+
+         <div class="col-md-8">
+           <input name="fullname" type="text" placeholder="Enter Full Name *" required="" value="" class="form-control">
+         </div>
 
         </div>
-    </section>
+
+        <!-- End Name -->
+
+
+        <!-- Name -->
+
+        <div class="form-group col-md-12">
+           <div class="col-md-4">
+          Email * :
+         </div>
+
+         <div class="col-md-8">
+       <input name="email" type="email" placeholder="Enter Email *" required="" value="" class="form-control" >
+
+         </div>
+
+        </div>
+
+        <!-- End Name -->
+
+
+        <!-- Name -->
+
+        <div class="form-group col-md-12">
+           <div class="col-md-4">
+          Mobile Number * :
+         </div>
+        
+
+         <div class="col-md-8">
+
+           <input name="mobile" type="text" placeholder="Enter Mob No *" required="" value="" maxlength="10" minlength="10" class="form-control">
+           
+         </div>
+
+        </div>
+
+        <!-- End Name -->
+
+
+        <!-- Name -->
+
+        <div class="form-group col-md-12">
+           <div class="col-md-4">
+          Select Position* :
+         </div>
+
+         <div class="col-md-8">
+
+  <select class="form-control" id="exampleFormControlSelect1" name="position">
+      <option selected="">-- Select Profile -- </option>
+     @php
+     $lists = App\Career::all();
+     @endphp
+     @foreach($lists as $list)
+     <option value="{{$list->id}}">{{$list->job_title}}</option>
+     @php
+     @endforeach
+    </select>           
+           
+         </div>
+
+        </div>
+
+        <!-- End Name -->
+
+
+        <!-- Name -->
+
+        <div class="form-group col-md-12">
+           <div class="col-md-4">
+          Upload Resume* :<small>(1MB Max Pdf)</small>
+         </div>
+
+         <div class="col-md-8">
+
+          <input name="file" type="file" placeholder="Select File *" required="" class="form-control">
+           
+           
+         </div>
+      
+
+        </div>
+
+        <!-- End Name -->
+
+          <!-- Name -->
+
+        <div class="form-group col-md-12">
+           <div class="col-md-4">
+          Upload Photo* :<small>(Photo Must Be Passport Size)</small>
+         </div>
+
+         <div class="col-md-8">
+
+          <input name="photo" type="file" placeholder="Select File *" required="" class="form-control">
+           
+           
+         </div>
+      
+
+        </div>
+
+        <!-- End Name -->
+
+
+
+        
+
+       </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-default" >Apply</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+ </form>
+  </div>
+</div>
 
 
 
@@ -90,10 +247,13 @@
     <a href="#" class="scroll-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 
       @include('home.layout.scripts')
+      <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 
       <script>
       $( document ).ready(function() {
     console.log( "ready!" );
+        $('#example').DataTable();
+
     @if ($message = Session::get('success'))
       //  alert("Message Sent");
         Command: toastr["success"]("Message Sent Succesfully.", "Success")
@@ -117,6 +277,32 @@ toastr.options = {
 }
 
 @endif
+
+
+ @if ($message = Session::get('error'))
+      //  alert("Message Sent");
+        Command: toastr["warning"]("Please Check All Fields.", "warning")
+
+toastr.options = {
+  "closeButton": true,
+  "debug": true,
+  "newestOnTop": true,
+  "progressBar": true,
+  "positionClass": "toast-bottom-right",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "show",
+  "hideMethod": "hide"
+}
+
+@endif
+
 
 });
       </script>

@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\StudentProfile;
+use App\Course;
+use App\PaymentTransaction;
 
 class AdminController extends Controller
 {
@@ -81,5 +85,42 @@ class AdminController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+     public function Studentindex(){
+
+        $studentslists = studentprofile::with(['userProfile','studentCourse','studentClass'])->orderBy('created_at','desc')->get();
+        // return $studentslists;
+
+        return view('students.index',compact('studentslists'));
+        
+    }
+
+    public function ApproveAdmission($id){
+
+        $student = studentprofile::where('id',$id)->firstOrFail();
+        $student->status = 1;
+        $student->save();
+        return back()->with('success','Application Approved');
+        
+    }
+
+    public function ViewAdmission($id){
+         $profileinfo = studentprofile::where('id',$id)
+                        ->with(['userProfile','studentCourse','studentClass'])->orderBy('created_at','desc')->firstOrFail();
+
+                        return view('home.adminformpreview',compact('profileinfo'));
+
+    }
+
+    public function pendingPayments(){
+       $transactions = PaymentTransaction::where('payment_method',0)->where('payment_status',0)
+                        ->with(['user','studentProfile'])
+                        ->get();
+       //return $transactions;
+
+       return view('payments.index',compact('transactions'));
+
     }
 }

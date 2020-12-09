@@ -9,37 +9,38 @@
                         <button class="search-btn"><span class="icon-search-icon"></span></button> --}}
                     </form>
                     <ul class="nav navbar-nav">
-                        <li class="dropdown"> <a data-toggle="dropdown" href="{{route('home.index')}}">Home</a>
-                            
-                        </li>
+                    <li> <a href="{{route('home.index')}}">Home</a></li>
+                    
 
                          <li> <a href="{{route('student.register')}}">Apply Online</a></li>
                     
                       
                         <li> <a href="{{route('home.course.index')}}">Courses</a></li>
-                        <li class="dropdown"> <a data-toggle="dropdown" href="#">Pay Fees <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <li class="dropdown"> <a data-toggle="dropdown" href="{{route('student.fees')}}">Pay Fees <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu">
-                                <li class="visible-xs"><a href="">Check Fees</a></li>
-                            
-                                <li><a href="">Pay Fees Online</a></li>
+                               
+                                <li><a href="{{route('student.fees')}}">Pay Fees Online</a></li>
                                 
                                 
                             </ul>
                         </li>
-                          <li class="dropdown"> <a data-toggle="dropdown" href="">Help <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                         
+                        
+                       
+                        
+
+                         <li class="dropdown"> <a data-toggle="dropdown" href="">Help <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="">How To Apply</a></li>
+                                <li><a href="{{route('howtoapply.index')}}">How To Apply</a></li>
                                   <li><a href=""></a></li>
                             </ul>
                         </li>
-                        
-                        <li> <a href="/contact">Contact Us</a></li>
-                        <li> <a href="/career">Career</a></li>
 
-                          <li> <a href="/career" class="pull-right">
-                              
-                            <i class="fa fa-whatsapp right-block clearfix"></i>
-                          </a></li>
+                        <li> <a href="/career">Career</a></li>
+                           <li> <a href="{{route('home.index')}}#faculties">Faculties</a></li>
+                            <li> <a href="/contact">Contact Us</a></li>
+
+                         
                     </ul>
                 </div>
             </div>

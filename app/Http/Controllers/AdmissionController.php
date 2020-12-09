@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\StudentProfile;
+use App\Course;
 
 class AdmissionController extends Controller
 {
@@ -136,4 +139,7 @@ class AdmissionController extends Controller
         return back()->with('success','Status Changed');
 
     }
+
+
+   
 }

@@ -19,6 +19,8 @@ Route::post('/sendinquiry','HomeController@storeInquiry')->name('inquiry.store')
 Route::get('/contact_send','HomeController@contactsend')->name('home.contact.send');
 Route::get('apply-online','StudentsController@admission')->name('student.admission.index');
 Route::get('career','CareerController@index')->name('career.index');
+Route::post('career','CareerController@apply')->name('career.apply');
+Route::get('/how-to-apply','HomeController@howToApply')->name('howtoapply.index');
 
 
 Route::prefix("student")->group(function(){
@@ -29,14 +31,48 @@ Route::prefix("student")->group(function(){
   Route::post('/login','StudentsController@login')->name('home.student.login.post');
  Route::get('/logout','StudentsController@logout')->name('home.student.logout');
  Route::get('/admission','StudentsController@studentAdmission')->name('student.admission')->middleware('auth');
+  Route::get('/admission/preview/{id}','StudentsController@formpreview')->name('student.admission.preview')->middleware('auth');
   Route::post('/admission','StudentsController@StorestudentAdmission')->name('student.admission.submit')->middleware('auth');
+ Route::post('fetch/course','CourseController@fetchCourse')->name('fetch.course');
+
+
+
+  Route::get('photo', 'AjaxController@getImage')->name('get.image');
+Route::post('photo', 'AjaxController@storeImage')->name('store.image')->middleware('auth');
+Route::get('pay/fees/{id?}', 'StudentsController@payStudentFees')->name('student.fees')->middleware('auth');
+
+Route::get('notifications','StudentsController@getNotifications')->name('students.notifications')->middleware('auth');
+Route::get('check/fees/{id?}','StudentsController@checkStudentFees')
+      ->name('students.checkfees')
+      ->middleware('auth');
+ Route::get('tnc','StudentsController@tnc')->name('tnc');    
+ Route::post('fetch/installment/{id?}', 'StudentsController@fetchInstallmentAmount')->name('fetch.installment.amount')->middleware('auth'); 
+ Route::get('form/reset','StudentsController@resetAdmission')->name('form.reset')->middleware('auth');
+
+
+ // Transaction Routes
+
+Route::post('payment/offline/{id}','StudentsController@initOfflinePayment')->name('payment.offline')->middleware('auth'); 
+
+Route::post('payment/online/{id}','StudentsController@initOnlinePayment')->name('payment.online')->middleware('auth'); 
+
+Route::get('payment/online/process','StudentsController@proccedTransaction')->name('payment.process')->middleware('auth');
+
+
+Route::post('invoice/download','StudentsController@invoicePriview')->name('invoice.download')->middleware('auth');
+
+ // End Transacion Routes
 
 });
 
 // Student Dashboard
 
+Route::get('verify/otp','StudentsController@sendotp')->name('student.sendotp')->middleware(['auth']);
+Route::post('verify/otp','StudentsController@verifyMobile')->name('student.verifymobile')->middleware(['auth','throttle:3,5']);
+Route::post('/resend/otp','StudentsController@resendotp')->name('student.resendotp')->middleware(['auth','throttle:1,1']);
 
-Route::prefix("student")->middleware(['auth','checkStudent'])->group(function(){
+
+Route::prefix("student")->middleware(['auth','checkStudent','verifyMobile'])->group(function(){
 
 Route::get('/dashboard','StudentsController@studentDashboardIndex')->name('student.dashboard');
 
@@ -67,9 +103,10 @@ Route::group([
  Route::group([
           'prefix' => 'admission',
 ],function(){
-    Route::get('new', 'AdmissionController@index')->name('admission.index');
-    Route::post('new','AdmissionController@store')->name('admission.store');
-    Route::post('manage','AdmissionController@manage')->name('admission.manage');
+    Route::get('/','AdminController@Studentindex')->name('admission.index');
+     Route::get('approve/{id}','AdminController@ApproveAdmission')->name('admission.approve');
+      Route::get('view/{id}','AdminController@ViewAdmission')->name('admission.view');
+   
 });
 
  Route::group([
@@ -80,6 +117,7 @@ Route::group([
     Route::post('/create','CourseController@store')->name('course.store');
     Route::get('/toggle/{id}','CourseController@toggleCoursestatus')->name('course.toggle');
     Route::get('fetch/class','CourseController@fetchClass')->name('fetch.class');
+   
 });
 
 
@@ -106,11 +144,15 @@ Route::get('/slider/toggle/{id}','WebsiteConfigration@toggleslider')->name('slid
 Route::get('/popup/create','WebsiteConfigration@popupCreate')->name('popup.create');
 Route::post('/popup/create','WebsiteConfigration@popupStore')->name('popup.store');
 Route::get('/popup/toggle/{id}','WebsiteConfigration@togglePopup')->name('popup.toggle');
-Route::get('/career','WebsiteConfigration@CareerIndex')->name('career.index');
+Route::get('/career','CareerController@adminindex')->name('career.index.admin');
 Route::get('/inquiry','WebsiteConfigration@inquiryIndex')->name('inquiry.index');
 Route::get('/inquiry/{id}','WebsiteConfigration@inquiryRead')->name('inquiry.view');
 Route::get('/inquiry/delete/{id}','WebsiteConfigration@DeleteInquiry')->name('inquiry.delete');
-Route::get('/updates','WebsiteConfigration@sliderindex')->name('updates.index');
+Route::get('/updates','WebsiteConfigration@Updatesindex')->name('updates.index');
+Route::get('/updates/new','WebsiteConfigration@CreateUpdates')->name('updates.create');
+Route::post('/updates/new','WebsiteConfigration@UpdatesStore')->name('updates.store');
+Route::get('/updates/delete/{id}','WebsiteConfigration@UpdatesDelete')->name('updates.delete');
+
 });
 
 
@@ -130,11 +172,11 @@ Route::get('/updates','WebsiteConfigration@sliderindex')->name('updates.index');
   Route::group([
           'prefix' => 'file',
 ],function(){
-   Route::get('/', 'AdmissionController@indexFile')->name('file.index');
-    Route::get('new', 'AdmissionController@createFile')->name('file.create');
-    Route::post('new','AdmissionController@storeFile')->name('file.store');
-      Route::get('delete/{id}', 'AdmissionController@deleteFile')->name('file.delete');
-       Route::get('toggle/{id}', 'AdmissionController@toggleFile')->name('file.toggle');
+   Route::get('/', 'AdminController@indexFile')->name('file.index');
+    Route::get('new', 'AdminController@createFile')->name('file.create');
+    Route::post('new','AdminController@storeFile')->name('file.store');
+      Route::get('delete/{id}', 'AdminController@deleteFile')->name('file.delete');
+       Route::get('toggle/{id}', 'AdminController@toggleFile')->name('file.toggle');
     
  
 });
@@ -150,6 +192,35 @@ Route::get('/updates','WebsiteConfigration@sliderindex')->name('updates.index');
     
  
 });
+
+
+      Route::group([
+          'prefix' => 'list',
+],function(){
+
+    Route::get('/applied','CareerController@appliedLits')->name('applied.index');
+    Route::get('/applied/{id}','CareerController@adminToggle')->name('applied.toggle');
+     Route::get('new','CareerController@adminstoreIndex')->name('career.add.new');
+      Route::post('new','CareerController@adminstore')->name('career.new.store');
+ 
+ 
+});
+
+
+
+     Route::group([
+          'prefix' => 'payments',
+],function(){
+
+    Route::get('/pending','AdminController@pendingPayments')->name('pending.payments');
+
+ 
+ 
+});
+
+
+
+
 
    
 

@@ -67,6 +67,10 @@ this is the file you need to edit to change the look of the Template.
 /* ================================================== */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
+html{
+	  scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
@@ -641,7 +645,7 @@ textarea:focus::placeholder{
 }
 .btn {
 	display: inline-block;
-	padding: 12px 24px;
+	padding: 10px 18px;
 	border-radius: 4px;
 	background: #ff9600;
 	font-family: 'texgyreadventorbold';
@@ -854,7 +858,10 @@ textarea:focus::placeholder{
 }
 .about p {
 	display: block;
-	padding-bottom: 34px;
+    padding-bottom: 34px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 500;
 }
 .about .know-more-wrapper {
 	display: block;
@@ -1601,9 +1608,9 @@ ul.our-strength li .title {
 -----------------------*/
 .testimonial {
 	display: block;
-    background: url(../images/testimonial-bg.jpg) no-repeat center top / cover;
 	text-align: center;
 	position: relative;
+	background-color: #fff;
 }
 .testimonial:after {
 	width: 100%;
@@ -1613,7 +1620,7 @@ ul.our-strength li .title {
 	top: 0px;
 	z-index: 1;
 	content: "";
-	background: #2e5f85;
+	background: #fff;
 	opacity: 0.8;
 }
 .testimonial .container {
@@ -1622,7 +1629,7 @@ ul.our-strength li .title {
 }
 .testimonial h2 {
 	font-family: 'texgyreadventorbold';
-	color: #fff;
+	color: #010101;
 }
 .testimonial .wrapper {
 	display: block;
@@ -1915,7 +1922,7 @@ a.scroll-top {
 	position: fixed;
 	display: none;
 	right: 20px;
-	bottom: 20px;
+	bottom: 10px;
 	background-color: #17a43b;
     z-index: 999;
 }
@@ -2777,8 +2784,8 @@ ul.browse-teachers-list > li .inner-block {
 	padding: 0 20px;
 }
 ul.browse-teachers-list figure {
-	width: 124px;
-	height: 124px;
+	width: 152px;
+	height: 152px;
 	margin: 0 auto 28px;
 	position: relative;
 }
@@ -2801,15 +2808,17 @@ ul.browse-teachers-list figure:before {
 }
 ul.browse-teachers-list h3 {
 	font-family: 'texgyreadventorbold';
-	font-size: 14px;
+	font-size: 18px;
 	text-transform: uppercase;
 	color: #414a4f;
+	letter-spacing: 1px;
+	margin-bottom: 12px;
 }
 ul.browse-teachers-list .designation {
 	display: block;
-	padding-bottom: 10px;
-	font-size: 12px;
-	font-weight: 500;
+	padding-bottom: 8px;
+	font-size: 16px;
+	font-weight: 600;
 }
 ul.browse-teachers-list p {
 	display: block;
@@ -4332,8 +4341,8 @@ ul.faq-listing li h2 {
 	padding: 0 20px;
 	background: none;
 	border: none;
-	border-left: 1px #dae4e8 solid;
-	border-bottom: 1px #dae4e8 solid;
+	border: 1px #dae4e8 solid;
+	/*border-bottom: 1px #dae4e8 solid;*/
 	font-size: 12px;
 	font-weight: 700;
 	color: #7f8385;
@@ -7410,4 +7419,520 @@ overflow-y: auto;
 .cust-menu{
 	height: 19px !important;
     border-bottom: #010101 solid 3px;
+}
+
+.dashboard-menu{
+	margin-top: 40px;
+	position: sticky;
+}
+
+
+
+.card {
+    padding-top: 20px;
+    margin: 10px 0 20px 0;
+    background-color: rgba(214, 224, 226, 0.2);
+    border-top-width: 0;
+    border-bottom-width: 2px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.card .card-heading {
+    padding: 0 20px;
+    margin: 0;
+}
+
+.card .card-heading.simple {
+    font-size: 20px;
+    font-weight: 300;
+    color: #777;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.card .card-heading.image img {
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    margin-right: 15px;
+    vertical-align: top;
+    border: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.card .card-heading.image .card-heading-header {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card .card-heading.image .card-heading-header h3 {
+    margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+    color: #262626;
+}
+
+.card .card-heading.image .card-heading-header span {
+    font-size: 12px;
+    color: #999999;
+}
+
+.card .card-body {
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.card .card-media {
+    padding: 0 20px;
+    margin: 0 -14px;
+}
+
+.card .card-media img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card .card-actions {
+    min-height: 30px;
+    padding: 0 20px 20px 20px;
+    margin: 20px 0 0 0;
+}
+
+.card .card-comments {
+    padding: 20px;
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+.card .card-comments .comments-collapse-toggle {
+    padding: 0;
+    margin: 0 20px 12px 20px;
+}
+
+.card .card-comments .comments-collapse-toggle a,
+.card .card-comments .comments-collapse-toggle span {
+    padding-right: 5px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #999;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-comments .media-heading {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.card.people {
+    position: relative;
+    display: inline-block;
+    width: 170px;
+    height: 300px;
+    padding-top: 0;
+    margin-left: 20px;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.card.people:first-child {
+    margin-left: 0;
+}
+
+.card.people .card-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 170px;
+    height: 150px;
+    background-color: #ffffff;
+}
+
+.card.people .card-top.green {
+    background-color: #53a93f;
+}
+
+.card.people .card-top.blue {
+    background-color: #427fed;
+}
+
+.card.people .card-info {
+    position: absolute;
+    top: 150px;
+    display: inline-block;
+    width: 100%;
+    height: 101px;
+    overflow: hidden;
+    background: #ffffff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.card.people .card-info .title {
+    display: block;
+    margin: 8px 14px 0 14px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #404040;
+}
+
+.card.people .card-info .desc {
+    display: block;
+    margin: 8px 14px 0 14px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 16px;
+    color: #737373;
+    text-overflow: ellipsis;
+}
+
+.card.people .card-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    line-height: 29px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.card.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(214, 224, 226, 0.2);
+}
+
+.card.hovercard .cardheader {
+    background: url("");
+    background-size: cover;
+    height: 135px;
+}
+
+.card.hovercard .avatar {
+    position: relative;
+    top: -50px;
+    margin-bottom: -50px;
+}
+
+.card.hovercard .avatar img {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.5);
+}
+
+.card.hovercard .info {
+    padding: 4px 8px 10px;
+}
+
+.card.hovercard .info .title {
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 1;
+    color: #262626;
+    vertical-align: middle;
+}
+
+.card.hovercard .info .desc {
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 20px;
+    color: #737373;
+    text-overflow: ellipsis;
+}
+
+.card.hovercard .bottom {
+    padding: 0 20px;
+    margin-bottom: 17px;
+}
+
+.bank{
+	  text-transform: uppercase;
+	    letter-spacing: 3px;
+
+}
+
+.badge-danger{
+    color: #fff;
+    background-color: #dc3545;
+}
+.badge-primary{
+	color: #fff;
+    background-color: #007bff;
+}
+.badge-success{
+	    color: #fff;
+    background-color: #28a745;
+}
+.badge-info{
+	    color: #fff;
+    background-color: #17a2b8;
+}
+.badge-warning{
+	    color: #212529;
+    background-color: #ffc107;
+}
+
+.btn-success{
+	    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn-danger{
+	    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+}
+
+
+ .profile {
+     margin-top: 16px;
+     margin-left: 11px
+ }
+
+ .profile-pic {
+     width: 58px
+ }
+
+ .cust-name {
+     font-size: 18px
+ }
+
+ .cust-profession {
+     font-size: 10px
+ }
+
+ .items {
+     width: 90%;
+     margin: 0px auto;
+     margin-top: 100px
+ }
+
+ .slick-slide {
+     margin: 10px
+ }
+ .wlsm-print-school-label {
+    font-size: 22px;
+    font-weight: 600;
+}
+.cust-clr{
+	color:#010101;
+}
+.wlsm-print-school-contact{
+	    font-size: 12px;
+
+}
+.wlsm-font-bold {
+    font-weight: 600;
+}
+
+
+.wlsm .row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.wlsm-school-header {
+    margin-bottom: 8px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #ccc;
+}
+
+#watermark {
+  height: 450px;
+  width: 600px;
+  position: relative;
+  overflow: hidden;
+}
+#watermark img {
+  max-width: 100%;
+}
+#watermark p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 18px;
+  pointer-events: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+}
+
+.notification-home{
+	    background-color: #dff0d8 !important;
+    border-color: #d6e9c6 !important;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    background: #b80000 !important;
+    color: #FFFFFF !important;
+}
+
+.scroll-wrapper {
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: relative;
+}
+ 
+.scroll-wrapper > .scroll-content {
+    border: none !important;
+    box-sizing: content-box !important;
+    height: auto;
+    left: 0;
+    margin: 0;
+    max-height: none;
+    max-width: none !important;
+    overflow: scroll !important;
+    padding: 0;
+    position: relative !important;
+    top: 0;
+    width: auto !important;
+}
+ 
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+ 
+.scroll-element {
+    display: none;
+}
+.scroll-element, .scroll-element div {
+    box-sizing: content-box;
+}
+ 
+.scroll-element.scroll-x.scroll-scrollx_visible,
+.scroll-element.scroll-y.scroll-scrolly_visible {
+    display: block;
+}
+ 
+.scroll-element .scroll-bar,
+.scroll-element .scroll-arrow {
+    cursor: default;
+}
+ 
+.scroll-textarea {
+    border: 1px solid #cccccc;
+    border-top-color: #999999;
+}
+.scroll-textarea > .scroll-content {
+    overflow: hidden !important;
+}
+.scroll-textarea > .scroll-content > textarea {
+    border: none !important;
+    box-sizing: border-box;
+    height: 100% !important;
+    margin: 0;
+    max-height: none !important;
+    max-width: none !important;
+    overflow: scroll !important;
+    outline: none;
+    padding: 2px;
+    position: relative !important;
+    top: 0;
+    width: 100% !important;
+}
+.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+ 
+ 
+ 
+ 
+/*************** SIMPLE INNER SCROLLBAR ***************/
+ 
+.scrollbar-inner > .scroll-element,
+.scrollbar-inner > .scroll-element div
+{
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 10;
+}
+ 
+.scrollbar-inner > .scroll-element div {
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+ 
+.scrollbar-inner > .scroll-element.scroll-x {
+    bottom: 2px;
+    height: 8px;
+    left: 0;
+    width: 100%;
+}
+ 
+.scrollbar-inner > .scroll-element.scroll-y {
+    height: 100%;
+    right: 2px;
+    top: 0;
+    width: 8px;
+}
+ 
+.scrollbar-inner > .scroll-element .scroll-element_outer {
+    overflow: hidden;
+}
+ 
+.scrollbar-inner > .scroll-element .scroll-element_outer,
+.scrollbar-inner > .scroll-element .scroll-element_track,
+.scrollbar-inner > .scroll-element .scroll-bar {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+ 
+.scrollbar-inner > .scroll-element .scroll-element_track,
+.scrollbar-inner > .scroll-element .scroll-bar {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    opacity: 0.4;
+}
+ 
+.scrollbar-inner > .scroll-element .scroll-element_track { background-color: #e0e0e0; }
+.scrollbar-inner > .scroll-element .scroll-bar { background-color: #c2c2c2; }
+.scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: #919191; }
+.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: #919191; }
+ 
+ 
+/* update scrollbar offset if both scrolls are visible */
+ 
+.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track { left: -12px; }
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track { top: -12px; }
+ 
+ 
+.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size { left: -12px; }
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size { top: -12px; }
+
+b{
+	color:#010101;
 }

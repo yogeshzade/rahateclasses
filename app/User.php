@@ -36,4 +36,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+     public function studentprofile(){
+
+        return $this->belongsTo('App\StudentProfile', 'id', 'user_id');
+
+    }
+
+     
 }

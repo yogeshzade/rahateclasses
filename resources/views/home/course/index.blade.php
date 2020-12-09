@@ -19,7 +19,8 @@
             <div class="row">
                 <div class="col-sm-8 col-lg-9">
                     <div class="content">
-                        <h1>Our Courses</h1>
+                        <h1 style="margin-bottom: 5px;
+    margin-top: -20px;">Our Courses</h1>
                         
                     </div>
                 </div>
@@ -46,10 +47,12 @@
                    
                 </div>
             </div>
+            <br/>
             <ul class="row course-list inner">
 
                 @foreach ($courses as $course)
                 <li class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="courseinfo">
                     <div class="inner">
                         <figure><img src="images/course-img1.jpg" alt=""></figure>
                         <h3>{{$course->course_name}}</h3>
@@ -58,11 +61,15 @@
                             <h4>Class: {{$course->class}}</h4>
                             <span> Courses : {{$course->board}}</span>
                             </div>
-                            <a href="{{route('student.register')}}?course={{$course->id}}" style="color:#fff; 
-                            padding: 4px;
-                            ">Enroll</a>
-                        </div>
+                            
+                        </div>                      
                     </div>
+                    <div class="inner" style="padding: 0px 0 0 15px; border-right: 0;margin-top:-2px;">
+                        <div class="btn clearfix" style="width: 95%;"> <a href="{{route('student.register')}}?course={{$course->id}}">Enroll</a></div>
+                    </div>
+                  
+                </div>
+
                 </li>
                 @endforeach
 

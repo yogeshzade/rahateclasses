@@ -10,6 +10,7 @@ use App\User;
 use App\Inquiry;
 use App\Popup;
 use App\Course;
+use App\StudentProfile;
 
 
 class RoutingController extends Controller
@@ -21,11 +22,15 @@ class RoutingController extends Controller
      */
     public function index()
     {
+        $today = date('d/m/Y');
         $sliders = Slider::where('status',1)->count();
         $students = User::where('type',1)->where('is_admin',0)->count();
         $courses = Course::all()->count();
         $inquiry = Inquiry::where('status',1)->count();
-        return view('dashboard',compact('sliders','students','courses','inquiry'));
+        $totalstudents = StudentProfile::all()->count();
+        $todaysregistered = StudentProfile::where('admission_date',$today)->count();
+        $recentadmissions = StudentProfile::take(10)->get();
+        return view('dashboard',compact('sliders','students','courses','inquiry','totalstudents','todaysregistered','recentadmissions'));
     }
 
     /**

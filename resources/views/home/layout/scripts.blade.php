@@ -13,5 +13,25 @@
     <script src="{{ asset('homeassets\js\jquery.cookie.js')}}"></script>
     <script src="{{ asset('homeassets\assets\datepicker\js\datepicker.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
+    <script src="{{ asset('homeassets\js\floating-wpp.js')}}"></script>
+
+    <script type="text/javascript">
+
+        
+    $(function () {
+        $('#myButton').floatingWhatsApp({
+            phone: '+919545578282',
+            popupMessage: 'Hello, how can we help you?',
+            message: "I'd like more Information",
+            showPopup: true,
+            showOnIE: false,
+            headerTitle: 'WhatsaApp Chat!',
+            headerColor: '#128C7E',
+            backgroundColor: 'crimson',
+            buttonImage: '<img src="whatsapp.svg" />',
+            position:'right',
+        });
+    });
+</script>
 
     @yield('otherjs')

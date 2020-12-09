@@ -54,6 +54,7 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('web')
              ->namespace($this->namespace)
              ->group(base_path('routes/web.php'));
+         $this->mapPaymentRoutes(); // <---- add this line     
     }
 
     /**
@@ -70,4 +71,12 @@ class RouteServiceProvider extends ServiceProvider
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
     }
+
+    protected function mapPaymentRoutes()  // <--- Add this method
+    {
+        Route::middleware('payment')       // <--- this line is important
+             ->namespace($this->namespace)
+             ->group(base_path('routes/payment.php'));
+    }
+
 }
