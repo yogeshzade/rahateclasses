@@ -8,7 +8,7 @@ use Auth;
 class SmsGateway 
 {
 
-	public static function sendSMS($msgtype,$to,$otp=null,$data){
+	public static function sendSMS($msgtype,$to,$otp=null,$data=null){
       // Account details
 	
   	$apiKey = urlencode('qn1V4Kg2/CU-VADqQYh8r0TBpHJu5lOWwdxvR5ay72');

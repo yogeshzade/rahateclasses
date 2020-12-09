@@ -518,7 +518,7 @@ class StudentsController extends Controller
 
     public function sendotp(){
       $sendotp = new SmsGateway();
-       $status =  $sendotp->sendSMS(1,Auth::user()->mobile,Auth::user()->otp);
+       $status =  $sendotp->sendSMS(1,Auth::user()->mobile,Auth::user()->otp,'');
       return view('home.verifyotp');
     }
 
