@@ -14,9 +14,7 @@
      <section class="login-wrapper" >
         <div class="inner" style="background-color:#f4f4f4;" >
             <div class="login">
-                <div class="login-logo">
-                    <a href="{{route('home.index')}}"><img src="{{asset('homeassets\images\rahatelogo.png')}}" class="img-responsive" alt="" style="width: 180px;"></a>
-                </div>
+               
                 <div class="head-block">
                     <h1>Login To Your Account</h1>
                 </div>
@@ -61,7 +59,7 @@
                         
                        
                         <div class="button-outer">
-                            <button class="btn" style="width: 220px; background-color: #17a2b8!important;">Login now <span class="fa fa-sign-in"></span></button>
+                            <button class="btn" style="background-color: #17a2b8!important;">Login now <span class="fa fa-sign-in"></span></button>
                           
                         <a href="{{route('student.register')}}">   <button class="btn register" type="button">Register now <span class="fa fa-plus"></span></button> </a>
                         </div>

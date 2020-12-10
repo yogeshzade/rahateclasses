@@ -64,9 +64,7 @@
                             
                         </div>                      
                     </div>
-                    <div class="inner" style="padding: 0px 0 0 15px; border-right: 0;margin-top:-2px;">
-                        <div class="btn clearfix" style="width: 95%;"> <a href="{{route('student.register')}}?course={{$course->id}}">Enroll</a></div>
-                    </div>
+                  
                   
                 </div>
 

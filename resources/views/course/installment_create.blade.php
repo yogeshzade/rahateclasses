@@ -132,7 +132,7 @@
 
                             <!-- Installment No -->
                                <div class="form-group mb-3">
-                        <label for="validationCustomUsername">No Of Days After Previous Installment * <small>(Keep 0 For Instant)</small></label>
+                        <label for="validationCustomUsername">No Of Days After Admission Date * <small>(Keep 0 For Admission Fees)</small></label>
                         <div class="input-group">
                             
                             <input type="number" class="form-control" id="installment_amount" placeholder=""
