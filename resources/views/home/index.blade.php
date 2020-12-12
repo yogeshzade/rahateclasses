@@ -133,8 +133,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-7 col-sm-push-5 left-block"> <span class="sm-head">Welcome To</span>
-                    <h2>Rahate Coaching Classes</h2>
-                    <p>Rahate Classes in Napur has stepped into education industry for redefining the perception of competitive exams coaching. Here we are guiding and teaching our students for IIT-JEE, NATA, NDA, SEEE, and CBSE by offering a highly encouraging learning atmosphere and with the good institutional setting. All of the tutors at Rahate Classes Nagpur are setting up confidence in the initial stage and then guide the aspirants all through the process thoroughly. Our aim is not only to show our experience and best teaching ability but also to improve the achievement of our aspirants in Rahate IIT And MEdical Home.</p>
+                    <h2>Rahate IIT & Medical Home</h2>
+                    <p style="text-align: justify;">Rahate Classes in Nagpur has stepped into education industry for redefining the perception of competitive exams coaching. Here we are guiding and teaching our students for <b>IIT-JEE, NEET ,NATA, NDA, SEEE, </b>and <b>CBSE</b> by offering a highly encouraging learning atmosphere and with the good institutional setting. All of the tutors at Rahate Classes Nagpur are setting up confidence in the initial stage and then guide the aspirants all through the process thoroughly. Our aim is not only to show our experience and best teaching ability but also to improve the achievement of our aspirants in Rahate IIT And Medical Home.</p>
                     <!-- <div class="know-more-wrapper"> <a href="about.html" class="know-more">Know More <span class="icon-more-icon"></span></a> </div> -->
                 </div>
                 <div class="col-sm-5 col-sm-pull-7">
