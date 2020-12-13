@@ -15,6 +15,8 @@
       
         <!-- End Navigation -->
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     </header>
 
     <!-- ==============================================
@@ -25,7 +27,7 @@
         <div class="col-md-8 com-sm-12" style="height: 200%;">
 
              <div class="banner-outer">
-        <div class="banner-slider">
+        <div class="banner-slider" data-aos="zoom-in">
             @foreach($sliders as $slider)
             <div class="slide1" style="background: url({{$slider->image_path}});
              background-repeat: no-repeat;
@@ -57,7 +59,7 @@
 
 <!--  -->
 
-<div class="panel panel-success">
+<div class="panel panel-success" data-aos="zoom-in-up">
                         <div class="panel-heading notification-home">
                             <span class="panel-title" style="font-family: inherit; font-weight: 500; line-height: 1.1;">Notifications & Update</span>
                         </div>
@@ -107,7 +109,7 @@
                 <li class="col-sm-4 apply-online clearfix equal-hight">
                     <div class="icon"><img src="{{ asset('homeassets\images\apply-online-ico.png')}}" class="img-responsive" alt=""></div>
                     <div class="detail">
-                        <h3>Apply Online</h3>
+                        <h3><a href="{{route('student.admission.index')}}" style="color:#fff;">Apply Online</a></h3>
                        
                         <a href="{{route('student.admission.index')}}" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
@@ -115,7 +117,7 @@
                 <li class="col-sm-4 prospects clearfix equal-hight">
                     <div class="icon"><img src="{{ asset('homeassets\images\prospects-ico.png')}}" class="img-responsive" alt=""></div>
                     <div class="detail">
-                        <h3><span>Download</span>Broucher</h3>
+                        <h3> <a href="{{url('raharepros.pdf')}}" style="color:#fff;"><span>Download</span>Broucher</a></h3>
                     
                         <a href="{{url('raharepros.pdf')}}" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
@@ -123,7 +125,11 @@
                 <li class="col-sm-4 certification clearfix equal-hight">
                     <div class="icon"><img src="{{ asset('homeassets\images\certification-ico.png')}}" class="img-responsive" alt=""></div>
                     <div class="detail">
-                        <h3>Fees Structure</h3>
+                        <h3>
+                             <a href="{{route('home.course.index')}}" style="color: #fff;" >
+                        Fees Structure
+                    </a>
+                    </h3>
                        
                         <a href="{{route('home.course.index')}}" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
@@ -132,12 +138,12 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-7 col-sm-push-5 left-block"> <span class="sm-head">Welcome To</span>
+                <div class="col-sm-7 col-sm-push-5 left-block" data-aos="zoom-in-left"> <span class="sm-head">Welcome To</span>
                     <h2>Rahate IIT & Medical Home</h2>
                     <p style="text-align: justify;">Rahate Classes in Nagpur has stepped into education industry for redefining the perception of competitive exams coaching. Here we are guiding and teaching our students for <b>IIT-JEE, NEET ,NATA, NDA, SEEE, </b>and <b>CBSE</b> by offering a highly encouraging learning atmosphere and with the good institutional setting. All of the tutors at Rahate Classes Nagpur are setting up confidence in the initial stage and then guide the aspirants all through the process thoroughly. Our aim is not only to show our experience and best teaching ability but also to improve the achievement of our aspirants in Rahate IIT And Medical Home.</p>
                     <!-- <div class="know-more-wrapper"> <a href="about.html" class="know-more">Know More <span class="icon-more-icon"></span></a> </div> -->
                 </div>
-                <div class="col-sm-5 col-sm-pull-7">
+                <div class="col-sm-5 col-sm-pull-7" data-aos="zoom-in-right">
                     <div class="video-block">
                         <div id="thumbnail_container"> <img src="{{ asset('homeassets\images\rahate-campus-campus.jpg')}}" id="thumbnail" class="img-responsive" alt=""> </div>
                        <!--  <a href="https://www.youtube.com/watch?v=i11RXCJVEnw" class="start-video video"><img src="images\play-btn.png" alt=""></a> -->
@@ -154,8 +160,13 @@
 
         <div class="container">
             <center> <h2>Why Choose US</h2></center>
-            <ul class="row">
-                <li class="col-sm-3 equal-hight" style="height: 254px;">
+            <ul class="row"
+
+
+            >
+                <li class="col-sm-3 equal-hight" style="height: 254px;"
+                data-aos="zoom-in"
+                >
                     <div class="inner"> <img src="{{ asset('homeassets\images\air-conditioner.png')}}" alt="Malleable Study Time">
                         <h3>Fully AC <span>Classrooms.</span> </h3>
                         <p>
@@ -164,19 +175,19 @@
                        
                     </div>
                 </li>
-                <li class="col-sm-3 equal-hight" style="height: 254px;">
+                <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\people.png')}}" alt="Placement Assistance">
                         <h3>Skilled Faculties</h3>
                         <p>Our Faculties one of best and Higly Experianced faculties.</p>
                     </div>
                 </li>
-                <li class="col-sm-3 equal-hight" style="height: 254px;">
+                <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\management.png')}}" alt="Placement Assistance"> 
                         <h3>100% Score in Exams</h3>
                     <p>Our students score best result in exams.</p>
                     </div>
                 </li>
-                <li class="col-sm-3 equal-hight" style="height: 278px;">
+                <li class="col-sm-3 equal-hight" style="height: 278px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\school.png')}}" alt="Study on the Go">
                         <h3>Library facility.</h3>
                         <p>We have library for IIT-JEE, AIPMT, MHT-CET exams.</p>
@@ -187,7 +198,7 @@
             </ul>
 
              <ul class="row">
-                <li class="col-sm-3 equal-hight" style="height: 254px;">
+                <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\technology.png')}}" alt="Malleable Study Time">
                         <h3>CCTV <span>Surveillance</span> </h3>
                         <p>
@@ -196,19 +207,19 @@
                        
                     </div>
                 </li>
-              <li class="col-sm-3 equal-hight" style="height: 254px;">
+              <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\sheet.png')}}" alt="Placement Assistance">
                         <h3>Printed Notes</h3>
                         <p>We Provide Printed Notes for our students.</p>
                     </div>
                 </li>
-                <li class="col-sm-3 equal-hight" style="height: 254px;">
+                <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\call.png')}}" alt="Placement Assistance"> 
                         <h3>Students counselling cell. </h3>
                     <p>Our Students counselling cell & grievances cell.</p>
                     </div>
                 </li>
-                <li class="col-sm-3 equal-hight" style="height: 278px;">
+                <li class="col-sm-3 equal-hight" style="height: 278px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\file.png')}}" alt="Study on the Go">
                         <h3>A synchronised program.</h3>
                         <p>that is school, college coaching all under one roof, so that students get plenty of time to study. (i.e. self preparation). </p>
@@ -223,7 +234,7 @@
        <!-- ==============================================
     ** Campus Tour **
     =================================================== -->
-    <section class="campus-tour padding-lg">
+    <section class="campus-tour">
         <div class="container-fluid">
             <div class="row">
               
@@ -290,7 +301,7 @@
      <h2 style="color:#010101;">OUR TOPPERS</h2>
      <form action="{{route('inquiry.store')}}" method="POST" id="inquiryform">
      @csrf
-    <div class="enquire-now">
+    <div class="enquire-now" data-aos="zoom-in-up">
     
    
                         <div class="inner">
@@ -334,12 +345,12 @@
             <ul class="our-strength">
                 <li>
                     <div class="icon"><span class="icon-certification-icon"> </span></div>
-                    <span class="counter">10</span><span>+</span>
+                    <span >10</span><span>+</span>
                     <div class="title">Cources Classes</div>
                 </li>
                 <li>
                     <div class="icon"><span class="icon-student-icon"></span></div>
-                    <span class="counter">1000</span><span>+</span>
+                    <span>100</span><span>+</span>
                     <div class="title">Students Registered</div>
                 </li>
                 <li>
@@ -358,13 +369,13 @@
 
 
         <!-- Teachers -->
-
-    <section class="browse-teacher padding-lg" id="faculties">
+<div id="faculties"></div>
+    <section class="browse-teacher padding-lg" id="">
         <div class="container">
             <h2>OUR EXPERTE FACULTIES</h2>
             <ul class="row browse-teachers-list clearfix">
                 @foreach($faculties as $facultie)
-                <li class="col-xs-6 col-sm-4">
+                <li class="col-xs-6 col-sm-4" data-aos="zoom-in">
                     <figure> <img src="{{url($facultie->photo_url)}}" width="124" height="124" alt=""  style="    font-size: 14px;
 "> </figure>
                     <h3>{{$facultie->fullname}}</h3>
@@ -657,9 +668,14 @@
     <a href="#" class="scroll-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 
       @include('home.layout.scripts')
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
       
 
       <script>
+
+          AOS.init();
+
 
 function subscriptionPopup(){
     // get the mPopup
