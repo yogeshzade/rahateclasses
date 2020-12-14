@@ -92,9 +92,11 @@
     <div class="col-sm-3 col-xs-6 second-box" style="  width: 270px;
     height: 200px;">
         <h1><span class="fa fa-location-arrow"></span></h1>
+        <a href="https://maps.google.com/maps?ll=21.111054,79.10189&z=15&t=m&hl=en-US&gl=US&mapclient=embed&q=Rahate%20Classes">
         <h3>Location</h3>
-        <p style="font-weight: 600;">L39, Old Subhedar L/O
+        <p style="font-weight: 600; color: #fff;">L39, Old Subhedar L/O
 Ayodhya Nagar,Nagpur-24</p><br>
+</a>
     </div>
     <div class="col-sm-3 col-xs-6 third-box" style="  width: 270px;
     height: 200px;">
@@ -105,8 +107,10 @@ Ayodhya Nagar,Nagpur-24</p><br>
     <div class="col-sm-3 col-xs-6 fourth-box" style="  width: 270px;
     height: 200px;">
       <h1><span class="fa fa-chrome"></span></h1>
+      <a href="http://www.rahateiithome.in" >
         <h3>Web</h3>
-        <p style="font-weight: 600;">http://www.rahateiithome.in</p><br>
+        <p style="font-weight: 600; color: #fff;">http://www.rahateiithome.in</p><br>
+      </a>
     </div>
   </div>
 </div>

@@ -906,6 +906,11 @@ textarea:focus::placeholder{
 	padding-top: 90px;
 	padding-bottom: 90px;
 }
+.padding-md {
+	display: block;
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
 .our-cources h2, 
 .how-study h2, 
 .why-choose h2, 
@@ -7935,4 +7940,50 @@ overflow-y: auto;
 
 b{
 	color:#010101;
+}
+
+#myCarousel .nav a small
+{
+    display: block;
+}
+#myCarousel .nav
+{
+    background: #eee;
+}
+.nav-justified > li > a
+{
+    border-radius: 0px;
+}
+.nav-pills>li[data-slide-to="0"].active a { background-color: #16a085; }
+.nav-pills>li[data-slide-to="1"].active a { background-color: #e67e22; }
+.nav-pills>li[data-slide-to="2"].active a { background-color: #2980b9; }
+.nav-pills>li[data-slide-to="3"].active a { background-color: #8e44ad; }
+
+.imgfeatured{
+	width:100%;
+	height: 250px;
+}
+
+.img-container{
+	height: 320px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	padding-bottom: 30px;
+}
+
+.img-crp{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.gallery
+{
+    display: inline-block;
+    margin-top: 20px;
 }

@@ -16,6 +16,9 @@
         <!-- End Navigation -->
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- References: https://github.com/fancyapps/fancyBox -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
 
     </header>
 
@@ -155,7 +158,7 @@
 
 
 
-    <section class="our-impotance padding-lg">
+    <section class="our-impotance padding-md">
         
 
         <div class="container">
@@ -200,11 +203,11 @@
              <ul class="row">
                 <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\technology.png')}}" alt="Malleable Study Time">
-                        <h3>CCTV <span>Surveillance</span> </h3>
+                      <a href="#gotocctv">  <h3>CCTV <span>Surveillance</span> </h3>
                         <p>
                             24x7 CCTV,Guard & Warden 
                         </p>
-                       
+                       </a>
                     </div>
                 </li>
               <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
@@ -231,10 +234,82 @@
         </div>
     </section>
 
+
+    <!-- IMAGES -->
+
+        <section class="campus-tour padding-md">
+        <div class="container-fluid">
+            <h2>Our Gallery</h2>
+
+            <div class="container">
+    <div class="row">
+        <div class='list-group gallery'>
+            <div class='col-sm-4 col-xs-6 col-md-4 col-lg-4'  data-aos="zoom-in">
+                <a class="thumbnail fancybox" rel="ligthbox" href="{{url('homeclass.png')}}">
+                    <img class="img-responsive" alt="" src="{{url('homeclass.png')}}" />
+                   
+
+                </a>
+                   <figcaption class="figure-caption" style="font-weight: 600; margin-top: 5px;  text-align: center; font-size: 22px;" >Our Class Room</figcaption>
+            </div> <!-- col-6 / end -->
+            <div class='col-sm-4 col-xs-6 col-md-4 col-lg-4'  data-aos="zoom-in">
+                <a class="thumbnail fancybox" rel="ligthbox" href="{{url('classes22.png')}}">
+                    <img class="img-responsive" alt="" src="{{url('classes22.png')}}" style="height: 191px;" />
+                     
+
+                </a>
+                 <figcaption class="figure-caption" style="font-weight: 600; margin-top: 5px;  text-align: center; font-size: 22px;">Faculties Lecture</figcaption>
+            </div> <!-- col-6 / end -->
+              <div class='col-sm-4 col-xs-6 col-md-4 col-lg-4'  data-aos="zoom-in">
+                <a class="thumbnail fancybox" rel="ligthbox" href="{{url('lib.png')}}">
+                    <img class="img-responsive" alt="" src="{{url('lib.png')}}" />
+                    
+
+                </a>
+                  <figcaption class="figure-caption" style="font-weight: 600; margin-top: 5px;  text-align: center; font-size: 22px;">Our Library</figcaption>
+            </div> <!-- col-6 / end -->
+
+              <div class='col-sm-4 col-xs-6 col-md-4 col-lg-4'  data-aos="zoom-in">
+                <a class="thumbnail fancybox" rel="ligthbox" href="{{url('housekeeping.png')}}">
+                    <img class="img-responsive" alt="" src="{{url('housekeeping.png')}}" />
+
+                </a>
+                   <figcaption class="figure-caption" style="font-weight: 600; margin-top: 5px;  text-align: center; font-size: 22px;">House Keeping</figcaption>
+            </div> <!-- col-6 / end -->
+
+              <div class='col-sm-4 col-xs-6 col-md-4 col-lg-4' id="gotocctv"  data-aos="zoom-in">
+                <a class="thumbnail fancybox" rel="ligthbox" href="{{url('security.jpg')}}">
+                    <img class="img-responsive" alt="" src="{{url('security.jpg')}}" />
+                </a>
+                 <figcaption class="figure-caption" style="font-weight: 600; margin-top: 5px;  text-align: center; font-size: 22px;">Security Guard & CCTV Surveillance</figcaption>
+            </div> <!-- col-6 / end -->
+
+              <div class='col-sm-4 col-xs-6 col-md-4 col-lg-4'  data-aos="zoom-in">
+                <a class="thumbnail fancybox" rel="ligthbox" href="{{url('operators.jpg')}}">
+                    <img class="img-responsive" alt="" src="{{url('operators.jpg')}}" />
+                   
+
+                </a>
+                 <figcaption class="figure-caption" style="font-weight: 600; margin-top: 5px;  text-align: center;font-size: 22px;">Security Guard & CCTV Surveillance</figcaption>
+            </div> <!-- col-6 / end -->
+        
+        </div> <!-- list-group / end -->
+    </div> <!-- row / end -->
+</div> <!-- container / end -->
+
+</div>
+
+
+
+    </section>
+
+
+    <!-- IMAGES END -->
+
        <!-- ==============================================
     ** Campus Tour **
     =================================================== -->
-    <section class="campus-tour">
+    <section class="campus-tour padding-md">
         <div class="container-fluid">
             <div class="row">
               
@@ -669,12 +744,35 @@
 
       @include('home.layout.scripts')
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
       
 
       <script>
 
           AOS.init();
+
+              $('#myCarousel').carousel({
+        interval:   4000
+    });
+    
+    var clickEvent = false;
+    $('#myCarousel').on('click', '.nav a', function() {
+            clickEvent = true;
+            $('.nav li').removeClass('active');
+            $(this).parent().addClass('active');        
+    }).on('slid.bs.carousel', function(e) {
+        if(!clickEvent) {
+            var count = $('.nav').children().length -1;
+            var current = $('.nav li.active');
+            current.removeClass('active').next().addClass('active');
+            var id = parseInt(current.data('slide-to'));
+            if(count == id) {
+                $('.nav li').first().addClass('active');    
+            }
+        }
+        clickEvent = false;
+    });
 
 
 function subscriptionPopup(){
@@ -741,7 +839,16 @@ var popDisplayed = $.cookie('popDisplayed');
 
 
     
-
+$(document).ready(function(){
+    //FANCYBOX
+    //https://github.com/fancyapps/fancyBox
+    $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+});
+   
+  
 
       </script>
 
