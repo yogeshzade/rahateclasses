@@ -180,8 +180,10 @@
                 </li>
                 <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\people.png')}}" alt="Placement Assistance">
+                        <a href="#ulfaculties">
                         <h3>Skilled Faculties</h3>
                         <p>Our Faculties one of best and Higly Experianced faculties.</p>
+                    </a>
                     </div>
                 </li>
                 <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
@@ -192,8 +194,10 @@
                 </li>
                 <li class="col-sm-3 equal-hight" style="height: 278px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\school.png')}}" alt="Study on the Go">
+                        <a href="#gotolib">
                         <h3>Library facility.</h3>
                         <p>We have library for IIT-JEE, AIPMT, MHT-CET exams.</p>
+                    </a>
                         
                     </div>
                 </li>
@@ -218,8 +222,10 @@
                 </li>
                 <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\call.png')}}" alt="Placement Assistance"> 
+                        <a href="#gotocctv">
                         <h3>Students counselling cell. </h3>
                     <p>Our Students counselling cell & grievances cell.</p>
+                </a>
                     </div>
                 </li>
                 <li class="col-sm-3 equal-hight" style="height: 278px;" data-aos="zoom-in">
@@ -244,7 +250,7 @@
             <div class="container">
     <div class="row">
         <div class='list-group gallery'>
-            <div class='col-sm-4 col-xs-6 col-md-4 col-lg-4'  data-aos="zoom-in">
+            <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4'  data-aos="zoom-in">
                 <a class="thumbnail fancybox" rel="ligthbox" href="{{url('homeclass.png')}}">
                     <img class="img-responsive" alt="" src="{{url('homeclass.png')}}" />
                    
@@ -252,7 +258,7 @@
                 </a>
                    <figcaption class="figure-caption" style="font-weight: 600; margin-top: 5px;  text-align: center; font-size: 22px;" >Our Class Room</figcaption>
             </div> <!-- col-6 / end -->
-            <div class='col-sm-4 col-xs-6 col-md-4 col-lg-4'  data-aos="zoom-in">
+            <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4'  data-aos="zoom-in">
                 <a class="thumbnail fancybox" rel="ligthbox" href="{{url('classes22.png')}}">
                     <img class="img-responsive" alt="" src="{{url('classes22.png')}}" style="height: 191px;" />
                      
@@ -260,7 +266,7 @@
                 </a>
                  <figcaption class="figure-caption" style="font-weight: 600; margin-top: 5px;  text-align: center; font-size: 22px;">Faculties Lecture</figcaption>
             </div> <!-- col-6 / end -->
-              <div class='col-sm-4 col-xs-6 col-md-4 col-lg-4'  data-aos="zoom-in">
+              <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4'  data-aos="zoom-in" id="gotolib">
                 <a class="thumbnail fancybox" rel="ligthbox" href="{{url('lib.png')}}">
                     <img class="img-responsive" alt="" src="{{url('lib.png')}}" />
                     
@@ -269,7 +275,7 @@
                   <figcaption class="figure-caption" style="font-weight: 600; margin-top: 5px;  text-align: center; font-size: 22px;">Our Library</figcaption>
             </div> <!-- col-6 / end -->
 
-              <div class='col-sm-4 col-xs-6 col-md-4 col-lg-4'  data-aos="zoom-in">
+              <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4'  data-aos="zoom-in">
                 <a class="thumbnail fancybox" rel="ligthbox" href="{{url('housekeeping.png')}}">
                     <img class="img-responsive" alt="" src="{{url('housekeeping.png')}}" />
 
@@ -277,20 +283,20 @@
                    <figcaption class="figure-caption" style="font-weight: 600; margin-top: 5px;  text-align: center; font-size: 22px;">House Keeping</figcaption>
             </div> <!-- col-6 / end -->
 
-              <div class='col-sm-4 col-xs-6 col-md-4 col-lg-4' id="gotocctv"  data-aos="zoom-in">
+              <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4' id="gotocctv"  data-aos="zoom-in">
                 <a class="thumbnail fancybox" rel="ligthbox" href="{{url('security.jpg')}}">
                     <img class="img-responsive" alt="" src="{{url('security.jpg')}}" />
                 </a>
                  <figcaption class="figure-caption" style="font-weight: 600; margin-top: 5px;  text-align: center; font-size: 22px;">Security Guard & CCTV Surveillance</figcaption>
             </div> <!-- col-6 / end -->
 
-              <div class='col-sm-4 col-xs-6 col-md-4 col-lg-4'  data-aos="zoom-in">
+              <div class='col-sm-12 col-xs-12 col-md-4 col-lg-4'  data-aos="zoom-in">
                 <a class="thumbnail fancybox" rel="ligthbox" href="{{url('operators.jpg')}}">
                     <img class="img-responsive" alt="" src="{{url('operators.jpg')}}" />
                    
 
                 </a>
-                 <figcaption class="figure-caption" style="font-weight: 600; margin-top: 5px;  text-align: center;font-size: 22px;">Security Guard & CCTV Surveillance</figcaption>
+                 <figcaption class="figure-caption" style="font-weight: 600; margin-top: 5px;  text-align: center;font-size: 22px;">Our Operator Team</figcaption>
             </div> <!-- col-6 / end -->
         
         </div> <!-- list-group / end -->
@@ -448,7 +454,7 @@
     <section class="browse-teacher padding-lg" id="">
         <div class="container">
             <h2>OUR EXPERTE FACULTIES</h2>
-            <ul class="row browse-teachers-list clearfix">
+            <ul class="row browse-teachers-list clearfix" id="ulfaculties">
                 @foreach($faculties as $facultie)
                 <li class="col-xs-6 col-sm-4" data-aos="zoom-in">
                     <figure> <img src="{{url($facultie->photo_url)}}" width="124" height="124" alt=""  style="    font-size: 14px;
