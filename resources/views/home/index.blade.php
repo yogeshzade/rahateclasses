@@ -120,9 +120,9 @@
                 <li class="col-sm-4 prospects clearfix equal-hight">
                     <div class="icon"><img src="{{ asset('homeassets\images\prospects-ico.png')}}" class="img-responsive" alt=""></div>
                     <div class="detail">
-                        <h3> <a href="{{url('raharepros.pdf')}}" style="color:#fff;"><span>Download</span>Broucher</a></h3>
+                        <h3> <a href="{{url('broucher.pdf')}}" style="color:#fff;"><span>Download</span>Broucher</a></h3>
                     
-                        <a href="{{url('raharepros.pdf')}}" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a href="{{url('broucher.pdf')}}" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
                 </li>
                 <li class="col-sm-4 certification clearfix equal-hight">
