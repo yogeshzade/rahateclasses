@@ -167,7 +167,7 @@
 
 
             >
-                <li class="col-sm-3 equal-hight" style="height: 254px;"
+                <li class="col-sm-4 equal-hight" style="height: 254px;"
                 data-aos="zoom-in"
                 >
                     <div class="inner"> <img src="{{ asset('homeassets\images\air-conditioner.png')}}" alt="Malleable Study Time">
@@ -178,7 +178,7 @@
                        
                     </div>
                 </li>
-                <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
+                <li class="col-sm-4 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\people.png')}}" alt="Placement Assistance">
                         <a href="#ulfaculties">
                         <h3>Skilled Faculties</h3>
@@ -186,13 +186,13 @@
                     </a>
                     </div>
                 </li>
-                <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
+                <li class="col-sm-4 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\management.png')}}" alt="Placement Assistance"> 
                         <h3>100% Score in Exams</h3>
                     <p>Our students score best result in exams.</p>
                     </div>
                 </li>
-                <li class="col-sm-3 equal-hight" style="height: 278px;" data-aos="zoom-in">
+                <li class="col-sm-4 equal-hight" style="height: 278px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\school.png')}}" alt="Study on the Go">
                         <a href="#gotolib">
                         <h3>Library facility.</h3>
@@ -205,7 +205,7 @@
             </ul>
 
              <ul class="row">
-                <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
+                <li class="col-sm-4 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\technology.png')}}" alt="Malleable Study Time">
                       <a href="#gotocctv">  <h3>CCTV <span>Surveillance</span> </h3>
                         <p>
@@ -214,13 +214,13 @@
                        </a>
                     </div>
                 </li>
-              <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
+              <li class="col-sm-4 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\sheet.png')}}" alt="Placement Assistance">
                         <h3>Printed Notes</h3>
                         <p>We Provide Printed Notes for our students.</p>
                     </div>
                 </li>
-                <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
+                <li class="col-sm-4 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\call.png')}}" alt="Placement Assistance"> 
                         <a href="#gotocctv">
                         <h3>Students counselling cell. </h3>
@@ -228,7 +228,7 @@
                 </a>
                     </div>
                 </li>
-                <li class="col-sm-3 equal-hight" style="height: 278px;" data-aos="zoom-in">
+                <li class="col-sm-4 equal-hight" style="height: 278px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\file.png')}}" alt="Study on the Go">
                         <h3>A synchronised program.</h3>
                         <p>that is school, college coaching all under one roof, so that students get plenty of time to study. (i.e. self preparation). </p>
