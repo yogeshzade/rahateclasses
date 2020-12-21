@@ -80,7 +80,7 @@
                                     @else
                                 {{$notification->notification_link}}
                                 @endif
-                                " style="color: brown;" class="link">
+                                " style="color: brown;" class="link" target="_blank">
                                     <b>{{$notification->notification_title}} <img src="{{url('new_icon_blink.gif')}}" style="width:22px; height: 9px;"></b><br>
                                   
                                       {{$notification->notification_body}}
@@ -205,7 +205,7 @@
                 <ul class="row">
                       <li class="col-sm-4 equal-hight" style="height: 278px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\school.png')}}" alt="Study on the Go">
-                        <a href="#gotolib">
+                        <a href="{{url('labbooks.pdf')}}" target="_blank">
                         <h3>Library facility.</h3>
                         <p>We have library for IIT-JEE, AIPMT, MHT-CET exams.</p>
                     </a>
