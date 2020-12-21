@@ -76,7 +76,12 @@
                                  <li class="list-group-item">
                                 <img src="{{url('images/bullet_arrow_r.png')}}" alt="" title="" style="border: 0px;"><a href="{{$notification->notification_link}}" style="color: brown;" class="link">
                                     <b>{{$notification->notification_title}} <img src="{{url('new_icon_blink.gif')}}" style="width:22px; height: 9px;"></b><br>
-                                    {{$notification->notification_body}}
+                                    @if($notification->file_path)
+                                     {{$notification->file_path}}
+                                    @else
+                                      {{$notification->notification_body}}
+                                    @endif
+                                   
 
                                    </a>
                             </li>
