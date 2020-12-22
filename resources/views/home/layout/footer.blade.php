@@ -35,8 +35,8 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="footer-logo hidden-xs"><a href="{{route('home.index')}}"><img src="{{ asset('images\rahatelogo.png')}}" class="img-responsive" alt=""></a></div>
-                    <p>2020 <span>Rahate Classes</span>. Deveopled By <a href="http://github.com/heyshantu13" style="color:#fff">Shantanu Kulkarni</a>
-                    V 1.0.1 
+                    <p><b>2020-21</b> <span>Rahate Classes</span>. Deveopled By <a href="http://github.com/heyshantu13" style="color:#fff">Shantanu Kulkarni</a>
+                    V 1.5.0
                     </p>
                    
                 </div>

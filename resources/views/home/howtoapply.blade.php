@@ -24,7 +24,8 @@
         <div class="container">
             <div class="row">
               <div class="col-md-12">
- <object data="{{url('admission.pdf')}}" type="application/pdf" width="100%" height="500px;">
+                   <iframe src="{{url('admission.pdf')}}#toolbar=0" width="100%" height="550px">
+
 
 </object>
 </div>
