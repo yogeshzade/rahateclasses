@@ -473,11 +473,11 @@
 
 
         <!-- Teachers -->
-<div id="faculties"></div>
+<a name="ulfaculties"></a>
     <section class="browse-teacher padding-lg" id="">
         <div class="container">
             <h2>OUR EXPERTE FACULTIES</h2>
-            <ul class="row browse-teachers-list clearfix" id="ulfaculties">
+            <ul class="row browse-teachers-list clearfix" >
                 @foreach($faculties as $facultie)
                 <li class="col-xs-6 col-sm-4" data-aos="zoom-in">
                     <figure> <img src="{{url($facultie->photo_url)}}" width="124" height="124" alt=""  style="    font-size: 14px;
