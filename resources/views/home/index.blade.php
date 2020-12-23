@@ -430,6 +430,30 @@
                </div>
             </div>
          </div>
+
+         <!-- Second -->
+
+          <div class="item">
+            <div class="row">
+               <div class="col-xs-12">
+                  <div class="thumbnail adjust1">
+                     <div class="col-md-3 col-sm-3 col-xs-12"> <img class="media-object img-rounded img-responsive" src="{{url('rishipandey.jpg')}}"> </div>
+                     <div class="col-md-9 col-sm-9 col-xs-12">
+                        <div class="caption">
+                           <h3 class="text-info lead adjust2">Rishi Pandey </h3>
+                           <p> This is a testimonial window. Feedback of user can be displayed here.</p>
+                           <blockquote class="adjust2">
+                              <b><cite title="Source Title"><i class="fa fa-trophy"></i>10th CBSE 89%</cite></b> 
+                           </blockquote>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            </div>
+         </div>
+
+         <!-- Second End -->
        
         
       </div>
