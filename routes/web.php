@@ -21,6 +21,8 @@ Route::get('apply-online','StudentsController@admission')->name('student.admissi
 Route::get('career','CareerController@index')->name('career.index');
 Route::post('career','CareerController@apply')->name('career.apply');
 Route::get('/how-to-apply','HomeController@howToApply')->name('howtoapply.index');
+Route::get('/view-notes','HomeController@authPage')->name('view-notes.index');
+Route::post('/view-notes','HomeController@authForNotes')->name('view-notes.auth');
 
 
 Route::prefix("student")->group(function(){

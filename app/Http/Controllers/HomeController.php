@@ -64,5 +64,10 @@ class HomeController extends Controller
         return view('home.howtoapply');
     }
 
+    public function authPage(){
+        return view();
+        
+    }
+
     
 }

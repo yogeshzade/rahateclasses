@@ -264,6 +264,184 @@
     </section>
 
 
+    <!-- ==============================================
+    ** Our Cources **
+    =================================================== -->
+    <section class="our-cources padding-lg">
+        <div class="container">
+            <h2> <span>Unique Features of our programs</span> What do you want to study?</h2>
+            <ul class="course-list owl-carousel">
+                  <li>
+                    <div class="inner">
+                        <figure><img src="" alt=""></figure>
+                        <h3>RAMANUJAN - JEE-2021</span></h3>
+                        <p>Rahate’s IIT & Medical Home offers RAMANUJAN JEE Coaching Classes IIT/NIT Prepration The faculty at Rahate’s IIT & Medical Home is highly qualified and vastly experienced.</p>
+                        <div class="bottom-txt clearfix">
+                            <div class="duration">
+                                <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
+                            </div>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="inner">
+                        <figure><img src="" alt=""></figure>
+                        <h3>DR ANANDI - NEET-2021</span></h3>
+                        <p>Expert Coaching Classes For Pre Medical NEET, Preparation in Nagpur. The Only Institute Which Truly Prepares You For NEET.</p>
+                        <div class="bottom-txt clearfix">
+                            <div class="duration">
+                               <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
+                            </div>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </li>
+                   <li>
+                    <div class="inner">
+                        <figure><img src="" alt=""></figure>
+                        <h3>ARJUN - JEE-2022</span></h3>
+                        <p>Rahate’s IIT & Medical Home offers RAMANUJAN JEE Coaching Classes IIT/NIT Prepration The faculty at Rahate’s IIT & Medical Home is highly qualified and vastly experienced.</p>
+                        <div class="bottom-txt clearfix">
+                            <div class="duration">
+                               <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
+                            </div>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </li>
+                  <li>
+                    <div class="inner">
+                        <figure><img src="" alt=""></figure>
+                        <h3>SUSHRUTA - NEET-2022</span></h3>
+                        <p>Expert Coaching Classes For Pre Medical NEET, Preparation in Nagpur. The Only Institute Which Truly Prepares You For NEET.</p>
+                        <div class="bottom-txt clearfix">
+                            <div class="duration">
+                               <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
+                            </div>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </li>
+
+                 <li>
+                    <div class="inner">
+                        <figure><img src="" alt=""></figure>
+                        <h3>MH-CET 2021</span></h3>
+                        <p>Expert Coaching Classes For MH-CET 21 Preparation in Nagpur. The Only Institute Which Truly Prepares With Expert Faculties.</p>
+                        <div class="bottom-txt clearfix">
+                            <div class="duration">
+                               <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
+                            </div>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </li>
+
+                  <li>
+                    <div class="inner">
+                        <figure><img src="" alt=""></figure>
+                        <h3>NATA 2021</span></h3>
+                                                <p>Rahate’s IIT & Medical Home is Best coaching institute to provides Entrance Exam coaching for prominent Architecture Entrance Exam like NATA etc.</p>
+                        <div class="bottom-txt clearfix">
+                            <div class="duration">
+                               <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
+                            </div>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </li>
+
+
+
+
+
+                 <li>
+                    <div class="inner">
+                        <figure><img src="" alt=""></figure>
+                        <h3>State Board</span></h3>
+                        <p>Rahate’s IIT & Medical Home 8 to 10 is 3 Years educational Program design by the educationalist for preparing the student to compete in a diverse world market.</p>
+                        <div class="bottom-txt clearfix">
+                            <div class="duration">
+                               <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
+                            </div>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="inner">
+                        <figure><img src="" alt=""></figure>
+                        <h3>NATA (ARCH.)</h3>
+                        <p>Rahate’s IIT & Medical Home is Best coaching institute to provides Entrance Exam coaching for prominent Architecture Entrance Exam like NATA , JEE Mains (B.Arch), etc.</p>
+                        <div class="bottom-txt clearfix">
+                            <div class="duration">
+                                 <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
+                            </div>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </li>
+               
+            </ul>
+        </div>
+    </section>
+
+            <section class="browse-teacher padding-md" id="ourtoppers" style="background-color:#f4f4f4; ">
+                <div class="container-fluid">
+            <div class="row">
+            <h2>OUR TOPPERS</h2>
+        </div>
+
+                <div class="container content">
+   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators --> 
+      <ol class="carousel-indicators">
+         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      </ol>
+      <!-- Wrapper for slides --> 
+      <div class="carousel-inner">
+         <div class="item active">
+            <div class="row">
+               <div class="col-xs-12">
+                  <div class="thumbnail adjust1">
+                     <div class="col-md-3 col-sm-3 col-xs-12"> <img class="media-object img-rounded img-responsive" src="{{url('rishipandey.jpg')}}"> </div>
+                     <div class="col-md-9 col-sm-9 col-xs-12">
+                        <div class="caption">
+                           <h3 class="text-info lead adjust2">Rishi Pandey </h3>
+                           <p> This is a testimonial window. Feedback of user can be displayed here.</p>
+                           <blockquote class="adjust2">
+                              <b><cite title="Source Title"><i class="fa fa-trophy"></i>10th CBSE 89%</cite></b> 
+                           </blockquote>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+       
+        
+      </div>
+      <!-- Controls --> <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">  </a> <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> 
+       
+       </a> 
+   </div>
+</div>
+          
+            </section>
+
+
     <!-- IMAGES -->
 
         <section class="campus-tour padding-md">
@@ -327,156 +505,17 @@
 </div> <!-- container / end -->
 
 </div>
-
-
-
     </section>
 
 
     <!-- IMAGES END -->
 
-       <!-- ==============================================
-    ** Campus Tour **
-    =================================================== -->
-    <section class="campus-tour padding-md">
-        <div class="container-fluid">
-            <div class="row">
-              
-            <h2>OUR TOPPERS</h2>
-        </div>
-          <div class="col-md-8 col-sm-12 col-lg-8">
-        <ul class="gallery clearfix">
-            <li>
-                <div class="overlay">
-                    <h3>Tanmay Giri</h3>
-                    <p>JEE Topper</p>
-                    <a class="galleryItem" href="{{asset('homeassets\images\rahate_topper_1.jpg')}}"><span class="icon-enlarge-icon"></span></a>
-                    
-                </div>
-                <figure><img src="{{asset('homeassets\images\0d965cee-0e18-488f-8cba-b1cfb8589c1e(1).jpg')}}" class="img-responsive" alt="" style="height: 320px; width: 100%"></figure>
-            </li>
-
-     <!--        <li>
-                <div class="overlay">
-                    <h3>Tanmay Giri</h3>
-                    <p>JEE Topper</p>
-                    <a class="galleryItem" href="images\1dff820e-55b4-4e7f-acd0-1bea08f75fa8.jpg"><span class="icon-enlarge-icon"></span></a>
-                    
-                </div>
-                <figure><img src="images\1dff820e-55b4-4e7f-acd0-1bea08f75fa8.jpg" class="img-responsive" alt="" style="height: 320px; width: 100%"></figure>
-            </li> -->
-
-            <li>
-                <div class="overlay">
-                    <h3>PRAFULLA GOTEMARE</h3>
-                    <p>JEE Topper</p>
-                    <a class="galleryItem" href="{{asset('homeassets\images\9c2cd031-32ce-498d-ae11-8d7376788256.jpg')}}"><span class="icon-enlarge-icon"></span></a>
-                    
-                </div>
-                <figure><img src="{{asset('homeassets\images\9c2cd031-32ce-498d-ae11-8d7376788256.jpg')}}" class="img-responsive" alt="" style="height: 320px; width: 100%"></figure>
-            </li>
-
-            <li>
-                <div class="overlay">
-                    <h3>Himakshi Kapte</h3>
-                    <p>JEE Topper</p>
-                    <a class="galleryItem" href="{{asset('homeassets\images\ff2bd4ad-08e4-48bc-a24b-825e0740d88a.jpg')}}"><span class="icon-enlarge-icon"></span></a>
-                    
-                </div>
-                <figure><img src="{{asset('homeassets\images\ff2bd4ad-08e4-48bc-a24b-825e0740d88a.jpg')}}" class="img-responsive" alt="" style="height: 320px; width: 100%"></figure>
-            </li>
-
-                <li>
-                <div class="overlay">
-                    <h3>Apporva Sonkusre</h3>
-                    <p>JEE Topper</p>
-                    <a class="galleryItem" href="{{asset('homeassets\images\ff2bd4ad-08e4-48bc-a24b-825e0740d88a.jpg')}}"><span class="icon-enlarge-icon"></span></a>
-                    
-                </div>
-                <figure><img src="{{asset('homeassets\images\381dd297-dd62-4a68-b5bb-8192becda14e.jpg')}}" class="img-responsive" alt="" style="height: 320px; width: 100%"></figure>
-            </li>
-
-            
-          
-        </ul>
-        </div>
-
-   <div class="col-md-4 col-sm-12 col-lg-4" id="enquirynow">
-     <h2 style="color:#010101;">OUR TOPPERS</h2>
-     <form action="{{route('inquiry.store')}}" method="POST" id="inquiryform">
-     @csrf
-    <div class="enquire-now" data-aos="zoom-in-up">
-    
-   
-                        <div class="inner">
-                          
-                            <div class="row1">
-                                <input name="name" placeholder="Name" type="text" required>
-                            </div>
-                            <div class="row2 clearfix">
-                                <input name="email" placeholder="Email" type="email" required>
-                                <input name="phone" placeholder="Phone" type="text" required maxlength="10">
-                            </div>
-                            <div class="row2 clearfix">
-                                <input name="place" placeholder="Place" type="text" required >
-                                <input name="message" placeholder="Message" type="text" required>
-                            </div>
-                        </div>
-                        <button class="enquire-btn" type="submit" id="sendinquiry">Send now <span class="icon-more-icon"></span></button>
-                    </div>
-                    </form>
-   </div>
-
-
-    </div>
-    </section>
-
-    <!-- End Our Topper -->
-
-      <section class="logos">
-        <div class="container">
-           
-        </div>
-    </section>
-
-
-
-
-
-     <section class="why-choose padding-lg">
-        <div class="container">
-            <h2><span>The Numbers Say it All</span>Why Choose Us</h2>
-            <ul class="our-strength">
-                <li>
-                    <div class="icon"><span class="icon-certification-icon"> </span></div>
-                    <span >10</span><span>+</span>
-                    <div class="title">Cources Classes</div>
-                </li>
-                <li>
-                    <div class="icon"><span class="icon-student-icon"></span></div>
-                    <span>100</span><span>+</span>
-                    <div class="title">Students Registered</div>
-                </li>
-                <li>
-                    <div class="icon"><span class="icon-book-icon"></span></div>
-                    <div class="couter-outer"></span><span class="counter">1</span></div>
-                    <div class="title">No. 1 Coaching In Nagpur</div>
-                </li>
-                <li>
-                    <div class="icon"><span class="icon-parents-icon"></span></div>
-                    <div class="couter-outer"><span class="counter">100</span><span>%</span></div>
-                    <div class="title">Exellent Faculties</div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-
+  
         <!-- Teachers -->
 <a name="ulfaculties"></a>
     <section class="browse-teacher padding-lg" id="">
         <div class="container">
-            <h2>OUR EXPERTE FACULTIES</h2>
+            <h2>OUR EXPERT FACULTIES</h2>
             <ul class="row browse-teachers-list clearfix" >
                 @foreach($faculties as $facultie)
                 <li class="col-xs-6 col-sm-4" data-aos="zoom-in">
@@ -495,200 +534,6 @@
 
     <!-- End teachers -->
 
-
-
-
-
-
-    <!-- ==============================================
-    ** Our Cources **
-    =================================================== -->
-    <section class="our-cources padding-lg">
-        <div class="container">
-            <h2> <span>Unique Features of our programs</span> What do you want to study?</h2>
-            <ul class="course-list owl-carousel">
-                <li>
-                    <div class="inner">
-                        <figure><img src="" alt=""></figure>
-                        <h3>NEET</span></h3>
-                        <p>Expert Coaching Classes For Pre Medical NEET, JEE Advanced (IIT), JEE Main Preparation in Nagpur. The Only Institute Which Truly Prepares You For NEET, JEE Main & JEE Advanced With XI-XII Board too.</p>
-                        <div class="bottom-txt clearfix">
-                            <div class="duration">
-                               <h4>Apply Online</h4>
-                                <span>To Take Admission</span>
-                            </div>
-                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
-                        </div>
-                    </div>
-                </li>
-                   <li>
-                    <div class="inner">
-                        <figure><img src="" alt=""></figure>
-                        <h3>CBSE</span></h3>
-                        <p>Rahate’s IIT & Medical Home 8 to 10 is 3 Years educational Program design by the educationalist for preparing the student to compete in a diverse world market.</p>
-                        <div class="bottom-txt clearfix">
-                            <div class="duration">
-                               <h4>Apply Online</h4>
-                                <span>To Take Admission</span>
-                            </div>
-                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
-                        </div>
-                    </div>
-                </li>
-
-                 <li>
-                    <div class="inner">
-                        <figure><img src="" alt=""></figure>
-                        <h3>State Board</span></h3>
-                        <p>Rahate’s IIT & Medical Home 8 to 10 is 3 Years educational Program design by the educationalist for preparing the student to compete in a diverse world market.</p>
-                        <div class="bottom-txt clearfix">
-                            <div class="duration">
-                               <h4>Apply Online</h4>
-                                <span>To Take Admission</span>
-                            </div>
-                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
-                        </div>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="inner">
-                        <figure><img src="" alt=""></figure>
-                        <h3>SEED</span></h3>
-                        <p>Studying at Rahate’s IIT & Medical Home prepares you for Success like no one else can. This coaching centre provides coaching to students from 8 to 10 as well as SEEE.</p>
-                        <div class="bottom-txt clearfix">
-                            <div class="duration">
-                               <h4>Apply Online</h4>
-                                <span>To Take Admission</span>
-                            </div>
-                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="inner">
-                        <figure><img src="" alt=""></figure>
-                        <h3>NDA</span></h3>
-                        <p>Rahate’s IIT & Medical Home offers NDA Coaching Classes For UPSC NDA/NA written examinations. The faculty at Rahate’s IIT & Medical Home is highly qualified and vastly experienced.</p>
-                        <div class="bottom-txt clearfix">
-                            <div class="duration">
-                                <h4>Apply Online</h4>
-                                <span>To Take Admission</span>
-                            </div>
-                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="inner">
-                        <figure><img src="" alt=""></figure>
-                        <h3>NATA (ARCH.)</h3>
-                        <p>Rahate’s IIT & Medical Home is Best coaching institute to provides Entrance Exam coaching for prominent Architecture Entrance Exam like NATA , JEE Mains (B.Arch), etc.</p>
-                        <div class="bottom-txt clearfix">
-                            <div class="duration">
-                                 <h4>Apply Online</h4>
-                                <span>To Take Admission</span>
-                            </div>
-                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="inner">
-                        <figure><img src="" alt=""></figure>
-                        <h3>IIT-JEE<span>Coaching</span></h3>
-                        <p>IIT JEE coaching is getting popular among the engineering aspirants. Our team is efficient in making you be a master of your IIT JEE course.</p>
-                        <div class="bottom-txt clearfix">
-                            <div class="duration">
-                                <h4>Apply Online</h4>
-                                <span>To Take Admission</span>
-                                
-                            </div>
-                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-  
-   
-    <!-- ==============================================
-    ** How Study **
-    =================================================== -->
-  
-
-    <!-- ==============================================
-    ** Why Choose **
-    =================================================== -->
-   
-  <?php
-    if($testimonials->count() > 0)
-    {
-
-      ?>
-
-         <!-- ==============================================
-    ** Testimonials **
-    =================================================== -->
-    <section class="testimonial padding-lg">
-
-        
-              <center> <h2>Alumini Testimonials</h2> </center> 
-            
-            <div class="strip"><img src="https://d16swpibua0gnc.cloudfront.net/Aakash-Anthe/s3fs-public/inline-images/strip.png"></div>
-
-        <div class="container">
-
-
-
-        <div class="carousel slide" data-ride="carousel" id="myCarousel" style="z-index: 99999;"><!-- Carousel indicators -->
-
-<!-- Wrapper for carousel items -->
-
-<div class="carousel-inner" style="border: 1px solid #f0832126;">
-
-    @foreach($testimonials as $testimonial)
-    @if($testimonial->id == 1)
-<div class="item carousel-item active">
-    @else
-    <div class="item carousel-item">
-    @endif
-
-<div class="img-box">
-<div class="avatar">
-                   
-                       
-                             
-
-    <img alt="" src="{{url($testimonial->image_path)}}" style="width:140px;height: 140px;" id="image_preview_container"></div>
-</div>
-
-<p class=""><img src="https://d16swpibua0gnc.cloudfront.net/Aakash-Anthe/s3fs-public/inline-images/testimonialsicon-top.png"><br>
-<br>
-{{$testimonial->description}}
-</p>
-
-<p class="overview"><b>{{$testimonial->name}}</b> JEE (Advanced) 2020 Topper<br>
-<b>4 Year Classroom Student | Class IX-XII</b></p>
-</div>
-@endforeach
-
-<!-- Carousel controls -->
-</div>
-</div>
-
-    </section>
-
-
-    <?php  
-        
-    }
-        
-  ?>
-
-   
 
     @if($popup->status)
     <!-- mPopup box -->
@@ -721,48 +566,34 @@
 </div>
 
 @endif
-
-    <!-- ==============================================
-    ** News & Events **
-    =================================================== -->
- 
-
-   
-
-    <!-- ==============================================
-    ** Brands **
-    =================================================== -->
-  
-
-    <!-- ==============================================
-    ** Testimonials **
-    =================================================== -->
-  <!--   <section class="testimonial padding-lg">
+  <section class="why-choose padding-lg">
         <div class="container">
-            <div class="wrapper">
-                <h2>Alumini Testimonials</h2>
-                <ul class="testimonial-slide">
-                    <li>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley...<a href="#">Read more</a></p>
-                        <span>Thomas, <span>London</span></span>
-                    </li>
-                    <li>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley...<a href="#">Read more</a></p>
-                        <span>Thomas, <span>London</span></span>
-                    </li>
-                    <li>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley...<a href="#">Read more</a></p>
-                        <span>Thomas, <span>London</span></span>
-                    </li>
-                </ul>
-                <div id="bx-pager">
-                    <a data-slide-index="0" href=""><img src="images\testimonial-thumb1.jpg" class="img-circle" alt=""></a>
-                    <a data-slide-index="1" href=""><img src="images\testimonial-thumb2.jpg" class="img-circle" alt=""></a>
-                    <a data-slide-index="2" href=""><img src="images\testimonial-thumb3.jpg" class="img-circle" alt=""></a>
-                </div>
-            </div>
+            <h2><span>The Numbers Say it All</span>Why Choose Us</h2>
+            <ul class="our-strength">
+                <li>
+                    <div class="icon"><span class="icon-certification-icon"> </span></div>
+                    <span >10</span><span>+</span>
+                    <div class="title">Cources Classes</div>
+                </li>
+                <li>
+                    <div class="icon"><span class="icon-student-icon"></span></div>
+                    <span>100</span><span>+</span>
+                    <div class="title">Students Registered</div>
+                </li>
+                <li>
+                    <div class="icon"><span class="icon-book-icon"></span></div>
+                    <div class="couter-outer"></span><span class="counter">1</span></div>
+                    <div class="title">No. 1 Coaching In Nagpur</div>
+                </li>
+                <li>
+                    <div class="icon"><span class="icon-parents-icon"></span></div>
+                    <div class="couter-outer"><span class="counter">100</span><span>%</span></div>
+                    <div class="title">Exellent Faculties</div>
+                </li>
+            </ul>
         </div>
-    </section> -->
+    </section>
+
 
     <!-- ==============================================
     ** Footer **
