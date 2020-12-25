@@ -176,15 +176,19 @@
                 <li class="col-sm-3 equal-hight" style="height: 254px;"
                 data-aos="zoom-in"
                 >
-                    <div class="inner"> <img src="{{ asset('homeassets\images\elearning.png')}}" alt="Malleable Study Time">
-                        <a href="http://rahateclasses.mstitute.com/test/build" target="_blank"><h3>Online <span>Lectures.</span> </h3>
+                    <div class="inner"> 
+                        <a href="http://rahateclasses.mstitute.com/test/build" target="_blank">
+                        <img src="{{ asset('homeassets\images\elearning.png')}}" alt="Malleable Study Time">
+                        <h3>Online <span>Lectures.</span> </h3>
                         
                        </a>
                     </div>
                 </li>
                 <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
-                    <div class="inner"> <img src="{{ asset('homeassets\images\people.png')}}" alt="Placement Assistance">
-                        <a href="#ulfaculties">
+                    <div class="inner">
+                         <a href="#ulfaculties">
+                     <img src="{{ asset('homeassets\images\people.png')}}" alt="Placement Assistance">
+                       
                         <h3>Skilled Faculties</h3>
                       
                     </a>
@@ -213,8 +217,10 @@
                     
 
                  <li class="col-sm-3 equal-hight" style="height: 278px;" data-aos="zoom-in">
-                    <div class="inner"> <img src="{{ asset('homeassets\images\exam.png')}}" alt="Study on the Go">
+                    <div class="inner"> 
                           <a href="http://rahateclasses.mstitute.com/test/build" target="_blank">
+                        <img src="{{ asset('homeassets\images\exam.png')}}" alt="Study on the Go">
+                        
                         <h3>Online Exam.</h3>
                        
                     </a>
@@ -386,7 +392,78 @@
     </section>
 
 <!-- TOPPER HERE -->
+  <section class="browse-teacher padding-md" id="ourtoppers" style="background-color:#f4f4f4; ">
+    <div class="container-fluid">
+        <div class="row">
+            <h2>OUR TOPPERS</h2>
+        </div>
+         <div class='row'>
+    <div class='col-md-12'>
+      <div class="carousel slide media-carousel" id="media">
+        <div class="carousel-inner">
+          <div class="item  active">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150">
+                <div class="caption">
+          <h3 class="text-center">Lorem ipsum...</h3>
+        </div>
+    </a>
+              </div>          
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150">
+                      <div class="caption">
+          <h3 class="text-center">Lorem ipsum...</h3>
+        </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150">
+                      <div class="caption">
+          <h3 class="text-center">Lorem ipsum...</h3>
+        </div>
+                </a>
+              </div>        
+            </div>
+          </div>
+          <div class="item">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/250x250"></a>
+              </div>          
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/250x250"></a>
+              </div>
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/250x250"></a>
+              </div>        
+            </div>
+          </div>
+          <!--  -->
+          <div class="item">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+              </div>          
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+              </div>
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+              </div>      
+            </div>
+          </div>
+          <!--  -->
 
+        </div>
+        <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+        <a data-slide="next" href="#media" class="right carousel-control">›</a>
+      </div>                          
+    </div>
+  </div>
+    </div>
+
+</section>
 
 <!-- TOPPER END HERE -->
 
@@ -656,6 +733,12 @@ $(document).ready(function(){
     });
 });
    
+   $(document).ready(function() {
+  $('#media').carousel({
+      interval: 4000,
+    cycle: true
+  });
+});
   
 
       </script>
