@@ -110,6 +110,9 @@
             <li>
                 <a href="{{route('popup.create')}}">Popups <span class="badge badge-success">@php echo \App\Popup::where('status',1)->count();@endphp</span></a>
             </li>
+             <li>
+                <a href="{{route('testimonials.index')}}">Toppers <span class="badge badge-success"></span></a>
+            </li>
             <li>
             <a href="{{route('inquiry.index')}}">Inquiry Box <span class="badge badge-danger">@php echo \App\Inquiry::where('status',1)->count();@endphp</span></a>
             </li>

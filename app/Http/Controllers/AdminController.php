@@ -7,6 +7,7 @@ use App\User;
 use App\StudentProfile;
 use App\Course;
 use App\PaymentTransaction;
+use App\Alumini;
 
 class AdminController extends Controller
 {
@@ -122,5 +123,32 @@ class AdminController extends Controller
 
        return view('payments.index',compact('transactions'));
 
+    }
+
+    public function TestimonialsIndex(){
+        $testimonials = Alumini::all();
+        return view('testimonials.index',compact('testimonials'));
+    }
+
+     public function TestimonialsCreate(){
+        return view('testimonials.create');
+    }
+
+    public function TestimonialsStore(Request $request){
+         $request->validate([
+        'image_path' => 'mimes:jpeg,jpg,png,gif|required|max:2048',
+        'student_name' => 'required',
+        'enter_class' => 'required',
+        'description' => 'required'
+        ]);
+        $imageName = time().'.'.$request->image_path->extension();  
+        $request->image_path->move(public_path('images/toppers'), $imageName);
+        $testimdata = new Alumini();
+        $testimdata->name = $request->student_name;
+        $testimdata->class = $request->enter_class;
+        $testimdata->desciption = $request->description;
+        $testimdata->image_path = 'images/toppers'.$imageName;
+        $testimdata->save();
+        return back()->with('success','Added Succesfully');
     }
 }

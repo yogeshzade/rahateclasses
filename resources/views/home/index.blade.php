@@ -173,29 +173,36 @@
         <div class="container">
             <center> <h2>Why Choose US</h2></center>
             <ul class="row">
-                <li class="col-sm-4 equal-hight" style="height: 254px;"
+                <li class="col-sm-3 equal-hight" style="height: 254px;"
                 data-aos="zoom-in"
                 >
                     <div class="inner"> <img src="{{ asset('homeassets\images\elearning.png')}}" alt="Malleable Study Time">
                         <a href="http://rahateclasses.mstitute.com/test/build" target="_blank"><h3>Online <span>Lectures.</span> </h3>
-                        <p>
-                            Online Lectures For Students
-                        </p>
+                        
                        </a>
                     </div>
                 </li>
-                <li class="col-sm-4 equal-hight" style="height: 254px;" data-aos="zoom-in">
+                <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\people.png')}}" alt="Placement Assistance">
                         <a href="#ulfaculties">
                         <h3>Skilled Faculties</h3>
-                        <p>Our Faculties one of best and Higly Experianced faculties.</p>
+                      
                     </a>
                     </div>
                 </li>
-                <li class="col-sm-4 equal-hight" style="height: 254px;" data-aos="zoom-in">
-                    <div class="inner"> <img src="{{ asset('homeassets\images\management.png')}}" alt="Placement Assistance"> 
+                <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
+                    <div class="inner"> <img src="{{ asset('homeassets\images\management.png')}}" alt="Placement Assistance">
                         <h3>100% Score in Exams</h3>
-                    <p>Our students score best result in exams.</p>
+                    </div>
+                </li>
+
+                  <li class="col-sm-3 equal-hight" style="height: 278px;" data-aos="zoom-in">
+                    <div class="inner"> <img src="{{ asset('homeassets\images\school.png')}}" alt="Study on the Go">
+                        <a href="{{url('labbooks.pdf')}}" target="_blank">
+                        <h3>Library facility.</h3>
+                       
+                    </a>
+                        
                     </div>
                 </li>
               
@@ -203,63 +210,44 @@
             </ul>
 
                 <ul class="row">
-                      <li class="col-sm-4 equal-hight" style="height: 278px;" data-aos="zoom-in">
-                    <div class="inner"> <img src="{{ asset('homeassets\images\school.png')}}" alt="Study on the Go">
-                        <a href="{{url('labbooks.pdf')}}" target="_blank">
-                        <h3>Library facility.</h3>
-                        <p>We have library for IIT-JEE, AIPMT, MHT-CET exams.</p>
-                    </a>
-                        
-                    </div>
-                </li>
+                    
 
-                 <li class="col-sm-4 equal-hight" style="height: 278px;" data-aos="zoom-in">
+                 <li class="col-sm-3 equal-hight" style="height: 278px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\exam.png')}}" alt="Study on the Go">
                           <a href="http://rahateclasses.mstitute.com/test/build" target="_blank">
                         <h3>Online Exam.</h3>
-                        <p>We Conduct Online Exam for Analys Student Performance</p>
+                       
                     </a>
                         
                     </div>
                 </li>
 
-                  <li class="col-sm-4 equal-hight" style="height: 278px;" data-aos="zoom-in">
+                  <li class="col-sm-3 equal-hight" style="height: 278px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\file.png')}}" alt="Study on the Go">
                         <h3>A synchronised program.</h3>
-                        <p>that is school, college coaching all under one roof, so that students get plenty of time to study. (i.e. self preparation). </p>
+                       
                         
                     </div>
                 </li>
 
-                </ul>
-
-             <ul class="row">
-                <li class="col-sm-4 equal-hight" style="height: 254px;" data-aos="zoom-in">
+                 <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\technology.png')}}" alt="Malleable Study Time">
                       <a href="#gotocctv">  <h3>CCTV <span>Surveillance</span> </h3>
-                        <p>
-                            24x7 CCTV,Guard & Warden 
-                        </p>
+                       
                        </a>
                     </div>
                 </li>
-              <li class="col-sm-4 equal-hight" style="height: 254px;" data-aos="zoom-in">
+
+                  <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
                     <div class="inner"> <img src="{{ asset('homeassets\images\sheet.png')}}" alt="Placement Assistance">
                         <h3>Printed Notes</h3>
                         <p>We Provide Printed Notes for our students.</p>
                     </div>
                 </li>
-                <li class="col-sm-4 equal-hight" style="height: 254px;" data-aos="zoom-in">
-                    <div class="inner"> <img src="{{ asset('homeassets\images\call.png')}}" alt="Placement Assistance"> 
-                        <a href="#gotocctv">
-                        <h3>Students counselling cell. </h3>
-                    <p>Our Students counselling cell & grievances cell.</p>
-                </a>
-                    </div>
-                </li>
-               
-               
-            </ul>
+
+                </ul>
+
+          
         </div>
     </section>
 
@@ -397,74 +385,10 @@
         </div>
     </section>
 
-            <section class="browse-teacher padding-md" id="ourtoppers" style="background-color:#f4f4f4; ">
-                <div class="container-fluid">
-            <div class="row">
-            <h2>OUR TOPPERS</h2>
-        </div>
+<!-- TOPPER HERE -->
 
-                <div class="container content">
-   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-      <!-- Indicators --> 
-      <ol class="carousel-indicators">
-         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      </ol>
-      <!-- Wrapper for slides --> 
-      <div class="carousel-inner">
-         <div class="item active">
-            <div class="row">
-               <div class="col-xs-12">
-                  <div class="thumbnail adjust1">
-                     <div class="col-md-3 col-sm-3 col-xs-12"> <img class="media-object img-rounded img-responsive" src="{{url('rishipandey.jpg')}}"> </div>
-                     <div class="col-md-9 col-sm-9 col-xs-12">
-                        <div class="caption">
-                           <h3 class="text-info lead adjust2">Rishi Pandey </h3>
-                           <p> This is a testimonial window. Feedback of user can be displayed here.</p>
-                           <blockquote class="adjust2">
-                              <b><cite title="Source Title"><i class="fa fa-trophy"></i>10th CBSE 89%</cite></b> 
-                           </blockquote>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
 
-         <!-- Second -->
-
-          <div class="item">
-            <div class="row">
-               <div class="col-xs-12">
-                  <div class="thumbnail adjust1">
-                     <div class="col-md-3 col-sm-3 col-xs-12"> <img class="media-object img-rounded img-responsive" src="{{url('rishipandey.jpg')}}"> </div>
-                     <div class="col-md-9 col-sm-9 col-xs-12">
-                        <div class="caption">
-                           <h3 class="text-info lead adjust2">Rishi Pandey </h3>
-                           <p> This is a testimonial window. Feedback of user can be displayed here.</p>
-                           <blockquote class="adjust2">
-                              <b><cite title="Source Title"><i class="fa fa-trophy"></i>10th CBSE 89%</cite></b> 
-                           </blockquote>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            </div>
-         </div>
-
-         <!-- Second End -->
-       
-        
-      </div>
-      <!-- Controls --> <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">  </a> <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> 
-       
-       </a> 
-   </div>
-</div>
-          
-            </section>
-
+<!-- TOPPER END HERE -->
 
     <!-- IMAGES -->
 
@@ -590,6 +514,7 @@
 </div>
 
 @endif
+
   <section class="why-choose padding-lg">
         <div class="container">
             <h2><span>The Numbers Say it All</span>Why Choose Us</h2>
@@ -617,7 +542,6 @@
             </ul>
         </div>
     </section>
-
 
     <!-- ==============================================
     ** Footer **

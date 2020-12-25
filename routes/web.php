@@ -210,15 +210,27 @@ Route::get('/updates/delete/{id}','WebsiteConfigration@UpdatesDelete')->name('up
 
 
 
-     Route::group([
+Route::group([
           'prefix' => 'payments',
 ],function(){
 
     Route::get('/pending','AdminController@pendingPayments')->name('pending.payments');
-
- 
  
 });
+
+
+Route::group([
+          'prefix' => 'testimonials',
+],function(){
+
+    Route::get('/','AdminController@TestimonialsIndex')->name('testimonials.index');
+    Route::get('/create','AdminController@TestimonialsCreate')->name('testimonials.create');
+    Route::post('/create','AdminController@TestimonialsStore')->name('testimonials.store');
+});
+
+
+
+
 
 
 
