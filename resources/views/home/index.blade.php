@@ -404,7 +404,7 @@
           <div class="item  active">
             <div class="row">
                 @php
-                $i = 1;
+                $i = 0;
                 @endphp
                 @foreach($testimonials as $testimonial)
               <div class="col-md-4">
