@@ -417,14 +417,25 @@
               @endphp
 
               @if($i == 6)
-                  @break
-                  @php $i = 1; @endphp
+
+            </div>
+          </div>
+          
+                <!--  -->
+          <div class="item">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="thumbnail" href="#"><img alt="" src="{{url($testimonial->image_path)}}"></a>
+              </div>          
+               
+            </div>
+          </div>
+          <!--  -->
+        
               @endif
 
                 @endforeach    
-                
-            </div>
-          </div>
+        
 
         
 
