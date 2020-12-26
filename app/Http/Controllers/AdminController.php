@@ -8,6 +8,7 @@ use App\StudentProfile;
 use App\Course;
 use App\PaymentTransaction;
 use App\Alumini;
+use App\Faculty;
 
 class AdminController extends Controller
 {
@@ -137,12 +138,11 @@ class AdminController extends Controller
     public function TestimonialsStore(Request $request){
          $request->validate([
         'image_path' => 'mimes:jpeg,jpg,png,gif|required|max:2048',
-        'student_name' => 'required',
+        'student_name' => 'string',
         'enter_class' => 'required',
-        'description' => 'required'
         ]);
         $imageName = time().'.'.$request->image_path->extension();  
-        $request->image_path->move(public_path('images/toppers'), $imageName);
+        $request->image_path->move(public_path('images/toppers/'), $imageName);
         $testimdata = new Alumini();
         $testimdata->name = $request->student_name;
         $testimdata->class = $request->enter_class;
@@ -150,5 +150,51 @@ class AdminController extends Controller
         $testimdata->image_path = 'images/toppers'.$imageName;
         $testimdata->save();
         return back()->with('success','Added Succesfully');
+    }
+
+    public function TestimonialsDelete(Alumini $id){
+
+        $id->delete();
+        return back()->with('success','DELETED!');
+
+    }
+
+    public function TeachersIndex(){
+         $teachers = Faculty::all();
+        return view('teachers.index',compact('teachers'));
+    }
+
+    public function TeachersCreate(){
+          return view('teachers.create');
+    }
+
+     public function TeachersStore(Request $request){
+        $teacher = new Faculty();
+         $request->validate([
+        'image_path' => 'mimes:jpeg,jpg,png,gif|required|max:2048',
+        'teacher_name' => 'string|required',
+        'designation' => 'required',
+        'description' => 'required'
+        ]);
+
+        $imageName = time().'.'.$request->image_path->extension();  
+        $request->image_path->move(public_path('faculties/'), $imageName);
+
+
+         $teacher->fullname = $request->teacher_name;
+        $teacher->details = $request->description;
+        $teacher->designation = $request->designation;
+        $teacher->photo_url = 'faculties/'.$imageName;
+        $teacher->save();
+
+        return back()->with('success','ADDED SUCCESSFULLY!');
+        
+    }
+
+    public function TeachersDelete(Faculty $id){
+
+        $id->delete();
+        return back()->with('success','DELETED SUCCESSFULLY');
+
     }
 }

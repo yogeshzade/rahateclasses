@@ -11,7 +11,7 @@
         <nav aria-label="breadcrumb" class="float-right mt-1">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="{{route('testimonials.index')}}">Testimonials</a></li>
+                <li class="breadcrumb-item"><a href="{{route('teachers.index')}}">Faculties</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Add New</li>
             </ol>
         </nav>
@@ -45,16 +45,16 @@
 
 
 
-<form class="" novalidate method="post" action="{{route('testimonials.store')}}" enctype='multipart/form-data'>
+<form class="" novalidate method="post" action="{{route('teachers.store')}}" enctype='multipart/form-data'>
                     @csrf
                 <!--     @method('POST') -->
                     <div class="form-group mb-3">
-                        <label for="validationCustom01">Enter Student Name </label>
+                        <label for="validationCustom01">Enter Teacher Name </label>
 
                           <div class="input-group">
                             
-                            <input type="text" class="form-control" id="student_name" placeholder=""
-                                aria-describedby="inputGroupPrepend" name="student_name"  >
+                            <input type="text" class="form-control" id="teacher_name" placeholder=""
+                                aria-describedby="inputGroupPrepend" name="teacher_name"  >
 
 
                           
@@ -70,11 +70,11 @@
 
                             <!-- Installment No -->
                                <div class="form-group mb-3">
-                        <label for="validationCustomUsername">Enter Class * </label>
+                        <label for="validationCustomUsername">Enter Designation * </label>
                         <div class="input-group">
                             
-                            <input type="text" class="form-control" id="enter_class" placeholder=""
-                                aria-describedby="inputGroupPrepend" name="enter_class"   >
+                            <input type="text" class="form-control" id="designation" placeholder=""
+                                aria-describedby="inputGroupPrepend" name="designation"   >
                           
                         </div>
                     </div>
@@ -93,8 +93,9 @@
                         <label for="validationCustomUsername">Enter Description </label>
                         <div class="input-group">
                             
-                            <input type="text" class="form-control" id="description" placeholder=""
-                                aria-describedby="inputGroupPrepend" name="description"  >
+                          
+                        <textarea id='description' name='description' id="description" ></textarea>               
+                   
                           
                         </div>
                     </div>
@@ -110,7 +111,7 @@
 
                             <!-- Installment No -->
                                <div class="form-group mb-3">
-                        <label for="validationCustomUsername">Upload Student Image * </label>
+                        <label for="validationCustomUsername">Upload Teacher Image * </label>
                           <div class="input-group">
 
                                   <input type="file" class="form-control" id="validationCustom01" placeholder=""
@@ -176,7 +177,12 @@
 
 <script>
 
-  
+    CKEDITOR.replace('description',{
+
+width: "100%",
+height: "200px"
+
+}); 
 
   
 $('#submit').click(function(){

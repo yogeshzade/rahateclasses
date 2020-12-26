@@ -226,8 +226,21 @@ Route::group([
     Route::get('/','AdminController@TestimonialsIndex')->name('testimonials.index');
     Route::get('/create','AdminController@TestimonialsCreate')->name('testimonials.create');
     Route::post('/create','AdminController@TestimonialsStore')->name('testimonials.store');
+    Route::get('/delete/{id}','AdminController@TestimonialsDelete')->name('testimonials.delete');
 });
 
+
+
+
+Route::group([
+          'prefix' => 'teachers',
+],function(){
+
+    Route::get('/','AdminController@TeachersIndex')->name('teachers.index');
+    Route::get('/create','AdminController@TeachersCreate')->name('teachers.create');
+    Route::post('/create','AdminController@TeachersStore')->name('teachers.store');
+    Route::get('/delete/{id}','AdminController@TeachersDelete')->name('teachers.delete');
+});
 
 
 
