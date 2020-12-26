@@ -18,7 +18,8 @@ class HomeController extends Controller
 
         $sliders = \App\Slider::where('status',1)->get();
         $popup = \App\Popup::first();
-        $testimonials = Alumini::all();
+        $testimonials = Alumini::where('status',1)->limit(6)->get();
+        $testimonial2 = Alumini::where('status',1)->limit(6)->get();
         $notifications = NewsAndUpdate::orderBy('id', 'DESC')->limit(4)->get();
         $faculties = Faculty::where('status',1)->orderBy('id','ASC')->get();
     	return view('home.index',compact('sliders','popup','testimonials','notifications','faculties'));

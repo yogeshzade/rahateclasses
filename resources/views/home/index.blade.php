@@ -411,32 +411,28 @@
                 <a class="thumbnail" href="#"><img alt="" src="{{url($testimonial->image_path)}}">
                 </a>
               </div>    
-              
-              @php
-              $i++;
-              @endphp
-
-              @if($i == 6)
-
+                @endforeach    
+                
             </div>
           </div>
-          
-                <!--  -->
+
+          <!--  -->
+
+            <!--  -->
+            @if(count($testimonials) >= 6)
           <div class="item">
             <div class="row">
+
               <div class="col-md-4">
-                <a class="thumbnail" href="#"><img alt="" src="{{url($testimonial->image_path)}}"></a>
+                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/250x250"></a>
               </div>          
+             
                
             </div>
           </div>
+          @endforeach
           <!--  -->
         
-              @endif
-
-                @endforeach    
-        
-
         
 
         </div>
