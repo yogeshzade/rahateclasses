@@ -403,29 +403,18 @@
         <div class="carousel-inner">
           <div class="item  active">
             <div class="row">
+
+                @foreach($testimonials as $testimonial)
               <div class="col-md-4">
-                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150">
-                <div class="caption">
-          <h3 class="text-center">Lorem ipsum...</h3>
-        </div>
-    </a>
-              </div>          
-              <div class="col-md-4">
-                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150">
-                      <div class="caption">
-          <h3 class="text-center">Lorem ipsum...</h3>
-        </div>
+                <a class="thumbnail" href="#"><img alt="" src="{{url($testimonial->image_path)}}">
                 </a>
-              </div>
-              <div class="col-md-4">
-                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150">
-                      <div class="caption">
-          <h3 class="text-center">Lorem ipsum...</h3>
-        </div>
-                </a>
-              </div>        
+              </div>    
+              @endforeach      
+                
             </div>
           </div>
+
+          <!--  -->
           <div class="item">
             <div class="row">
               <div class="col-md-4">
@@ -440,20 +429,7 @@
             </div>
           </div>
           <!--  -->
-          <div class="item">
-            <div class="row">
-              <div class="col-md-4">
-                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
-              </div>          
-              <div class="col-md-4">
-                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
-              </div>
-              <div class="col-md-4">
-                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
-              </div>      
-            </div>
-          </div>
-          <!--  -->
+        
 
         </div>
         <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
