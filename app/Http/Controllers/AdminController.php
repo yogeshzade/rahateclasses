@@ -147,7 +147,7 @@ class AdminController extends Controller
         $testimdata->name = $request->student_name;
         $testimdata->class = $request->enter_class;
         $testimdata->desciption = $request->description;
-        $testimdata->image_path = 'images/toppers'.$imageName;
+        $testimdata->image_path = 'images/toppers/'.$imageName;
         $testimdata->save();
         return back()->with('success','Added Succesfully');
     }
