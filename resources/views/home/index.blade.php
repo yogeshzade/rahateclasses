@@ -403,32 +403,29 @@
         <div class="carousel-inner">
           <div class="item  active">
             <div class="row">
-
+                @php
+                $i = 1;
+                @endphp
                 @foreach($testimonials as $testimonial)
               <div class="col-md-4">
                 <a class="thumbnail" href="#"><img alt="" src="{{url($testimonial->image_path)}}">
                 </a>
               </div>    
-              @endforeach      
+              
+              @php
+              $i++;
+              @endphp
+
+              @if($i == 6)
+                  @break
+                  @php $i = 1; @endphp
+              @endif
+
+                @endforeach    
                 
             </div>
           </div>
 
-          <!--  -->
-          <div class="item">
-            <div class="row">
-              <div class="col-md-4">
-                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/250x250"></a>
-              </div>          
-              <div class="col-md-4">
-                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/250x250"></a>
-              </div>
-              <div class="col-md-4">
-                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/250x250"></a>
-              </div>        
-            </div>
-          </div>
-          <!--  -->
         
 
         </div>
@@ -711,7 +708,7 @@ $(document).ready(function(){
    
    $(document).ready(function() {
   $('#media').carousel({
-      interval: 4000,
+      interval: 10000,
     cycle: true
   });
 });
