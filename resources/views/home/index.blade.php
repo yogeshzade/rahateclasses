@@ -403,7 +403,7 @@
                
                @foreach($testimonials as $testimonial)
 
-                 <div class="item">
+                 <div class="item" style="width: 220px !important;">
                     <div class="pad15">
                     <img alt="" src="{{url($testimonial->image_path)}}" class="thumbnail" style="width: 220px;height: 220px;">
                     </div>
