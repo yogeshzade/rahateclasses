@@ -231,7 +231,7 @@
                    <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
                       <a href="#" 
 target="popup" 
-onclick="window.open('/show-notes','popup','width=1020,height=600'); return false;">
+onclick="window.open('/show-notes','popup','width=1080,height=650'); return false;">
                     <div class="inner"> <img src="{{ asset('homeassets\images\sheet.png')}}" alt="Placement Assistance">
                         <h3>Printed Notes</h3>
                         

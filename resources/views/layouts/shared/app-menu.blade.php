@@ -53,7 +53,7 @@
             </li>
 
              <li>
-                <a href="{{route('updates.index')}}">Upload Notes</a>
+                <a href="{{route('notes.index')}}">Manage Notes</a>
             </li>
            
         </ul>
@@ -130,9 +130,7 @@
             <li>
                 <a href="{{route('calender.index')}}">Exam Updates</a>
             </li>
-             <li>
-                <a href="{{route('file.index')}}">Upload Notes</a>
-            </li>
+          
            
         </ul>
     </li>

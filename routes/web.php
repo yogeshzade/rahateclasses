@@ -248,6 +248,19 @@ Route::group([
 
 
 
+Route::group([
+          'prefix' => 'notes',
+],function(){
+
+    Route::get('/','AdminController@NotesIndex')->name('notes.index');
+    Route::get('/create','AdminController@NotesCreate')->name('notes.create');
+    Route::post('/create','AdminController@NotesStore')->name('notes.store');
+    Route::get('/delete/{id}','AdminController@NotesDelete')->name('notes.delete');
+});
+
+
+
+
 
 
 
