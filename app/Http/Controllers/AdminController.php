@@ -10,6 +10,7 @@ use App\PaymentTransaction;
 use App\Alumini;
 use App\Faculty;
 use Validator;
+use App\StudentsNote;
 
 
 class AdminController extends Controller
@@ -226,5 +227,13 @@ class AdminController extends Controller
         $update->save();
 
         return redirect()->route('teachers.index')->with('success','Teacher Updated');
+    }
+
+    public function NotesIndex(){
+        $notes = StudentsNote::all();
+        return view('notes.index',compact('notes'));
+    }
+    public function NotesCreate(){
+        return view('notes.create');
     }
 }

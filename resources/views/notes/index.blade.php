@@ -11,11 +11,11 @@
         <nav aria-label="breadcrumb" class="float-right mt-1">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="">Students</a></li>
+                <li class="breadcrumb-item"><a href="">Notes</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Manage</li>
             </ol>
         </nav>
-        <h4 class="mb-1 mt-0">Students List</h4>
+        <h4 class="mb-1 mt-0">Notes List</h4>
     </div>
 </div>
 @endsection
@@ -32,15 +32,16 @@
 <!-- end row -->
 
 <div class="row">
+  
     <div class="col-lg-12">
         <div class="card">
+
             <div class="card-body">
                 <h4 class="header-title mt-0 mb-1">
-                
-               <!--  <p class="sub-header">
-                    Add <code>.table-hover</code> to enable a hover state on table rows within a
-                    <code>&lt;tbody&gt;</code>.
-                </p> -->
+            
+   
+      <a href="{{route('notes.create')}}" class="btn btn-success pull-right">Add New</a>
+ 
               </h4>
 
                 <div class="table-responsive" >
