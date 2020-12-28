@@ -236,4 +236,25 @@ class AdminController extends Controller
     public function NotesCreate(){
         return view('notes.create');
     }
+
+    public function NotesStore(Request $request){
+
+         $request->validate([
+
+        'class_name' => 'string|required',
+        'subject_name' => 'required|string',
+        'topic_name' => 'required|string',
+        'file_link' => 'required|string'
+        ]);
+
+         $notes = new StudentsNote();
+         $notes->class_name = $request->class_name;
+         $notes->subject_name = $request->subject_name;
+         $notes->topic_name = $request->topic_name;
+         $notes->file_link = $request->file_link;
+         $notes->save();
+
+         return back()->with('success','Notes Addded Succesfully');
+
+    }
 }

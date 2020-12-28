@@ -60,29 +60,36 @@
                 <div class="tab-content" style="display:block;">
 
                     <!-- Section Start -->
+                    @foreach($notes as $note)
                     
                         <div class="col-md-4 col-sm-6 col-xs-12" style="border:1px solid rgba(0,0,0,.06);">
                             <div class="card">
-                                <img class="img img-responsive" src="https://www.thinkiit.in/static/resources/card.jpg" alt="/BOARD NOTES/ English Class 12" title="/BOARD NOTES/&nbsp;|&nbsp;English&nbsp;|&nbsp;Class 12" style="max-width: 330px; max-height: 248px;">
+                                <img class="img img-responsive" src="https://www.thinkiit.in/static/resources/card.jpg" alt="" title="" style="max-width: 280px; max-height: 248px; padding: 20px; margin-left: -8px;">
                                 <div class="container-fluid border-bottom border-left border-right">
                                     <h4 class="card-title">
                                        <center>
-                                        <a href="/board-notes/english/class-12/#c1" style="font-size: 19px; font-weight: bold;">Class :12</a>
+                                        <a href="/board-notes/english/class-12/#c1" style="font-size: 19px; font-weight: bold;">Class : {{$note->class_name}}</a>
                                     </center>
                                     </h4>
                                     <ul class="list-group">
                                         
                                             <li class="category4-list-style slow-transition">
                                               <b> Subject Name:</b>
+                                              <i>
+                                                {{$note->subject_name}}
+                                              </i>
                                             </li>
 
                                              <li class="category4-list-style slow-transition">
                                                <b>Topic Name:</b>
+                                                 <i>
+                                                {{$note->topic_name}}
+                                              </i>
                                             </li>
 
                                             
                                                 <center>
-                                                    <a href="">
+                                                    <a href="{{$note->file_path}}" target="_blank">
                                                <b style="margin-right: 20px;">Download:</b> 
                                                <i class="fas fa-download"></i>
                                                 </center>
@@ -97,6 +104,7 @@
                                 </div>
                             </div>
                         </div>
+                        @endforeach
 
                         <!-- Section End -->
 

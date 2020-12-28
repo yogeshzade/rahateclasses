@@ -8,6 +8,8 @@ use App\Inquiry;
 use App\Alumini;
 use App\NewsAndUpdate;
 use App\Faculty;
+use App\StudentsNote;
+
 
 
 class HomeController extends Controller
@@ -79,7 +81,8 @@ class HomeController extends Controller
     }
 
     public function showNotes(){
-        return view('home.noteslist');
+        $notes = StudentsNote::all();
+        return view('home.noteslist',compact('notes'));
     }
 
     
