@@ -388,8 +388,12 @@
                         </div>
                     </div>
                 </li>
+
+
                
             </ul>
+              <button class="btn btn-primary leftLst"><</button>
+            <button class="btn btn-primary rightLst">></button>
         </div>
     </section>
 
