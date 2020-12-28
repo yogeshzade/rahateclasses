@@ -70,5 +70,13 @@ class HomeController extends Controller
         
     }
 
+    public function feesStructure(){
+        return view('home.feesstruct');
+    }
+
+    public function rahateresults(){
+        return view('home.results');
+    }
+
     
 }

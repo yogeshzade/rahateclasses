@@ -138,12 +138,12 @@
                     <div class="icon"><img src="{{ asset('homeassets\images\certification-ico.png')}}" class="img-responsive" alt=""></div>
                     <div class="detail">
                         <h3>
-                             <a href="{{route('home.course.index')}}" style="color: #fff;" >
+                             <a href="{{route('feesStruct.index')}}" style="color: #fff;" >
                         Fees Structure
                     </a>
                     </h3>
                        
-                        <a href="{{route('home.course.index')}}" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a href="{{route('feesStruct.index')}}" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
                 </li>
             </ul>
@@ -228,11 +228,10 @@
                     </div>
                 </li>
 
-                  <li class="col-sm-3 equal-hight" style="height: 278px;" data-aos="zoom-in">
-                    <div class="inner"> <img src="{{ asset('homeassets\images\file.png')}}" alt="Study on the Go">
-                        <h3>A synchronised program.</h3>
-                       
-                        
+                   <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
+                    <div class="inner"> <img src="{{ asset('homeassets\images\sheet.png')}}" alt="Placement Assistance">
+                        <h3>Printed Notes</h3>
+                        <p>We Provide Printed Notes for our students.</p>
                     </div>
                 </li>
 
@@ -244,12 +243,15 @@
                     </div>
                 </li>
 
-                  <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
-                    <div class="inner"> <img src="{{ asset('homeassets\images\sheet.png')}}" alt="Placement Assistance">
-                        <h3>Printed Notes</h3>
-                        <p>We Provide Printed Notes for our students.</p>
+                 <li class="col-sm-3 equal-hight" style="height: 278px;" data-aos="zoom-in">
+                    <div class="inner"> <img src="{{ asset('homeassets\images\file.png')}}" alt="Study on the Go">
+                        <h3>A synchronised program.</h3>
+                       
+                        
                     </div>
                 </li>
+
+               
 
                 </ul>
 
@@ -405,7 +407,7 @@
 
                  <div class="item" style="width: 250px !important;">
                     <div class="pad15">
-                    <img alt="" src="{{url($testimonial->image_path)}}" class="thumbnail" style="width: 250px;height: 230px;">
+                    <img alt="" src="{{url($testimonial->image_path)}}" class="thumbnail" style="width: 250px;height: 230px;" id="jshover">
                     </div>
                 </div>
 
@@ -804,6 +806,14 @@ $(document).ready(function(){
 
 });
   
+  $(document).ready(function(){
+    $('#jshover').hover(function() {
+        $("#jshover").addClass('transition');
+    
+    }, function() {
+        $("#jshover").removeClass('transition');
+    });
+});
 
       </script>
 
