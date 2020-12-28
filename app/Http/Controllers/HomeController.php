@@ -78,5 +78,9 @@ class HomeController extends Controller
         return view('home.results');
     }
 
+    public function showNotes(){
+        return view('home.noteslist');
+    }
+
     
 }
