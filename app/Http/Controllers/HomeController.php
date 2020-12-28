@@ -21,7 +21,7 @@ class HomeController extends Controller
         $testimonials = Alumini::where('status',1)->get();
         $testimonial2 = Alumini::where('status',1)->limit(6)->get();
         $notifications = NewsAndUpdate::orderBy('id', 'DESC')->limit(4)->get();
-        $faculties = Faculty::where('status',1)->orderBy('id','ASC')->get();
+        $faculties = Faculty::where('status',1)->orderBy('sequence','DESC')->get();
     	return view('home.index',compact('sliders','popup','testimonials','notifications','faculties'));
     }
 

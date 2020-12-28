@@ -168,8 +168,8 @@ class AdminController extends Controller
 
     public function TeachersCreate(){
                $sequenceno = Faculty::whereNotNull('sequence')->count();
-               $sqs = $sequenceno + 1;
-          return view('teachers.create',compact('sqs'));
+               $sequenceno = $sequenceno + 1;
+          return view('teachers.create',compact('sequenceno'));
     }
 
      public function TeachersStore(Request $request){

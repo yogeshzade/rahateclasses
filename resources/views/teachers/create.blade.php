@@ -129,7 +129,7 @@
                           <div class="input-group">
 
                                   <input type="text" class="form-control" id="validationCustom01" placeholder=""
-                            value="{{sqs}}" required name="sequence">
+                            value="{{$sequenceno}}" required name="sequence">
                           
                         </div>
                       
