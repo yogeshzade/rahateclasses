@@ -8055,22 +8055,3 @@ b{
     
         .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
 
-        .imghover:hover{
-
-        	  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-        	  	  transition: transform .2s; /* Animation */
-
-        }
-
-        .transition {
-    -webkit-transform: scale(1.6); 
-    -moz-transform: scale(1.6);
-    -o-transform: scale(1.6);
-    transform: scale(1.6);
-}
-#jshover {
-	-webkit-transition: all .4s ease-in-out;
-	-moz-transition: all .4s ease-in-out;
-	-o-transition: all .4s ease-in-out;
-	-ms-transition: all .4s ease-in-out;
-}

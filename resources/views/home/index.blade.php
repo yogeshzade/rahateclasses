@@ -392,7 +392,7 @@
 
                
             </ul>
-            
+
         </div>
     </section>
 
@@ -410,7 +410,7 @@
 
                  <div class="item" style="width: 250px !important;">
                     <div class="pad15">
-                    <img alt="" src="{{url($testimonial->image_path)}}" class="thumbnail" style="width: 250px;height: 230px;" id="jshover">
+                    <img alt="" src="{{url($testimonial->image_path)}}" class="thumbnail" style="width: 250px;height: 230px;">
                     </div>
                 </div>
 
@@ -809,14 +809,7 @@ $(document).ready(function(){
 
 });
   
-  $(document).ready(function(){
-    $('#jshover').hover(function() {
-        $("#jshover").addClass('transition');
-    
-    }, function() {
-        $("#jshover").removeClass('transition');
-    });
-});
+
 
       </script>
 
