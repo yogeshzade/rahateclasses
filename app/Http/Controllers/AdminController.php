@@ -9,6 +9,8 @@ use App\Course;
 use App\PaymentTransaction;
 use App\Alumini;
 use App\Faculty;
+use Validator;
+
 
 class AdminController extends Controller
 {
@@ -161,11 +163,13 @@ class AdminController extends Controller
 
     public function TeachersIndex(){
          $teachers = Faculty::all();
-        return view('teachers.index',compact('teachers'));
+          return view('teachers.index',compact('teachers'));
     }
 
     public function TeachersCreate(){
-          return view('teachers.create');
+               $sequenceno = Faculty::whereNotNull('sequence')->count();
+               $sqs = $sequenceno + 1;
+          return view('teachers.create',compact('sqs'));
     }
 
      public function TeachersStore(Request $request){
@@ -174,7 +178,8 @@ class AdminController extends Controller
         'image_path' => 'mimes:jpeg,jpg,png,gif|required|max:2048',
         'teacher_name' => 'string|required',
         'designation' => 'required',
-        'description' => 'required'
+        'description' => 'required',
+        'sequence' => 'required|unique:faculties|numeric'
         ]);
 
         $imageName = time().'.'.$request->image_path->extension();  
@@ -185,6 +190,7 @@ class AdminController extends Controller
         $teacher->details = $request->description;
         $teacher->designation = $request->designation;
         $teacher->photo_url = 'faculties/'.$imageName;
+        $teacher->sequence = $request->sequence;
         $teacher->save();
 
         return back()->with('success','ADDED SUCCESSFULLY!');
@@ -196,5 +202,29 @@ class AdminController extends Controller
         $id->delete();
         return back()->with('success','DELETED SUCCESSFULLY');
 
+    }
+
+    public function TeachersEdit(Faculty $tid){
+        return view('teachers.update',compact('tid'));
+    }
+
+    public function TeachersUpdate(Request $request,$tid)
+    {
+        $request->validate([
+
+        'teacher_name' => 'string|required',
+        'designation' => 'required',
+        'description' => 'required',
+        'sequence' => 'required|unique:faculties'
+        ]);
+
+        $update = Faculty::where('id',$tid)->first();
+        $update->fullname = $request->teacher_name;
+        $update->sequence = $request->sequence;
+        $update->designation = $request->designation;
+        $update->details = $request->description;
+        $update->save();
+
+        return redirect()->route('teachers.index')->with('success','Teacher Updated');
     }
 }

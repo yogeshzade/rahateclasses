@@ -34,6 +34,14 @@
 
 <div class="row">
     <div class="col-lg-12">
+         @if(session()->has('success'))
+    <div class="alert alert-success">
+        {{ session()->get('success') }}
+    </div>
+@endif
+
+
+
         <div class="card">
             <div class="card-body">
                 <h4 class="header-title mt-0 mb-1">
@@ -53,6 +61,7 @@
                                  <th scope="col">Teacher Photo</th>
                                    <th scope="col">Designation</th>
                                   <th scope="col">Description</th>
+                                    <th scope="col">Sequence No</th>
                                   <th scope="col">Action</th>
                                 
                             </tr>
@@ -61,6 +70,7 @@
                             @foreach ($teachers ?? '' as $teacher)
                             <tr scope="{{$loop->iteration}}">
                                 <td>{{$loop->iteration}}</td>
+
                                 <td>{{$teacher->fullname}}</td>
                             <td><img src="{{url($teacher->photo_url)}}" class="img-rounded" style="width:152px; height: 152px;"></td>
                              <td>
@@ -69,13 +79,28 @@
                                  <td>
                                     {!! $teacher->details !!}
                                  </td>
-                                
+                               <b> 
+                             
+                                <td>{{$teacher->sequence}}</td> 
+                            </b>
                                  <td>
-                                    <a href="{{route('teachers.delete',$teacher->id)}}">
+                                    <div class="col">
+                                        <div class="col-md-6">
+                                             <a href="{{route('teachers.delete',$teacher->id)}}">
                                      <button class="btn btn-danger">
                                          Delete
                                      </button>
                                  </a>
+                                        </div>
+                                         <div class="col-md-6">
+                                             <a href="{{route('teachers.edit',$teacher->id)}}">
+                                     <button class="btn btn-success">
+                                         Edit
+                                     </button>
+                                 </a>
+                                        </div>
+                                    </div>
+                                   
                                  </td>
                                 
                             </tr>

@@ -51,6 +51,10 @@
             <li>
                 <a href="{{route('updates.index')}}">Website Notifications</a>
             </li>
+
+             <li>
+                <a href="{{route('updates.index')}}">Upload Notes</a>
+            </li>
            
         </ul>
     </li>

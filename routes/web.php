@@ -241,6 +241,8 @@ Route::group([
     Route::get('/create','AdminController@TeachersCreate')->name('teachers.create');
     Route::post('/create','AdminController@TeachersStore')->name('teachers.store');
     Route::get('/delete/{id}','AdminController@TeachersDelete')->name('teachers.delete');
+    Route::get('/edit/{tid}','AdminController@TeachersEdit')->name('teachers.edit');
+    Route::post('/update/{tid}','AdminController@TeachersUpdate')->name('teachers.update');
 });
 
 

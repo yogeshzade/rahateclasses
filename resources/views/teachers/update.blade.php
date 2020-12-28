@@ -45,7 +45,7 @@
 
 
 
-<form class="" novalidate method="post" action="{{route('teachers.store')}}" enctype='multipart/form-data'>
+<form class="" novalidate method="post" action="{{route('teachers.update',$tid->id)}}" enctype='multipart/form-data'>
                     @csrf
                 <!--     @method('POST') -->
                     <div class="form-group mb-3">
@@ -54,7 +54,9 @@
                           <div class="input-group">
                             
                             <input type="text" class="form-control" id="teacher_name" placeholder=""
-                                aria-describedby="inputGroupPrepend" name="teacher_name"  >
+                                aria-describedby="inputGroupPrepend" name="teacher_name" 
+                                value="{{$tid->fullname}}" 
+                                 >
 
 
                           
@@ -74,7 +76,9 @@
                         <div class="input-group">
                             
                             <input type="text" class="form-control" id="designation" placeholder=""
-                                aria-describedby="inputGroupPrepend" name="designation"   >
+                                aria-describedby="inputGroupPrepend" name="designation"  
+                                value="{{$tid->designation}}" 
+                                 >
                           
                         </div>
                     </div>
@@ -87,16 +91,24 @@
 
                            <!-- Col Start -->
                         <div class="col-md-12">
+
+                         
                                <div class="form-group mb-3">
                         <label for="validationCustomUsername">Enter Description </label>
                         <div class="input-group">
                             
                           
-                        <textarea id='description' name='description' id="description" ></textarea>               
+                        <textarea id='description' name='description' id="description" >
+                            {{ $tid->details }}
+                        </textarea>               
                    
                           
                         </div>
                     </div>
+
+                            
+
+                            
                         </div>
                         <!-- col end -->
 
@@ -105,31 +117,11 @@
 
                             <!-- Installment No -->
                                <div class="form-group mb-3">
-                        <label for="validationCustomUsername">Upload Teacher Image * </label>
-                          <div class="input-group">
-
-                                  <input type="file" class="form-control" id="validationCustom01" placeholder=""
-                            value="" required name="image_path">
-                          
-                        </div>
-                      
-                    </div>
-
-                            <!-- Installment No End -->
-
-                            
-                        </div>
-                        <!-- col end -->
-
-                           <div class="col-md-12">
-
-                            <!-- Installment No -->
-                               <div class="form-group mb-3">
-                        <label for="validationCustomUsername">Enter Sequence No * </label>
+                        <label for="validationCustomUsername">Update Sequence * </label>
                           <div class="input-group">
 
                                   <input type="text" class="form-control" id="validationCustom01" placeholder=""
-                            value="{{sqs}}" required name="sequence">
+                           required name="sequence" value="{{$tid->sequence}}">
                           
                         </div>
                       
