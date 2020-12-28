@@ -78,7 +78,7 @@
                                         </a>
                                       </td>
                                       <td>
-                                        <a href="" class="btn btn-md btn-danger">
+                                        <a href="{{route('notes.delete',$note->id)}}" class="btn btn-md btn-danger">
                                           Delete
                                         </a>
                                       </td>

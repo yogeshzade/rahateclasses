@@ -257,4 +257,9 @@ class AdminController extends Controller
          return back()->with('success','Notes Addded Succesfully');
 
     }
+    public function NotesDelete(StudentsNote $id){
+        $id->delete();
+        return back()->with('success','DELETED!!!');
+
+    }
 }
