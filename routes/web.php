@@ -21,7 +21,11 @@ Route::get('apply-online','StudentsController@admission')->name('student.admissi
 Route::get('career','CareerController@index')->name('career.index');
 Route::post('career','CareerController@apply')->name('career.apply');
 Route::get('/how-to-apply','HomeController@howToApply')->name('howtoapply.index');
-
+Route::get('/fees-structure','HomeController@feesStructure')->name('feesStruct.index');
+Route::get('/view-notes','HomeController@authPage')->name('view-notes.index');
+Route::post('/view-notes','HomeController@authForNotes')->name('view-notes.auth');
+Route::get('/rahates-results','HomeController@authForNotes')->name('results.index');
+Route::get('/show-notes','HomeController@showNotes')->name('shownotes.index');
 
 Route::prefix("student")->group(function(){
 
@@ -208,15 +212,55 @@ Route::get('/updates/delete/{id}','WebsiteConfigration@UpdatesDelete')->name('up
 
 
 
-     Route::group([
+Route::group([
           'prefix' => 'payments',
 ],function(){
 
     Route::get('/pending','AdminController@pendingPayments')->name('pending.payments');
-
- 
  
 });
+
+
+Route::group([
+          'prefix' => 'testimonials',
+],function(){
+
+    Route::get('/','AdminController@TestimonialsIndex')->name('testimonials.index');
+    Route::get('/create','AdminController@TestimonialsCreate')->name('testimonials.create');
+    Route::post('/create','AdminController@TestimonialsStore')->name('testimonials.store');
+    Route::get('/delete/{id}','AdminController@TestimonialsDelete')->name('testimonials.delete');
+});
+
+
+
+
+Route::group([
+          'prefix' => 'teachers',
+],function(){
+
+    Route::get('/','AdminController@TeachersIndex')->name('teachers.index');
+    Route::get('/create','AdminController@TeachersCreate')->name('teachers.create');
+    Route::post('/create','AdminController@TeachersStore')->name('teachers.store');
+    Route::get('/delete/{id}','AdminController@TeachersDelete')->name('teachers.delete');
+    Route::get('/edit/{tid}','AdminController@TeachersEdit')->name('teachers.edit');
+    Route::post('/update/{tid}','AdminController@TeachersUpdate')->name('teachers.update');
+});
+
+
+
+Route::group([
+          'prefix' => 'notes',
+],function(){
+
+    Route::get('/','AdminController@NotesIndex')->name('notes.index');
+    Route::get('/create','AdminController@NotesCreate')->name('notes.create');
+    Route::post('/create','AdminController@NotesStore')->name('notes.store');
+    Route::get('/delete/{id}','AdminController@NotesDelete')->name('notes.delete');
+});
+
+
+
+
 
 
 

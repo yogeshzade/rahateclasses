@@ -15,9 +15,9 @@
                         <h3>Useful Links</h3>
                         <ul>
                             <li><a href="{{route('career.index')}}">Career</a></li>
-                            <li><a href="#">Download Broucher</a></li>
+                            <li><a href="{{url('broucher.pdf')}}">Download Broucher</a></li>
                             <li><a href="{{route('home.course.index')}}">All Courses</a></li>
-                              <li><a href="{{route('home.index')}}#faculties">Our Faculties</a></li>
+                              <li><a href="{{route('home.index')}}#ulfaculties">Our Faculties</a></li>
                            
                         </ul>
                     </div>
@@ -28,14 +28,16 @@
                             <li><a href="#">+91-9130622590</a></li>
                             <li><a href="#">+91-9561302469</a></li>
                             <li><a href="#">+91-954557828</a></li>
-                            <li><a href="#">39, Old Subhedar Lay Out N/o,</a></li>
-                            <li><a href="#">Ayodhya Nagar,Nagpur-24</a></li>
+                            <li><a href="https://www.google.com/maps?ll=21.111054,79.10189&z=15&t=m&hl=en-US&gl=US&mapclient=embed&q=Rahate+Classes">39, Old Subhedar Lay Out N/o,</a></li>
+                            <li><a href="https://www.google.com/maps?ll=21.111054,79.10189&z=15&t=m&hl=en-US&gl=US&mapclient=embed&q=Rahate+Classes">Ayodhya Nagar,Nagpur-24</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="footer-logo hidden-xs"><a href="{{route('home.index')}}"><img src="{{ asset('images\rahatelogo.png')}}" class="img-responsive" alt=""></a></div>
-                    <p>2020 <span>Rahate Classes</span>. Deveopled By <a href="http://github.com/heyshantu13">Shantanu K.</a> </p>
+                    <p><b>2020-2021</b> <span>Rahate Classes</span>. Deveopled By <a href="http://github.com/heyshantu13" style="color:#fff">Shantanu Kulkarni</a>
+                    V 1.5.0
+                    </p>
                    
                 </div>
             </div>

@@ -101,7 +101,7 @@
                     navText: ['', ''],
                     nav: true,
                     autoplay: true,
-                    smartSpeed: 1000,
+                    smartSpeed: 100,
                     autoplayHoverPause: true,
                     responsive: {
                         0: {

@@ -8,6 +8,8 @@ use App\Inquiry;
 use App\Alumini;
 use App\NewsAndUpdate;
 use App\Faculty;
+use App\StudentsNote;
+
 
 
 class HomeController extends Controller
@@ -18,9 +20,10 @@ class HomeController extends Controller
 
         $sliders = \App\Slider::where('status',1)->get();
         $popup = \App\Popup::first();
-        $testimonials = Alumini::all();
+        $testimonials = Alumini::where('status',1)->get();
+        $testimonial2 = Alumini::where('status',1)->limit(6)->get();
         $notifications = NewsAndUpdate::orderBy('id', 'DESC')->limit(4)->get();
-        $faculties = Faculty::where('status',1)->orderBy('id','ASC')->get();
+        $faculties = Faculty::where('status',1)->orderBy('sequence','DESC')->get();
     	return view('home.index',compact('sliders','popup','testimonials','notifications','faculties'));
     }
 
@@ -62,6 +65,24 @@ class HomeController extends Controller
 
     public function howToApply(){
         return view('home.howtoapply');
+    }
+
+    public function authPage(){
+        return view();
+        
+    }
+
+    public function feesStructure(){
+        return view('home.feesstruct');
+    }
+
+    public function rahateresults(){
+        return view('home.results');
+    }
+
+    public function showNotes(){
+        $notes = StudentsNote::all();
+        return view('home.noteslist',compact('notes'));
     }
 
     

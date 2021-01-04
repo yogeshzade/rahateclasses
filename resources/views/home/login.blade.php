@@ -46,13 +46,13 @@
                       <div class="row">
                           <div class="col-md-12">
                              <div class="col-md-12 form-group"> <b>Email *</b></div>
-                              <div class="col-md-12"><input name="email" type="text" placeholder="Email Address"></div>
+                              <div class="col-md-12"><input name="email" type="text" placeholder=""></div>
                               
                           </div>
 
                            <div class="col-md-12">
                             <div class="col-md-12 form-group"> <b>Password * </b></div>
-                              <div class="col-md-12"><input name="password" type="password" placeholder="password"></div>
+                              <div class="col-md-12"><input name="password" type="password" placeholder=""></div>
                           </div>
 
                       </div>
