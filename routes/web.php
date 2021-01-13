@@ -15,6 +15,7 @@ Auth::routes(['register' => false]);
 Route::get('/','HomeController@index')->name('home.index');
 Route::get('/courses','HomeController@getCourses')->name('home.course.index');
 Route::get('/contact','HomeController@contact')->name('home.contact');
+Route::get('/faculties','HomeController@faculties')->name('home.faculties');
 Route::post('/sendinquiry','HomeController@storeInquiry')->name('inquiry.store');
 Route::get('/contact_send','HomeController@contactsend')->name('home.contact.send');
 Route::get('apply-online','StudentsController@admission')->name('student.admission.index');

@@ -64,6 +64,7 @@
                     
                         <div class="col-md-4 col-sm-6 col-xs-12" style="border:1px solid rgba(0,0,0,.06);">
                             <div class="card">
+                              
                                 <img class="img img-responsive" src="https://www.thinkiit.in/static/resources/card.jpg" alt="" title="" style="max-width: 280px; max-height: 248px; padding: 20px; margin-left: -8px;">
                                 <div class="container-fluid border-bottom border-left border-right">
                                     <h4 class="card-title">

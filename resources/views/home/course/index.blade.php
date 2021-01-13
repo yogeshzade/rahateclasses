@@ -37,60 +37,139 @@
 
 
   
-    <section class="our-cources sub padding-lg">
+     <section class="our-cources padding-lg">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-8">
-                    <h2> <span>Unique Features of our programs</span> What do you want to study?</h2>
-                </div>
-                <div class="col-sm-4">
-                   
-                </div>
-            </div>
-            <br/>
-            <ul class="row course-list inner">
-
-                @foreach ($courses as $course)
-                <li class="col-xs-6 col-sm-4 col-md-3">
-                    <div class="courseinfo">
+            <h2> <span>Unique Features of our programs</span> What do you want to study?</h2>
+            <ul class="course-list owl-carousel">
+                  <li>
                     <div class="inner">
-                        <figure><img src="images/course-img1.jpg" alt=""></figure>
-                        <h3>{{$course->course_name}}</h3>
+                        <figure><img src="" alt=""></figure>
+                        <h3>RAMANUJAN - JEE-2021</span></h3>
+                        <p>Rahate’s IIT & Medical Home offers RAMANUJAN JEE Coaching Classes IIT/NIT Prepration The faculty at Rahate’s IIT & Medical Home is highly qualified and vastly experienced.</p>
                         <div class="bottom-txt clearfix">
                             <div class="duration">
-                            <h4>Class: {{$course->class}}</h4>
-                            <span> Courses : {{$course->board}}</span>
+                                <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
                             </div>
-                            
-                        </div>                      
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
                     </div>
-                  
-                  
-                </div>
-
                 </li>
-                @endforeach
 
-              
-          
+                <li>
+                    <div class="inner">
+                        <figure><img src="" alt=""></figure>
+                        <h3>DR ANANDI - NEET-2021</span></h3>
+                        <p>Expert Coaching Classes For Pre Medical NEET, Preparation in Nagpur. The Only Institute Which Truly Prepares You For NEET.</p>
+                        <div class="bottom-txt clearfix">
+                            <div class="duration">
+                               <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
+                            </div>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </li>
+                   <li>
+                    <div class="inner">
+                        <figure><img src="" alt=""></figure>
+                        <h3>ARJUN - JEE-2022</span></h3>
+                        <p>Rahate’s IIT & Medical Home offers RAMANUJAN JEE Coaching Classes IIT/NIT Prepration The faculty at Rahate’s IIT & Medical Home is highly qualified and vastly experienced.</p>
+                        <div class="bottom-txt clearfix">
+                            <div class="duration">
+                               <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
+                            </div>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </li>
+                  <li>
+                    <div class="inner">
+                        <figure><img src="" alt=""></figure>
+                        <h3>SUSHRUTA - NEET-2022</span></h3>
+                        <p>Expert Coaching Classes For Pre Medical NEET, Preparation in Nagpur. The Only Institute Which Truly Prepares You For NEET.</p>
+                        <div class="bottom-txt clearfix">
+                            <div class="duration">
+                               <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
+                            </div>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </li>
+
+                 <li>
+                    <div class="inner">
+                        <figure><img src="" alt=""></figure>
+                        <h3>MH-CET 2021</span></h3>
+                        <p>Expert Coaching Classes For MH-CET 21 Preparation in Nagpur. The Only Institute Which Truly Prepares With Expert Faculties.</p>
+                        <div class="bottom-txt clearfix">
+                            <div class="duration">
+                               <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
+                            </div>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </li>
+
+                  <li>
+                    <div class="inner">
+                        <figure><img src="" alt=""></figure>
+                        <h3>NATA 2021</span></h3>
+                                                <p>Rahate’s IIT & Medical Home is Best coaching institute to provides Entrance Exam coaching for prominent Architecture Entrance Exam like NATA etc.</p>
+                        <div class="bottom-txt clearfix">
+                            <div class="duration">
+                               <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
+                            </div>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </li>
+
+
+
+
+
+                 <li>
+                    <div class="inner">
+                        <figure><img src="" alt=""></figure>
+                        <h3>State Board</span></h3>
+                        <p>Rahate’s IIT & Medical Home 8 to 10 is 3 Years educational Program design by the educationalist for preparing the student to compete in a diverse world market.</p>
+                        <div class="bottom-txt clearfix">
+                            <div class="duration">
+                               <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
+                            </div>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="inner">
+                        <figure><img src="" alt=""></figure>
+                        <h3>NATA (ARCH.)</h3>
+                        <p>Rahate’s IIT & Medical Home is Best coaching institute to provides Entrance Exam coaching for prominent Architecture Entrance Exam like NATA , JEE Mains (B.Arch), etc.</p>
+                        <div class="bottom-txt clearfix">
+                            <div class="duration">
+                                 <h4>Apply Online</h4>
+                                <span>To Take Admission</span>
+                            </div>
+                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                        </div>
+                    </div>
+                </li>
+
+
+               
             </ul>
-            {{-- <div class="row">
-                <div class="col-sm-12">
-                    <nav aria-label="Page navigation" class="text-center">
-                        <ul class="pagination">
-                            <li> <a href="#" aria-label="Previous"> <span aria-hidden="true"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</span> </a> </li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li> <a href="#" aria-label="Next"> <span aria-hidden="true">Next <i class="fa fa-angle-right" aria-hidden="true"></i></span> </a> </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div> --}}
+
         </div>
     </section>
-  
+
 
    
 

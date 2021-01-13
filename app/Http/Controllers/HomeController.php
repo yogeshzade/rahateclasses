@@ -27,6 +27,11 @@ class HomeController extends Controller
     	return view('home.index',compact('sliders','popup','testimonials','notifications','faculties'));
     }
 
+    public function faculties(){
+          $faculties = Faculty::where('status',1)->orderBy('sequence','DESC')->get();
+        return view('home.fac',compact('faculties'));
+    }
+
 
     public function getCourses(){
         $courses = Course::where('status',1)->orderByRaw("featured =  1")->get();
