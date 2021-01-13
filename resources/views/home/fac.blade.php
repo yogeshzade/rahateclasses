@@ -20,7 +20,7 @@
                 <div class="col-sm-8 col-lg-9">
                     <div class="content">
                         <h1 style="margin-bottom: 5px;
-    margin-top: -20px;">Our Faculties</h1>
+    margin-top: -20px;"></h1>
                         
                     </div>
                 </div>
