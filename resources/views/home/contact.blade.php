@@ -87,7 +87,7 @@
     height: 200px;">
         <h1><span class="fa fa-phone"></span></h1>
         <h3>Phone</h3>
-        <p style="font-weight: 600;">+91-9545578282</p><br>
+       <a href="tel:+91-9545578282"> <p style="font-weight: 600;">+91-9545578282</p><br> </a>
     </div>
     <div class="col-sm-3 col-xs-6 second-box" style="  width: 270px;
     height: 200px;">
@@ -102,7 +102,7 @@ Ayodhya Nagar,Nagpur-24</p><br>
     height: 200px;">
         <h1><span class="fa fa-envelope"></span></h1>
         <h3>E-mail</h3>
-        <p style="font-weight: 600;">krantirahate12@gmail.com</p><br>
+        <a href="mailto:krantirahate12@gmail.com"><p style="font-weight: 600;">krantirahate12@gmail.com</p><br></a>
     </div>
     <div class="col-sm-3 col-xs-6 fourth-box" style="  width: 270px;
     height: 200px;">
