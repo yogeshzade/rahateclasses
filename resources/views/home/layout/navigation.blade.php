@@ -1,5 +1,5 @@
  <nav class="navbar navbar-inverse">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="navbar-header">
                     <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 </div>
@@ -35,7 +35,7 @@
                                   <li><a href=""></a></li>
                             </ul>
                         </li>
-
+                         <li> <a href="{{route('shownotes.index')}}">Notes</a></li>
                         <li> <a href="/career">Career</a></li>
                            <li> <a href="{{route('home.faculties')}}#ulfaculties">Faculties</a></li>
                             <li> <a href="/contact">Contact Us</a></li>

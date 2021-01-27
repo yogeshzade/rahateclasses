@@ -43,7 +43,9 @@
               <span class="icon-bar"></span>
             </button>
             
+            <a href="{{route('home.index')}}">
                 <img src="http://rahateiithome.in/homeassets\images\rahatelogo.png" style="width: 280px;height: 100px;" class="navbar-brand">
+              </a>
            
           </div>
           <div id="navbar" class="navbar-collapse collapse">
@@ -54,6 +56,12 @@
 
     <div class="container">
     <div class="row" id="subjects">
+      <ul class="nav nav-pills">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Physics</a></li>
+  <li><a href="#">Chemistry</a></li>
+  <li><a href="#">Maths</a></li>
+</ul>
 
         <div class="">
             
@@ -62,7 +70,7 @@
                     <!-- Section Start -->
                     @foreach($notes as $note)
                     
-                        <div class="col-md-4 col-sm-6 col-xs-12" style="border:1px solid rgba(0,0,0,.06);">
+                        <div class="col-md-3 col-sm-3 col-xs-12" style="border:1px solid rgba(0,0,0,.06);">
                             <div class="card">
                               
                                 <img class="img img-responsive" src="/open-book.png" alt="" title="" style="max-width: 280px; max-height: 248px; padding: 20px; margin-left: -8px;">

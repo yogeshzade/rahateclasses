@@ -1,8 +1,11 @@
  <!-- Start Header top Bar -->
         <div class="header-top mb-3">
             <div class="container clearfix">
-                <ul class="follow-us hidden-xs">
-                 
+                 <ul class="follow-us hidden-xs">
+                    <li><a href="https://www.facebook.com/Rahate-IIT-and-Medical-classes-105172521588124
+" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/Rahate-IIT-and-Medical-classes-105172521588124
+" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                 </ul>
                 <div class="right-block clearfix">
                     <ul class="top-nav hidden-xs">
