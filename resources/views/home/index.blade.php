@@ -195,8 +195,12 @@
                     </div>
                 </li>
                 <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
-                    <div class="inner"> <img src="{{ asset('homeassets\images\management.png')}}" alt="Placement Assistance">
+                  
+                    <div class="inner"> 
+                        <a href="#ourtoppers">
+                        <img src="{{ asset('homeassets\images\management.png')}}" alt="Placement Assistance">
                         <h3>100% Score in Exams</h3>
+                    </a>
                     </div>
                 </li>
 

@@ -17,7 +17,7 @@
                             <li><a href="{{route('career.index')}}">Career</a></li>
                             <li><a href="{{url('broucher.pdf')}}">Download Broucher</a></li>
                             <li><a href="{{route('home.course.index')}}">All Courses</a></li>
-                              <li><a href="{{route('home.index')}}#ulfaculties">Our Faculties</a></li>
+                              <li><a href="{{route('home.faculties')}}">Our Faculties</a></li>
                            
                         </ul>
                     </div>
