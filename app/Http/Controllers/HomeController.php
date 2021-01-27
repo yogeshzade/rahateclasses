@@ -90,5 +90,9 @@ class HomeController extends Controller
         return view('home.noteslist',compact('notes'));
     }
 
+    public function syncprogram(){
+        return "This page is working! Please add data";
+    }
+
     
 }

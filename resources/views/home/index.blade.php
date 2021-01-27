@@ -252,11 +252,12 @@ onclick="window.open('/show-notes','popup','width=1080,height=650'); return fals
                 </li>
 
                  <li class="col-sm-3 equal-hight" style="height: 278px;" data-aos="zoom-in">
+                    <a href="{{route('syncprogram.index')}}">
                     <div class="inner"> <img src="{{ asset('homeassets\images\file.png')}}" alt="Study on the Go">
-                        <h3>A synchronised program.</h3>
-                       
-                        
+                        <h3>A synchronised program.</h3>   
                     </div>
+                </a>
+
                 </li>
 
                
@@ -568,21 +569,21 @@ onclick="window.open('/show-notes','popup','width=1080,height=650'); return fals
                 <li>
                     <div class="icon"><span class="icon-certification-icon"> </span></div>
                     <span >10</span><span>+</span>
-                    <div class="title">Cources Classes</div>
+                    <div class="title">Courses</div>
                 </li>
                 <li>
                     <div class="icon"><span class="icon-student-icon"></span></div>
-                    <span>100</span><span>+</span>
+                    <span>350</span><span>+</span>
                     <div class="title">Students Registered</div>
                 </li>
                 <li>
                     <div class="icon"><span class="icon-book-icon"></span></div>
-                    <div class="couter-outer"></span><span class="counter">1</span></div>
+                    <div class="couter-outer"></span><span>1</span></div>
                     <div class="title">No. 1 Coaching In Nagpur</div>
                 </li>
                 <li>
                     <div class="icon"><span class="icon-parents-icon"></span></div>
-                    <div class="couter-outer"><span class="counter">100</span><span>%</span></div>
+                    <div class="couter-outer"><span>100</span><span>%</span></div>
                     <div class="title">Exellent Faculties</div>
                 </li>
             </ul>

@@ -26,7 +26,8 @@ Route::get('/fees-structure','HomeController@feesStructure')->name('feesStruct.i
 Route::get('/view-notes','HomeController@authPage')->name('view-notes.index')->middleware('auth');
 Route::post('/view-notes','HomeController@authForNotes')->name('view-notes.auth');
 Route::get('/rahates-results','HomeController@authForNotes')->name('results.index');
-Route::get('/show-notes','HomeController@showNotes')->name('shownotes.index');
+Route::get('/show-notes','HomeController@showNotes')->name('shownotes.index')->middleware('auth');
+Route::get('/sync-program','HomeController@syncprogram')->name('syncprogram.index');
 
 Route::prefix("student")->group(function(){
 
