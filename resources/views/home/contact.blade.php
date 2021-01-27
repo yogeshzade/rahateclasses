@@ -87,14 +87,14 @@
     height: 200px;">
         <h1><span class="fa fa-phone"></span></h1>
         <h3>Phone</h3>
-       <a href="tel:+91-9545578282"> <p style="font-weight: 600;">+91-9545578282</p><br> </a>
+       <a href="tel:+91-9545578282" style="color:#fff;" target="_blank"> <p style="font-weight: 600;">+91-9545578282</p><br> </a>
     </div>
     <div class="col-sm-3 col-xs-6 second-box" style="  width: 270px;
     height: 200px;">
         <h1><span class="fa fa-location-arrow"></span></h1>
         <a href="https://maps.google.com/maps?ll=21.111054,79.10189&z=15&t=m&hl=en-US&gl=US&mapclient=embed&q=Rahate%20Classes">
         <h3>Location</h3>
-        <p style="font-weight: 600; color: #fff;">L39, Old Subhedar L/O
+        <p style="font-weight: 600; color: #fff;" >L39, Old Subhedar L/O
 Ayodhya Nagar,Nagpur-24</p><br>
 </a>
     </div>
@@ -102,7 +102,7 @@ Ayodhya Nagar,Nagpur-24</p><br>
     height: 200px;">
         <h1><span class="fa fa-envelope"></span></h1>
         <h3>E-mail</h3>
-        <a href="mailto:krantirahate12@gmail.com"><p style="font-weight: 600;">krantirahate12@gmail.com</p><br></a>
+        <a href="mailto:krantirahate12@gmail.com" style="color: #fff;" target="_blank"><p style="font-weight: 600;">krantirahate12@gmail.com</p><br></a>
     </div>
     <div class="col-sm-3 col-xs-6 fourth-box" style="  width: 270px;
     height: 200px;">

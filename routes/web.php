@@ -23,7 +23,7 @@ Route::get('career','CareerController@index')->name('career.index');
 Route::post('career','CareerController@apply')->name('career.apply');
 Route::get('/how-to-apply','HomeController@howToApply')->name('howtoapply.index');
 Route::get('/fees-structure','HomeController@feesStructure')->name('feesStruct.index');
-Route::get('/view-notes','HomeController@authPage')->name('view-notes.index');
+Route::get('/view-notes','HomeController@authPage')->name('view-notes.index')->middleware('auth');
 Route::post('/view-notes','HomeController@authForNotes')->name('view-notes.auth');
 Route::get('/rahates-results','HomeController@authForNotes')->name('results.index');
 Route::get('/show-notes','HomeController@showNotes')->name('shownotes.index');

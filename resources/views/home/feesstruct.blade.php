@@ -60,7 +60,7 @@ Ayodhya Nagar,Nagpur-24</p><br>
      <div class="col-sm-4 col-xs-6 third-box" style="  width: 355px;
     height: 200px;">
         <h1><span class="fa fa-envelope"></span></h1>
-        <a href="mailto:krantirahate12@gmail.com" style="color:#fff; letter-spacing: 2px; font-size: 19px;  margin-top: 2px;">
+        <a href="mailto:krantirahate12@gmail.com" style="color:#fff; letter-spacing: 2px; font-size: 19px;  margin-top: 2px;" target="_blank">
         <h3>E-mail</h3>
         <p style="font-weight: 600;">krantirahate12@gmail.com</p><br>
       </a>
