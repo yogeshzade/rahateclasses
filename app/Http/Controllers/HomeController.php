@@ -87,7 +87,9 @@ class HomeController extends Controller
 
     public function showNotes(){
         $notes = StudentsNote::all();
-        return view('home.noteslist',compact('notes'));
+        $subjects StudentsNote::groupBy('subject_name')
+                 ->get();
+        return view('home.noteslist',compact('notes','subjects'));
     }
 
     public function syncprogram(){

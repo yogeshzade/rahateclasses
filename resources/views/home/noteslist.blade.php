@@ -58,9 +58,9 @@
     <div class="row" id="subjects">
       <ul class="nav nav-pills">
   <li class="active"><a href="#">Home</a></li>
-  <li><a href="#">Physics</a></li>
-  <li><a href="#">Chemistry</a></li>
-  <li><a href="#">Maths</a></li>
+  @foreach($subjects as $subject)
+      <li><a href="{{route('shownotes.index')}}}">{{$subject->subject_name}}</a></li>
+  @endforeach
 </ul>
 
         <div class="">
