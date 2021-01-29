@@ -235,7 +235,7 @@
                    <li class="col-sm-3 equal-hight" style="height: 254px;" data-aos="zoom-in">
                       <a href="#" 
 target="popup" 
-onclick="window.open('/show-notes','popup','width=1080,height=650'); return false;">
+onclick="window.open('/show-notes','popup','width=1200,height=1080'); return false;">
                     <div class="inner"> <img src="{{ asset('homeassets\images\sheet.png')}}" alt="Placement Assistance">
                         <h3>Printed Notes</h3>
                         
@@ -419,7 +419,11 @@ onclick="window.open('/show-notes','popup','width=1080,height=650'); return fals
 
                    <div class="item">
                     <div class="pad15">
-                    <img alt="" src="{{url($testimonial->image_path)}}" class="thumbnail" style="width: 250px;height: 230px;">
+                    <img alt="" class="thumbnail" style="width: 250px;height: 230px;  
+                    background-image: url('{{url($testimonial->image_path)}}');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;">
                     </div>
                 </div>
 
