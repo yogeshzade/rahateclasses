@@ -419,11 +419,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
 
                    <div class="item">
                     <div class="pad15">
-                    <img alt="" class="thumbnail" 
-                    style="background: url({{url($testimonial->image_path)}});
-             background-repeat: no-repeat;
-            background-size: contain, cover;
-                    >
+                    <img alt="" src="{{url($testimonial->image_path)}}" class="thumbnail" style="width: 250px;height: 230px;">
                     </div>
                 </div>
 
