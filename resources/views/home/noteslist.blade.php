@@ -57,7 +57,7 @@
     <div class="container">
     <div class="row" id="subjects">
       <ul class="nav nav-pills">
-  <li class="active"><a href="#" onclick="myWindow.close()">Home</a></li>
+  <li class="active"><a href="javascript:closeWindow();">Home</a></li>
   @foreach($subjects as $subject)
       <li><a href="{{route('shownotes.index')}}?subject={{$subject->subject_name}}">{{ucfirst($subject->subject_name)}}</a></li>
   @endforeach
@@ -127,6 +127,12 @@
         </div>
     </div>
 </div>
+<script>
+    function closeWindow() {
+        window.open('','_parent','');
+        window.close();
+    }
+</script> 
 </body>
 
 </html>
