@@ -57,7 +57,7 @@
     <div class="container">
     <div class="row" id="subjects">
       <ul class="nav nav-pills">
-  <li class="active"><a href="#">Home</a></li>
+  <li class="active"><a href="#" onclick="myWindow.close()">Home</a></li>
   @foreach($subjects as $subject)
       <li><a href="{{route('shownotes.index')}}?subject={{$subject->subject_name}}">{{ucfirst($subject->subject_name)}}</a></li>
   @endforeach
