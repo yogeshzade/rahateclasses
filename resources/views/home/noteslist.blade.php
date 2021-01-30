@@ -76,12 +76,17 @@
                                 <img class="img img-responsive" src="/{{$note->img}}" alt="" title="" style="max-width: 210px; max-height: 210px; padding: 20px; margin-left: 10px;">
                                 <div class="container-fluid border-bottom border-left border-right">
                                     <h4 class="card-title">
-                                       <center>
-                                        <a href="/board-notes/english/class-12/#c1" style="font-size: 19px; font-weight: bold;">Class : {{$note->class_name}}</a>
-                                    </center>
+                                     
                                     </h4>
                                     <ul class="list-group">
                                         
+                                         <li class="category4-list-style slow-transition">
+                                               <b>Class Name:</b>
+                                                 <i>
+                                               {{$note->class_name}}
+                                              </i>
+                                            </li>
+
                                             <li class="category4-list-style slow-transition">
                                               <b> Subject Name:</b>
                                               <i>
@@ -95,8 +100,6 @@
                                                 {{$note->topic_name}}
                                               </i>
                                             </li>
-
-                                            
                                                 <center>
                                                     <a href="{{$note->file_path}}" target="_blank">
                                                <b style="margin-right: 20px;">Download:</b> 
