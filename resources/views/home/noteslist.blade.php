@@ -59,7 +59,7 @@
       <ul class="nav nav-pills">
   <li class="active"><a href="#">Home</a></li>
   @foreach($subjects as $subject)
-      <li><a href="{{route('shownotes.index')}}}">{{$subject->subject_name}}</a></li>
+      <li><a href="{{route('shownotes.index')}}?subject={{$subject->subject_name}}">{{ucfirst($subject->subject_name)}}</a></li>
   @endforeach
 </ul>
 
