@@ -9,6 +9,7 @@ use App\Alumini;
 use App\NewsAndUpdate;
 use App\Faculty;
 use App\StudentsNote;
+use DB;
 
 
 
@@ -87,8 +88,9 @@ class HomeController extends Controller
 
     public function showNotes(){
         $notes = StudentsNote::all();
-        $subjects  = StudentsNote::groupBy('subject_name')
-                 ->get();
+        $subjects  =  DB::table('students_notes')
+             ->groupBy('subject_name')
+             ->get();
       //  $subjects = null;
         return view('home.noteslist',compact('notes','subjects'));
     }
