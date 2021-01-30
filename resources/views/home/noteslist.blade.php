@@ -70,10 +70,10 @@
                     <!-- Section Start -->
                     @foreach($notes as $note)
                     
-                        <div class="col-md-3 col-sm-3 col-xs-12" style="border:1px solid rgba(0,0,0,.06);">
+                        <div class="col-md-3 col-sm-3 col-xs-12" style="border:10px solid rgba(0,0,0,.06); margin: 12px;">
                             <div class="card">
                               
-                                <img class="img img-responsive" src="/{{$note->img}}" alt="" title="" style="max-width: 210px; max-height: 210px; padding: 20px; margin-left: -8px;">
+                                <img class="img img-responsive" src="/{{$note->img}}" alt="" title="" style="max-width: 210px; max-height: 210px; padding: 20px; margin-left: 10px;">
                                 <div class="container-fluid border-bottom border-left border-right">
                                     <h4 class="card-title">
                                        <center>
