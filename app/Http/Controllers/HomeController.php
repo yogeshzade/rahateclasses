@@ -86,7 +86,7 @@ class HomeController extends Controller
         return view('home.results');
     }
 
-    public function showNotes(){
+    public function showNotes(Request $request){
         if($request->subject == "Biology")
         {
              $notes = StudentsNote::where('subject_name',"Biology")->get();
