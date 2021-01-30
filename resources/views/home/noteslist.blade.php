@@ -81,7 +81,7 @@
                                     <ul class="list-group">
                                         
                                          <li class="category4-list-style slow-transition">
-                                               <b>Class Name:</b>
+                                               <b>Class:</b>
                                                  <i>
                                                {{$note->class_name}}
                                               </i>
@@ -101,8 +101,8 @@
                                               </i>
                                             </li>
                                                 <center>
-                                                    <a href="{{$note->file_path}}" target="_blank">
-                                               <b style="margin-right: 20px;">Download:</b> 
+                                                    <a href="{{$note->file_link}}" target="_blank">
+                                               <b style="margin-right: 20px;">View Notes:</b> 
                                                <i class="fas fa-download"></i>
                                                 </center>
                                             </a>

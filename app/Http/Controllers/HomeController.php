@@ -87,6 +87,46 @@ class HomeController extends Controller
     }
 
     public function showNotes(){
+        if($request->subject == "Biology")
+        {
+             $notes = StudentsNote::where('subject_name',"Biology")->get();
+             $subjects  = StudentsNote::select('subject_name')
+                    ->groupBy('subject_name')
+                    ->get();
+        return view('home.noteslist',compact('notes','subjects'));
+        }
+
+        if($request->subject == "chemistry")
+        {
+             $notes = StudentsNote::where('subject_name',"chemistry")->get();
+             $subjects  = StudentsNote::select('subject_name')
+                    ->groupBy('subject_name')
+                    ->get();
+        return view('home.noteslist',compact('notes','subjects'));
+        }
+
+         if($request->subject == "Mathematics")
+        {
+         //  http://rahateiithome.in/show-notes?subject=Mathematics
+             $notes = StudentsNote::where('subject_name',"Mathematics")->get();
+             $subjects  = StudentsNote::select('subject_name')
+                    ->groupBy('subject_name')
+                    ->get();
+        return view('home.noteslist',compact('notes','subjects'));
+        }
+
+          // http://rahateiithome.in/show-notes?subject=Physics  
+
+         if($request->subject == "Physics")
+        {
+         //  http://rahateiithome.in/show-notes?subject=Physics
+             $notes = StudentsNote::where('subject_name',"Physics")->get();
+             $subjects  = StudentsNote::select('subject_name')
+                    ->groupBy('subject_name')
+                    ->get();
+        return view('home.noteslist',compact('notes','subjects'));
+        }
+
         $notes = StudentsNote::all();
         $subjects  = StudentsNote::select('subject_name')
                     ->groupBy('subject_name')
