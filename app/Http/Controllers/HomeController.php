@@ -91,8 +91,8 @@ class HomeController extends Controller
         $subjects  = StudentsNote::select('subject_name')
                     ->groupBy('subject_name')
                     ->get();
-                    print_r($subjects);
-                    die();
+                    // print_r($subjects);
+                    // die();
       //  $subjects = null;
         return view('home.noteslist',compact('notes','subjects'));
     }
