@@ -417,15 +417,20 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                
                @foreach($testimonials as $testimonial)
 
+
+
                    <div class="item">
                     <div class="pad15">
-                    <img alt="" src="{{url($testimonial->image_path)}}" class="thumbnail"
+                    <div class="thumbnail"
                      style="
-                         width: 250px;
-                         height: 250px;
-                         max-height: 300px;
-                         max-width: 300px;
+                        width: 300px;
+    height: 300px;
+    background-image: url({{url($testimonial->image_path)}});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
                      ">
+                 </div>
                     </div>
                 </div>
 
