@@ -59,6 +59,7 @@
                                  <th scope="col">Notification Title</th>
                                  <th scope="col">Notification Body</th>
                                    <th scope="col">Notification Link/File</th>
+                                    <th scope="col">Action</th>
                                    
                                 
                             </tr>
@@ -92,6 +93,9 @@
                                     @endif
                                     
                                  
+                                 </td>
+                                 <td>
+                                     <a href="{{route('updates.delete',$update->id)}}"> Delete </a>
                                  </td>
 
                                 

@@ -117,6 +117,13 @@ class WebsiteConfigration extends Controller
         return view('updates.index',compact('updates'));
     }
 
+     public function UpdatesindexDelete($id){
+        $updates = NewsAndUpdate::findOrFail($id);
+        $updates->delete();
+        return back()->with('success','Deleted !');
+    }
+
+
      public function CreateUpdates(){
          return view('updates.create');
 

@@ -279,8 +279,10 @@ textarea:focus::placeholder{
 /* 02. header	*/ 
 /* ================================================== */
 .header-top {
-	display: block;
-	background: #211d1e;
+    display: block;
+    background: #211d1e;
+    height: 60px;
+    padding: 13px;
 }
 .header-top ul.follow-us {
 	display: block;
@@ -290,7 +292,7 @@ textarea:focus::placeholder{
 .header-top ul.follow-us li {
 	display: inline-block;
 	padding-right: 20px;
-	font-size: 18px;
+	font-size: 28px;
 }
 .header-top ul.follow-us li a {
 	color: #646162;
@@ -318,6 +320,7 @@ textarea:focus::placeholder{
 }
 .header-top ul.top-nav li a {
 	color: #6c777d;
+	font-size: 15px;
 }
 .header-top ul.top-nav li a:hover {
 	color: #fff;

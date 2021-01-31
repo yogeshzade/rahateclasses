@@ -157,7 +157,7 @@ Route::get('/inquiry/delete/{id}','WebsiteConfigration@DeleteInquiry')->name('in
 Route::get('/updates','WebsiteConfigration@Updatesindex')->name('updates.index');
 Route::get('/updates/new','WebsiteConfigration@CreateUpdates')->name('updates.create');
 Route::post('/updates/new','WebsiteConfigration@UpdatesStore')->name('updates.store');
-Route::get('/updates/delete/{id}','WebsiteConfigration@UpdatesDelete')->name('updates.delete');
+Route::get('/updates/delete/{id}','WebsiteConfigration@UpdatesindexDelete')->name('updates.delete');
 
 });
 
@@ -207,6 +207,7 @@ Route::get('/updates/delete/{id}','WebsiteConfigration@UpdatesDelete')->name('up
     Route::get('/applied','CareerController@appliedLits')->name('applied.index');
     Route::get('/applied/{id}','CareerController@adminToggle')->name('applied.toggle');
      Route::get('new','CareerController@adminstoreIndex')->name('career.add.new');
+        Route::get('edit/{id}','CareerController@adminstoreEdit')->name('career.edit');
       Route::post('new','CareerController@adminstore')->name('career.new.store');
  
  

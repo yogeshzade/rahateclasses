@@ -352,7 +352,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                   <li>
                     <div class="inner">
                         <figure><img src="" alt=""></figure>
-                        <h3>NATA 2021</span></h3>
+                        <h3>NATA 2022</span></h3>
                                                 <p>Rahate’s IIT & Medical Home is Best coaching institute to provides Entrance Exam coaching for prominent Architecture Entrance Exam like NATA etc.</p>
                         <div class="bottom-txt clearfix">
                             <div class="duration">
@@ -383,20 +383,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                     </div>
                 </li>
 
-                <li>
-                    <div class="inner">
-                        <figure><img src="" alt=""></figure>
-                        <h3>NATA (ARCH.)</h3>
-                        <p>Rahate’s IIT & Medical Home is Best coaching institute to provides Entrance Exam coaching for prominent Architecture Entrance Exam like NATA , JEE Mains (B.Arch), etc.</p>
-                        <div class="bottom-txt clearfix">
-                            <div class="duration">
-                                 <h4>Apply Online</h4>
-                                <span>To Take Admission</span>
-                            </div>
-                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
-                        </div>
-                    </div>
-                </li>
+               
 
 
                
@@ -574,7 +561,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
             <ul class="our-strength">
                 <li>
                     <div class="icon"><span class="icon-certification-icon"> </span></div>
-                    <span >10</span><span>+</span>
+                    <span >7</span><span>+</span>
                     <div class="title">Courses</div>
                 </li>
                 <li>

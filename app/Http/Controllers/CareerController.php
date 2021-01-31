@@ -71,6 +71,26 @@ class CareerController extends Controller
     	
     }
 
+     public function adminstoreEdit($id){
+        $data = Career::findorFail($id);
+        return view('career.edit',compact('data'));
+      
+    }
+
+     public function adminstoreUpdate($id){
+        $request->validate([
+        'job_description' => 'required|string',
+        'job_title' => 'required'
+      ]);
+
+        $job = Career::findorFail($id);
+          $job->job_title = $request->job_title;
+      $job->job_description = $request->job_description;
+        $job->save();
+        return route('career.add.new')->with('success','Updated');
+      
+    }
+
       public function adminstore(Request $request){
 
      	$request->validate([

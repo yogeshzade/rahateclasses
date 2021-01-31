@@ -57,6 +57,7 @@
                                  <th scope="col">Vacancy Name</th>
                                  <th scope="col">Vacancy Description</th>
                                  <th scope="col">Status</th>
+                                  <th scope="col">Edit</th>
                                
                                 
                                 
@@ -84,6 +85,15 @@
                                          <span class="badge badge-danger">Inactive</span>
                                           </a>
                                         @endif
+                                    </td>
+                                       
+
+                                        <td>
+                                       
+                                         <a href="{{route('career.edit',$list->id)}}">
+                                         <span class="badge badge-primary">Edit</span>
+                                          </a>
+                                      
                                     </td>
                                        
                                                
