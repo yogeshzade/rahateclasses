@@ -382,11 +382,6 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                         </div>
                     </div>
                 </li>
-
-               
-
-
-               
             </ul>
 
         </div>
@@ -582,6 +577,67 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
             </ul>
         </div>
     </section>
+
+    <!-- TOPPER HERE -->
+  <section class="browse-teacher padding-md" id="ourtoppers" style="background-color:#f4f4f4; ">
+    <div class="container">
+         <div class="row">
+            <h2 style="font-size: 22px; margin:2px 0px 10px;">FOLLOW US ON</h2>
+        </div>
+            <div class="row">
+     <div class="social-box">
+    <div class="container">
+        <div class="row">
+            
+                
+                 <div class="col-lg-4 col-xs-12 text-center">
+                    <div class="box">
+                        <a href="https://www.facebook.com/Rahate-IIT-and-Medical-classes-105172521588124">
+                        <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
+                        <div class="box-title">
+                            <h3>Facebook</h3>
+                        </div>
+                        </a>
+                     </div>
+                </div>   
+
+                  <div class="col-lg-4 col-xs-12  text-center">
+                    <div class="box">
+                          <a href="https://www.facebook.com/Rahate-IIT-and-Medical-classes-105172521588124">
+                        <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+                        <div class="box-title">
+                            <h3>Twitter</h3>
+                        </div>
+                     </a>
+                     </div>
+                </div>   
+
+                  <div class="col-lg-4 col-xs-12  text-center">
+                    <div class="box">
+                          <a href="https://www.facebook.com/Rahate-IIT-and-Medical-classes-105172521588124">
+                        <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+                        <div class="box-title">
+                            <h3>Instagram</h3>
+                        </div>
+                     </a>
+                     </div>
+                </div>   
+                
+              
+               
+                
+                
+        
+        </div>      
+    </div>
+</div>
+        </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- TOPPER END HERE -->
 
     <!-- ==============================================
     ** Footer **

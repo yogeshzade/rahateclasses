@@ -134,7 +134,12 @@ class HomeController extends Controller
                     // print_r($subjects);
                     // die();
       //  $subjects = null;
-        return view('home.noteslist',compact('notes','subjects'));
+
+             $classnames = StudentsNote::select('class_name')
+                    ->groupBy('class_name')
+                    ->get();
+                           
+        return view('home.noteslist',compact('notes','subjects','classnames'));
     }
 
     public function syncprogram(){

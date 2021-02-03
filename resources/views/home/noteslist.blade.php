@@ -58,9 +58,6 @@
     <div class="row" id="subjects">
       <ul class="nav nav-pills">
   <li class="active"><a href="javascript:closeWindow();">Home</a></li>
-  @foreach($subjects as $subject)
-      <li><a href="{{route('shownotes.index')}}?subject={{$subject->subject_name}}">{{ucfirst($subject->subject_name)}}</a></li>
-  @endforeach
 </ul>
 
         <div class="">
@@ -68,50 +65,50 @@
                 <div class="tab-content" style="display:block;">
 
                     <!-- Section Start -->
-                    @foreach($notes as $note)
+                    @foreach($classnames as $note)
                     
-                        <div class="col-md-3 col-sm-3 col-xs-12" style="border:7px solid rgba(0,0,0,.06);">
+                        <div class="col-md-3 col-sm-3 col-xs-12" 
+
+                        style="border: 7px solid rgba(0,0,0,.06);
+    height: 420px;
+    padding: 10px;" 
+                        >
                             <div class="card">
                               
-                                <img class="img img-responsive" src="/{{$note->img}}" alt="" title="" style="max-width: 210px; max-height: 210px; padding: 20px; margin-left: 10px;">
+                                <img class="img img-responsive" src="/video-tutorials.png" alt="" title="" style="    max-width: 120px;
+    max-height: 120px;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;">
                                 <div class="container-fluid border-bottom border-left border-right">
-                                    <h4 class="card-title">
-                                     
-                                    </h4>
+                                   <h5 class="card-title">
+                                        <a href="" style="font-weight: 600;
+    font-size: 17px;">
+                                          {{$note->class_name}}
+                                        </a>
+                                    </h5>
                                     <ul class="list-group">
+
+                                      @php
+                                      $subs = \App\StudentsNote::select('subject_name')
+                                               ->groupBy('subject_name')
+                                              ->where('class_name',$note->class_name)
+                                              ->get();
+                                      @endphp
+
+                                      @foreach($subs as $sub)
+
+                                        <li class="category4-list-style slow-transition">
+                                          <a href="{{$sub->subject_name}}">
+                                                 <b>
+                                               {{$sub->subject_name}}
+                                              </b>
+                                            </li>
+                                          </a>
+                                      @endforeach
                                         
-                                         <li class="category4-list-style slow-transition">
-                                               <b>Class:</b>
-                                                 <i>
-                                               {{$note->class_name}}
-                                              </i>
-                                            </li>
-
-                                            <li class="category4-list-style slow-transition">
-                                              <b> Subject Name:</b>
-                                              <i>
-                                                {{$note->subject_name}}
-                                              </i>
-                                            </li>
-
-                                             <li class="category4-list-style slow-transition">
-                                               <b>Topic Name:</b>
-                                                 <i>
-                                                {{$note->topic_name}}
-                                              </i>
-                                            </li>
-                                                <center>
-                                                    <a href="{{$note->file_link}}" target="_blank">
-                                               <b style="margin-right: 20px;">View Notes:</b> 
-                                               <i class="fas fa-download"></i>
-                                                </center>
                                             </a>
-
-                                       
-                                        
-                                          
-                                        
-                                          
                                     </ul>
                                 </div>
                             </div>
