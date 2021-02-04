@@ -65,7 +65,7 @@
                 <div class="tab-content" style="display:block;">
 
                     <!-- Section Start -->
-                    @foreach($classnames as $note)
+                    @foreach($notes as $note)
                     
                         <div class="col-md-3 col-sm-3 col-xs-12" 
 
@@ -75,7 +75,7 @@
                         >
                             <div class="card">
                               
-                                <img class="img img-responsive" src="/video-tutorials.png" alt="" title="" style="    max-width: 120px;
+                                <img class="img img-responsive" src="{{url($note->img)}}" alt="" title="" style="    max-width: 120px;
     max-height: 120px;
     padding: 5px;
     display: block;
@@ -85,33 +85,10 @@
                                    <h5 class="card-title">
                                         <a href="" style="font-weight: 600;
     font-size: 17px;">
-                                          {{$note->class_name}}
+                                         
                                         </a>
                                     </h5>
-                                    <ul class="list-group">
-
-                                      @php
-                                      $subs = \App\StudentsNote::select('subject_name')
-                                               ->groupBy('subject_name')
-                                              ->where('class_name',$note->class_name)
-                                              ->get();
-                                      @endphp
-
-                                      @foreach($subs as $sub)
-
-                                        <li class="category4-list-style slow-transition">
-                                          <a href="{{route('shownotesof.index')}}?class={{$note->class_name}}&subject={{$sub->subject_name}}">
-                                                 <b>
-                                              
-                                               {{$sub->subject_name}}
-                                             </a>
-                                              </b>
-                                            </li>
-                                          </a>
-                                      @endforeach
-                                        
-                                            </a>
-                                    </ul>
+                                 
                                 </div>
                             </div>
                         </div>

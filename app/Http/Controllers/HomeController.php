@@ -146,5 +146,19 @@ class HomeController extends Controller
         return "This page is working! Please add data";
     }
 
+    public function showNotesof(Request $request){
+        $request->validate([
+            'class' => 'required|string',
+            'subject' => 'required|string'
+        ]);
+        $notes = StudentsNote::where('class_name',$request->class)->where('subject_name',$request->subject)->get();
+       if($notes){
+        return view('home.viewsubjnotes',compact('notes'));
+       }
+       else{
+        return "No Data Available On Server! Try After Sometime.";
+       }
+    }
+
     
 }
