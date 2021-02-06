@@ -75,8 +75,8 @@
                         >
                             <div class="card">
                               
-                                <img class="img img-responsive" src="{{url($note->img)}}" alt="" title="" style="    max-width: 120px;
-    max-height: 120px;
+                                <img class="img img-responsive" src="{{url($note->img)}}" alt="" title="" style="    max-width: 90px;
+    max-height: 90px;
     padding: 5px;
     display: block;
     margin-left: auto;
