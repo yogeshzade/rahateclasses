@@ -48,7 +48,7 @@
               </a>
            
           </div>
-            <div class="pull-right m-4" style="margin-top: 20px;">
+             <div class="pull-right m-4" style="margin-top: 20px;">
                <ul class="nav nav-pills">
                 <li class="active"><a href="{{route('home.index')}}">Home</a></li>
   <li class="active"><a href="javascript:closeWindow();">Close</a></li>
@@ -57,73 +57,53 @@
           <div id="navbar" class="navbar-collapse collapse">
            
           </div><!--/.nav-collapse -->
-        
         </div><!--/.container-fluid -->
       </nav>
 
     <div class="container">
     <div class="row" id="subjects">
-   
+
 
         <div class="">
             
                 <div class="tab-content" style="display:block;">
 
-                    <!-- Section Start -->
-                    @foreach($notes as $note)
-                    
-                        <div class="col-md-3 col-sm-3 col-xs-12" 
-
-                        style="border: 7px solid rgba(0,0,0,.06);
-    height: 340px;
-    padding: 10px;" 
-                        >
-                            <div class="card">
-                              
-                                <img class="img img-responsive" src="{{url($note->img)}}" alt="" title="" style="    max-width: 80px;
-    max-height: 80px;
-    padding: 5px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;">
-                                <div class="container-fluid border-bottom border-left border-right">
-                                   <h5 class="card-title">
-                                    <center>
-                                        <a href="" style="font-weight: 600;
-    font-size: 18px;">
-    {{$note->subject_name}}
-                                         
-                                        </a>
-                                      </center>
-
-                                    </h5>
-
-                                       <ul class="list-group">
-
-                                           <li class="category4-list-style slow-transition">
-                                             <b> Class Name:  </b> {{$note->class_name}}
-                                             </li>
-
-                                             <li class="category4-list-style slow-transition">
-                                             <b> Topic Name:  </b> {{$note->topic_name}}
-                                             </li>
-
-                                       </ul>
-
-                                       <center>
-                                        <a href="{{route('opennotesof.index',$note->id)}}">
-                                         <button class="btn btn-success btn-sm fa fa-files-o">
-                                           Open Notes
-                                         </button>
-                                       </a>
-                                       </center>
-                                 
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
 
                         <!-- Section End -->
+
+                           <div class="container-fluid">
+                             <div class="row">
+                              <div class="col-md-4">
+                              <b> Class Name : </b> 
+                              <b class="label label-default">{{$note->class_name}}</b>
+                              </div>
+                                <div class="col-md-4">
+                                   <b> Subject Name : </b>
+                                     <b class="label label-success">
+                                    {{$note->subject_name}}
+                                  </b>
+                                </div>
+                                  <div class="col-md-4">
+                                     <b> Topic Name : </b>
+                                      <b class="label label-danger">
+                                   {{$note->topic_name}}
+                                  </b>
+                                    
+                                  </div>
+                             </div>
+
+                           </div>
+
+                           <hr/>
+
+                        <div class="container-fluid">
+                             <div class="row">
+                                    <div class="col-md-12">
+                   <iframe src="{{$note->file_link}}" height="650px" width="100%"> </iframe>
+
+                 </div>
+               </div>
+             </div>
 
                     
                     <div style="clear:both;"></div>

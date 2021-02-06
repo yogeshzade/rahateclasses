@@ -28,6 +28,7 @@ Route::post('/view-notes','HomeController@authForNotes')->name('view-notes.auth'
 Route::get('/rahates-results','HomeController@authForNotes')->name('results.index');
 Route::get('/show-notes','HomeController@showNotes')->name('shownotes.index')->middleware('auth');
 Route::get('/show-notes-of','HomeController@showNotesof')->name('shownotesof.index')->middleware('auth');
+Route::get('/open-notes-of/{id}','HomeController@openNotesof')->name('opennotesof.index')->middleware('auth');
 Route::get('/sync-program','HomeController@syncprogram')->name('syncprogram.index');
 
 Route::prefix("student")->group(function(){

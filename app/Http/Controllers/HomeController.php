@@ -160,5 +160,14 @@ class HomeController extends Controller
        }
     }
 
+    public function openNotesof($id){
+       
+        $note = StudentsNote::where('id',$id)->firstOrFail();
+        return view('home.opennotes',compact('note'));
+      
+    }
+
+
+
     
 }

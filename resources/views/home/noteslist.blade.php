@@ -48,6 +48,12 @@
               </a>
            
           </div>
+             <div class="pull-right m-4" style="margin-top: 20px;">
+               <ul class="nav nav-pills">
+                <li class="active"><a href="{{route('home.index')}}">Home</a></li>
+  <li class="active"><a href="javascript:closeWindow();">Close</a></li>
+</ul>
+          </div>
           <div id="navbar" class="navbar-collapse collapse">
            
           </div><!--/.nav-collapse -->
@@ -56,9 +62,7 @@
 
     <div class="container">
     <div class="row" id="subjects">
-      <ul class="nav nav-pills">
-  <li class="active"><a href="javascript:closeWindow();">Home</a></li>
-</ul>
+
 
         <div class="">
             
