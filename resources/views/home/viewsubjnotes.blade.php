@@ -85,8 +85,10 @@
                                    <h5 class="card-title">
                                         <a href="" style="font-weight: 600;
     font-size: 17px;">
+    {{$note->subject_name}}
                                          
                                         </a>
+                                        
                                     </h5>
                                  
                                 </div>
