@@ -590,7 +590,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
         <div class="row">
             
                 
-                 <div class="col text-center">
+                 <div class="col-lg-2 col-xs-12 text-center">
                     <div class="box">
                         <a href="https://www.facebook.com/Rahateiitmedicalhome">
                         <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
@@ -601,7 +601,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                      </div>
                 </div>   
 
-                  <div class="col  text-center">
+                  <div class="col-lg-2 col-xs-12  text-center  col-md-offset-1">
                     <div class="box">
                           <a href="https://www.twitter.com/iit_home">
                         <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
@@ -612,7 +612,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                      </div>
                 </div>   
 
-                  <div class="col text-center">
+                  <div class="col-lg-2 col-xs-12  text-center">
                     <div class="box">
                           <a href="https://www.instagram.com/rahates_iit_medical_home">
                         <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
@@ -624,7 +624,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                      </div>
                 </div>   
 
-                 <div class="col text-center">
+                 <div class="col-lg-2 col-xs-12  text-center col-md-offset-1">
                     <div class="box">
                           <a href="https://www.youtube.com/channel/UC30b7P3I3g8bavJOfCagIPg">
                         <i class="fa fa-youtube fa-3x" aria-hidden="true"></i>
@@ -636,7 +636,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                      </div>
                 </div>   
 
-                  <div class="col text-center">
+                  <div class="col-lg-2 col-xs-12  text-center">
                     <div class="box">
                           <a href="https://www.linkedin.com/company/rahate-s-iit-and-medical-home">
                         <i class="fa fa-linkedin fa-3x" aria-hidden="true"></i>
