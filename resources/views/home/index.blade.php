@@ -601,7 +601,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                      </div>
                 </div>   
 
-                  <div class="col-lg-2 col-xs-12  text-center  col-md-offset-1">
+                  <div class="col-lg-2 col-xs-12  text-center">
                     <div class="box">
                           <a href="https://www.twitter.com/iit_home">
                         <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
@@ -624,7 +624,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                      </div>
                 </div>   
 
-                 <div class="col-lg-2 col-xs-12  text-center col-md-offset-1">
+                 <div class="col-lg-2 col-xs-12  text-center">
                     <div class="box">
                           <a href="https://www.youtube.com/channel/UC30b7P3I3g8bavJOfCagIPg">
                         <i class="fa fa-youtube fa-3x" aria-hidden="true"></i>
@@ -642,6 +642,17 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                         <i class="fa fa-linkedin fa-3x" aria-hidden="true"></i>
                            <div class="box-title">
                             <h3 style="font-size: 14px;">Linkedin</h3>
+                        </div>
+                     </a>
+                     </div>
+                </div>   
+
+                  <div class="col-lg-2 col-xs-12  text-center">
+                    <div class="box">
+                          <a href="tel:+91-9545578282">
+                        <i class="fa fa-phone fa-3x" aria-hidden="true"></i>
+                           <div class="box-title">
+                            <h3 style="font-size: 14px;">Call us</h3>
                         </div>
                      </a>
                      </div>
