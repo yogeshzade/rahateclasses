@@ -162,7 +162,7 @@ class CourseController extends Controller
      }
 
      public function fetchCourse(Request $request){
-        $data = Course::where('class',$request->class_id)->first();
+        $data = Course::where('class',$request->class_id)->get();
         return response()->json($data,200);
      }
 

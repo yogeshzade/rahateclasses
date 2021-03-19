@@ -6,7 +6,7 @@
                     <div class="foot-nav" style="margin-right: 5px;">
                         <h3>About US</h3>
                         <ul>
-                            <li style="color: #fff;">Rahate Coaching Classes is a premier Coaching institution for students and best coaching in nagpur for IIT's and Medical Prepration with Highest success result.</li>
+                            <li style="color: #fff;">Rahate’s IIT and Medical Home is the best IIT-JEE and Medical Coaching Classes in Nagpur.</li>
                            
                         </ul>
                     </div>
@@ -28,8 +28,8 @@
                             <li><a href="#">+91-9130622590</a></li>
                             <li><a href="#">+91-9561302469</a></li>
                             <li><a href="#">+91-954557828</a></li>
-                            <li><a href="https://www.google.com/maps?ll=21.111054,79.10189&z=15&t=m&hl=en-US&gl=US&mapclient=embed&q=Rahate+Classes">39, Old Subhedar Lay Out N/o,</a></li>
-                            <li><a href="https://www.google.com/maps?ll=21.111054,79.10189&z=15&t=m&hl=en-US&gl=US&mapclient=embed&q=Rahate+Classes">Ayodhya Nagar,Nagpur-24</a></li>
+                            <li><a href="https://goo.gl/maps/Bsj18YrWSeae39Cm7">39, Old Subhedar Lay Out N/o,</a></li>
+                            <li><a href="https://goo.gl/maps/Bsj18YrWSeae39Cm7">Ayodhya Nagar,Nagpur-24</a></li>
                         </ul>
                     </div>
                 </div>
