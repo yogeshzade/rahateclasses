@@ -513,11 +513,7 @@
                  $("#course_id").prop("disabled",false); 
                  $('#course_id').empty();
                  console.log(data);
-                $(data).each(function(index,value)){
-                    console.log(value.id);
-                             };
-
-               $("#course_id").append("<option value='"+data.id+"'>"+data.course_name+"</option>");
+               $("#course_id").append(data);
                      var coursedata = data;
             }
         });

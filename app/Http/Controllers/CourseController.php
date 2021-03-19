@@ -163,7 +163,13 @@ class CourseController extends Controller
 
      public function fetchCourse(Request $request){
         $data = Course::where('class',$request->class_id)->get();
-        return response()->json($data,200);
+
+        foreach ($data as $dt) {
+
+                    echo "<option value='".$dt->id."'>".$dt->course_name."</option>"
+
+        }
+        //return response()->json($data,200);
      }
 
 
