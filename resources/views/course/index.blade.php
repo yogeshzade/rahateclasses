@@ -54,7 +54,7 @@
                                 <th scope="col">Class</th>
                                 <th scope="col">Board</th>
                                 <th scope="col">Total Fees</th>
-                                 <th scope="col">Edit</th>
+                               
                                  <th scope="col">Status</th>
                                 
                             </tr>
@@ -67,15 +67,6 @@
                             <td>{{$course->class}}</td>
                             <td>{{$course->board}}</td>
                             <td>{{$course->total_fees}}</td>
-
-                               
-                                 <td>
-                                   
-                                   
-                                    <button type="button" class="btn btn-outline-primary">Edit</button>
-                              
-                             
-                                 </td>
 
                                  <td>
                                    
