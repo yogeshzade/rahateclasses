@@ -513,7 +513,7 @@
                  $("#course_id").prop("disabled",false); 
                  $('#course_id').empty();
                  console.log(data);
-                $(data).each(function(index,value){
+                $(data).each(function(index,value)){
                     console.log(value.id);
                              };
 
