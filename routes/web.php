@@ -41,7 +41,7 @@ Route::prefix("student")->group(function(){
  Route::get('/admission','StudentsController@studentAdmission')->name('student.admission')->middleware('auth');
   Route::get('/admission/preview/{id}','StudentsController@formpreview')->name('student.admission.preview')->middleware('auth');
   Route::post('/admission','StudentsController@StorestudentAdmission')->name('student.admission.submit')->middleware('auth');
- Route::post('fetch/course','CourseController@fetchCourse')->name('fetch.course');
+ Route::any('fetch/course','CourseController@fetchCourse')->name('fetch.course');
 
 
 
