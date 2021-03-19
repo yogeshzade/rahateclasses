@@ -252,7 +252,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                 </li>
 
                  <li class="col-sm-3 equal-hight" style="height: 278px;" data-aos="zoom-in">
-                    <a href="{{route('syncprogram.index')}}">
+                    <a href="/sync-program.pdf">
                     <div class="inner"> <img src="{{ asset('homeassets\images\file.png')}}" alt="Study on the Go">
                         <h3>A synchronised program.</h3>   
                     </div>
