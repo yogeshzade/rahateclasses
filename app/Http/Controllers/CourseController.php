@@ -166,7 +166,7 @@ class CourseController extends Controller
 
         foreach ($data as $dt) {
 
-                    echo "<option value='".$dt->id."'>".$dt->course_name."</option>"
+                    echo "<option value='".$dt->id."'>".$dt->course_name."</option>";
 
         }
         //return response()->json($data,200);
