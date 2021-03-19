@@ -11,7 +11,7 @@
         <nav aria-label="breadcrumb" class="float-right mt-1">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="">Employees</a></li>
+                <li class="breadcrumb-item"><a href="">Courses</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Manage</li>
             </ol>
         </nav>
