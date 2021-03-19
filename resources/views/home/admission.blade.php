@@ -515,7 +515,7 @@
                  console.log(data);
                 $(data).each(function(index,value){
                     console.log(value.id);
-                             }
+                             };
 
                $("#course_id").append("<option value='"+data.id+"'>"+data.course_name+"</option>");
                      var coursedata = data;
