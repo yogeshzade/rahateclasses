@@ -516,6 +516,9 @@
                   $.each(data , function(index, val) {
                     console.log(index);
                     console.log(val);
+                    var menu = '<option value="'+val['id']+'">'+val['course_name']+'</option>';
+                    $('#course_id').append(menu);
+
                   });
 
                      var coursedata = data;
