@@ -61,8 +61,6 @@
                          <!-- <li> <a href="#">Notes</a></li> -->
                         <li> <a href="/career">Career</a></li>
                            <li> <a href="{{route('home.faculties')}}#ulfaculties">Faculties</a></li>
-                            <li> <a href="/contact">Contact Us</a></li>
-
                          
                     </ul>
                 </div>
