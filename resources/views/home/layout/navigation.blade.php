@@ -36,21 +36,24 @@
                             </ul>
                         </li>
 
-                        <li class="dropdown"> <a data-toggle="dropdown" href="">Pre Foundation Course <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <li class="dropdown"> <a data-toggle="dropdown" href="{{route('shownotes.index')}}">Pre Foundation Course <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{route('howtoapply.index')}}">#</a></li>
-                                  <li><a href=""></a></li>
+                                <li><a href="#">Board Notes: Class 12</a></li>
+                                  <li><a href="">Pre Foundation - Class 10</a></li>
+                                  <li><a href="">Pre Foundation - Class 9</a></li>
+                                  <li><a href="">Pre Foundation - Class 8</a></li>
+                                
                             </ul>
                         </li>
 
-                         <li class="dropdown"> <a data-toggle="dropdown" href="">IIT<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                         <li class="dropdown"> <a data-toggle="dropdown" href="{{route('shownotes.index')}}">IIT<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="">Quick Revision</a></li>
                                   <li><a href="">IIT JEE Videos Lectures</a></li>
                             </ul>
                         </li>
 
-                        <li class="dropdown"> <a data-toggle="dropdown" href="">Solutions<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <li class="dropdown"> <a data-toggle="dropdown" href="{{route('shownotes.index')}}">Solutions<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="">H.C Verma</a></li>
                                   <li><a href="">I.E Irodov</a></li>
