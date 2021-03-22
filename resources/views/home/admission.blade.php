@@ -509,10 +509,15 @@
             },
             success: function (data) {
 
-          
                  $("#course_id").prop("disabled",false); 
                  $('#course_id').empty();
                  console.log(data);
+
+                  $.each(data , function(index, val) {
+                    console.log(index);
+                    console.log(val);
+                  });
+
                      var coursedata = data;
             }
         });
