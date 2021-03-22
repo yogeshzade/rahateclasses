@@ -513,7 +513,6 @@
                  $("#course_id").prop("disabled",false); 
                  $('#course_id').empty();
                  console.log(data);
-               $("#course_id").html(data);
                      var coursedata = data;
             }
         });
