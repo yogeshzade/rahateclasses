@@ -253,6 +253,7 @@ class StudentsController extends Controller
         $studentcourse = studentprofile::where('user_id',Auth::user()->id)->firstOrFail();
         $coursedetails = Course::findOrFail($studentcourse->course_id);
         $installments = Installment::where('course_id',$studentcourse->course_id)->get();
+        return $installments;
         $classdetails = CourseClass::where('id',$studentcourse->class_id)->firstOrFail();
       
       return view('home.feesdetails',compact('studentcourse','coursedetails','installments','classdetails'));
