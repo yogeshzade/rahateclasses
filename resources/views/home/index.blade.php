@@ -403,7 +403,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                     <div class="pad15">
                     <img alt="" src="{{url($testimonial->image_path)}}" class="thumbnail"
                      style="
-                         width: 250px;
+                         width: 190px;
                          height: 250px;
                          max-height: 300px;
                          max-width: 300px;
