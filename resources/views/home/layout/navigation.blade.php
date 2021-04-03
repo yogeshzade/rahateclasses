@@ -28,12 +28,15 @@
                                </li>
 
                                 <li class="dropdown-submenu">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="nav-label">Engineering   </span> <span class="caret"></span></a>
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="nav-label">Pre Foundation </span><span class="caret"></span></a>
                                   <ul class="dropdown-menu">
-                                    <li><a href="#">IIT-JEE</a></li>
-                                    <li><a href="#">MH-CET</a></li>
+                                    <li><a href="#">7th Std</a></li>
+                                    <li><a href="#">8th Std</a></li>
+                                    <li><a href="#">9th Std</a></li>
+                                    <li><a href="#">10th Std</a></li>
                                 </ul>
                                </li>
+
 
                               <!-- Dropdown End -->
                              </ul> 
