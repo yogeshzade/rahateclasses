@@ -9,61 +9,44 @@
                         <button class="search-btn"><span class="icon-search-icon"></span></button> --}}
                     </form>
                     <ul class="nav navbar-nav">
-                    <li> <a href="{{route('home.index')}}">Home</a></li>
-                    
-
-                         <li> <a href="{{route('student.register')}}">Apply Online</a></li>
-                    
                       
-                        <li> <a href="{{route('home.course.index')}}">Courses</a></li>
-                        <li class="dropdown"> <a data-toggle="dropdown" href="{{route('student.fees')}}">Pay Fees <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <li> <a href="{{route('home.index')}}">Home</a></li>
+                     <li> <a href="{{route('home.contact')}}">About Us</a></li>
+
+                          <li class="dropdown"> <a data-toggle="dropdown" href="{{route('home.course.index')}}">Courses <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+
+                            <ul class="dropdown-menu"> 
+                              <!-- Dropdown Start -->
+                               <li class="dropdown-submenu">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="nav-label">Pre Foundation</span><span class="caret"></span></a>
+                                  <ul class="dropdown-menu">
+                                    <li><a href="#">7th Std</a></li>
+                                    <li><a href="#">8th Std</a></li>
+                                    <li><a href="#">9th Std</a></li>
+                                    <li><a href="#">10th Std</a></li>
+                                </ul>
+                               </li>
+                              <!-- Dropdown End -->
+                             </ul> 
+                        </li>
+
+                         <li class="dropdown"> <a data-toggle="dropdown" href="#">Resources <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu">
-                               
-                                <li><a href="{{route('student.fees')}}">Pay Fees Online</a></li>
-                                
-                                
+                                <li><a href="#">Engineering Exams</a></li>
+                                <li><a href="#">Medical Exams</a></li>
+                                <li><a href="#">Other Exams</a></li>
                             </ul>
                         </li>
-                         
-                        
-                       
-                        
 
-                         <li class="dropdown"> <a data-toggle="dropdown" href="">Help <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                         <li class="dropdown"> <a data-toggle="dropdown" href="#">Admission <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="{{route('howtoapply.index')}}">How To Apply</a></li>
-                                  <li><a href=""></a></li>
+                                <li><a href="{{route('student.register')}}">Apply Online</a></li>
+                                <li><a href="{{route('home.contact')}}">Inquiry</a></li>
+                                 <li><a href="{{route('student.fees')}}">Pay Fees Online</a></li>
                             </ul>
                         </li>
 
-                        <li class="dropdown"> <a data-toggle="dropdown" href="{{route('shownotes.index')}}">Pre Foundation Course <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Board Notes: Class 12</a></li>
-                                  <li><a href="">Pre Foundation - Class 10</a></li>
-                                  <li><a href="">Pre Foundation - Class 9</a></li>
-                                  <li><a href="">Pre Foundation - Class 8</a></li>
-                                
-                            </ul>
-                        </li>
-
-                         <li class="dropdown"> <a data-toggle="dropdown" href="{{route('shownotes.index')}}">IIT<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="">Quick Revision</a></li>
-                                  <li><a href="">IIT JEE Videos Lectures</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="dropdown"> <a data-toggle="dropdown" href="{{route('shownotes.index')}}">Solutions<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="">H.C Verma</a></li>
-                                  <li><a href="">I.E Irodov</a></li>
-                                  <li><a href="">S.S Krotov</a></li>
-                            </ul>
-                        </li>
-
-                         <!-- <li> <a href="#">Notes</a></li> -->
-                        <li> <a href="/career">Career</a></li>
-                           <li> <a href="{{route('home.faculties')}}#ulfaculties">Faculties</a></li>
                          
                     </ul>
                 </div>
