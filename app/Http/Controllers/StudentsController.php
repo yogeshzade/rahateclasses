@@ -24,7 +24,7 @@ class StudentsController extends Controller
     //
 
     public function loginindex(){
-    		return view('home.login');
+        return view('home.login');
     }
 
     public function login(Request $request){
@@ -257,6 +257,11 @@ class StudentsController extends Controller
       
       return view('home.feesdetails',compact('studentcourse','coursedetails','installments','classdetails'));
 
+    }
+
+    public function getInstallments(Request $request){
+      $installmentamt = Installment::where('course_id',$request->course_id)->first();
+      return $installmentamt;
     }
 
     public function checkStudentFees($id=null){
