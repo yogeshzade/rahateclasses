@@ -1,5 +1,5 @@
  <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="navbar-header">
                     <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 </div>
@@ -58,6 +58,9 @@
                                  <li><a href="{{route('student.fees')}}">Pay Fees Online</a></li>
                             </ul>
                         </li>
+
+                         <li> <a href="{{route('home.contact')}}">Blog</a></li>
+                          <li> <a href="{{route('home.contact')}}">Contact Us</a></li>
 
                          
                     </ul>
