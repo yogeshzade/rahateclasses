@@ -189,7 +189,7 @@
 @endif
         </td>
         <td>
-          <a href="#amount" onclick="return payfees('{{$installment->id}}');">Pay Fees</a>
+          <a href="#amount" onclick="return payfees('{{$installment->amount}}');">Pay Fees</a>
         </td>
     </tr>
     @endforeach
@@ -404,31 +404,11 @@ Enter Amount:-
    });
   
 
-      function payfees(id)
+      function payfees(amount)
       {
-      console.log(id);
+      console.log(amount);
 
-        $.ajax({
-
-            type: 'POST',
-            url: "{{route('fetch.installment.amount')}}",
-            dataType: "json",
-            data:{
-              id:id
-            },
-              success: function (data) {
-                console.log(data);
-                if(data.length == 0){
-                  return false;
-                }
-
-                 var amount = $("#amount").val(data.amount);
-                 var amountonline = $("#amountonline").val(data.amount);
-
-              }
-
-
-        });
+        $("#amountonline").val(amount);
       }
 
 
