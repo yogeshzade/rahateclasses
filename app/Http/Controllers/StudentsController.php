@@ -24,7 +24,7 @@ class StudentsController extends Controller
     //
 
     public function loginindex(){
-    		return view('home.login');
+        return view('home.login');
     }
 
     public function login(Request $request){
@@ -253,11 +253,15 @@ class StudentsController extends Controller
         $studentcourse = studentprofile::where('user_id',Auth::user()->id)->firstOrFail();
         $coursedetails = Course::findOrFail($studentcourse->course_id);
         $installments = Installment::where('course_id',$studentcourse->course_id)->get();
-        return $installments;
         $classdetails = CourseClass::where('id',$studentcourse->class_id)->firstOrFail();
       
       return view('home.feesdetails',compact('studentcourse','coursedetails','installments','classdetails'));
 
+    }
+
+    public function getInstallments(Request $request){
+      $installmentamt = Installment::where('course_id',$request->course_id)->first();
+      return $installmentamt;
     }
 
     public function checkStudentFees($id=null){
