@@ -11,7 +11,7 @@
                     <ul class="nav navbar-nav">
 
                     <li> <a href="{{route('home.index')}}">Home</a></li>
-                     <li> <a href="{{route('home.contact')}}">About Us</a></li>
+                     <li> <a href="{{route('aboutus.index')}}">About Us</a></li>
 
                           <li class="dropdown"> <a data-toggle="dropdown" href="{{route('home.course.index')}}">Courses <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 
