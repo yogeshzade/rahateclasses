@@ -23,7 +23,7 @@
     ** Inner Banner **
     =================================================== -->
    
-   </br>
+   <br/>
        
 
        <section class="browse-teacher padding-md" id="ourtoppers" style="background-color:#fff; ">
