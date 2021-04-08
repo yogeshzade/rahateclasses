@@ -38,13 +38,13 @@
             <div class="col-md-12">
                 <h3> About Us</h3>
                 <br/>
-                <p>Rahate’s IIT  & Medical Home Formed with a vision of providing the best educational solutions to science aspirants, imbibes a unique teaching methodology with their experienced faculties methodology with their experienced faculties beholding three decades of teaching expertise. 
+                <p style="color:#010101;font-size: 16px;">Rahate’s IIT  & Medical Home Formed with a vision of providing the best educational solutions to science aspirants, imbibes a unique teaching methodology with their experienced faculties methodology with their experienced faculties beholding three decades of teaching expertise. 
 Visionary Directors of Rahate’s IIT & Medical Home have designed the teaching system in the best tailored manner for the board examination as well as the entrance exams to pass with flying colors, 
 We understand all the difficulties of aspiring students and we offer the ever best guidance along with all possible solution to students under one roof. 
 Our exceptional teaching has brought in a different to way students think and solve the problems. Our students not only learn but are also trained with skills to excel  in various entrance exams.   
 In our endeavor, we focus upon reserving our good will with parents, potential students and commitments of our faculties and staff of the academy.   </p>
             </div>
-
+            <br/>
             <div class="col-md-6">
                 <div class="panel panel-default">
                       <div class="panel-heading">
