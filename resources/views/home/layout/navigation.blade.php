@@ -15,19 +15,14 @@
 
                           <li class="dropdown"> <a data-toggle="dropdown" href="{{route('home.course.index')}}">Courses <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 
-                            <ul class="dropdown-menu"> 
-                              <!-- Dropdown Start -->
-                               <li class="dropdown-submenu">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="nav-label">Pre Foundation </span><span class="caret"></span></a>
-                                  <ul class="dropdown-menu">
-                                    <li><a href="#">7th Std</a></li>
-                                    <li><a href="#">8th Std</a></li>
-                                    <li><a href="#">9th Std</a></li>
-                                    <li><a href="#">10th Std</a></li>
-                                </ul>
-                               </li>
-                              <!-- Dropdown End -->
-                             </ul> 
+                            <ul class="dropdown-menu">
+                                <li><a href="{{route('prefoundation.index')}}">Pre - Foundation Courses</a></li>
+                                <li><a href="#">Engineering</a></li>
+                                <li><a href="#">Medical</a></li>
+                                <li><a href="#">Other Exams</a></li>
+                           </ul>
+
+                           
                         </li>
 
                          <li class="dropdown"> <a data-toggle="dropdown" href="#">Resources <i class="fa fa-angle-down" aria-hidden="true"></i></a>
