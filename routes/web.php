@@ -33,6 +33,8 @@ Route::get('/sync-program','HomeController@syncprogram')->name('syncprogram.inde
 Route::get('/about-us','HomeController@aboutus')->name('aboutus.index');
 Route::get('/prefoundation','HomeController@prefoundation')->name('prefoundation.index');
 Route::get('/engineering','HomeController@engineering')->name('engineering.index');
+Route::get('/medical','HomeController@medical')->name('medical.index');
+
 
 
 Route::prefix("student")->group(function(){

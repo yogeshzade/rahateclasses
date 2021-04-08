@@ -180,6 +180,11 @@ class HomeController extends Controller
     }
 
 
+    public function medical(){
+        return view('home.medical');
+    }
+
+
 
     
 }
