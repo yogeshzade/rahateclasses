@@ -17,7 +17,7 @@
 
                             <ul class="dropdown-menu">
                                 <li><a href="{{route('prefoundation.index')}}">Pre - Foundation Courses</a></li>
-                                <li><a href="#">Engineering</a></li>
+                                <li><a href="{{route('engineering.index')}}">Engineering</a></li>
                                 <li><a href="#">Medical</a></li>
                                 <li><a href="#">Other Exams</a></li>
                            </ul>
