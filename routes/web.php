@@ -32,6 +32,8 @@ Route::get('/open-notes-of/{id}','HomeController@openNotesof')->name('opennoteso
 Route::get('/sync-program','HomeController@syncprogram')->name('syncprogram.index');
 Route::get('/about-us','HomeController@aboutus')->name('aboutus.index');
 Route::get('/prefoundation','HomeController@prefoundation')->name('prefoundation.index');
+Route::get('/engineering','HomeController@engineering')->name('engineering.index');
+
 
 Route::prefix("student")->group(function(){
 

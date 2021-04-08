@@ -175,6 +175,10 @@ class HomeController extends Controller
         return view('home.prefoundation');
     }
 
+    public function engineering(){
+        return view('home.engineering');
+    }
+
 
 
     
