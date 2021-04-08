@@ -52,12 +52,12 @@ Why should your child join us?
 
  <p style="color:#010101;font-size: 16px;">
 <ul>
-  <li>Full-time Faculty Assistance.</li>
-  <li>SMS Results to Parents on Regular Basis.</li>
-  <li>Regular Parent teachers meeting for the betterment of the students.</li>
-  <li>Detailed weekly evaluation report of each & every student so as timely evaluation.</li>
-  <li>Positive Mental attitudes are taught.</li>
-  <li>Short and Fast study techniques are taught.</li>
+  <li style="color:#010101;font-size: 16px;">Full-time Faculty Assistance.</li>
+  <li style="color:#010101;font-size: 16px;">SMS Results to Parents on Regular Basis.</li>
+  <li style="color:#010101;font-size: 16px;">Regular Parent teachers meeting for the betterment of the students.</li>
+  <li style="color:#010101;font-size: 16px;">Detailed weekly evaluation report of each & every student so as timely evaluation.</li>
+  <li style="color:#010101;font-size: 16px;">Positive Mental attitudes are taught.</li>
+  <li style="color:#010101;font-size: 16px;">Short and Fast study techniques are taught.</li>
 </ul>
 </p>
 <br/>

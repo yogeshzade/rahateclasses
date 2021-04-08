@@ -13,7 +13,7 @@
                     <li> <a href="{{route('home.index')}}">Home</a></li>
                      <li> <a href="{{route('aboutus.index')}}">About Us</a></li>
 
-                          <li class="dropdown"> <a data-toggle="dropdown" href="{{route('home.course.index')}}">Courses <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                          <li class="dropdown"> <a data-toggle="dropdown" href="#">Courses <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 
                             <ul class="dropdown-menu">
                                 <li><a href="{{route('prefoundation.index')}}">Pre - Foundation Courses</a></li>
