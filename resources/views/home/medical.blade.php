@@ -34,7 +34,7 @@
 
                 <div class="col-md-12">
 
-                    <p><strong>NEET</strong></p>
+                    <h3><strong>NEET</strong></h3>
 
 <p>The National eligibility and entrance test (NEET) is a National level exam held for MBBS and BDS. In 2020 around 16 Lakh students applied and in 2019 around 15 Lakh so, with that you can imagine how much the competition is? This is the reason we help our students for preparing for NEET in all the possible way -</p>
 
@@ -93,9 +93,9 @@
 
                    
                 </div>
-
+<br/>
                 <div class="col-md-12">
-                    <p><strong>JIPMER</strong></p>
+                    <h3><strong>JIPMER</strong></h3>
 
 <p>The aim of most medical aspirants is to get admission to the JIPMER MBBS. JIPMER (Jawaharlal Institute of Postgraduate Medical Education and Research, Puducherry.) comes at the top in the list of Best Medical institutions in India. We Rahate's IIT and Medical Home is the best JIPMER coaching institute in Nagpur. </p>
 
