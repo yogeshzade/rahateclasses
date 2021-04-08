@@ -47,9 +47,11 @@ In our endeavor, we focus upon reserving our good will with parents, potential s
 
             <div class="col-md-6">
                 <div class="panel panel-default">
-                      <div class="panel-heading">Vision</div>
+                      <div class="panel-heading">
+                        <h3>Vision</h3>
+                    </div>
                   <div class="panel-body">
-                    <p>
+                    <p style="color:#010101;font-size: 16px;">
                       To be a destination choice for quality education focused on enabling the students reach their goal by harnessing their potential. 
                   </p>
                   </div>
@@ -57,9 +59,11 @@ In our endeavor, we focus upon reserving our good will with parents, potential s
             </div>
             <div class="col-md-6">
                  <div class="panel panel-default">
-                      <div class="panel-heading">Mission</div>
+                      <div class="panel-heading">
+                           <h3>Mission</h3>
+                      </div>
                   <div class="panel-body">
-                    <p>
+                    <p style="color:#010101;font-size: 16px;">
                       To provide high quality, systematic and effective teaching to enable our students emerge at winner in the toughest of competitions. 
                   </p>
                   </div>
