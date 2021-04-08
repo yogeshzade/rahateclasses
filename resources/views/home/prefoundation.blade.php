@@ -43,11 +43,14 @@
 You can understand, how much bonding between students and teachers is important? 
 We are the best IIT and Medical coaching classes in Nagpur for 15 years so, starting from std 7th to 10th we can get to know the strength and weaknesses of your child and with that our experts work on it. 
 <br/>
+</p>
+ <p style="color:#010101;font-size: 16px;">
 Why should your child join us?
+</p>
 
 
 
-
+ <p style="color:#010101;font-size: 16px;">
 <ul>
   <li>Full-time Faculty Assistance.</li>
   <li>SMS Results to Parents on Regular Basis.</li>
@@ -56,8 +59,9 @@ Why should your child join us?
   <li>Positive Mental attitudes are taught.</li>
   <li>Short and Fast study techniques are taught.</li>
 </ul>
-
+</p>
 <br/>
+ <p style="color:#010101;font-size: 16px;">
 Are you ready to give your child a better start with Best IIT and Medical Coaching Classes in Nagpur?
                 </p>
             </div>
