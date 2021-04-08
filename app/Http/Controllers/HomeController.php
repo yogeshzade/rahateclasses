@@ -171,6 +171,10 @@ class HomeController extends Controller
         return view('home.aboutus');
     }
 
+    public function prefoundation(){
+        return view('home.prefoundation');
+    }
+
 
 
     

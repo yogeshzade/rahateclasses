@@ -31,6 +31,7 @@ Route::get('/show-notes-of','HomeController@showNotesof')->name('shownotesof.ind
 Route::get('/open-notes-of/{id}','HomeController@openNotesof')->name('opennotesof.index')->middleware('auth');
 Route::get('/sync-program','HomeController@syncprogram')->name('syncprogram.index');
 Route::get('/about-us','HomeController@aboutus')->name('aboutus.index');
+Route::get('/','HomeController@prefoundation')->name('prefoundation.index')
 
 Route::prefix("student")->group(function(){
 
