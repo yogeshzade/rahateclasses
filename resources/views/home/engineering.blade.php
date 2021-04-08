@@ -103,6 +103,55 @@
             </div>
             <br/>
 
+            <hr/>
+
+            <div class="col-md-12">
+                <h3> MH-CET</h3>
+                <br/>
+
+                <p>
+    Are you preparing for MH-CET? Then, you should start with understanding the
+    syllabus, also, you must be in doubt about how can I study effectively so
+    that I will get top rank right?
+</p>
+<p>
+    For Competitive exams like MH-CET, you have to take guidance from experts.
+</p>
+<p>
+    We Rahate’s IIT and Medical Home have those experts for you!
+</p>
+<p>
+    Our experts make sure that each and every student of the class understand
+    the topics which were taught from basics.
+</p>
+<p>
+    Our Student Counseling and Grievances cell present all the time for you!
+    And with that we can say, proudly we Rahate’s IIT and Medical Home is the
+    best MH-CET coaching classes in Nagpur.
+</p>
+<p>
+    Frequently Asked Questions (FAQ)
+</p>
+<p>
+    1. What is the syllabus of the MH-CET exam?
+</p>
+<p>
+    Please refer (Our website link of the NATA syllabus).
+</p>
+<p>
+    2. Is the MH-CET exam conduct online/offline?
+</p>
+<p>
+    <strong> </strong>
+    <strong> </strong>
+    MH-CET conducted in the online mode. <strong> </strong>
+</p>
+              
+            </div>
+
+            <br/>
+            <hr/>
+
         </div>
 
     </div>
