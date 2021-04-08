@@ -94,6 +94,41 @@
                    
                 </div>
 
+                <div class="col-md-12">
+                    <p><strong>JIPMER</strong></p>
+
+<p>The aim of most medical aspirants is to get admission to the JIPMER MBBS. JIPMER (Jawaharlal Institute of Postgraduate Medical Education and Research, Puducherry.) comes at the top in the list of Best Medical institutions in India. We Rahate's IIT and Medical Home is the best JIPMER coaching institute in Nagpur. </p>
+
+<p>Why you should take admission? </p>
+
+<p>* Experienced and Core Faculties for each subject</p>
+
+<p>* Scientifically Designed Course</p>
+
+<p>* Library Facility</p>
+
+<p>* Reading Room</p>
+
+<p>* Student Counseling and Grievances Cell</p>
+
+<p>* Full-time Faculty Assistance</p>
+
+<p>* Positive Mental attitudes are taught</p>
+
+<p>* Short and Fast study techniques are taught </p>
+
+<p>Frequently Asked Questions (FAQs):</p>
+
+<p>1. How can I crack the JIPMER 2021?</p>
+
+<p>2. Which books are best for JIPMER?</p>
+
+<p>3. What is the best way to prepare for the JIPMER and the AIIMS?</p>
+
+<p>4. Does JIPMER have negative marking?</p>
+
+                </div>
+
             </div>
 
         </div>
