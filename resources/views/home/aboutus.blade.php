@@ -37,18 +37,21 @@
 
             <div class="col-md-12">
                 <h3> About Us</h3>
-                Rahate’s IIT  & Medical Home Formed with a vision of providing the best educational solutions to science aspirants, imbibes a unique teaching methodology with their experienced faculties methodology with their experienced faculties beholding three decades of teaching expertise. 
+                <br/>
+                <p>Rahate’s IIT  & Medical Home Formed with a vision of providing the best educational solutions to science aspirants, imbibes a unique teaching methodology with their experienced faculties methodology with their experienced faculties beholding three decades of teaching expertise. 
 Visionary Directors of Rahate’s IIT & Medical Home have designed the teaching system in the best tailored manner for the board examination as well as the entrance exams to pass with flying colors, 
 We understand all the difficulties of aspiring students and we offer the ever best guidance along with all possible solution to students under one roof. 
 Our exceptional teaching has brought in a different to way students think and solve the problems. Our students not only learn but are also trained with skills to excel  in various entrance exams.   
-In our endeavor, we focus upon reserving our good will with parents, potential students and commitments of our faculties and staff of the academy.   
+In our endeavor, we focus upon reserving our good will with parents, potential students and commitments of our faculties and staff of the academy.   </p>
             </div>
 
             <div class="col-md-6">
                 <div class="panel panel-default">
                       <div class="panel-heading">Vision</div>
                   <div class="panel-body">
+                    <p>
                       To be a destination choice for quality education focused on enabling the students reach their goal by harnessing their potential. 
+                  </p>
                   </div>
                 </div>
             </div>
@@ -56,7 +59,9 @@ In our endeavor, we focus upon reserving our good will with parents, potential s
                  <div class="panel panel-default">
                       <div class="panel-heading">Mission</div>
                   <div class="panel-body">
+                    <p>
                       To provide high quality, systematic and effective teaching to enable our students emerge at winner in the toughest of competitions. 
+                  </p>
                   </div>
                 </div>
             </div>
