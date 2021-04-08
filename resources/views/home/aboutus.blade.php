@@ -77,5 +77,6 @@ In our endeavor, we focus upon reserving our good will with parents, potential s
   
 
 </section>
+ @include('home.layout.footer')
 
       @endsection
