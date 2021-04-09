@@ -13,7 +13,12 @@
        @include('home.layout.navigation')
         <!-- End Navigation -->
         <style type="text/css">
-    p{color:#010101;font-size: 16px;}
+    p{ color: #010101;
+          }
+          span{
+            color:#010101;
+            line-height: 1.6;
+          }
         </style>
     </header>
 
