@@ -12,12 +12,8 @@
         <!-- Start Navigation -->
        @include('home.layout.navigation')
         <!-- End Navigation -->
-        <style type="text/css">
-          .first-box{padding:30px;background:#9C0; color: #fff;margin: 5px;}
-.second-box{padding:30px; background:#39F; color: #fff;margin: 5px;}
-.third-box{padding:30px;background:#F66; color: #fff;margin: 5px;}
-.fourth-box{padding:30px;background:#6CC; color: #fff;margin: 5px;}
-        </style>
+        <style type="text/css"></style>
+
     </header>
 
   
@@ -38,38 +34,26 @@
             <div class="col-md-12">
                 <h3> Std 7th to 10th</h3>
                 <br/>
-                <p style="color:#010101;font-size: 16px;">
-                  Today every parent wants their child to be a topper and do good in his/her career right? We Rahate's IIT and Medical Home focus on giving quality education to every student. In fact, understanding concepts are not useful for scoring good marks in exam but in higher studies also, it's very important. 
-You can understand, how much bonding between students and teachers is important? 
-We are the best IIT and Medical coaching classes in Nagpur for 15 years so, starting from std 7th to 10th we can get to know the strength and weaknesses of your child and with that our experts work on it. 
-<br/>
-</p>
- <p style="color:#010101;font-size: 16px;">
-Why should your child join us?
-</p>
-
-
-
- <p style="color:#010101;font-size: 16px;">
+                <p style="margin: 0cm; line-height: 1.5; font-size: 15px; font-family: Arial, sans-serif;"><span style="font-size: 17px;">Today every parent wants their child to be a topper and do good in his/her career right? We Rahate&apos;s IIT and Medical Home focus on giving quality education to every student. In fact, understanding concepts are not useful for scoring good marks in exam but in higher studies also, it&apos;s very important.&nbsp;</span></p>
+<p style="margin: 0cm; line-height: 1.5; font-size: 15px; font-family: Arial, sans-serif;"><span style="font-size: 17px;">You can understand, how much bonding between students and teachers is important?&nbsp;</span></p>
+<p style="margin: 0cm; line-height: 1.5; font-size: 15px; font-family: Arial, sans-serif;"><span style="font-size: 17px;">We are the best IIT and Medical coaching classes in Nagpur for 15 years so, starting from std 7th to 10th we can get to know the strength and weaknesses of your child and with that our experts work on it. </span></p>
+<p style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>&nbsp;</p>
+<p style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><strong>Why should your child join us?</strong></p>
+<p style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><br></p>
 <ul>
-  <li style="color:#010101;font-size: 16px;">Full-time Faculty Assistance.</li>
-  <li style="color:#010101;font-size: 16px;">SMS Results to Parents on Regular Basis.</li>
-  <li style="color:#010101;font-size: 16px;">Regular Parent teachers meeting for the betterment of the students.</li>
-  <li style="color:#010101;font-size: 16px;">Detailed weekly evaluation report of each & every student so as timely evaluation.</li>
-  <li style="color:#010101;font-size: 16px;">Positive Mental attitudes are taught.</li>
-  <li style="color:#010101;font-size: 16px;">Short and Fast study techniques are taught.</li>
+    <li style="line-height: 1.5;"><span style="font-size: 17px;">Full-time Faculty Assistance</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 17px;">SMS Results to Parents on Regular Basis</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 17px;">Regular Parent teachers meeting for the betterment of the students</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 17px;">Detailed weekly evaluation report of each &amp; every student so as timely evaluation</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 17px;">Positive Mental attitudes are taught</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 17px;">Short and Fast study techniques are taught</span> </li>
 </ul>
-</p>
-<br/>
- <p style="color:#010101;font-size: 16px;">
-Are you ready to give your child a better start with Best IIT and Medical Coaching Classes in Nagpur?
-                </p>
+<p style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>&nbsp;</p>
+<p style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><strong>Are you ready to give your child a better start with Best IIT and Medical Coaching Classes in Nagpur?</strong></p>
             </div>
-            <br/>
 
-        </div>
-
-    </div>
+       </div>
+  </div>
   
 
 </section>
