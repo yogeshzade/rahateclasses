@@ -17,6 +17,7 @@
           }
           span{
             color:#010101;
+            line-height: 1.6;
           }
         </style>
 
@@ -36,6 +37,10 @@
     <div class="container">
       
         <div class="row">
+           <div class="col-lg-12">
+                <img src="/prefoundation.jpeg" class="img-responsive center-block d-block mx-auto" alt="Sample Image">
+                
+            </div>
 
             <div class="col-md-12">
                 <h3> Std 7th to 10th</h3>
@@ -47,12 +52,12 @@
 <p style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><strong>Why should your child join us?</strong></p>
 <p style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><br></p>
 <ul>
-    <li style="line-height: 1.5;"><span style="font-size: 17px;">Full-time Faculty Assistance</span></li>
-    <li style="line-height: 1.5;"><span style="font-size: 17px;">SMS Results to Parents on Regular Basis</span></li>
-    <li style="line-height: 1.5;"><span style="font-size: 17px;">Regular Parent teachers meeting for the betterment of the students</span></li>
-    <li style="line-height: 1.5;"><span style="font-size: 17px;">Detailed weekly evaluation report of each &amp; every student so as timely evaluation</span></li>
-    <li style="line-height: 1.5;"><span style="font-size: 17px;">Positive Mental attitudes are taught</span></li>
-    <li style="line-height: 1.5;"><span style="font-size: 17px;">Short and Fast study techniques are taught</span> </li>
+    <li style="line-height: 1.5;"><span style="font-size: 17px;">* Full-time Faculty Assistance.</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 17px;">* SMS Results to Parents on Regular Basis.</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 17px;">* Regular Parent teachers meeting for the betterment of the students.</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 17px;">* Detailed weekly evaluation report of each &amp; every student so as timely evaluation.</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 17px;">* Positive Mental attitudes are taught.</span></li>
+    <li style="line-height: 1.5;"><span style="font-size: 17px;">* Short and Fast study techniques are taught.</span> </li>
 </ul>
 <p style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'>&nbsp;</p>
 <p style='margin:0cm;line-height:115%;font-size:15px;font-family:"Arial",sans-serif;'><strong>Are you ready to give your child a better start with Best IIT and Medical Coaching Classes in Nagpur?</strong></p>
