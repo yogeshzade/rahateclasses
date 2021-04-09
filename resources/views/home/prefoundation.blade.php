@@ -12,7 +12,9 @@
         <!-- Start Navigation -->
        @include('home.layout.navigation')
         <!-- End Navigation -->
-        <style type="text/css"></style>
+        <style type="text/css">
+          p{ color: #010101; }
+        </style>
 
     </header>
 
