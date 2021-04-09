@@ -38,12 +38,16 @@
       
         <div class="row">
            <div class="col-lg-12">
-                <img src="/prefoundation.jpeg" class="img-responsive center-block d-block mx-auto" alt="Sample Image">
+             <h3> Std 7th to 10th</h3>
+             <br/>
+                <img src="/prefoundation.jpeg" class="img-responsive center-block d-block mx-auto" alt="Sample Image" style="
+    width: 550px;
+">
                 
             </div>
 
             <div class="col-md-12">
-                <h3> Std 7th to 10th</h3>
+               
                 <br/>
                 <p style="margin: 0cm; line-height: 1.5; font-size: 15px; font-family: Arial, sans-serif;"><span style="font-size: 17px;">Today every parent wants their child to be a topper and do good in his/her career right? We Rahate&apos;s IIT and Medical Home focus on giving quality education to every student. In fact, understanding concepts are not useful for scoring good marks in exam but in higher studies also, it&apos;s very important.&nbsp;</span></p>
 <p style="margin: 0cm; line-height: 1.5; font-size: 15px; font-family: Arial, sans-serif;"><span style="font-size: 17px;">You can understand, how much bonding between students and teachers is important?&nbsp;</span></p>
