@@ -74,7 +74,26 @@ In our endeavor, we focus upon reserving our good will with parents, potential s
             </div>
             <br/>
 
+<div class="col-md-12">
+<h3> Director's Message</h3>
+</div>
+            <div class="col-md-4">
+               
+                <img src="{{ asset('dir.jpg')}}" class="img-rounded" alt="Cinque Terre">
+            </div>
+            <div class="col-md-8">
+               
+            <p style="text-align: justify;">
+            Rahate's IIT and Medical Home is now well established brand in the field of competitive exam coaching (Especially IIT JEE, NEET, AIIMS ETC.) It has emerged as a brand name under the chairmanship of Mr. Omprakash Rahate who has ample experience in the field of coaching as well as in the field of higher education colleges.
+            </br>
+            "We need an education system that equips young people and germinates the seeds of industrial ambition in them."
+            </br>
+            Rahate's IIT and Medical Home is continuously endeavoring for contributing significantly towards shattering proficiency and boosting of students, so that they may fulfill their dreams
+of becoming relent and truly professional technocrat/medicon with remarkable self-confidence in the days to come.
 
+            </p>
+           </div>
+            <br/>
         </div>
 
     </div>
