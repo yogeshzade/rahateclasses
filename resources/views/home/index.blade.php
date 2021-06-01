@@ -128,7 +128,7 @@
                     </div>
                 </li>
             </a>
-            
+
                 <li class="col-sm-4 prospects clearfix equal-hight">
                     <div class="icon"><img src="{{ asset('homeassets\images\prospects-ico.png')}}" class="img-responsive" alt=""></div>
                     <div class="detail">
@@ -903,6 +903,13 @@ $(document).ready(function(){
         ResCarousel(ell, Parent, slide);
     }
 
+});
+
+$(".owl-carousel").owlCarousel({
+    items: 1,
+    autoplay: true,
+    navigation: true,
+    navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
 });
   
 

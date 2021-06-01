@@ -74,9 +74,12 @@ In our endeavor, we focus upon reserving our good will with parents, potential s
             </div>
             <br/>
 
+            <br/>
+            <br/>
 <div class="col-md-12">
-<b> Director's Message</b>
+<h4> Director's Message</h4>
 </div>
+<br/>
 <br/>
             <div class="col-md-4">
                
