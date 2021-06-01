@@ -118,14 +118,17 @@
     <section class="about">
         <div class="container">
             <ul class="row our-links">
+            <a href="{{route('student.admission.index')}}" class="">
                 <li class="col-sm-4 apply-online clearfix equal-hight">
                     <div class="icon"><img src="{{ asset('homeassets\images\apply-online-ico.png')}}" class="img-responsive" alt=""></div>
                     <div class="detail">
-                        <h3><a href="{{route('student.admission.index')}}" style="color:#fff;">Apply Online</a></h3>
+                        <h3><a href="" style="color:#fff;">Apply Online</a></h3>
                        
-                        <a href="{{route('student.admission.index')}}" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a href="" class="more"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
                 </li>
+            </a>
+            
                 <li class="col-sm-4 prospects clearfix equal-hight">
                     <div class="icon"><img src="{{ asset('homeassets\images\prospects-ico.png')}}" class="img-responsive" alt=""></div>
                     <div class="detail">

@@ -86,7 +86,7 @@ Route::post('verify/otp','StudentsController@verifyMobile')->name('student.verif
 Route::post('/resend/otp','StudentsController@resendotp')->name('student.resendotp')->middleware(['auth','throttle:1,2']);
 
 
-Route::prefix("student")->middleware(['auth','checkStudent','verifyMobile'])->group(function(){
+Route::prefix("student")->middleware(['auth','checkStudent'])->group(function(){
 
 Route::get('/dashboard','StudentsController@studentDashboardIndex')->name('student.dashboard');
 

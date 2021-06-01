@@ -25,9 +25,9 @@
                         <h3>Contact Us</h3>
                         <ul>
                            
-                            <li><a href="#">+91-9130622590</a></li>
-                            <li><a href="#">+91-9561302469</a></li>
-                            <li><a href="#">+91-954557828</a></li>
+                            <li><a href="#">+91-8855064388</a></li>
+                            <li><a href="#">+91-8446678484</a></li>
+                            <li><a href="#">+91-9545578282</a></li>
                             <li><a href="https://goo.gl/maps/Bsj18YrWSeae39Cm7">39, Old Subhedar Lay Out N/o,</a></li>
                             <li><a href="https://goo.gl/maps/Bsj18YrWSeae39Cm7">Ayodhya Nagar,Nagpur-24</a></li>
                         </ul>

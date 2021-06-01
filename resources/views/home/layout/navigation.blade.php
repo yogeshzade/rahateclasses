@@ -42,7 +42,6 @@
                             </ul>
                         </li>
 
-                         <li> <a href="{{route('home.contact')}}">Blog</a></li>
                           <li> <a href="{{route('home.contact')}}">Contact Us</a></li>
 
                          

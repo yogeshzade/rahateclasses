@@ -51,7 +51,7 @@
     <div class="container">
       <div class="row">
          <div class="col-md-8">
-        <iframe src="https://maps.google.com/maps?q=Rahate%20Classes&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="315" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.9175314285776!2d79.10387781493412!3d21.115853785951202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdf150108aba5e029!2sRahate&#39;s%20IIT%20%26%20Medical%20Home!5e0!3m2!1sen!2sin!4v1622525091992!5m2!1sen!2sin" width="100%" height="315" frameborder="0" style="border:0" allowfullscreen></iframe>
 
       </div>
 
@@ -92,10 +92,9 @@
     <div class="col-sm-3 col-xs-6 second-box" style="  width: 270px;
     height: 200px;">
         <h1><span class="fa fa-location-arrow"></span></h1>
-        <a href="https://maps.google.com/maps?ll=21.111054,79.10189&z=15&t=m&hl=en-US&gl=US&mapclient=embed&q=Rahate%20Classes">
+        <a href="https://goo.gl/maps/cCF4R9TzqVm1Hdi58">
         <h3>Location</h3>
-        <p style="font-weight: 600; color: #fff;" >L39, Old Subhedar L/O
-Ayodhya Nagar,Nagpur-24</p><br>
+        <p style="font-weight: 600; color: #fff;" >39, near Durga Nagar, Old Subhedar Layout, Ambika Nagar, Sharda Chowk, Nagpur, Maharashtra 440024</p><br>
 </a>
     </div>
     <div class="col-sm-3 col-xs-6 third-box" style="  width: 270px;
