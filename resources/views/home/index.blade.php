@@ -906,7 +906,7 @@ $(document).ready(function(){
 });
 
 $(".owl-carousel").owlCarousel({
-    items: 1,
+    items: 4,
     autoplay: true,
     navigation: true,
     navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
