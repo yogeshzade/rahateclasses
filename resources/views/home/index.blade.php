@@ -606,7 +606,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
 
                   <div class="col-lg-2 col-xs-12  text-center">
                     <div class="box">
-                          <a href="https://www.twitter.com/iit_home">
+                          <a href="https://twitter.com/rahate_iit_home">
                         <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
                            <div class="box-title">
                            <h3 style="font-size: 14px;">Twitter</h3>
@@ -617,7 +617,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
 
                   <div class="col-lg-2 col-xs-12  text-center">
                     <div class="box">
-                          <a href="https://www.instagram.com/rahates_iit_medical_home">
+                          <a href="https://www.instagram.com/rahates_iit_medical/">
                         <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
                            <div class="box-title">
                            <h3 style="font-size: 14px;">Instagram</h3>
