@@ -78,7 +78,6 @@ class StudentsController extends Controller
             'email' => 'required|email|unique:users',
             'password' => 'required|string|min:8|max:14',
             'mobile' => 'required|min:10|max:10',
-            'captcha' => 'required|captcha',
             'dob' => 'required|max:10'
         ]);
      // dd($validate);

@@ -27,7 +27,7 @@
 
                          <li class="dropdown"> <a data-toggle="dropdown" href="#">Resources <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Engineering Exams</a></li>
+                                <li><a href="https://drive.google.com/file/d/1TKNTSl_vf2EubrljdNJJcbTZbqkczNxA/view?usp=sharing">Engineering Exams</a></li>
                                 <li><a href="#">Medical Exams</a></li>
                                 <li><a href="#">Other Exams</a></li>
                             </ul>
