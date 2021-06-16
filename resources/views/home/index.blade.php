@@ -155,7 +155,7 @@
             <div class="row">
                 <div class="col-sm-7 col-sm-push-5 left-block" data-aos="zoom-in-left"> <span class="sm-head">Welcome To</span>
                     <h2>Rahate IIT & Medical Home</h2>
-                    <p style="text-align: justify;">Rahate Classes in Nagpur has stepped into education industry for redefining the perception of competitive exams coaching. Here we are guiding and teaching our students for <b>IIT-JEE, NEET ,NATA, NDA, SEEE, </b>and <b>CBSE</b> by offering a highly encouraging learning atmosphere and with the good institutional setting. All of the tutors at Rahate Classes Nagpur are setting up confidence in the initial stage and then guide the aspirants all through the process thoroughly. Our aim is not only to show our experience and best teaching ability but also to improve the achievement of our aspirants in Rahate IIT And Medical Home.</p>
+                    <p style="text-align: justify; color:#010101;">Rahate Classes in Nagpur has stepped into education industry for redefining the perception of competitive exams coaching. Here we are guiding and teaching our students for <b style="#b80000 !important" >IIT-JEE, NEET ,NATA, NDA, SEEE, </b>and <b>CBSE</b> by offering a highly encouraging learning atmosphere and with the good institutional setting. All of the tutors at Rahate Classes Nagpur are setting up confidence in the initial stage and then guide the aspirants all through the process thoroughly. Our aim is not only to show our experience and best teaching ability but also to improve the achievement of our aspirants in Rahate IIT And Medical Home.</p>
                     <!-- <div class="know-more-wrapper"> <a href="about.html" class="know-more">Know More <span class="icon-more-icon"></span></a> </div> -->
                 </div>
                 <div class="col-sm-5 col-sm-pull-7" data-aos="zoom-in-right">
@@ -289,7 +289,12 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                                 <h4>Apply Online</h4>
                                 <span>To Take Admission</span>
                             </div>
-                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                            <a href="/student/register">
+                                <span class="fa fa-arrow-right 2x" style="
+    color: #fff;
+    margin-right: 12px;
+"></span>
+                            </a>
                         </div>
                     </div>
                 </li>
@@ -304,7 +309,10 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                                <h4>Apply Online</h4>
                                 <span>To Take Admission</span>
                             </div>
-                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                            <a href="{{route('student.admission.index')}}"><span class="fa fa-arrow-right 2x" style="
+    color: #fff;
+    margin-right: 12px;
+"></span></a>
                         </div>
                     </div>
                 </li>
@@ -318,7 +326,10 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                                <h4>Apply Online</h4>
                                 <span>To Take Admission</span>
                             </div>
-                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                            <a href="{{route('student.admission.index')}}"><span class="fa fa-arrow-right 2x" style="
+    color: #fff;
+    margin-right: 12px;
+"></span></a>
                         </div>
                     </div>
                 </li>
@@ -332,7 +343,10 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                                <h4>Apply Online</h4>
                                 <span>To Take Admission</span>
                             </div>
-                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                            <a href="{{route('student.admission.index')}}"><span class="fa fa-arrow-right 2x" style="
+    color: #fff;
+    margin-right: 12px;
+"></span></a>
                         </div>
                     </div>
                 </li>
@@ -347,7 +361,10 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                                <h4>Apply Online</h4>
                                 <span>To Take Admission</span>
                             </div>
-                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                            <a href="{{route('student.admission.index')}}"><span class="fa fa-arrow-right 2x" style="
+    color: #fff;
+    margin-right: 12px;
+"></span></a>
                         </div>
                     </div>
                 </li>
@@ -362,7 +379,10 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                                <h4>Apply Online</h4>
                                 <span>To Take Admission</span>
                             </div>
-                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                            <a href="{{route('student.admission.index')}}"><span class="fa fa-arrow-right 2x" style="
+    color: #fff;
+    margin-right: 12px;
+"></span></a>
                         </div>
                     </div>
                 </li>
@@ -381,7 +401,10 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                                <h4>Apply Online</h4>
                                 <span>To Take Admission</span>
                             </div>
-                            <a href="{{route('student.admission.index')}}"><span class="icon-more-icon"></span></a>
+                            <a href="{{route('student.admission.index')}}"><span class="fa fa-arrow-right 2x" style="
+    color: #fff;
+    margin-right: 12px;
+"></span></a>
                         </div>
                     </div>
                 </li>
@@ -905,12 +928,7 @@ $(document).ready(function(){
 
 });
 
-$(".owl-carousel").owlCarousel({
-    items: 4,
-    autoplay: true,
-    navigation: true,
-    navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
-});
+
   
 
 

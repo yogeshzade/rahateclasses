@@ -146,19 +146,7 @@
                 @endif
                         </div>
 
-                          <div class="col-sm-6 captcha">
-                             <span>{!! captcha_img() !!}</span>
-                              <button type="button" class="btn btn-danger" class="reload" id="reload">
-                        &#x21bb;
-                    </button>
-                        </div>
-                        <div class="col-sm-6">
-                                         <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha *" name="captcha">
-                                            @if ($errors->has('captcha'))
-                    <span class="text-danger">Invalid Captcha ! Re-enter</span>
-                @endif
-
-                        </div>
+                        
 
                           <div class="col-sm-12" style="font-weight: 600">
                            <input type="checkbox" id="test1" checked="" disabled="">
@@ -171,7 +159,7 @@
                 
                 
                     <div class="button-outer">
-                        <button class="btn">Register Now <span class="icon-more-icon"></span></button>
+                        <button class="btn btn-lg">Register Now <span class="icon-more-icon"></span></button>
                            <a href="{{route('home.student.login.index')}}">  
                             <button class="btn register" type="button">Back To Login <span class="icon-more-icon"></span></button> </a>
                     </div>
