@@ -106,7 +106,7 @@
                                                    
                                                    
                                                   <div class="col-md-4">
-                                                    <a href="{{route('admission.approve',$studentlist)}}">
+                                                    <a href="{{route('paymenthistory.view',$studentlist)}}">
                                                      <span class="btn btn-success"> <i class="fas fa-rupee-sign"></i> </span>
                                                    </a>
                                                   </div>

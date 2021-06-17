@@ -311,9 +311,7 @@ class StudentsController extends Controller
           'payment_amount' => 'required|numeric|not_in:0|min:1',
           'file' => 'required|image|max:1024',
         ]);
-
-
-
+        
         $initTransaction = new PaymentTransaction();
         $initTransactionID = new TransactionId();
         $txnID = $initTransactionID->TransactionId($authuser); 

@@ -1,7 +1,0 @@
-
-# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:rahateiithome.in
- RewriteCond %{HTTP_HOST} ^rahateiithome.in$ [NC,OR]
-  RewriteCond %{HTTP_HOST} ^www.rahateiithome.in$
-  RewriteCond %{REQUEST_URI} !/public/
-  RewriteRule (.*) /public/$1 [L]
-# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:rahateiithome.in

@@ -120,6 +120,7 @@ Route::group([
     Route::get('/','AdminController@Studentindex')->name('admission.index');
      Route::get('approve/{id}','AdminController@ApproveAdmission')->name('admission.approve');
       Route::get('view/{id}','AdminController@ViewAdmission')->name('admission.view');
+      Route::get('transaction/{id}','AdminController@viewstudenthistory')->name('paymenthistory.view');
    
 });
 

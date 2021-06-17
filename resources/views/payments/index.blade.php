@@ -65,7 +65,7 @@
                         <tbody>
 
                  
-                            @foreach ($transactions ?? '' as $transaction)
+                            @foreach ($alltransactions ?? '' as $alltransaction)
 
                           
                             <tr scope="{{$loop->iteration}}">

@@ -11,6 +11,8 @@ use App\Alumini;
 use App\Faculty;
 use Validator;
 use App\StudentsNote;
+use App\CourseClass;
+use App\StudentFee;
 
 
 class AdminController extends Controller
@@ -124,8 +126,8 @@ class AdminController extends Controller
                         ->with(['user','studentProfile'])
                         ->get();
        //return $transactions;
-
-       return view('payments.index',compact('transactions'));
+       $totalcount = PaymentTransaction::where('payment_method',0)->where('payment_status',0)->count();
+       return view('payments.index',compact('transactions','totalcount'));
 
     }
 
@@ -261,5 +263,19 @@ class AdminController extends Controller
         $id->delete();
         return back()->with('success','DELETED!!!');
 
+    }
+
+    public function viewstudenthistory(int $id){
+        $alltransactions =  PaymentTransaction::where('user_id',$id)->get();
+        $userid = $id;
+        $fees = StudentFee::where('user_id',$id)->get();
+        if($fees->count() > 0){
+            return view('payments.alltransactions',compact('alltransactions','fees'));
+        }
+        else{
+            return back()->with('error','Student Not Applied For Any Course');
+        } 
+      //  $studentfeesinfo = ;
+        
     }
 }
