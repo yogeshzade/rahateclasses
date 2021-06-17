@@ -34,8 +34,7 @@ Route::get('/about-us','HomeController@aboutus')->name('aboutus.index');
 Route::get('/prefoundation','HomeController@prefoundation')->name('prefoundation.index');
 Route::get('/engineering','HomeController@engineering')->name('engineering.index');
 Route::get('/medical','HomeController@medical')->name('medical.index');
-
-
+Route::get('/medical-resource','HomeController@medical_resource')->name('medical-resource.index');
 
 Route::prefix("student")->group(function(){
 

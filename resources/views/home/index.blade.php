@@ -618,7 +618,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
                 
                  <div class="col-lg-2 col-xs-12 text-center">
                     <div class="box">
-                        <a href="https://www.facebook.com/Rahateiitmedicalhome">
+                        <a href="https://www.facebook.com/Rahateiitmedicalhome" target="_blank">
                         <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
                          <div class="box-title">
                             <h3 style="font-size: 14px;">Facebook</h3>
@@ -629,7 +629,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
 
                   <div class="col-lg-2 col-xs-12  text-center">
                     <div class="box">
-                          <a href="https://twitter.com/rahate_iit_home">
+                          <a href="https://twitter.com/rahate_iit_home" target="_blank">
                         <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
                            <div class="box-title">
                            <h3 style="font-size: 14px;">Twitter</h3>
@@ -640,7 +640,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
 
                   <div class="col-lg-2 col-xs-12  text-center">
                     <div class="box">
-                          <a href="https://www.instagram.com/rahates_iit_medical/">
+                          <a href="https://www.instagram.com/rahates_iit_medical/" target="_blank">
                         <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
                            <div class="box-title">
                            <h3 style="font-size: 14px;">Instagram</h3>
@@ -652,7 +652,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
 
                  <div class="col-lg-2 col-xs-12  text-center">
                     <div class="box">
-                          <a href="https://www.youtube.com/channel/UC30b7P3I3g8bavJOfCagIPg">
+                          <a href="https://www.youtube.com/channel/UC30b7P3I3g8bavJOfCagIPg" target="_blank">
                         <i class="fa fa-youtube fa-3x" aria-hidden="true"></i>
                            <div class="box-title">
                            <h3 style="font-size: 14px;">Youtube</h3>
@@ -664,7 +664,7 @@ onclick="window.open('/show-notes','popup','width=1200,height=1080'); return fal
 
                   <div class="col-lg-2 col-xs-12  text-center">
                     <div class="box">
-                          <a href="https://www.linkedin.com/company/rahate-s-iit-and-medical-home">
+                          <a href="https://www.linkedin.com/company/rahate-s-iit-and-medical-home" target="_blank">
                         <i class="fa fa-linkedin fa-3x" aria-hidden="true"></i>
                            <div class="box-title">
                             <h3 style="font-size: 14px;">Linkedin</h3>
