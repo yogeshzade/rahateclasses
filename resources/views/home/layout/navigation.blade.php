@@ -19,7 +19,6 @@
                                 <li><a href="{{route('prefoundation.index')}}">Pre - Foundation Courses</a></li>
                                 <li><a href="{{route('engineering.index')}}">Engineering</a></li>
                                 <li><a href="{{route('medical.index')}}">Medical</a></li>
-                                <li><a href="#">Other Exams</a></li>
                            </ul>
 
                            
@@ -27,9 +26,8 @@
 
                          <li class="dropdown"> <a data-toggle="dropdown" href="#">Resources <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="https://drive.google.com/file/d/1TKNTSl_vf2EubrljdNJJcbTZbqkczNxA/view?usp=sharing">Engineering Exams</a></li>
-                                <li><a href="#">Medical Exams</a></li>
-                                <li><a href="#">Other Exams</a></li>
+                                <li><a href="https://drive.google.com/file/d/1TKNTSl_vf2EubrljdNJJcbTZbqkczNxA/view?usp=sharing" target="_blank">Engineering Exams</a></li>
+                                <li><a href="{{route('medical-resource.index')}}">Medical Exams</a></li>
                             </ul>
                         </li>
 

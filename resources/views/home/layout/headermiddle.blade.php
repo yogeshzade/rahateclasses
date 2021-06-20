@@ -1,6 +1,6 @@
 <!-- Start Header Middle -->
         <div class="container header-middle">
-            <div class="row"> <span class="col-xs-6 col-sm-3"><a href="{{route('home.index')}}"><img src="{{asset('homeassets\images\rahatelogo.png')}}" class="img-responsive" alt=""></a></span>
+            <div class="row"> <span class="col-xs-6 col-sm-3"><a href="{{route('home.index')}}"><img src="{{asset('homeassets\images\rahatelogo.png')}}" class="img-responsive" alt="" style="width:120px;height:90px;"></a></span>
                 <div class="col-xs-6 col-sm-3"></div>
                 <div class="col-xs-6 col-sm-9">
                     <div class="contact clearfix">

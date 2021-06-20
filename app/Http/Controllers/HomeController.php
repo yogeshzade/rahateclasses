@@ -183,6 +183,10 @@ class HomeController extends Controller
     public function medical(){
         return view('home.medical');
     }
+    
+     public function medical_resource(){
+        return view('home.medical-resource');
+    }
 
 
 
