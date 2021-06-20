@@ -28,7 +28,8 @@
           <div class="row">
         <div class="col-md-8 com-sm-12" style="height: 200%;">
 
-             <div class="banner-outer">
+             <div class="banner-outer"  style="
+    margin-top: 18px;">
         <div class="banner-slider" data-aos="zoom-in">
             @foreach($sliders as $slider)
             <div class="slide1" style="background: url({{$slider->image_path}});
@@ -61,7 +62,7 @@
 
 <!--  -->
 
-<div class="panel panel-success" data-aos="zoom-in-up">
+<div class="panel panel-success">
                         <div class="panel-heading notification-home">
                             <span class="panel-title" style="font-family: inherit; font-weight: 500; line-height: 1.1;">Notifications & Update</span>
                         </div>
@@ -179,7 +180,7 @@
                 data-aos="zoom-in"
                 >
                     <div class="inner"> 
-                        <a href="http://rahateclasses.mstitute.com/test/build" target="_blank">
+                        <a href="http://rahateiithome.speedlabs.in/loginRAHA.aspx" target="_blank">
                         <img src="{{ asset('homeassets\images\elearning.png')}}" alt="Malleable Study Time">
                         <h3>Online <span>Lectures.</span> </h3>
                         
@@ -224,7 +225,7 @@
 
                  <li class="col-sm-3 equal-hight" style="height: 278px;" data-aos="zoom-in">
                     <div class="inner"> 
-                          <a href="http://rahateclasses.mstitute.com/test/build" target="_blank">
+                          <a href="https://web.classplusapp.com/newApp/login" target="_blank">
                         <img src="{{ asset('homeassets\images\exam.png')}}" alt="Study on the Go">
                         
                         <h3>Online Exam.</h3>

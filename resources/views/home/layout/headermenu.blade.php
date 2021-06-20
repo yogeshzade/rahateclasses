@@ -9,7 +9,7 @@
                 <div class="right-block clearfix">
                     <ul class="top-nav hidden-xs">
                         <li style="color:#fff"><a href="#">+91-97664478484/+91-8855064388<a href="#"></li>
-                        <li style="color:#fff"><a href="#">Apply Online</a></li>
+                        <li style="color:#fff"><a href="{{route('student.register')}}">Apply Online</a></li>
                     </ul>
                    
                 </div>

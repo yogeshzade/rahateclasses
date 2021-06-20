@@ -159,7 +159,7 @@
 						</tr>
 						<tr>
 							<th>Date</th>
-							<td>2020-07-14</td>
+							<td>{{$invoice->created_at}}</td>
 						</tr>
 						
 						
