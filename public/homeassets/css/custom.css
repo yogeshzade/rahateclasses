@@ -319,7 +319,7 @@ textarea:focus::placeholder{
 	text-transform: uppercase;
 }
 .header-top ul.top-nav li a {
-	color: #6c777d;
+	color: #fff;
 	font-size: 15px;
 }
 .header-top ul.top-nav li a:hover {

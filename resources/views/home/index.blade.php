@@ -7,9 +7,8 @@
     =================================================== -->
     <header>
         @include('home.layout.headermenu')
-        @include('home.layout.navigation')
-      
        @include('home.layout.headermiddle')
+       @include('home.layout.navigation')
 
         <!-- Start Navigation -->
       
